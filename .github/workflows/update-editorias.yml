@@ -1,0 +1,38 @@
+name: Atualizar editorias
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 */2 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-editorias:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Atualizar curadoria
+        run: python scripts/update-editorias.py
+
+      - name: Publicar alteracoes
+        run: |
+          if git diff --quiet -- assets/js/editorial-data.js; then
+            echo "Sem novidades para publicar."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/editorial-data.js
+          git commit -m "Atualiza editorias automaticamente"
+          git push

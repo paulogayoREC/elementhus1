@@ -11,8 +11,114 @@ const feedbackStorageKey = "encontreAquiTechFeedback";
 const feedbackCleanupKey = `${feedbackStorageKey}:removedLastJulia`;
 const feedbackNameStorageKey = `${feedbackStorageKey}:name`;
 const feedbackMessageLimit = 500;
+const editorialCategories = window.editorialData?.categories || {};
+
+const formatEditorialDate = (value) => {
+  if (!value) return "";
+
+  const date = new Date(`${value}T00:00:00`);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat("pt-BR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC"
+  }).format(date);
+};
+
+const getEditorialItems = (key) => {
+  const items = editorialCategories[key]?.items;
+  return Array.isArray(items) ? items : [];
+};
+
+const getFeaturedEditorialItem = (key) => {
+  const items = getEditorialItems(key);
+  return items.find((item) => item.featured) || items[0];
+};
+
+const createTextElement = (tagName, className, text) => {
+  const element = document.createElement(tagName);
+  if (className) {
+    element.className = className;
+  }
+  element.textContent = text;
+  return element;
+};
+
+const renderHomeEditorialHighlights = () => {
+  document.querySelectorAll("[data-editorial-feature]").forEach((card) => {
+    const key = card.dataset.editorialFeature;
+    const item = getFeaturedEditorialItem(key);
+    const slot = card.querySelector("[data-feature-slot]");
+
+    if (!item || !slot) return;
+
+    const meta = [item.source, formatEditorialDate(item.date)].filter(Boolean).join(" · ");
+    slot.textContent = "";
+
+    slot.append(
+      createTextElement("span", "topic-feature-label", "Destaque"),
+      createTextElement("strong", "topic-feature-title", item.title),
+      createTextElement("span", "topic-feature-meta", meta)
+    );
+  });
+};
+
+const renderTopicEditorialLists = () => {
+  document.querySelectorAll("[data-topic-list]").forEach((list) => {
+    const key = list.dataset.topicList;
+    const items = getEditorialItems(key).slice(0, 2);
+
+    list.textContent = "";
+
+    items.forEach((item) => {
+      const article = document.createElement("article");
+      article.className = "content-card";
+
+      const imageWrap = document.createElement("div");
+      imageWrap.className = "content-card-media";
+
+      const image = document.createElement("img");
+      image.src = item.image || "assets/img/astronaut-earth.png";
+      image.alt = "";
+      image.loading = "lazy";
+      imageWrap.append(image);
+
+      const body = document.createElement("div");
+      body.className = "content-card-body";
+
+      const tag = createTextElement("span", "content-tag", item.tag || "Tecnologia");
+      const title = createTextElement("h3", "", item.title);
+      const summary = createTextElement("p", "", item.summary);
+      const meta = createTextElement(
+        "span",
+        "content-meta",
+        [item.source, formatEditorialDate(item.date)].filter(Boolean).join(" · ")
+      );
+
+      const link = document.createElement("a");
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "Ler na fonte";
+      link.setAttribute("aria-label", `Ler na fonte: ${item.title}`);
+
+      body.append(tag, title, summary, meta, link);
+      article.append(imageWrap, body);
+      list.append(article);
+    });
+  });
+};
+
+renderHomeEditorialHighlights();
+renderTopicEditorialLists();
+
 const revealTargets = document.querySelectorAll(
-  ".section-heading, .topic-card, .feature-copy, .signal-panel, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout"
+  ".section-heading, .topic-card, .topic-feature, .content-card, .feature-copy, .signal-panel, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel"
 );
 
 const setHeaderState = () => {
