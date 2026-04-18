@@ -159,12 +159,9 @@ const renderFeedbackItems = () => {
 
   const items = getFeedbackItems().slice(-5).reverse();
   feedbackList.textContent = "";
+  feedbackList.classList.toggle("is-empty", !items.length);
 
   if (!items.length) {
-    const empty = document.createElement("p");
-    empty.className = "empty-comments";
-    empty.textContent = "Seja o primeiro a comentar neste navegador.";
-    feedbackList.append(empty);
     return;
   }
 
