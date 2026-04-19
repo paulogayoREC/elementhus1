@@ -1,77 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Encontre Aqui Tech</title>
-  <desc id="desc">Capa de compartilhamento do Encontre Aqui Tech.</desc>
+  <desc id="desc">Capa de compartilhamento do Encontre Aqui Tech com paleta escura, creme, bronze e azul.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07100f"/>
-      <stop offset="0.45" stop-color="#10261f"/>
-      <stop offset="1" stop-color="#0b181c"/>
+    <linearGradient id="heroShade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#100d0b"/>
+      <stop offset="0.58" stop-color="#100d0b" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#100d0b" stop-opacity="0.56"/>
     </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#123d39" stop-opacity="0.96"/>
-      <stop offset="1" stop-color="#0a1d24" stop-opacity="0.96"/>
+    <linearGradient id="blueBeam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#257da7" stop-opacity="0.42"/>
+      <stop offset="0.5" stop-color="#257da7" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#c29f73" stop-opacity="0.12"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#55d6be"/>
-      <stop offset="0.55" stop-color="#8ee86e"/>
-      <stop offset="1" stop-color="#f6d55c"/>
-    </linearGradient>
-    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000000" flood-opacity="0.38"/>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#257da7" stop-opacity="0.34"/>
+      <stop offset="0.52" stop-color="#257da7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#257da7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="astroGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#faebd1" flood-opacity="0.26"/>
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000000" flood-opacity="0.42"/>
     </filter>
-    <clipPath id="panelClip">
-      <rect x="58" y="54" width="1084" height="522" rx="28"/>
+    <filter id="softLift" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+    <clipPath id="frameClip">
+      <rect x="54" y="44" width="1092" height="542" rx="8"/>
     </clipPath>
   </defs>
 
-  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="#100d0b"/>
 
-  <g opacity="0.32">
-    <path d="M0 98H1200M0 214H1200M0 330H1200M0 446H1200M0 562H1200" stroke="#6be2c8" stroke-width="1"/>
-    <path d="M120 0V630M300 0V630M480 0V630M660 0V630M840 0V630M1020 0V630" stroke="#6be2c8" stroke-width="1"/>
+  <g opacity="0.72">
+    <rect width="1200" height="630" fill="url(#heroShade)"/>
+    <path d="M0 86H1200M0 170H1200M0 254H1200M0 338H1200M0 422H1200M0 506H1200M0 590H1200" stroke="#faebd1" stroke-width="1" opacity="0.08"/>
+    <path d="M80 0V630M164 0V630M248 0V630M332 0V630M416 0V630M500 0V630M584 0V630M668 0V630M752 0V630M836 0V630M920 0V630M1004 0V630M1088 0V630" stroke="#faebd1" stroke-width="1" opacity="0.08"/>
+    <circle cx="264" cy="118" r="2" fill="#257da7" opacity="0.42"/>
+    <circle cx="466" cy="206" r="2" fill="#c29f73" opacity="0.36"/>
+    <circle cx="716" cy="76" r="2" fill="#257da7" opacity="0.42"/>
+    <circle cx="936" cy="252" r="2" fill="#c29f73" opacity="0.38"/>
+    <circle cx="182" cy="430" r="2" fill="#faebd1" opacity="0.28"/>
+    <circle cx="628" cy="492" r="2" fill="#257da7" opacity="0.36"/>
   </g>
 
-  <circle cx="1050" cy="68" r="210" fill="#55d6be" opacity="0.09"/>
-  <circle cx="952" cy="572" r="170" fill="#f6d55c" opacity="0.11"/>
-  <circle cx="96" cy="520" r="160" fill="#8ee86e" opacity="0.08"/>
+  <rect x="54" y="44" width="1092" height="542" rx="8" fill="none" stroke="#faebd1" stroke-opacity="0.18"/>
+  <rect x="55" y="45" width="1090" height="540" rx="8" fill="url(#blueBeam)" opacity="0.42"/>
 
-  <rect x="58" y="54" width="1084" height="522" rx="28" fill="url(#panel)" filter="url(#softShadow)"/>
-  <rect x="58" y="54" width="1084" height="522" rx="28" fill="none" stroke="#72e7cf" stroke-opacity="0.32" stroke-width="2"/>
-  <rect x="98" y="102" width="282" height="42" rx="21" fill="#0a1518" stroke="#55d6be" stroke-opacity="0.58"/>
-
-  <g clip-path="url(#panelClip)">
-    <circle cx="986" cy="314" r="252" fill="#07100f" opacity="0.55"/>
-    <image href="astro001-cutout.png" x="756" y="56" width="430" height="430" opacity="0.9"/>
-    <path d="M800 488C884 441 978 420 1100 432L1142 576H720C735 538 761 510 800 488Z" fill="#10261f" opacity="0.96"/>
-    <path d="M770 505C868 456 978 438 1120 456" fill="none" stroke="#55d6be" stroke-width="2" stroke-opacity="0.45"/>
+  <g clip-path="url(#frameClip)">
+    <circle cx="954" cy="302" r="280" fill="url(#blueGlow)"/>
+    <path d="M737 92H1146V586H846C792 512 761 425 753 326C747 242 742 164 737 92Z" fill="#000000" opacity="0.22"/>
+    <path d="M760 514C862 462 998 444 1136 472L1146 586H724C728 552 740 530 760 514Z" fill="#100d0b" opacity="0.86"/>
+    <path d="M750 518C854 468 990 450 1130 475" fill="none" stroke="#257da7" stroke-width="2" stroke-opacity="0.44"/>
+    <image href="astro001-cutout.png" x="757" y="78" width="424" height="424" opacity="0.96" filter="url(#astroGlow)"/>
   </g>
 
-  <text x="122" y="132" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#dffaf3">ENCONTRE AQUI TECH</text>
-  <rect x="100" y="172" width="520" height="7" rx="3.5" fill="url(#accent)"/>
-
-  <text x="98" y="259" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#f7fffb">Encontre antes</text>
-  <text x="98" y="331" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" fill="#f7fffb">de todo mundo.</text>
-
-  <text x="102" y="386" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="650" fill="#d5e8e2">Notícias, Alertas de Segurança,</text>
-  <text x="102" y="424" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="650" fill="#d5e8e2">Tutoriais e Curiosidades</text>
-  <text x="102" y="462" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="650" fill="#d5e8e2">para viver melhor no mundo Tech!</text>
-
-  <g transform="translate(98 505)">
-    <rect width="142" height="44" rx="8" fill="#55d6be"/>
-    <text x="22" y="29" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#06110f">NOTÍCIAS</text>
-  </g>
-  <g transform="translate(256 505)">
-    <rect width="156" height="44" rx="8" fill="#8ee86e"/>
-    <text x="22" y="29" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#06110f">SEGURANÇA</text>
-  </g>
-  <g transform="translate(428 505)">
-    <rect width="150" height="44" rx="8" fill="#f6d55c"/>
-    <text x="21" y="29" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#06110f">TUTORIAIS</text>
-  </g>
-  <g transform="translate(594 505)">
-    <rect width="174" height="44" rx="8" fill="#dffaf3"/>
-    <text x="20" y="29" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#06110f">CURIOSIDADES</text>
+  <g filter="url(#softLift)">
+    <rect x="96" y="88" width="186" height="42" rx="8" fill="#100d0b" stroke="#faebd1" stroke-opacity="0.28"/>
+    <text x="120" y="115" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800" fill="#faebd1">ENCONTRE AQUI TECH</text>
   </g>
 
-  <text x="836" y="536" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#f7fffb">encontreaquitech.com</text>
+  <text x="96" y="202" font-family="JetBrains Mono, Consolas, monospace" font-size="17" font-weight="800" letter-spacing="3" fill="#c29f73">TECNOLOGIA PARA ENCONTRAR ANTES</text>
+  <rect x="96" y="226" width="426" height="4" fill="#257da7"/>
+  <rect x="522" y="226" width="122" height="4" fill="#c29f73"/>
+
+  <text x="96" y="312" font-family="Orbitron, JetBrains Mono, Consolas, monospace" font-size="72" font-weight="900" letter-spacing="1" fill="#faebd1">ENCONTRE ANTES</text>
+  <text x="96" y="395" font-family="Orbitron, JetBrains Mono, Consolas, monospace" font-size="72" font-weight="900" letter-spacing="1" fill="#faebd1">DE TODO MUNDO</text>
+
+  <text x="100" y="454" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#faebd1" opacity="0.86">Notícias, Alertas de Segurança, Tutoriais,</text>
+  <text x="100" y="492" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#faebd1" opacity="0.86">Curiosidades para viver melhor no mundo Tech!</text>
+
+  <g transform="translate(96 535)" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800">
+    <rect x="0" y="0" width="192" height="42" rx="8" fill="#faebd1"/>
+    <text x="23" y="27" fill="#100d0b">conteúdo útil</text>
+    <rect x="208" y="0" width="214" height="42" rx="8" fill="#100d0b" stroke="#faebd1" stroke-opacity="0.28"/>
+    <text x="229" y="27" fill="#faebd1">conhecimento tech</text>
+    <rect x="438" y="0" width="198" height="42" rx="8" fill="#257da7"/>
+    <text x="461" y="27" fill="#faebd1">alertas digitais</text>
+  </g>
+
+  <text x="896" y="548" font-family="JetBrains Mono, Consolas, monospace" font-size="21" font-weight="800" fill="#faebd1">encontreaquitech.com</text>
 </svg>
