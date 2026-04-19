@@ -903,8 +903,8 @@ h4 {
 
 .signal-panel {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
   padding: 1rem;
   border: 1px solid rgba(61, 45, 36, 0.18);
   background: var(--ink);
@@ -913,15 +913,16 @@ h4 {
 
 .signal-panel span {
   display: grid;
-  min-height: 6.25rem;
+  min-height: 4.8rem;
   place-items: center;
   border: 1px solid rgba(250, 235, 209, 0.14);
   border-radius: 8px;
-  padding: 0.8rem;
+  padding: 0.75rem 0.55rem;
   color: var(--cream);
   font-family: var(--font-primary);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 800;
+  line-height: 1.3;
   text-align: center;
   text-transform: uppercase;
   background: rgba(250, 235, 209, 0.06);
@@ -2951,6 +2952,10 @@ h4 {
   .editorial-grid,
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .signal-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .topic-large {
