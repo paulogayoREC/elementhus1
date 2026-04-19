@@ -55,7 +55,10 @@ const createAuthModal = () => {
           </label>
           <label>
             <span>Senha</span>
-            <input type="password" name="password" autocomplete="current-password" placeholder="Sua senha" required>
+            <span class="auth-password-field">
+              <input type="password" name="password" autocomplete="current-password" placeholder="Sua senha" required data-auth-password-input>
+              <button class="auth-password-toggle" type="button" data-auth-password-toggle aria-label="Mostrar senha" aria-pressed="false">Mostrar</button>
+            </span>
           </label>
           <button class="button button-primary auth-submit" type="submit">Entrar</button>
           <p class="auth-switch">Ainda não tem login? <button type="button" data-auth-switch="register">Crie sua conta</button></p>
@@ -74,12 +77,18 @@ const createAuthModal = () => {
           </label>
           <label>
             <span>Senha</span>
-            <input type="password" name="password" autocomplete="new-password" placeholder="Mínimo 8 caracteres" required>
+            <span class="auth-password-field">
+              <input type="password" name="password" autocomplete="new-password" placeholder="Mínimo 8 caracteres" required data-auth-password-input>
+              <button class="auth-password-toggle" type="button" data-auth-password-toggle aria-label="Mostrar senha" aria-pressed="false">Mostrar</button>
+            </span>
             <small class="auth-field-error" data-error-for="password"></small>
           </label>
           <label>
             <span>Confirmar senha</span>
-            <input type="password" name="password_confirmation" autocomplete="new-password" placeholder="Repita sua senha" required>
+            <span class="auth-password-field">
+              <input type="password" name="password_confirmation" autocomplete="new-password" placeholder="Repita sua senha" required data-auth-password-input>
+              <button class="auth-password-toggle" type="button" data-auth-password-toggle aria-label="Mostrar confirmação de senha" aria-pressed="false">Mostrar</button>
+            </span>
             <small class="auth-field-error" data-error-for="password_confirmation"></small>
           </label>
           <label class="auth-check">
@@ -152,6 +161,22 @@ const initAuth = () => {
   const loginForm = modal.querySelector("[data-auth-login]");
   const registerForm = modal.querySelector("[data-auth-register]");
   const logoutButton = modal.querySelector("[data-auth-logout]");
+
+  modal.querySelectorAll("[data-auth-password-toggle]").forEach((button) => {
+    const field = button.closest(".auth-password-field");
+    const input = field?.querySelector("[data-auth-password-input]");
+
+    if (!input) return;
+
+    button.addEventListener("click", () => {
+      const shouldShow = input.type === "password";
+      input.type = shouldShow ? "text" : "password";
+      button.textContent = shouldShow ? "Ocultar" : "Mostrar";
+      button.setAttribute("aria-pressed", String(shouldShow));
+      button.setAttribute("aria-label", shouldShow ? "Ocultar senha" : "Mostrar senha");
+      input.focus();
+    });
+  });
 
   const setStatus = (message = "", type = "") => {
     status.textContent = message;

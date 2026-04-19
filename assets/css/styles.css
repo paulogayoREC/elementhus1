@@ -1494,6 +1494,42 @@ h4 {
   box-shadow: 0 0 0 3px rgba(37, 125, 167, 0.18), 0 0 20px rgba(37, 125, 167, 0.16);
 }
 
+.auth-password-field {
+  position: relative;
+  display: grid;
+}
+
+.auth-password-field input {
+  padding-right: 5.2rem;
+}
+
+.auth-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.38rem;
+  min-height: 1.9rem;
+  transform: translateY(-50%);
+  border: 1px solid rgba(37, 125, 167, 0.42);
+  border-radius: 8px;
+  padding: 0.34rem 0.52rem;
+  color: rgba(250, 235, 209, 0.8);
+  font-family: var(--font-primary);
+  font-size: 0.58rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  background: rgba(37, 125, 167, 0.12);
+}
+
+.auth-password-toggle:hover,
+.auth-password-toggle:focus-visible {
+  border-color: rgba(37, 125, 167, 0.82);
+  color: var(--cream);
+  background: rgba(37, 125, 167, 0.2);
+  box-shadow: 0 0 14px rgba(37, 125, 167, 0.2);
+  outline: none;
+}
+
 .auth-check {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -3210,6 +3246,15 @@ h4 {
   .feedback-form textarea,
   .auth-form input {
     font-size: 1rem;
+  }
+
+  .auth-password-field input {
+    padding-right: 5.7rem;
+  }
+
+  .auth-password-toggle {
+    min-height: 2rem;
+    font-size: 0.56rem;
   }
 
   .feedback-compact-row {
