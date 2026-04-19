@@ -26,8 +26,9 @@ final class Database
         );
 
         if (
-            str_contains($password, 'COLOQUE_A_SENHA')
-            || str_contains($password, 'SENHA_DO_MYSQL')
+            strpos($password, 'COLOQUE_A_SENHA') !== false
+            || strpos($password, 'SENHA_DO_MYSQL') !== false
+            || strpos($password, 'SUA_SENHA_REAL') !== false
             || ($usesHostingerDefaults && $password === '')
         ) {
             throw new RuntimeException('Senha do banco de dados não configurada.');
