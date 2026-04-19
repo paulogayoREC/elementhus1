@@ -2584,6 +2584,116 @@ h4 {
   padding: 1.2rem;
 }
 
+.affiliate-product-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  min-height: 20.5rem;
+  padding: 0.82rem;
+  gap: 0.72rem;
+}
+
+.affiliate-product-card .product-tag {
+  margin-bottom: 0;
+}
+
+.product-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 9.4rem;
+  overflow: hidden;
+  border: 1px solid rgba(250, 235, 209, 0.14);
+  border-radius: 8px;
+  padding: 0.7rem;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(37, 125, 167, 0.16), transparent 48%),
+    rgba(250, 235, 209, 0.94);
+}
+
+.product-media::after {
+  position: absolute;
+  inset: auto 12% 0.7rem;
+  height: 0.7rem;
+  content: "";
+  border-radius: 999px;
+  background: rgba(16, 13, 11, 0.14);
+  filter: blur(10px);
+}
+
+.product-media img {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 10rem);
+  height: 8rem;
+  object-fit: contain;
+  filter: saturate(0.96) contrast(1.03);
+}
+
+.product-info {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-content: space-between;
+  gap: 0.68rem;
+  height: 100%;
+}
+
+.product-info h4 {
+  display: -webkit-box;
+  min-height: 2.7rem;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(250, 235, 209, 0.12);
+  border-bottom: 1px solid rgba(250, 235, 209, 0.12);
+  padding: 0.62rem 0;
+}
+
+.product-price-row span,
+.product-price-row strong {
+  font-family: var(--font-primary);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.product-price-row span {
+  color: rgba(250, 235, 209, 0.58);
+  font-weight: 700;
+}
+
+.product-price-row strong {
+  color: var(--bronze);
+  font-weight: 800;
+  text-align: right;
+}
+
+.product-card .product-buy-link {
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+  border-color: rgba(250, 235, 209, 0.32);
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.product-card .product-buy-link:hover,
+.product-card .product-buy-link:focus-visible {
+  border-color: var(--blue);
+  color: var(--cream);
+  background: var(--blue);
+}
+
 .product-tag {
   position: relative;
   display: inline-flex;
