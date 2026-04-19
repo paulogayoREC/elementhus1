@@ -7,6 +7,7 @@ const feedbackStatus = document.querySelector("[data-feedback-status]");
 const feedbackMessage = document.querySelector("[data-feedback-message]");
 const feedbackCount = document.querySelector("[data-feedback-count]");
 const feedbackName = feedbackForm?.querySelector('input[name="name"]');
+const shareButtons = document.querySelectorAll("[data-share-site]");
 const feedbackStorageKey = "encontreAquiTechFeedback";
 const feedbackCleanupKey = `${feedbackStorageKey}:removedLastJulia`;
 const feedbackNameStorageKey = `${feedbackStorageKey}:name`;
@@ -153,6 +154,69 @@ menuToggle?.addEventListener("click", () => {
 
 menu?.querySelectorAll("a, button").forEach((link) => {
   link.addEventListener("click", closeMenu);
+});
+
+const copyShareUrl = async (url) => {
+  if (navigator.clipboard?.writeText && window.isSecureContext) {
+    await navigator.clipboard.writeText(url);
+    return;
+  }
+
+  const field = document.createElement("textarea");
+  field.value = url;
+  field.setAttribute("readonly", "");
+  field.style.position = "fixed";
+  field.style.top = "-9999px";
+  field.style.left = "-9999px";
+  document.body.append(field);
+  field.select();
+  document.execCommand("copy");
+  field.remove();
+};
+
+const setShareButtonFeedback = (button, message) => {
+  const originalLabel = button.dataset.shareOriginalLabel || button.getAttribute("aria-label") || "Compartilhar";
+  button.dataset.shareOriginalLabel = originalLabel;
+  button.classList.add("is-copied");
+  button.setAttribute("aria-label", message);
+  button.title = message;
+
+  window.clearTimeout(Number(button.dataset.shareTimer || 0));
+  button.dataset.shareTimer = String(window.setTimeout(() => {
+    button.classList.remove("is-copied");
+    button.setAttribute("aria-label", originalLabel);
+    button.title = "Compartilhar";
+  }, 1800));
+};
+
+shareButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const url = button.dataset.shareUrl || window.location.origin;
+    const shareData = {
+      title: "Encontre Aqui Tech | Encontre Antes de Todo Mundo",
+      text: "Notícias, Alertas de Segurança, Tutoriais, Curiosidades para viver melhor no mundo Tech!",
+      url
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        return;
+      }
+
+      await copyShareUrl(url);
+      setShareButtonFeedback(button, "Link copiado");
+    } catch (error) {
+      if (error?.name === "AbortError") return;
+
+      try {
+        await copyShareUrl(url);
+        setShareButtonFeedback(button, "Link copiado");
+      } catch {
+        setShareButtonFeedback(button, "Não foi possível copiar");
+      }
+    }
+  });
 });
 
 document.addEventListener("keydown", (event) => {
