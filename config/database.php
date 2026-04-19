@@ -34,8 +34,8 @@ $value = static function (string $key, string $default = '') use ($privateConfig
 return [
     'host' => $value('DB_HOST', 'localhost'),
     'port' => $value('DB_PORT', '3306'),
-    'name' => $value('DB_NAME'),
-    'user' => $value('DB_USER'),
+    'name' => $value('DB_NAME', 'u994269801_bd_eat'),
+    'user' => $value('DB_USER', 'u994269801_paulogayo'),
     'pass' => $value('DB_PASS'),
     'charset' => 'utf8mb4',
 ];

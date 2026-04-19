@@ -101,9 +101,9 @@ declare(strict_types=1);
 return [
     'DB_HOST' => 'localhost',
     'DB_PORT' => '3306',
-    'DB_NAME' => 'NOME_DO_BANCO_AQUI',
-    'DB_USER' => 'USUARIO_DO_BANCO_AQUI',
-    'DB_PASS' => 'SENHA_DO_BANCO_AQUI',
+    'DB_NAME' => 'u994269801_bd_eat',
+    'DB_USER' => 'u994269801_paulogayo',
+    'DB_PASS' => 'SENHA_DO_MYSQL_DA_HOSTINGER_AQUI',
 ];
 ```
 
@@ -123,17 +123,43 @@ DB_USER
 DB_PASS
 ```
 
+Para o domínio `encontreaquitech.com`, o projeto já está preparado para usar:
+
+```txt
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=u994269801_bd_eat
+DB_USER=u994269801_paulogayo
+```
+
+Você ainda precisa preencher `DB_PASS` com a senha do usuário MySQL criada no hPanel da Hostinger. Não publique essa senha no GitHub.
+
 ## Como publicar na Hostinger
 
 1. Faça upload dos arquivos do site para a pasta pública do domínio, normalmente `public_html`.
 2. No hPanel, crie o banco em `Bancos de dados > Bancos de dados MySQL`.
 3. Abra o phpMyAdmin e execute `database/schema.sql`.
-4. Crie o arquivo `private/database.php` com as credenciais reais.
+4. Crie o arquivo `private/database.php` com as credenciais reais. Prefira criar esse arquivo um nível acima de `public_html`, por exemplo `domains/encontreaquitech.com/private/database.php`.
 5. Acesse `https://encontreaquitech.com`.
 6. Clique em `Login` no menu.
 7. Abra `Criar conta`, preencha os dados e confirme o cadastro.
 
 Depois do cadastro, o sistema inicia a sessão automaticamente.
+
+## Erro "Configuração indisponível"
+
+Essa mensagem aparece quando o PHP não encontrou os dados completos do MySQL. Confira:
+
+```txt
+DB_HOST=localhost
+DB_NAME=u994269801_bd_eat
+DB_USER=u994269801_paulogayo
+DB_PASS=senha real do usuário MySQL
+```
+
+Se `DB_PASS` ainda estiver como `COLOQUE_A_SENHA...` ou estiver vazio, o cadastro não vai conectar ao banco.
+
+Se a senha estiver correta e o erro mudar para conexão/consulta, confirme também se a tabela `users` foi criada no phpMyAdmin usando `database/schema.sql`.
 
 ## Como testar localmente
 
