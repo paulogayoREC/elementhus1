@@ -29,6 +29,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   color: var(--cream);
   background: var(--ink);
   font-family: var(--font-secondary);
@@ -1803,7 +1804,7 @@ h4 {
 
 @media (max-width: 980px) {
   .nav-shell {
-    min-height: 4.5rem;
+    min-height: 4.15rem;
   }
 
   .menu-toggle {
@@ -1815,7 +1816,8 @@ h4 {
     gap: 0.35rem 0.55rem;
     border: 1px solid rgba(250, 235, 209, 0.24);
     border-radius: 8px;
-    padding: 0.62rem 0.75rem;
+    min-height: 2.75rem;
+    padding: 0.52rem 0.68rem;
     color: var(--cream);
     font-family: var(--font-primary);
     font-size: 0.78rem;
@@ -1872,13 +1874,14 @@ h4 {
 
   .nav-links {
     display: grid;
-    gap: 0.75rem;
+    gap: 0.55rem;
   }
 
   .nav-links a {
     justify-content: center;
-    padding: 1rem;
-    font-size: 1rem;
+    min-height: 3rem;
+    padding: 0.78rem;
+    font-size: 0.9rem;
   }
 
   .nav-socials {
@@ -1888,9 +1891,9 @@ h4 {
   }
 
   .nav-social {
-    min-height: 3rem;
+    min-height: 2.7rem;
     padding: 0.6rem 0.5rem;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
   }
 
   .nav-social .social-icon {
@@ -1899,8 +1902,8 @@ h4 {
   }
 
   .hero-section {
-    min-height: 88svh;
-    padding: 6.5rem 0 4.5rem;
+    min-height: 78svh;
+    padding: 6rem 0 5.75rem;
   }
 
   .hero-media {
@@ -1912,7 +1915,7 @@ h4 {
   }
 
   h1 {
-    font-size: 4.1rem;
+    font-size: 3.65rem;
   }
 
   h2 {
@@ -1944,11 +1947,11 @@ h4 {
   }
 
   .shop-hero h1 {
-    font-size: 3.55rem;
+    font-size: 3.15rem;
   }
 
   .topic-hero h1 {
-    font-size: 3.35rem;
+    font-size: 3rem;
   }
 
   .footer-layout {
@@ -1965,13 +1968,13 @@ h4 {
 
 @media (max-width: 700px) {
   .section {
-    padding: 4.25rem 0;
+    padding: 3.35rem 0;
   }
 
   .section-inner,
   .hero-content,
   .nav-shell {
-    width: min(100% - 1rem, 1180px);
+    width: min(100% - 2rem, 1180px);
   }
 
   .brand-avatar {
@@ -1980,30 +1983,30 @@ h4 {
   }
 
   .brand-name {
-    max-width: 12.5rem;
-    font-size: 0.84rem;
+    max-width: 11.4rem;
+    font-size: 0.8rem;
   }
 
   .hero-section {
-    min-height: auto;
-    padding: 6.25rem 0 4.75rem;
+    min-height: 82svh;
+    padding: 5.25rem 0 4.6rem;
   }
 
   .hero-media {
-    top: 7.05rem;
-    right: -3.75rem;
+    top: 6.55rem;
+    right: -5.25rem;
     bottom: auto;
-    width: 20rem;
-    opacity: 0.48;
+    width: 18.5rem;
+    opacity: 0.36;
   }
 
   .topic-hero {
     min-height: auto;
-    padding: 6.25rem 0 4rem;
+    padding: 5.6rem 0 3.25rem;
   }
 
   .topic-hero h1 {
-    font-size: 2.55rem;
+    font-size: 2.28rem;
   }
 
   .topic-hero-media {
@@ -2014,17 +2017,37 @@ h4 {
   }
 
   h1 {
-    font-size: 3rem;
+    max-width: 12ch;
+    margin-bottom: 0.85rem;
+    font-size: 2.48rem;
+    line-height: 1;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.82rem;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.7rem;
+    font-size: 0.68rem;
+    line-height: 1.35;
   }
 
   .hero-copy,
   .shop-hero p,
   .topic-hero p:not(.eyebrow) {
-    font-size: 1rem;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .hero-copy {
+    max-width: 22rem;
+    margin-bottom: 1.35rem;
   }
 
   .hero-actions,
@@ -2039,29 +2062,74 @@ h4 {
     justify-content: center;
   }
 
+  .button {
+    min-height: 2.85rem;
+    padding: 0.72rem 0.85rem;
+    font-size: 0.78rem;
+  }
+
   .mission-strip {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .mission-strip span {
-    padding: 0.55rem;
-    font-size: 0.7rem;
+    display: grid;
+    min-height: 3.1rem;
+    place-items: center;
+    padding: 0.45rem 0.28rem;
+    font-size: 0.56rem;
+    line-height: 1.25;
   }
 
   .mission-strip span + span {
-    border-top: 1px solid rgba(250, 235, 209, 0.14);
-    border-left: 0;
+    border-top: 0;
+    border-left: 1px solid rgba(250, 235, 209, 0.14);
+  }
+
+  .intro-layout {
+    gap: 1rem;
+  }
+
+  .intro-layout p:last-child {
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   .editorial-grid,
-  .product-grid,
-  .signal-panel {
+  .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .signal-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+    padding: 0.7rem;
+  }
+
+  .signal-panel span {
+    min-height: 4.3rem;
+    padding: 0.65rem 0.45rem;
+    font-size: 0.68rem;
+    line-height: 1.35;
   }
 
   .topic-card,
   .product-card {
     min-height: auto;
+    padding: 1rem;
+  }
+
+  .topic-card p,
+  .product-card p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .topic-card a,
+  .product-card a {
+    min-height: 2.5rem;
+    padding: 0.58rem 0.7rem;
+    font-size: 0.72rem;
   }
 
   .content-card {
@@ -2075,7 +2143,7 @@ h4 {
 
   .feedback-form,
   .comment-stream {
-    padding: 1rem;
+    padding: 0.85rem;
   }
 
   .feedback-compact-row {
@@ -2103,7 +2171,7 @@ h4 {
 
   .topic-kicker,
   .product-tag {
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.9rem;
   }
 
   .about-layout {
@@ -2111,34 +2179,106 @@ h4 {
   }
 
   .shop-hero {
-    padding: 6.25rem 0 3.5rem;
+    padding: 5.6rem 0 3rem;
   }
 
   .shop-hero h1 {
-    font-size: 2.7rem;
+    font-size: 2.35rem;
+  }
+
+  .category-nav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-width: thin;
+  }
+
+  .category-nav a {
+    flex: 0 0 auto;
+    padding: 0.62rem 0.75rem;
+    font-size: 0.7rem;
   }
 
   .product-category {
-    padding: 1.75rem 0;
+    padding: 1.4rem 0;
+  }
+
+  .focus-panel {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .focus-panel span {
+    margin-bottom: 0.8rem;
+    font-size: 0.62rem;
+  }
+
+  .focus-panel h2 {
+    font-size: 1.35rem;
+  }
+
+  .focus-panel p {
+    font-size: 0.92rem;
+    line-height: 1.55;
   }
 
 }
 
 @media (max-width: 420px) {
   h1 {
-    font-size: 2.42rem;
+    font-size: 2.08rem;
   }
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.52rem;
   }
 
   .shop-hero h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .topic-hero h1 {
-    font-size: 2.2rem;
+    font-size: 1.92rem;
+  }
+
+  .nav-shell {
+    min-height: 3.7rem;
+  }
+
+  .brand-avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .brand-name {
+    max-width: 10.4rem;
+    font-size: 0.74rem;
+  }
+
+  .menu-toggle {
+    grid-template-columns: 1.05rem;
+    width: 2.65rem;
+    min-height: 2.5rem;
+    overflow: hidden;
+    padding: 0.48rem;
+    font-size: 0;
+  }
+
+  .menu-toggle span {
+    width: 1.05rem;
+  }
+
+  .hero-section {
+    min-height: 76svh;
+    padding-top: 4.75rem;
+  }
+
+  .hero-media {
+    top: 6.25rem;
+    right: -5.8rem;
+    width: 17rem;
+    opacity: 0.32;
   }
 
   .nav-links a {
@@ -2148,6 +2288,15 @@ h4 {
   .nav-social {
     gap: 0.32rem;
     font-size: 0.68rem;
+  }
+
+  .mission-strip span {
+    min-height: 2.75rem;
+    font-size: 0.54rem;
+  }
+
+  .signal-panel {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
