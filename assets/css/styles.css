@@ -2600,11 +2600,11 @@ h4 {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 9.4rem;
+  min-height: 10.1rem;
   overflow: hidden;
   border: 1px solid rgba(250, 235, 209, 0.14);
   border-radius: 8px;
-  padding: 0.7rem;
+  padding: 0.75rem;
   background:
     radial-gradient(circle at 50% 22%, rgba(37, 125, 167, 0.22), transparent 50%),
     linear-gradient(145deg, rgba(250, 235, 209, 0.14), rgba(37, 125, 167, 0.1)),
@@ -2625,8 +2625,8 @@ h4 {
 .product-media img {
   position: relative;
   z-index: 1;
-  width: min(100%, 10rem);
-  height: 8rem;
+  width: min(100%, 12.2rem);
+  height: 8.9rem;
   object-fit: contain;
   filter: saturate(0.98) contrast(1.04) drop-shadow(0 16px 22px rgba(0, 0, 0, 0.34));
 }
