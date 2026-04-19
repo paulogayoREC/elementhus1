@@ -118,7 +118,7 @@ renderHomeEditorialHighlights();
 renderTopicEditorialLists();
 
 const revealTargets = document.querySelectorAll(
-  ".section-heading, .topic-card, .topic-feature, .content-card, .feature-copy, .signal-panel, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel"
+  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .signal-panel, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside"
 );
 
 const setHeaderState = () => {
