@@ -7,7 +7,6 @@ const feedbackStatus = document.querySelector("[data-feedback-status]");
 const feedbackMessage = document.querySelector("[data-feedback-message]");
 const feedbackCount = document.querySelector("[data-feedback-count]");
 const feedbackName = feedbackForm?.querySelector('input[name="name"]');
-const shareButtons = document.querySelectorAll("[data-share-site]");
 const feedbackStorageKey = "encontreAquiTechFeedback";
 const feedbackCleanupKey = `${feedbackStorageKey}:removedLastJulia`;
 const feedbackNameStorageKey = `${feedbackStorageKey}:name`;
@@ -156,6 +155,19 @@ menu?.querySelectorAll("a, button").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
+const createMobileShareButton = () => {
+  const shareButton = document.querySelector("[data-share-site]");
+
+  if (!shareButton || !menuToggle || document.querySelector("[data-share-site-mobile]")) {
+    return;
+  }
+
+  const mobileShareButton = shareButton.cloneNode(true);
+  mobileShareButton.classList.add("nav-share-button-mobile");
+  mobileShareButton.dataset.shareSiteMobile = "";
+  menuToggle.before(mobileShareButton);
+};
+
 const copyShareUrl = async (url) => {
   if (navigator.clipboard?.writeText && window.isSecureContext) {
     await navigator.clipboard.writeText(url);
@@ -189,8 +201,12 @@ const setShareButtonFeedback = (button, message) => {
   }, 1800));
 };
 
-shareButtons.forEach((button) => {
+createMobileShareButton();
+
+document.querySelectorAll("[data-share-site]").forEach((button) => {
   button.addEventListener("click", async () => {
+    closeMenu();
+
     const url = button.dataset.shareUrl || window.location.origin;
     const shareData = {
       title: "Encontre Aqui Tech | Encontre Antes de Todo Mundo",
