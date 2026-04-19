@@ -83,7 +83,7 @@ function require_csrf(): void
     }
 }
 
-function clean_text(mixed $value, int $maxLength): string
+function clean_text($value, int $maxLength): string
 {
     $text = trim((string) $value);
     $text = preg_replace('/\s+/', ' ', $text) ?? '';
@@ -95,7 +95,7 @@ function clean_text(mixed $value, int $maxLength): string
     return substr($text, 0, $maxLength);
 }
 
-function normalize_email(mixed $value): string
+function normalize_email($value): string
 {
     return strtolower(trim((string) $value));
 }
@@ -105,9 +105,27 @@ function password_is_strong(string $password): bool
     return (bool) preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/', $password);
 }
 
-function bool_from_input(mixed $value): bool
+function bool_from_input($value): bool
 {
     return in_array($value, [true, 1, '1', 'true', 'on', 'yes'], true);
+}
+
+function safe_database_error_message(Throwable $exception, string $fallback): string
+{
+    $safeMessages = [
+        'Configuração do banco de dados incompleta.',
+        'Senha do banco de dados não configurada.',
+        'Extensão PDO do PHP indisponível.',
+        'Extensão pdo_mysql do PHP indisponível.',
+    ];
+
+    $message = $exception->getMessage();
+
+    if (in_array($message, $safeMessages, true)) {
+        return $message;
+    }
+
+    return $fallback;
 }
 
 function client_ip(): ?string

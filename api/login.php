@@ -46,6 +46,9 @@ try {
     error_log($exception->getMessage());
     json_response([
         'ok' => false,
-        'message' => 'Não foi possível entrar agora. Verifique a configuração do banco.',
+        'message' => safe_database_error_message(
+            $exception,
+            'Não foi possível entrar agora. Verifique a configuração do banco.'
+        ),
     ], 500);
 }

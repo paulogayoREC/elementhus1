@@ -137,6 +137,9 @@ try {
     error_log($exception->getMessage());
     json_response([
         'ok' => false,
-        'message' => 'Configuração indisponível. Verifique os dados do banco de dados.',
+        'message' => safe_database_error_message(
+            $exception,
+            'Configuração indisponível. Verifique os dados do banco de dados.'
+        ),
     ], 500);
 }

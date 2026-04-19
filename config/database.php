@@ -3,10 +3,46 @@
 declare(strict_types=1);
 
 $privateConfig = [];
-$privateConfigPaths = [
-    dirname(__DIR__, 2) . '/private/database.php',
-    dirname(__DIR__) . '/private/database.php',
-];
+$projectRoot = dirname(__DIR__);
+$privateConfigPaths = [];
+
+$addPrivateConfigPath = static function (string $path) use (&$privateConfigPaths): void {
+    $path = str_replace('\\', '/', trim($path));
+
+    if ($path !== '' && !in_array($path, $privateConfigPaths, true)) {
+        $privateConfigPaths[] = $path;
+    }
+};
+
+$configuredPath = getenv('DB_CONFIG_PATH');
+if ($configuredPath !== false && $configuredPath !== '') {
+    $addPrivateConfigPath($configuredPath);
+}
+
+$addPrivateConfigPath($projectRoot . '/private/database.php');
+$addPrivateConfigPath(dirname($projectRoot) . '/private/database.php');
+
+$hostName = strtolower((string) ($_SERVER['HTTP_HOST'] ?? 'encontreaquitech.com'));
+$hostName = preg_replace('/:\d+$/', '', $hostName) ?: 'encontreaquitech.com';
+$hostName = preg_replace('/[^a-z0-9.-]/', '', $hostName) ?: 'encontreaquitech.com';
+$hostNames = [$hostName, preg_replace('/^www\./', '', $hostName), 'encontreaquitech.com'];
+$hostNames = array_values(array_unique(array_filter($hostNames)));
+
+foreach ($hostNames as $domainName) {
+    $addPrivateConfigPath($projectRoot . '/domains/' . $domainName . '/private/database.php');
+    $addPrivateConfigPath(dirname($projectRoot) . '/domains/' . $domainName . '/private/database.php');
+}
+
+$documentRoot = (string) ($_SERVER['DOCUMENT_ROOT'] ?? '');
+if ($documentRoot !== '') {
+    $documentRoot = rtrim($documentRoot, '/\\');
+    $addPrivateConfigPath($documentRoot . '/private/database.php');
+    $addPrivateConfigPath(dirname($documentRoot) . '/private/database.php');
+    foreach ($hostNames as $domainName) {
+        $addPrivateConfigPath($documentRoot . '/domains/' . $domainName . '/private/database.php');
+        $addPrivateConfigPath(dirname($documentRoot) . '/domains/' . $domainName . '/private/database.php');
+    }
+}
 
 $hasUsableDatabasePassword = static function (array $config): bool {
     $password = (string) ($config['DB_PASS'] ?? '');

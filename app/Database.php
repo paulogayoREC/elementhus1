@@ -4,12 +4,20 @@ declare(strict_types=1);
 
 final class Database
 {
-    private static ?PDO $connection = null;
+    private static $connection = null;
 
     public static function connection(): PDO
     {
         if (self::$connection instanceof PDO) {
             return self::$connection;
+        }
+
+        if (!class_exists('PDO')) {
+            throw new RuntimeException('Extensão PDO do PHP indisponível.');
+        }
+
+        if (!in_array('mysql', PDO::getAvailableDrivers(), true)) {
+            throw new RuntimeException('Extensão pdo_mysql do PHP indisponível.');
         }
 
         $config = require dirname(__DIR__) . '/config/database.php';

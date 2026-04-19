@@ -89,7 +89,13 @@ Na Hostinger, crie um arquivo privado chamado:
 private/database.php
 ```
 
-Você pode colocar essa pasta `private` na raiz do projeto ou, melhor ainda, um nível acima da pasta pública do domínio. Na Hostinger, prefira algo como `domains/encontreaquitech.com/private/database.php`, deixando `public_html` apenas para os arquivos públicos.
+Se o site estiver publicado em `public_html/domains/encontreaquitech.com`, use:
+
+```txt
+public_html/domains/encontreaquitech.com/private/database.php
+```
+
+Também é possível colocar essa pasta `private` um nível acima da pasta pública do domínio. A configuração atual procura automaticamente os caminhos mais comuns da Hostinger.
 
 Conteúdo do arquivo:
 
@@ -141,10 +147,31 @@ Você ainda precisa preencher `DB_PASS` com a senha do usuário MySQL criada no 
 3. Abra o phpMyAdmin e execute `database/schema.sql`.
 4. Crie o arquivo `private/database.php` com as credenciais reais. Prefira criar esse arquivo um nível acima de `public_html`, por exemplo `domains/encontreaquitech.com/private/database.php`.
 5. Acesse `https://encontreaquitech.com`.
-6. Clique em `Login` no menu.
-7. Abra `Criar conta`, preencha os dados e confirme o cadastro.
+6. Teste `https://encontreaquitech.com/api/db-check.php`.
+7. Clique em `Login` no menu.
+8. Abra `Criar conta`, preencha os dados e confirme o cadastro.
 
 Depois do cadastro, o sistema inicia a sessão automaticamente.
+
+## Teste de conexão com o banco
+
+Depois de publicar os arquivos, abra:
+
+```txt
+https://encontreaquitech.com/api/db-check.php
+```
+
+Se estiver tudo certo, a resposta será parecida com:
+
+```json
+{"ok":true,"stage":"ready","message":"Banco conectado e tabela users disponível."}
+```
+
+Se a resposta citar `users_table`, a conexão funcionou, mas falta criar a tabela `users` no phpMyAdmin usando `database/schema.sql`.
+
+Se a resposta citar `connection`, confira host, nome do banco, usuário, senha e permissões do usuário MySQL.
+
+Se a resposta citar `configuration`, confira se `private/database.php` está no caminho correto e com `DB_PASS` preenchido.
 
 ## Erro "Configuração indisponível"
 
