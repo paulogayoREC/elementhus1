@@ -27,8 +27,8 @@ const createAuthModal = () => {
 
       <div class="auth-dialog-heading">
         <p class="auth-kicker">Conta Tech</p>
-        <h2 id="auth-title">Entre ou crie seu acesso</h2>
-        <p id="auth-description">Salve preferências, participe melhor da comunidade e acompanhe novidades do Encontre Aqui Tech.</p>
+        <h2 id="auth-title">Acesse sua conta</h2>
+        <p id="auth-description">Entre ou crie seu cadastro para acompanhar o Encontre Aqui Tech com mais praticidade.</p>
       </div>
 
       <div class="auth-connected" data-auth-connected hidden>
@@ -53,7 +53,7 @@ const createAuthModal = () => {
             <span>Senha</span>
             <input type="password" name="password" autocomplete="current-password" placeholder="Sua senha" required>
           </label>
-          <button class="button button-primary" type="submit">Entrar</button>
+          <button class="button button-primary auth-submit" type="submit">Entrar</button>
           <p class="auth-switch">Ainda não tem login? <button type="button" data-auth-switch="register">Crie sua conta</button></p>
         </form>
 
@@ -84,7 +84,7 @@ const createAuthModal = () => {
           </label>
           <small class="auth-field-error" data-error-for="terms_accepted"></small>
           <p class="auth-password-hint">Use maiúscula, minúscula e número.</p>
-          <button class="button button-primary" type="submit">Criar conta</button>
+          <button class="button button-primary auth-submit" type="submit">Criar conta</button>
           <p class="auth-switch">Já tem login? <button type="button" data-auth-switch="login">Entre agora</button></p>
         </form>
       </div>
