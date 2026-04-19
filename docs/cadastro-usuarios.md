@@ -10,7 +10,9 @@
 - `app/Database.php`: conexão PDO com MySQL.
 - `config/database.php`: lê credenciais por variável de ambiente ou arquivo privado.
 - `config/database.private.example.php`: modelo de configuração privada.
+- `config/legal.php`: versões dos Termos, Política e dados de contato para o fluxo de aceite.
 - `database/schema.sql`: SQL para criar a tabela `users`.
+- `database/migrations/20260419_add_terms_acceptance_fields.sql`: migração para bancos já criados antes dos campos de aceite.
 - `assets/js/auth.js`: modal de Login/Cadastro e validação no front-end.
 - `app/.htaccess`, `config/.htaccess` e `database/.htaccess`: bloqueiam acesso direto às pastas internas na Hostinger.
 
@@ -25,6 +27,11 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(190) NOT NULL,
   password_hash VARCHAR(255) NOT NULL,
   terms_accepted TINYINT(1) NOT NULL DEFAULT 0,
+  terms_accepted_at DATETIME NULL,
+  terms_version VARCHAR(32) NULL,
+  privacy_version VARCHAR(32) NULL,
+  terms_accepted_ip VARCHAR(45) NULL,
+  terms_accepted_user_agent VARCHAR(255) NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
@@ -34,6 +41,43 @@ CREATE TABLE IF NOT EXISTS users (
 ```
 
 O mesmo SQL está em `database/schema.sql`.
+
+Se a tabela `users` já existir, execute primeiro a migração:
+
+```sql
+ALTER TABLE users
+  ADD COLUMN terms_accepted_at DATETIME NULL AFTER terms_accepted,
+  ADD COLUMN terms_version VARCHAR(32) NULL AFTER terms_accepted_at,
+  ADD COLUMN privacy_version VARCHAR(32) NULL AFTER terms_version,
+  ADD COLUMN terms_accepted_ip VARCHAR(45) NULL AFTER privacy_version,
+  ADD COLUMN terms_accepted_user_agent VARCHAR(255) NULL AFTER terms_accepted_ip;
+```
+
+O mesmo script está em `database/migrations/20260419_add_terms_acceptance_fields.sql`.
+
+## Onde personalizar Termos e Privacidade
+
+Atualize `config/legal.php` quando mudar versão, contato ou responsável:
+
+```php
+return [
+    'site_name' => 'Encontre Aqui Tech',
+    'domain' => 'encontreaquitech.com',
+    'responsible_name' => 'Paulo Gayo',
+    'contact_email' => 'contato@encontreaquitech.com',
+    'privacy_email' => 'privacidade@encontreaquitech.com',
+    'terms_version' => '2026-04-19',
+    'privacy_version' => '2026-04-19',
+    'effective_date' => '2026-04-19',
+];
+```
+
+Revise também os textos públicos em:
+
+```txt
+termos-de-uso/index.html
+politica-de-privacidade/index.html
+```
 
 ## Onde colocar DB_HOST, DB_NAME, DB_USER e DB_PASS
 

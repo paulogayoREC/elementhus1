@@ -8,6 +8,7 @@ require dirname(__DIR__) . '/app/Database.php';
 require_post();
 require_csrf();
 
+$legal = require dirname(__DIR__) . '/config/legal.php';
 $data = request_json();
 
 $name = clean_text($data['name'] ?? '', 120);
@@ -35,7 +36,7 @@ if ($password !== $passwordConfirmation) {
 }
 
 if (!$termsAccepted) {
-    $errors['terms_accepted'] = 'Aceite os termos e a política para continuar.';
+    $errors['terms_accepted'] = 'Leia e aceite os Termos de Uso e a Política de Privacidade para continuar.';
 }
 
 if ($errors) {
@@ -65,8 +66,27 @@ try {
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
     $insert = $pdo->prepare(
-        'INSERT INTO users (name, email, password_hash, terms_accepted)
-         VALUES (:name, :email, :password_hash, :terms_accepted)'
+        'INSERT INTO users (
+            name,
+            email,
+            password_hash,
+            terms_accepted,
+            terms_accepted_at,
+            terms_version,
+            privacy_version,
+            terms_accepted_ip,
+            terms_accepted_user_agent
+        ) VALUES (
+            :name,
+            :email,
+            :password_hash,
+            :terms_accepted,
+            :terms_accepted_at,
+            :terms_version,
+            :privacy_version,
+            :terms_accepted_ip,
+            :terms_accepted_user_agent
+        )'
     );
 
     $insert->execute([
@@ -74,6 +94,11 @@ try {
         'email' => $email,
         'password_hash' => $passwordHash,
         'terms_accepted' => $termsAccepted ? 1 : 0,
+        'terms_accepted_at' => gmdate('Y-m-d H:i:s'),
+        'terms_version' => (string) $legal['terms_version'],
+        'privacy_version' => (string) $legal['privacy_version'],
+        'terms_accepted_ip' => client_ip(),
+        'terms_accepted_user_agent' => client_user_agent(),
     ]);
 
     $user = [

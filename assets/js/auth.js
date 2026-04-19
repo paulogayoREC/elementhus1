@@ -4,6 +4,10 @@ const authState = {
   apiAvailable: true
 };
 
+const authScriptElement = document.currentScript;
+const authApiBase = authScriptElement?.src
+  ? new URL("../../api/", authScriptElement.src).toString()
+  : new URL("/api/", window.location.origin).toString();
 const authPasswordIsStrong = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
 
 const getFirstName = (name) => String(name || "Visitante").trim().split(/\s+/)[0] || "Visitante";
@@ -80,7 +84,7 @@ const createAuthModal = () => {
           </label>
           <label class="auth-check">
             <input type="checkbox" name="terms_accepted" required>
-            <span>Li e aceito os termos de uso e a política de privacidade do Encontre Aqui Tech.</span>
+            <span>Li e concordo com os <a href="/termos-de-uso/" target="_blank" rel="noopener">Termos de Uso</a> e a <a href="/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
           </label>
           <small class="auth-field-error" data-error-for="terms_accepted"></small>
           <p class="auth-password-hint">Use maiúscula, minúscula e número.</p>
@@ -108,7 +112,7 @@ const authApiRequest = async (endpoint, options = {}) => {
     headers["X-CSRF-Token"] = authState.csrfToken;
   }
 
-  const response = await fetch(`api/${endpoint}.php`, {
+  const response = await fetch(`${authApiBase}${endpoint}.php`, {
     credentials: "same-origin",
     ...options,
     headers
@@ -249,7 +253,7 @@ const initAuth = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = "Informe um e-mail válido.";
     if (!authPasswordIsStrong(password)) errors.password = "Use 8 caracteres, maiúscula, minúscula e número.";
     if (password !== passwordConfirmation) errors.password_confirmation = "As senhas precisam ser iguais.";
-    if (!termsAccepted) errors.terms_accepted = "Você precisa aceitar os termos.";
+    if (!termsAccepted) errors.terms_accepted = "Você precisa aceitar os Termos de Uso e a Política de Privacidade.";
 
     return errors;
   };

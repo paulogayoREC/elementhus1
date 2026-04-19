@@ -110,6 +110,30 @@ function bool_from_input(mixed $value): bool
     return in_array($value, [true, 1, '1', 'true', 'on', 'yes'], true);
 }
 
+function client_ip(): ?string
+{
+    $candidates = [
+        $_SERVER['HTTP_CF_CONNECTING_IP'] ?? '',
+        explode(',', (string) ($_SERVER['HTTP_X_FORWARDED_FOR'] ?? ''))[0] ?? '',
+        $_SERVER['REMOTE_ADDR'] ?? '',
+    ];
+
+    foreach ($candidates as $candidate) {
+        $ip = trim((string) $candidate);
+        if ($ip !== '' && filter_var($ip, FILTER_VALIDATE_IP)) {
+            return $ip;
+        }
+    }
+
+    return null;
+}
+
+function client_user_agent(): ?string
+{
+    $userAgent = clean_text($_SERVER['HTTP_USER_AGENT'] ?? '', 255);
+    return $userAgent !== '' ? $userAgent : null;
+}
+
 function session_user_payload(array $user): array
 {
     return [
