@@ -1,0 +1,149 @@
+# Cadastro de usuários do Encontre Aqui Tech
+
+## Estrutura criada
+
+- `api/session.php`: inicia sessão segura e entrega o token CSRF.
+- `api/register.php`: valida e cadastra novos usuários.
+- `api/login.php`: autentica usuários existentes.
+- `api/logout.php`: encerra a sessão.
+- `app/bootstrap.php`: sessão, respostas JSON, CSRF e validações comuns.
+- `app/Database.php`: conexão PDO com MySQL.
+- `config/database.php`: lê credenciais por variável de ambiente ou arquivo privado.
+- `config/database.private.example.php`: modelo de configuração privada.
+- `database/schema.sql`: SQL para criar a tabela `users`.
+- `assets/js/auth.js`: modal de Login/Cadastro e validação no front-end.
+- `app/.htaccess`, `config/.htaccess` e `database/.htaccess`: bloqueiam acesso direto às pastas internas na Hostinger.
+
+## SQL para criar a tabela
+
+Execute no phpMyAdmin da Hostinger:
+
+```sql
+CREATE TABLE IF NOT EXISTS users (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(190) NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  terms_accepted TINYINT(1) NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY users_email_unique (email),
+  KEY users_created_at_index (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+O mesmo SQL está em `database/schema.sql`.
+
+## Onde colocar DB_HOST, DB_NAME, DB_USER e DB_PASS
+
+Não coloque senha real no GitHub.
+
+Na Hostinger, crie um arquivo privado chamado:
+
+```txt
+private/database.php
+```
+
+Você pode colocar essa pasta `private` na raiz do projeto ou, melhor ainda, um nível acima da pasta pública do domínio. Na Hostinger, prefira algo como `domains/encontreaquitech.com/private/database.php`, deixando `public_html` apenas para os arquivos públicos.
+
+Conteúdo do arquivo:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+return [
+    'DB_HOST' => 'localhost',
+    'DB_PORT' => '3306',
+    'DB_NAME' => 'NOME_DO_BANCO_AQUI',
+    'DB_USER' => 'USUARIO_DO_BANCO_AQUI',
+    'DB_PASS' => 'SENHA_DO_BANCO_AQUI',
+];
+```
+
+Na Hostinger, esses dados ficam em:
+
+```txt
+hPanel > Bancos de dados > Bancos de dados MySQL
+```
+
+Também é possível usar variáveis de ambiente com os mesmos nomes:
+
+```txt
+DB_HOST
+DB_PORT
+DB_NAME
+DB_USER
+DB_PASS
+```
+
+## Como publicar na Hostinger
+
+1. Faça upload dos arquivos do site para a pasta pública do domínio, normalmente `public_html`.
+2. No hPanel, crie o banco em `Bancos de dados > Bancos de dados MySQL`.
+3. Abra o phpMyAdmin e execute `database/schema.sql`.
+4. Crie o arquivo `private/database.php` com as credenciais reais.
+5. Acesse `https://encontreaquitech.com`.
+6. Clique em `Login` no menu.
+7. Abra `Criar conta`, preencha os dados e confirme o cadastro.
+
+Depois do cadastro, o sistema inicia a sessão automaticamente.
+
+## Como testar localmente
+
+Você precisa de PHP com as extensões `pdo` e `pdo_mysql`, além de um MySQL local.
+
+1. Crie um banco local, por exemplo:
+
+```sql
+CREATE DATABASE encontreaquitech CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+2. Execute o arquivo:
+
+```txt
+database/schema.sql
+```
+
+3. Crie `private/database.php` com os dados locais:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+return [
+    'DB_HOST' => '127.0.0.1',
+    'DB_PORT' => '3306',
+    'DB_NAME' => 'encontreaquitech',
+    'DB_USER' => 'root',
+    'DB_PASS' => '',
+];
+```
+
+4. Rode o servidor local na raiz do projeto:
+
+```bash
+php -S localhost:8000
+```
+
+5. Acesse:
+
+```txt
+http://localhost:8000
+```
+
+O cadastro não funciona abrindo o `index.html` diretamente pelo navegador, porque os endpoints PHP precisam do servidor PHP ativo.
+
+## Segurança aplicada
+
+- PDO com prepared statements.
+- `password_hash()` para senha.
+- Senha nunca é salva em texto puro.
+- Validação no front-end e no back-end.
+- Bloqueio de e-mail duplicado por validação e índice `UNIQUE`.
+- Token CSRF nas ações de login, cadastro e logout.
+- Cookie de sessão com `HttpOnly`, `SameSite=Lax` e `Secure` quando estiver em HTTPS.
+- Saídas de usuário no front-end feitas com `textContent`.

@@ -151,7 +151,7 @@ menuToggle?.addEventListener("click", () => {
   }
 });
 
-menu?.querySelectorAll("a").forEach((link) => {
+menu?.querySelectorAll("a, button").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 

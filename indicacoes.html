@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
   </head>
   <body class="shop-page">
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -26,6 +27,20 @@
           <span class="brand-name">Encontre Aqui Tech</span>
         </a>
 
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+          Menu
+        </button>
+
+        <div class="site-menu" id="site-menu" data-menu>
+          <div class="nav-links">
+            <a href="index.html#editorias">Editorias</a>
+            <a href="indicacoes.html" aria-current="page">Indicações</a>
+            <button class="nav-auth-button" type="button" data-auth-open>Login</button>
+          </div>
+        </div>
       </nav>
     </header>
 
