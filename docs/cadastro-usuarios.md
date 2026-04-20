@@ -5,15 +5,21 @@
 - `api/session.php`: inicia sessão segura e entrega o token CSRF.
 - `api/register.php`: valida e cadastra novos usuários.
 - `api/login.php`: autentica usuários existentes.
+- `api/request-password-reset.php`: recebe o e-mail e dispara link seguro de redefinição.
+- `api/reset-password.php`: valida token de uso único e grava a nova senha.
 - `api/logout.php`: encerra a sessão.
 - `app/bootstrap.php`: sessão, respostas JSON, CSRF e validações comuns.
 - `app/Database.php`: conexão PDO com MySQL.
+- `app/Mailer.php`: envio de e-mails HTML/texto para recuperação de senha e confirmação de alteração.
 - `config/database.php`: lê credenciais por variável de ambiente ou arquivo privado.
 - `config/database.private.example.php`: modelo de configuração privada.
 - `config/legal.php`: versões dos Termos, Política e dados de contato para o fluxo de aceite.
 - `database/schema.sql`: SQL para criar a tabela `users`.
+- `database/migrations/20260420_create_password_resets_table.sql`: cria a tabela de tokens de redefinição.
 - `database/migrations/20260419_add_terms_acceptance_fields.sql`: migração para bancos já criados antes dos campos de aceite.
 - `assets/js/auth.js`: modal de Login/Cadastro e validação no front-end.
+- `assets/js/password-reset.js`: formulário da página de nova senha.
+- `resetar-senha.html`: página acessada pelo link enviado por e-mail.
 - `app/.htaccess`, `config/.htaccess` e `database/.htaccess`: bloqueiam acesso direto às pastas internas na Hostinger.
 
 ## SQL para criar a tabela
@@ -38,6 +44,25 @@ CREATE TABLE IF NOT EXISTS users (
   UNIQUE KEY users_email_unique (email),
   KEY users_created_at_index (created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS password_resets (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id BIGINT UNSIGNED NOT NULL,
+  email VARCHAR(190) NOT NULL,
+  token_hash CHAR(64) NOT NULL,
+  requested_ip VARCHAR(45) NULL,
+  requested_user_agent VARCHAR(255) NULL,
+  expires_at DATETIME NOT NULL,
+  used_at DATETIME NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY password_resets_token_hash_unique (token_hash),
+  KEY password_resets_user_created_index (user_id, created_at),
+  KEY password_resets_expires_at_index (expires_at),
+  CONSTRAINT password_resets_user_id_foreign
+    FOREIGN KEY (user_id) REFERENCES users (id)
+    ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
 O mesmo SQL está em `database/schema.sql`.
@@ -54,6 +79,31 @@ ALTER TABLE users
 ```
 
 O mesmo script está em `database/migrations/20260419_add_terms_acceptance_fields.sql`.
+
+Para liberar o fluxo de "Esqueci minha senha", execute também:
+
+```sql
+CREATE TABLE IF NOT EXISTS password_resets (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id BIGINT UNSIGNED NOT NULL,
+  email VARCHAR(190) NOT NULL,
+  token_hash CHAR(64) NOT NULL,
+  requested_ip VARCHAR(45) NULL,
+  requested_user_agent VARCHAR(255) NULL,
+  expires_at DATETIME NOT NULL,
+  used_at DATETIME NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY password_resets_token_hash_unique (token_hash),
+  KEY password_resets_user_created_index (user_id, created_at),
+  KEY password_resets_expires_at_index (expires_at),
+  CONSTRAINT password_resets_user_id_foreign
+    FOREIGN KEY (user_id) REFERENCES users (id)
+    ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+O mesmo script está em `database/migrations/20260420_create_password_resets_table.sql`.
 
 ## Onde personalizar Termos e Privacidade
 
@@ -129,6 +179,26 @@ DB_USER
 DB_PASS
 ```
 
+## Envio de e-mail para redefinição de senha
+
+O reset usa `mail()` do PHP e envia e-mail HTML com alternativa em texto puro. Na Hostinger, crie ou valide uma conta de e-mail do domínio antes de publicar o fluxo.
+
+Variáveis opcionais:
+
+```txt
+EAT_MAIL_FROM=seguranca@encontreaquitech.com
+EAT_MAIL_FROM_NAME=Encontre Aqui Tech
+EAT_MAIL_REPLY_TO=contato@encontreaquitech.com
+```
+
+Se essas variáveis não existirem, o sistema usa `seguranca@encontreaquitech.com` como remetente e o `contact_email` de `config/legal.php` como resposta.
+
+O link enviado aponta para:
+
+```txt
+https://encontreaquitech.com/resetar-senha.html?token=TOKEN_DE_USO_UNICO
+```
+
 Para o domínio `encontreaquitech.com`, o projeto já está preparado para usar:
 
 ```txt
@@ -168,6 +238,8 @@ Se estiver tudo certo, a resposta será parecida com:
 ```
 
 Se a resposta citar `users_table`, a conexão funcionou, mas falta criar a tabela `users` no phpMyAdmin usando `database/schema.sql`.
+
+Se a resposta citar `password_resets_table`, execute `database/migrations/20260420_create_password_resets_table.sql`.
 
 Se a resposta citar `connection`, confira host, nome do banco, usuário, senha e permissões do usuário MySQL.
 
@@ -242,5 +314,11 @@ O cadastro não funciona abrindo o `index.html` diretamente pelo navegador, porq
 - Validação no front-end e no back-end.
 - Bloqueio de e-mail duplicado por validação e índice `UNIQUE`.
 - Token CSRF nas ações de login, cadastro e logout.
+- Mensagem genérica em login e reset para reduzir enumeração de contas.
+- Reset de senha com token criptograficamente aleatório, salvo apenas como hash SHA-256.
+- Link de redefinição com expiração de 30 minutos e uso único.
+- Cooldown de 2 minutos por conta para reduzir abuso de envio de e-mails.
+- Tempo mínimo de resposta no pedido de reset para reduzir diferença perceptível entre conta existente e inexistente.
+- E-mail de confirmação após a senha ser alterada.
 - Cookie de sessão com `HttpOnly`, `SameSite=Lax` e `Secure` quando estiver em HTTPS.
 - Saídas de usuário no front-end feitas com `textContent`.

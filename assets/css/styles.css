@@ -1392,7 +1392,8 @@ h4 {
 .auth-modal-shell[hidden],
 .auth-form[hidden],
 .auth-connected[hidden],
-.auth-access[hidden] {
+.auth-access[hidden],
+.auth-recovery-card[hidden] {
   display: none;
 }
 
@@ -1487,7 +1488,9 @@ h4 {
 .auth-dialog-heading p:not(.auth-kicker),
 .auth-connected p,
 .auth-password-hint,
-.auth-switch {
+.auth-switch,
+.auth-reset-intro p,
+.auth-recovery-card p {
   color: rgba(250, 235, 209, 0.68);
   font-size: 0.8rem;
   line-height: 1.45;
@@ -1636,6 +1639,62 @@ h4 {
   font-size: 0.68rem;
 }
 
+.auth-form-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.14rem;
+}
+
+.auth-link-button,
+.auth-recovery-card button {
+  border: 0;
+  padding: 0;
+  color: #63d0ff;
+  font-family: var(--font-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+  background: transparent;
+}
+
+.auth-link-button:hover,
+.auth-link-button:focus-visible,
+.auth-recovery-card button:hover,
+.auth-recovery-card button:focus-visible {
+  color: var(--cream);
+  outline: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(37, 125, 167, 0.82);
+  text-underline-offset: 0.2rem;
+}
+
+.auth-reset-intro,
+.auth-recovery-card {
+  border: 1px solid rgba(37, 125, 167, 0.34);
+  border-radius: 8px;
+  padding: 0.72rem;
+  background: rgba(37, 125, 167, 0.08);
+}
+
+.auth-reset-intro strong,
+.auth-recovery-card strong {
+  color: var(--cream);
+  font-family: var(--font-primary);
+  font-size: 0.76rem;
+}
+
+.auth-reset-intro p,
+.auth-recovery-card p {
+  margin: 0.26rem 0 0;
+}
+
+.auth-recovery-card {
+  display: grid;
+  gap: 0.36rem;
+  border-color: rgba(255, 180, 168, 0.24);
+  background: rgba(255, 180, 168, 0.06);
+}
+
 .auth-password-hint,
 .auth-switch {
   margin: -0.18rem 0 0;
@@ -1709,6 +1768,93 @@ h4 {
   min-height: 2.65rem;
   padding: 0.68rem 0.85rem;
   font-size: 0.76rem;
+}
+
+.reset-page {
+  min-height: 100svh;
+  background:
+    linear-gradient(135deg, rgba(37, 125, 167, 0.12), transparent 34%, rgba(194, 159, 115, 0.08)),
+    #100d0b;
+}
+
+.reset-page-main {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.reset-shell {
+  width: min(100%, 32rem);
+}
+
+.reset-brand {
+  width: max-content;
+  margin: 0 0 1rem;
+}
+
+.reset-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(37, 125, 167, 0.82);
+  border-radius: 8px;
+  padding: 1.15rem;
+  color: var(--cream);
+  background:
+    linear-gradient(145deg, rgba(37, 125, 167, 0.2), transparent 42%, rgba(194, 159, 115, 0.08)),
+    linear-gradient(180deg, rgba(250, 235, 209, 0.045), transparent),
+    rgba(8, 7, 6, 0.98);
+  box-shadow:
+    0 0 0 1px rgba(99, 208, 255, 0.16),
+    0 0 34px rgba(37, 125, 167, 0.52),
+    0 24px 80px rgba(0, 0, 0, 0.54);
+}
+
+.reset-card::before {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  left: 1rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(99, 208, 255, 0.95), transparent);
+}
+
+.reset-card h1 {
+  margin: 0 0 0.42rem;
+  font-size: 1.55rem;
+  line-height: 1.18;
+}
+
+.reset-form {
+  margin-top: 1rem;
+}
+
+.reset-feedback-panel[hidden] {
+  display: none;
+}
+
+.reset-feedback-panel {
+  margin-top: 1rem;
+}
+
+.reset-inline-link {
+  display: inline-flex;
+  width: max-content;
+  margin-top: 0.72rem;
+  color: #63d0ff;
+  font-family: var(--font-primary);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(37, 125, 167, 0.82);
+  text-underline-offset: 0.2rem;
+}
+
+.reset-inline-link:hover,
+.reset-inline-link:focus-visible {
+  color: var(--cream);
+  outline: none;
 }
 
 .legal-page {
@@ -3596,7 +3742,9 @@ h4 {
   .auth-dialog-heading p:not(.auth-kicker),
   .auth-connected p,
   .auth-password-hint,
-  .auth-switch {
+  .auth-switch,
+  .auth-reset-intro p,
+  .auth-recovery-card p {
     font-size: 0.76rem;
   }
 

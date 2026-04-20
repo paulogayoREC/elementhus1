@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Redefina sua senha da Conta Tech com link seguro de uso único.">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#07100f">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <title>Redefinir senha | Encontre Aqui Tech</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon-astronaut.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260420-reset-senha">
+    <script src="assets/js/password-reset.js?v=20260420-reset-senha" defer></script>
+  </head>
+  <body class="reset-page">
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <main class="reset-page-main" id="conteudo">
+      <section class="reset-shell" aria-labelledby="reset-title">
+        <a class="brand-mark reset-brand" href="index.html" aria-label="Encontre Aqui Tech - início">
+          <span class="brand-avatar" aria-hidden="true">
+            <img src="assets/img/astronauta-eat.jpeg" alt="">
+          </span>
+          <span class="brand-name">Encontre Aqui Tech</span>
+        </a>
+
+        <div class="reset-card">
+          <div class="auth-dialog-heading">
+            <p class="auth-kicker">Conta Tech</p>
+            <h1 id="reset-title">Crie uma nova senha</h1>
+            <p>Use uma senha exclusiva para manter seu acesso protegido.</p>
+          </div>
+
+          <form class="auth-form reset-form" data-reset-password-form novalidate>
+            <label>
+              <span>Nova senha</span>
+              <span class="auth-password-field">
+                <input type="password" name="password" autocomplete="new-password" placeholder="Mínimo 8 caracteres" required>
+                <button class="auth-password-toggle" type="button" data-reset-password-toggle aria-label="Mostrar senha" aria-pressed="false">Mostrar</button>
+              </span>
+              <small class="auth-field-error" data-reset-error-for="password"></small>
+            </label>
+
+            <label>
+              <span>Confirmar nova senha</span>
+              <span class="auth-password-field">
+                <input type="password" name="password_confirmation" autocomplete="new-password" placeholder="Repita sua nova senha" required>
+                <button class="auth-password-toggle" type="button" data-reset-password-toggle aria-label="Mostrar confirmação de senha" aria-pressed="false">Mostrar</button>
+              </span>
+              <small class="auth-field-error" data-reset-error-for="password_confirmation"></small>
+            </label>
+
+            <small class="auth-field-error" data-reset-error-for="token"></small>
+            <p class="auth-password-hint">Use maiúscula, minúscula e número. Evite senhas usadas em outros serviços.</p>
+            <button class="button button-primary auth-submit" type="submit">Salvar nova senha</button>
+          </form>
+
+          <div class="auth-reset-intro reset-feedback-panel" data-reset-invalid hidden>
+            <strong>Link indisponível</strong>
+            <p>Solicite um novo envio pelo botão de login. Links de redefinição expiram e só podem ser usados uma vez.</p>
+            <a class="reset-inline-link" href="index.html">Voltar para o site</a>
+          </div>
+
+          <div class="auth-reset-intro reset-feedback-panel" data-reset-success hidden>
+            <strong>Senha atualizada</strong>
+            <p>Sua senha foi alterada com segurança. Agora entre novamente usando a nova senha.</p>
+            <a class="reset-inline-link" href="index.html">Entrar na Conta Tech</a>
+          </div>
+
+          <p class="auth-status" data-reset-status aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

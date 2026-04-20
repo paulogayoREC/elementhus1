@@ -185,10 +185,21 @@ try {
         ], 500, $exception);
     }
 
+    try {
+        $pdo->query('SELECT id FROM password_resets WHERE 1 = 0');
+    } catch (Throwable $exception) {
+        error_log($exception->getMessage());
+        db_check_response([
+            'ok' => false,
+            'stage' => 'password_resets_table',
+            'message' => 'Conexão com o banco OK, mas a tabela password_resets não foi encontrada ou está incompleta.',
+        ], 500, $exception);
+    }
+
     db_check_response([
         'ok' => true,
         'stage' => 'ready',
-        'message' => 'Banco conectado e tabela users disponível.',
+        'message' => 'Banco conectado e tabelas users/password_resets disponíveis.',
     ]);
 } catch (PDOException $exception) {
     error_log($exception->getMessage());

@@ -28,7 +28,7 @@ try {
     if (!$user || !password_verify($password, (string) $user['password_hash'])) {
         json_response([
             'ok' => false,
-            'message' => 'E-mail ou senha inválidos.',
+            'message' => 'Não foi possível entrar. Confira e-mail e senha ou use Esqueci minha senha.',
         ], 401);
     }
 

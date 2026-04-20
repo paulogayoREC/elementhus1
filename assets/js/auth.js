@@ -52,6 +52,7 @@ const createAuthModal = () => {
           <label>
             <span>E-mail</span>
             <input type="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+            <small class="auth-field-error" data-error-for="login_email"></small>
           </label>
           <label>
             <span>Senha</span>
@@ -59,9 +60,32 @@ const createAuthModal = () => {
               <input type="password" name="password" autocomplete="current-password" placeholder="Sua senha" required data-auth-password-input>
               <button class="auth-password-toggle" type="button" data-auth-password-toggle aria-label="Mostrar senha" aria-pressed="false">Mostrar</button>
             </span>
+            <small class="auth-field-error" data-error-for="login_password"></small>
           </label>
+          <div class="auth-form-row">
+            <button class="auth-link-button" type="button" data-auth-switch="forgot">Esqueci minha senha</button>
+          </div>
           <button class="button button-primary auth-submit" type="submit">Entrar</button>
+          <div class="auth-recovery-card" data-auth-login-help hidden>
+            <strong>Não conseguiu entrar?</strong>
+            <p>Confira o e-mail e a senha. Se preferir, envie um link seguro para criar uma nova senha.</p>
+            <button type="button" data-auth-switch="forgot">Enviar link de redefinição</button>
+          </div>
           <p class="auth-switch">Ainda não tem login? <button type="button" data-auth-switch="register">Crie sua conta</button></p>
+        </form>
+
+        <form class="auth-form" data-auth-panel="forgot" data-auth-forgot hidden novalidate>
+          <div class="auth-reset-intro">
+            <strong>Recuperação segura</strong>
+            <p>Informe o e-mail cadastrado. Se a conta existir, enviaremos um link de uso único para redefinir sua senha.</p>
+          </div>
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" autocomplete="email" maxlength="190" placeholder="voce@email.com" required>
+            <small class="auth-field-error" data-error-for="reset_email"></small>
+          </label>
+          <button class="button button-primary auth-submit" type="submit">Enviar link seguro</button>
+          <p class="auth-switch">Lembrou a senha? <button type="button" data-auth-switch="login">Voltar para entrar</button></p>
         </form>
 
         <form class="auth-form" data-auth-panel="register" data-auth-register hidden novalidate>
@@ -159,6 +183,8 @@ const initAuth = () => {
   const connectedArea = modal.querySelector("[data-auth-connected]");
   const connectedName = modal.querySelector("[data-auth-user-name]");
   const loginForm = modal.querySelector("[data-auth-login]");
+  const forgotForm = modal.querySelector("[data-auth-forgot]");
+  const loginHelp = modal.querySelector("[data-auth-login-help]");
   const registerForm = modal.querySelector("[data-auth-register]");
   const logoutButton = modal.querySelector("[data-auth-logout]");
 
@@ -202,8 +228,9 @@ const initAuth = () => {
   };
 
   const selectPanel = (panelName) => {
+    const activeTabName = panelName === "forgot" ? "login" : panelName;
     tabs.forEach((tab) => {
-      const isActive = tab.dataset.authTab === panelName;
+      const isActive = tab.dataset.authTab === activeTabName;
       tab.classList.toggle("is-active", isActive);
       tab.setAttribute("aria-selected", String(isActive));
     });
@@ -214,6 +241,7 @@ const initAuth = () => {
 
     setFieldErrors();
     setStatus();
+    if (loginHelp) loginHelp.hidden = true;
   };
 
   const renderAuthState = () => {
@@ -283,6 +311,18 @@ const initAuth = () => {
     return errors;
   };
 
+  const validateForgot = (formData) => {
+    const email = String(formData.get("email") || "").trim();
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return {
+        reset_email: "Informe um e-mail válido."
+      };
+    }
+
+    return {};
+  };
+
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", async () => {
       await ensureSession();
@@ -315,18 +355,34 @@ const initAuth = () => {
       setStatus("A conexão com o PHP ainda não está disponível.", "error");
       return;
     }
+    setFieldErrors();
+    if (loginHelp) loginHelp.hidden = true;
+
+    const formData = new FormData(loginForm);
+    const email = String(formData.get("email") || "").trim();
+    const password = String(formData.get("password") || "");
+    const errors = {};
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.login_email = "Informe um e-mail válido.";
+    if (!password) errors.login_password = "Informe sua senha.";
+
+    if (Object.keys(errors).length) {
+      setFieldErrors(errors);
+      setStatus("Revise os dados para entrar.", "error");
+      return;
+    }
+
     setStatus("Entrando...", "loading");
 
     const submitButton = loginForm.querySelector('button[type="submit"]');
     submitButton.disabled = true;
 
     try {
-      const formData = new FormData(loginForm);
       const data = await authApiRequest("login", {
         method: "POST",
         body: JSON.stringify({
-          email: formData.get("email"),
-          password: formData.get("password")
+          email,
+          password
         })
       });
 
@@ -336,6 +392,48 @@ const initAuth = () => {
       renderAuthState();
       setStatus(data.message || "Login realizado com sucesso.", "success");
     } catch (error) {
+      if (error.status === 401 && loginHelp) {
+        loginHelp.hidden = false;
+      }
+      setStatus(error.payload?.message || error.message, "error");
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+
+  forgotForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    await ensureSession();
+    if (!authState.csrfToken) {
+      setStatus("A conexão com o PHP ainda não está disponível.", "error");
+      return;
+    }
+    setFieldErrors();
+
+    const formData = new FormData(forgotForm);
+    const errors = validateForgot(formData);
+    if (Object.keys(errors).length) {
+      setFieldErrors(errors);
+      setStatus("Revise o e-mail informado.", "error");
+      return;
+    }
+
+    setStatus("Preparando envio seguro...", "loading");
+    const submitButton = forgotForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+
+    try {
+      const data = await authApiRequest("request-password-reset", {
+        method: "POST",
+        body: JSON.stringify({
+          email: formData.get("email")
+        })
+      });
+
+      forgotForm.reset();
+      setStatus(data.message || "Se o e-mail estiver cadastrado, enviaremos as instruções.", "success");
+    } catch (error) {
+      setFieldErrors(error.payload?.errors || {});
       setStatus(error.payload?.message || error.message, "error");
     } finally {
       submitButton.disabled = false;
