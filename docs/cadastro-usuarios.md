@@ -7,16 +7,19 @@
 - `api/login.php`: autentica usuários existentes.
 - `api/request-password-reset.php`: recebe o e-mail e dispara link seguro de redefinição.
 - `api/reset-password.php`: valida token de uso único e grava a nova senha.
+- `api/comments.php`: lista e publica comentários/avaliações no MySQL.
 - `api/logout.php`: encerra a sessão.
 - `app/bootstrap.php`: sessão, respostas JSON, CSRF e validações comuns.
 - `app/Database.php`: conexão PDO com MySQL.
 - `app/Mailer.php`: envio de e-mails HTML/texto para recuperação de senha e confirmação de alteração.
 - `app/PasswordResetStorage.php`: criação defensiva da tabela `password_resets` quando o fluxo de reset roda.
+- `app/CommentStorage.php`: criação defensiva e payload público da tabela `community_comments`.
 - `config/database.php`: lê credenciais por variável de ambiente ou arquivo privado.
 - `config/database.private.example.php`: modelo de configuração privada.
 - `config/legal.php`: versões dos Termos, Política e dados de contato para o fluxo de aceite.
 - `database/schema.sql`: SQL para criar a tabela `users`.
 - `database/migrations/20260420_create_password_resets_table.sql`: cria a tabela de tokens de redefinição.
+- `database/migrations/20260420_create_community_comments_table.sql`: cria a tabela de comentários e avaliações.
 - `database/migrations/20260419_add_terms_acceptance_fields.sql`: migração para bancos já criados antes dos campos de aceite.
 - `assets/js/auth.js`: modal de Login/Cadastro e validação no front-end.
 - `assets/js/password-reset.js`: formulário da página de nova senha.
@@ -64,6 +67,25 @@ CREATE TABLE IF NOT EXISTS password_resets (
     FOREIGN KEY (user_id) REFERENCES users (id)
     ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS community_comments (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id BIGINT UNSIGNED NULL,
+  name VARCHAR(48) NOT NULL,
+  rating TINYINT UNSIGNED NOT NULL,
+  message TEXT NOT NULL,
+  status VARCHAR(24) NOT NULL DEFAULT 'published',
+  submitted_ip VARCHAR(45) NULL,
+  submitted_user_agent VARCHAR(255) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY community_comments_status_created_index (status, created_at),
+  KEY community_comments_user_created_index (user_id, created_at),
+  CONSTRAINT community_comments_user_id_foreign
+    FOREIGN KEY (user_id) REFERENCES users (id)
+    ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
 O mesmo SQL está em `database/schema.sql`.
@@ -107,6 +129,31 @@ CREATE TABLE IF NOT EXISTS password_resets (
 O mesmo script está em `database/migrations/20260420_create_password_resets_table.sql`.
 
 O endpoint também tenta criar essa tabela automaticamente se ela ainda não existir. Mesmo assim, manter a migração executada pelo phpMyAdmin é o caminho mais previsível em produção.
+
+Para salvar comentários e avaliações no MySQL, execute:
+
+```sql
+CREATE TABLE IF NOT EXISTS community_comments (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  user_id BIGINT UNSIGNED NULL,
+  name VARCHAR(48) NOT NULL,
+  rating TINYINT UNSIGNED NOT NULL,
+  message TEXT NOT NULL,
+  status VARCHAR(24) NOT NULL DEFAULT 'published',
+  submitted_ip VARCHAR(45) NULL,
+  submitted_user_agent VARCHAR(255) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY community_comments_status_created_index (status, created_at),
+  KEY community_comments_user_created_index (user_id, created_at),
+  CONSTRAINT community_comments_user_id_foreign
+    FOREIGN KEY (user_id) REFERENCES users (id)
+    ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+O mesmo script está em `database/migrations/20260420_create_community_comments_table.sql`. O endpoint `api/comments.php` também tenta criar a tabela automaticamente se ela ainda não existir.
 
 ## Onde personalizar Termos e Privacidade
 
@@ -244,6 +291,8 @@ Se a resposta citar `users_table`, a conexão funcionou, mas falta criar a tabel
 
 Se a resposta citar `password_resets_table`, execute `database/migrations/20260420_create_password_resets_table.sql`.
 
+Se a resposta citar `community_comments_table`, execute `database/migrations/20260420_create_community_comments_table.sql`.
+
 Se a resposta citar `connection`, confira host, nome do banco, usuário, senha e permissões do usuário MySQL.
 
 Se a resposta citar `configuration`, confira se `private/database.php` está no caminho correto e com `DB_PASS` preenchido.
@@ -323,5 +372,7 @@ O cadastro não funciona abrindo o `index.html` diretamente pelo navegador, porq
 - Cooldown de 2 minutos por conta para reduzir abuso de envio de e-mails.
 - Tempo mínimo de resposta no pedido de reset para reduzir diferença perceptível entre conta existente e inexistente.
 - E-mail de confirmação após a senha ser alterada.
+- Comentários e avaliações salvos em `community_comments`, com validação no servidor, CSRF no envio e limite simples de 3 comentários a cada 2 minutos por IP.
+- Listagem pública limitada aos comentários com `status = published` e sem exposição de IP, user-agent ou e-mail.
 - Cookie de sessão com `HttpOnly`, `SameSite=Lax` e `Secure` quando estiver em HTTPS.
 - Saídas de usuário no front-end feitas com `textContent`.

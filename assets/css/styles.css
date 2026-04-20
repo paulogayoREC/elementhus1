@@ -1151,6 +1151,11 @@ h4 {
   font-size: 0.78rem;
 }
 
+.feedback-actions-row .button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
 .comment-stream {
   padding: 0.74rem;
 }

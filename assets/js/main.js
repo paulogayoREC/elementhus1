@@ -7,10 +7,17 @@ const feedbackStatus = document.querySelector("[data-feedback-status]");
 const feedbackMessage = document.querySelector("[data-feedback-message]");
 const feedbackCount = document.querySelector("[data-feedback-count]");
 const feedbackName = feedbackForm?.querySelector('input[name="name"]');
-const feedbackStorageKey = "encontreAquiTechFeedback";
-const feedbackCleanupKey = `${feedbackStorageKey}:removedLastJulia`;
-const feedbackNameStorageKey = `${feedbackStorageKey}:name`;
+const feedbackNameStorageKey = "encontreAquiTechFeedback:name";
 const feedbackMessageLimit = 500;
+const mainScriptElement = document.currentScript;
+const feedbackApiBase = mainScriptElement?.src
+  ? new URL("../../api/", mainScriptElement.src).toString()
+  : new URL("/api/", window.location.origin).toString();
+const feedbackState = {
+  csrfToken: "",
+  items: [],
+  apiAvailable: true
+};
 const editorialCategories = window.editorialData?.categories || {};
 
 const formatEditorialDate = (value) => {
@@ -276,18 +283,49 @@ document.querySelectorAll('a[href="#"]').forEach((link) => {
   });
 });
 
-const getFeedbackItems = () => {
-  try {
-    const stored = window.localStorage.getItem(feedbackStorageKey);
-    const parsed = stored ? JSON.parse(stored) : [];
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
+const feedbackApiRequest = async (endpoint, options = {}) => {
+  const [path, query = ""] = endpoint.split("?");
+  const headers = {
+    Accept: "application/json",
+    ...(options.headers || {})
+  };
+
+  if (options.body) {
+    headers["Content-Type"] = "application/json";
+    headers["X-CSRF-Token"] = feedbackState.csrfToken;
   }
+
+  const response = await fetch(`${feedbackApiBase}${path}.php${query ? `?${query}` : ""}`, {
+    credentials: "same-origin",
+    ...options,
+    headers
+  });
+
+  let data = {};
+  try {
+    data = await response.json();
+  } catch {
+    data = {
+      ok: false,
+      message: "Resposta inesperada do servidor."
+    };
+  }
+
+  if (!response.ok || data.ok === false) {
+    const error = new Error(data.message || "Não foi possível concluir a ação.");
+    error.payload = data;
+    error.status = response.status;
+    throw error;
+  }
+
+  return data;
 };
 
-const saveFeedbackItems = (items) => {
-  window.localStorage.setItem(feedbackStorageKey, JSON.stringify(items));
+const ensureFeedbackSession = async () => {
+  if (feedbackState.csrfToken) return;
+
+  const data = await feedbackApiRequest("session");
+  feedbackState.csrfToken = data.csrfToken || "";
 };
 
 const restoreFeedbackName = () => {
@@ -297,34 +335,6 @@ const restoreFeedbackName = () => {
   if (storedName && !feedbackName.value) {
     feedbackName.value = storedName;
   }
-};
-
-const removeLastJuliaCommentOnce = () => {
-  if (window.localStorage.getItem(feedbackCleanupKey)) return;
-
-  const items = getFeedbackItems();
-  let juliaIndex = -1;
-
-  for (let index = items.length - 1; index >= 0; index -= 1) {
-    const item = items[index];
-    const name = String(item.name || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .trim()
-      .toLowerCase();
-
-    if (name.split(/\s+/)[0] === "julia") {
-      juliaIndex = index;
-      break;
-    }
-  }
-
-  if (juliaIndex >= 0) {
-    items.splice(juliaIndex, 1);
-    saveFeedbackItems(items);
-  }
-
-  window.localStorage.setItem(feedbackCleanupKey, "true");
 };
 
 const renderStars = (rating) => {
@@ -343,7 +353,7 @@ const updateFeedbackCount = () => {
 const renderFeedbackItems = () => {
   if (!feedbackList) return;
 
-  const items = getFeedbackItems().slice(-5).reverse();
+  const items = feedbackState.items.slice(0, 5);
   feedbackList.textContent = "";
   feedbackList.classList.toggle("is-empty", !items.length);
 
@@ -375,9 +385,27 @@ const renderFeedbackItems = () => {
   });
 };
 
+const loadFeedbackItems = async () => {
+  if (!feedbackList) return;
+
+  try {
+    const data = await feedbackApiRequest("comments?limit=5");
+    feedbackState.apiAvailable = true;
+    feedbackState.items = Array.isArray(data.comments) ? data.comments : [];
+    renderFeedbackItems();
+  } catch {
+    feedbackState.apiAvailable = false;
+    feedbackState.items = [];
+    renderFeedbackItems();
+    if (feedbackStatus) {
+      feedbackStatus.textContent = "Comentários disponíveis quando o site estiver conectado ao PHP e MySQL.";
+    }
+  }
+};
+
 feedbackMessage?.addEventListener("input", updateFeedbackCount);
 
-feedbackForm?.addEventListener("submit", (event) => {
+feedbackForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const formData = new FormData(feedbackForm);
@@ -395,23 +423,51 @@ feedbackForm?.addEventListener("submit", (event) => {
     return;
   }
 
-  const items = getFeedbackItems();
-  items.push(nextItem);
-  saveFeedbackItems(items.slice(-25));
-  window.localStorage.setItem(feedbackNameStorageKey, nextItem.name);
-  renderFeedbackItems();
-  feedbackForm.reset();
-  if (feedbackName) {
-    feedbackName.value = nextItem.name;
-  }
-  updateFeedbackCount();
-
+  const submitButton = feedbackForm.querySelector('button[type="submit"]');
+  if (submitButton) submitButton.disabled = true;
   if (feedbackStatus) {
-    feedbackStatus.textContent = `Comentário publicado com ${nextItem.rating} de 5 estrelas.`;
+    feedbackStatus.textContent = "Publicando no banco de dados...";
+  }
+
+  try {
+    await ensureFeedbackSession();
+
+    if (!feedbackState.csrfToken) {
+      throw new Error("Sessão indisponível. Atualize a página e tente novamente.");
+    }
+
+    const data = await feedbackApiRequest("comments", {
+      method: "POST",
+      body: JSON.stringify(nextItem)
+    });
+
+    window.localStorage.setItem(feedbackNameStorageKey, nextItem.name);
+    if (data.comment) {
+      feedbackState.items = [data.comment, ...feedbackState.items].slice(0, 5);
+    } else {
+      await loadFeedbackItems();
+    }
+
+    renderFeedbackItems();
+    feedbackForm.reset();
+    if (feedbackName) {
+      feedbackName.value = nextItem.name;
+    }
+    updateFeedbackCount();
+
+    if (feedbackStatus) {
+      feedbackStatus.textContent = data.message || `Comentário publicado com ${nextItem.rating} de 5 estrelas.`;
+    }
+  } catch (error) {
+    if (feedbackStatus) {
+      feedbackStatus.textContent = error.payload?.message || error.message || "Não foi possível publicar o comentário agora.";
+    }
+  } finally {
+    if (submitButton) submitButton.disabled = false;
   }
 });
 
 restoreFeedbackName();
 updateFeedbackCount();
-removeLastJuliaCommentOnce();
 renderFeedbackItems();
+loadFeedbackItems();

@@ -32,3 +32,5 @@ O acesso administrativo deve ser validado no servidor com:
 - Nao implementar login Google sem OAuth Client ID oficial e verificacao de token no servidor.
 - Nao revelar se um e-mail existe em mensagens de login ou recuperacao de senha.
 - Nao salvar token de redefinicao de senha em texto puro no banco.
+- Nao salvar comentarios apenas no navegador quando eles precisam aparecer para todo o publico.
+- Nao expor IP, user-agent ou dados internos dos comentarios na API publica.
