@@ -5,6 +5,7 @@ declare(strict_types=1);
 require dirname(__DIR__) . '/app/bootstrap.php';
 require dirname(__DIR__) . '/app/Database.php';
 require dirname(__DIR__) . '/app/Mailer.php';
+require dirname(__DIR__) . '/app/PasswordResetStorage.php';
 
 require_post();
 require_csrf();
@@ -33,6 +34,8 @@ try {
     $user = $statement->fetch();
 
     if ($user) {
+        ensure_password_resets_table($pdo);
+
         $cooldown = $pdo->prepare(
             'SELECT id FROM password_resets
              WHERE user_id = :user_id

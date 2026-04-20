@@ -11,6 +11,7 @@
 - `app/bootstrap.php`: sessão, respostas JSON, CSRF e validações comuns.
 - `app/Database.php`: conexão PDO com MySQL.
 - `app/Mailer.php`: envio de e-mails HTML/texto para recuperação de senha e confirmação de alteração.
+- `app/PasswordResetStorage.php`: criação defensiva da tabela `password_resets` quando o fluxo de reset roda.
 - `config/database.php`: lê credenciais por variável de ambiente ou arquivo privado.
 - `config/database.private.example.php`: modelo de configuração privada.
 - `config/legal.php`: versões dos Termos, Política e dados de contato para o fluxo de aceite.
@@ -104,6 +105,8 @@ CREATE TABLE IF NOT EXISTS password_resets (
 ```
 
 O mesmo script está em `database/migrations/20260420_create_password_resets_table.sql`.
+
+O endpoint também tenta criar essa tabela automaticamente se ela ainda não existir. Mesmo assim, manter a migração executada pelo phpMyAdmin é o caminho mais previsível em produção.
 
 ## Onde personalizar Termos e Privacidade
 

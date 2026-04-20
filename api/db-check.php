@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require dirname(__DIR__) . '/app/bootstrap.php';
 require dirname(__DIR__) . '/app/Database.php';
+require dirname(__DIR__) . '/app/PasswordResetStorage.php';
 
 function db_check_is_debug(): bool
 {
@@ -186,6 +187,7 @@ try {
     }
 
     try {
+        ensure_password_resets_table($pdo);
         $pdo->query('SELECT id FROM password_resets WHERE 1 = 0');
     } catch (Throwable $exception) {
         error_log($exception->getMessage());

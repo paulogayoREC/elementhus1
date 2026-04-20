@@ -88,6 +88,11 @@ function send_html_mail(string $toEmail, string $subject, string $htmlBody, stri
         return false;
     }
 
+    if (!function_exists('mail')) {
+        error_log('Função mail() indisponível no servidor.');
+        return false;
+    }
+
     $settings = mail_settings();
     $boundary = 'eat_' . bin2hex(random_bytes(12));
     $headers = [
@@ -117,7 +122,12 @@ function send_html_mail(string $toEmail, string $subject, string $htmlBody, stri
         '--' . $boundary . '--',
     ]);
 
-    return mail($toEmail, encode_mail_subject($subject), $message, implode("\r\n", $headers));
+    try {
+        return mail($toEmail, encode_mail_subject($subject), $message, implode("\r\n", $headers));
+    } catch (Throwable $exception) {
+        error_log('Falha ao chamar mail(): ' . $exception->getMessage());
+        return false;
+    }
 }
 
 function render_security_email(array $content): string

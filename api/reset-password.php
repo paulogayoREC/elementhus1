@@ -5,6 +5,7 @@ declare(strict_types=1);
 require dirname(__DIR__) . '/app/bootstrap.php';
 require dirname(__DIR__) . '/app/Database.php';
 require dirname(__DIR__) . '/app/Mailer.php';
+require dirname(__DIR__) . '/app/PasswordResetStorage.php';
 
 require_post();
 require_csrf();
@@ -38,6 +39,8 @@ if ($errors) {
 
 try {
     $pdo = Database::connection();
+    ensure_password_resets_table($pdo);
+
     $tokenHash = hash('sha256', $token);
     $now = gmdate('Y-m-d H:i:s');
 
