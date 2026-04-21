@@ -4313,10 +4313,10 @@ h4 {
 
 .geek-home-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.36fr);
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.4fr);
   gap: 1rem;
-  align-items: end;
-  min-height: 18.5rem;
+  align-items: center;
+  min-height: 28rem;
   padding: clamp(1.25rem, 3vw, 1.85rem);
   background:
     linear-gradient(90deg, rgba(57, 255, 20, 0.96), rgba(57, 255, 20, 0.82) 58%, rgba(5, 5, 5, 0.18) 58%),
@@ -4373,8 +4373,8 @@ h4 {
 
 .geek-home-subtitle,
 .geek-hub-subtitle {
-  display: inline-flex;
-  max-width: 100%;
+  display: inline-block;
+  max-width: min(100%, 45rem);
   margin-bottom: 1rem;
   border: 1px solid rgba(5, 5, 5, 0.58);
   border-radius: 0;
@@ -4404,6 +4404,217 @@ h4 {
 
 .geek-home-hero h2 {
   font-size: 3.7rem;
+}
+
+.geek-mario-stage {
+  position: relative;
+  width: min(100%, 33rem);
+  aspect-ratio: 16 / 7;
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(5, 5, 5, 0.78);
+  clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% 0.9rem, 100% 100%, 0.9rem 100%, 0 calc(100% - 0.9rem));
+  background:
+    radial-gradient(circle at 76% 26%, rgba(0, 240, 255, 0.22), transparent 8rem),
+    linear-gradient(180deg, #103b0d 0 54%, #111100 54% 100%);
+  box-shadow: 0.45rem 0.45rem 0 rgba(5, 5, 5, 0.82), inset 0 0 0 1px rgba(57, 255, 20, 0.32);
+  isolation: isolate;
+}
+
+.geek-mario-stage::before,
+.geek-mario-stage::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.geek-mario-stage::before {
+  z-index: 1;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 1.15rem 1.15rem;
+  mix-blend-mode: screen;
+}
+
+.geek-mario-stage::after {
+  z-index: 8;
+  background:
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.18)),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 4px);
+  opacity: 0.5;
+}
+
+.geek-mario-cloud {
+  position: absolute;
+  z-index: 0;
+  width: 5rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: rgba(57, 255, 20, 0.18);
+  box-shadow: 1.4rem -0.42rem 0 rgba(57, 255, 20, 0.13), 2.8rem 0.16rem 0 rgba(57, 255, 20, 0.1);
+  animation: geekMarioCloud 9s linear infinite;
+}
+
+.geek-mario-cloud-one {
+  top: 14%;
+  left: -9%;
+}
+
+.geek-mario-cloud-two {
+  top: 32%;
+  left: 56%;
+  width: 4rem;
+  opacity: 0.68;
+  animation-duration: 12s;
+  animation-delay: -4s;
+}
+
+.geek-mario-block {
+  position: absolute;
+  top: 24%;
+  left: 48%;
+  z-index: 5;
+  display: grid;
+  width: clamp(2.55rem, 8vw, 3.35rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 0.18rem solid #5d3600;
+  color: #2a1600;
+  font-family: var(--font-cyber);
+  font-size: clamp(1.45rem, 4vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent 28%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.18) 0 0.22rem, transparent 0.22rem 0.52rem),
+    #f9bd34;
+  box-shadow: 0.28rem 0.28rem 0 #7b4300, 0 0 1.6rem rgba(249, 189, 52, 0.36);
+  animation: geekMarioBlockHit 4.8s ease-in-out infinite;
+}
+
+.geek-mario-mushroom {
+  position: absolute;
+  left: 50%;
+  bottom: 45%;
+  z-index: 4;
+  width: clamp(2.6rem, 7vw, 4.3rem);
+  height: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 0.72rem rgba(255, 255, 255, 0.52)) drop-shadow(0 0.35rem 0 rgba(5, 5, 5, 0.45));
+  animation: geekMarioMushroom 4.8s ease-in-out infinite;
+}
+
+.geek-mario-runner {
+  position: absolute;
+  bottom: 14%;
+  left: 7%;
+  z-index: 6;
+  width: clamp(2.6rem, 7vw, 3.35rem);
+  height: clamp(3.4rem, 9vw, 4.25rem);
+  filter: drop-shadow(0.18rem 0.32rem 0 rgba(0, 0, 0, 0.52));
+  animation: geekMarioRun 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.geek-mario-runner span {
+  position: absolute;
+  display: block;
+}
+
+.geek-mario-hat {
+  top: 0;
+  left: 24%;
+  width: 54%;
+  height: 16%;
+  background: #e11f22;
+  box-shadow: -0.32rem 0.42rem 0 #e11f22, 0.68rem 0.42rem 0 #e11f22;
+}
+
+.geek-mario-face {
+  top: 17%;
+  left: 30%;
+  width: 46%;
+  height: 24%;
+  background: #ffb16c;
+  box-shadow: 0.55rem 0.16rem 0 #361500, -0.2rem 0.72rem 0 #ffb16c;
+}
+
+.geek-mario-body {
+  top: 43%;
+  left: 22%;
+  width: 58%;
+  height: 31%;
+  background:
+    linear-gradient(90deg, #1856d4 0 42%, #f8cf3a 42% 50%, #1856d4 50% 58%, #e11f22 58%);
+  box-shadow: inset 0 -0.34rem 0 rgba(0, 0, 0, 0.22);
+}
+
+.geek-mario-arm {
+  top: 48%;
+  left: 7%;
+  width: 26%;
+  height: 14%;
+  background: #ffb16c;
+  transform-origin: 100% 50%;
+  animation: geekMarioArm 4.8s ease-in-out infinite;
+}
+
+.geek-mario-leg {
+  bottom: 0;
+  width: 24%;
+  height: 28%;
+  background: #743719;
+  transform-origin: 50% 0;
+}
+
+.geek-mario-leg-left {
+  left: 25%;
+  animation: geekMarioLegLeft 520ms steps(2, end) infinite;
+}
+
+.geek-mario-leg-right {
+  right: 20%;
+  animation: geekMarioLegRight 520ms steps(2, end) infinite;
+}
+
+.geek-mario-sparkle {
+  position: absolute;
+  z-index: 7;
+  width: 0.75rem;
+  aspect-ratio: 1;
+  opacity: 0;
+  background: var(--cp-cyan);
+  clip-path: polygon(50% 0, 62% 36%, 100% 50%, 62% 64%, 50% 100%, 38% 64%, 0 50%, 38% 36%);
+  box-shadow: 0 0 0.8rem rgba(0, 240, 255, 0.9);
+  animation: geekMarioSparkle 4.8s ease-in-out infinite;
+}
+
+.geek-mario-sparkle-one {
+  right: 18%;
+  bottom: 39%;
+}
+
+.geek-mario-sparkle-two {
+  right: 12%;
+  bottom: 25%;
+  background: #f9bd34;
+  animation-delay: 90ms;
+}
+
+.geek-mario-ground {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  height: 18%;
+  border-top: 0.18rem solid #70ff4f;
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.24) 1px, transparent 1px),
+    linear-gradient(#c89247 0 48%, #a0692e 48% 100%);
+  background-size: 1rem 100%, auto;
 }
 
 .geek-home-description,
@@ -4482,7 +4693,7 @@ h4 {
   z-index: 1;
   display: grid;
   align-self: stretch;
-  min-height: 9.4rem;
+  min-height: clamp(24rem, 34vw, 31rem);
   align-content: end;
   gap: 0.5rem;
   border: 1px solid rgba(0, 240, 255, 0.7);
@@ -4494,6 +4705,7 @@ h4 {
     linear-gradient(135deg, rgba(0, 240, 255, 0.12), transparent 36%),
     var(--cp-panel);
   box-shadow: inset 0 0 0 1px rgba(57, 255, 20, 0.14), 0.55rem 0.55rem 0 rgba(255, 0, 60, 0.62);
+  isolation: isolate;
 }
 
 .geek-home-console::before {
@@ -4505,6 +4717,34 @@ h4 {
   content: "";
   background: var(--cp-cyan);
   box-shadow: 0 0 1rem rgba(0, 240, 255, 0.48);
+  z-index: 4;
+}
+
+.geek-home-console::after {
+  position: absolute;
+  inset: 42% 0 0;
+  z-index: 2;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(5, 5, 5, 0.94) 52%, rgba(5, 5, 5, 0.98));
+  pointer-events: none;
+}
+
+.geek-home-console-album {
+  position: absolute;
+  inset: 2.2rem 0.5rem 7.2rem;
+  z-index: 1;
+  width: calc(100% - 1rem);
+  height: calc(100% - 9.4rem);
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 1.1rem 1.15rem rgba(0, 0, 0, 0.62)) saturate(1.08) contrast(1.04);
+}
+
+.geek-home-console-copy {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  gap: 0.45rem;
 }
 
 .geek-home-console span,
@@ -4519,9 +4759,9 @@ h4 {
 .geek-home-console strong {
   color: var(--cp-cyan);
   font-family: var(--font-cyber);
-  font-size: 2rem;
+  font-size: clamp(1.42rem, 2.05vw, 2rem);
   font-weight: 800;
-  line-height: 0.9;
+  line-height: 1;
   text-shadow: 0.12rem 0 rgba(255, 0, 60, 0.65);
 }
 
@@ -4841,6 +5081,170 @@ h4 {
   transition: opacity 520ms ease, transform 520ms ease;
 }
 
+@keyframes geekMarioCloud {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(46rem);
+  }
+}
+
+@keyframes geekMarioBlockHit {
+  0%,
+  20%,
+  32%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-0.56rem);
+  }
+}
+
+@keyframes geekMarioMushroom {
+  0%,
+  23% {
+    left: 51%;
+    bottom: 45%;
+    opacity: 0;
+    transform: translate(-50%, 1rem) scale(0.48);
+  }
+
+  28% {
+    left: 51%;
+    bottom: 63%;
+    opacity: 1;
+    transform: translate(-50%, 0) scale(0.92);
+  }
+
+  42% {
+    left: 57%;
+    bottom: 20%;
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  68% {
+    left: 72%;
+    bottom: 20%;
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  78%,
+  100% {
+    left: 76%;
+    bottom: 26%;
+    opacity: 0;
+    transform: translate(-50%, -0.6rem) scale(0.22);
+  }
+}
+
+@keyframes geekMarioRun {
+  0% {
+    left: 7%;
+    bottom: 14%;
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+
+  18% {
+    left: 38%;
+    bottom: 14%;
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+
+  26% {
+    left: 45%;
+    bottom: 48%;
+    transform: translate3d(0, 0, 0) rotate(-5deg) scaleX(1);
+  }
+
+  36% {
+    left: 54%;
+    bottom: 14%;
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+
+  68% {
+    left: 73%;
+    bottom: 14%;
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+
+  76% {
+    left: 76%;
+    bottom: 14%;
+    transform: translate3d(0, 0, 0) scale(1.08);
+  }
+
+  100% {
+    left: 76%;
+    bottom: 14%;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes geekMarioArm {
+  0%,
+  18%,
+  42%,
+  100% {
+    transform: rotate(18deg);
+  }
+
+  25% {
+    transform: rotate(-72deg);
+  }
+
+  72% {
+    transform: rotate(-28deg);
+  }
+}
+
+@keyframes geekMarioLegLeft {
+  0%,
+  100% {
+    transform: rotate(18deg);
+  }
+
+  50% {
+    transform: rotate(-18deg);
+  }
+}
+
+@keyframes geekMarioLegRight {
+  0%,
+  100% {
+    transform: rotate(-18deg);
+  }
+
+  50% {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes geekMarioSparkle {
+  0%,
+  67% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0deg);
+  }
+
+  74% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+
+  86%,
+  100% {
+    opacity: 0;
+    transform: scale(1.8) rotate(120deg);
+  }
+}
+
 @media (max-width: 1080px) {
   .geek-home-hero,
   .geek-hub-hero-layout,
@@ -4868,7 +5272,7 @@ h4 {
   }
 
   .geek-home-console {
-    min-height: auto;
+    min-height: clamp(22rem, 54vw, 30rem);
   }
 
   .geek-hub-grid,
@@ -4899,6 +5303,35 @@ h4 {
 
   .geek-home-hero {
     padding: 1rem;
+  }
+
+  .geek-mario-stage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .geek-mario-block {
+    top: 18%;
+    left: 45%;
+  }
+
+  .geek-mario-runner {
+    width: 2.45rem;
+    height: 3.25rem;
+  }
+
+  .geek-home-console {
+    min-height: 25rem;
+  }
+
+  .geek-home-console-album {
+    inset: 2rem 0.4rem 7.8rem;
+    width: calc(100% - 0.8rem);
+    height: calc(100% - 10.1rem);
+  }
+
+  .geek-home-console span,
+  .geek-home-console small {
+    font-size: 0.78rem;
   }
 
   .geek-home-hero h2,
