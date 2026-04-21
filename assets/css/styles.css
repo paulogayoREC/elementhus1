@@ -5530,11 +5530,10 @@ h4 {
 .geek-world-heading {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  gap: 1rem;
-  align-items: end;
-  margin-bottom: clamp(1rem, 2.4vw, 1.8rem);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: clamp(0.85rem, 1.8vw, 1.35rem);
 }
 
 .geek-world-heading .eyebrow {
@@ -5542,19 +5541,7 @@ h4 {
   color: var(--cp-black);
   background: var(--cp-neon);
   box-shadow: 0.28rem 0.28rem 0 rgba(0, 240, 255, 0.78);
-}
-
-.geek-world-heading h2 {
-  max-width: 18ch;
-  margin: 0;
-  color: var(--cp-neon);
-  font-family: var(--font-cyber);
-  font-size: clamp(2.2rem, 5vw, 4.7rem);
-  font-weight: 800;
-  line-height: 0.92;
-  letter-spacing: 0;
   text-transform: uppercase;
-  text-shadow: 0.12rem 0 rgba(0, 240, 255, 0.7), -0.1rem 0 rgba(255, 0, 60, 0.6);
 }
 
 .geek-topic-stack {
@@ -6114,15 +6101,6 @@ h4 {
     max-width: none;
   }
 
-  .geek-world-heading {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-
-  .geek-world-heading h2 {
-    max-width: 14ch;
-  }
-
   .geek-topic-band {
     grid-template-columns: minmax(5.6rem, 7.4rem) minmax(0, 1fr);
   }
@@ -6307,11 +6285,6 @@ h4 {
     margin-top: 0.74rem;
     padding: 0.52rem 0.6rem;
     font-size: 0.72rem;
-  }
-
-  .geek-world-heading h2 {
-    max-width: 100%;
-    font-size: 2.05rem;
   }
 
   .geek-topic-stack {
