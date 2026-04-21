@@ -4725,6 +4725,32 @@ h4 {
   box-shadow: inset 0 -0.22rem 0 rgba(0, 240, 255, 0.34);
 }
 
+.geek-page .back-link {
+  position: relative;
+  overflow: hidden;
+  border-color: #ffed00;
+  color: #050505;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.34), transparent 30%),
+    repeating-linear-gradient(135deg, rgba(5, 5, 5, 0.12) 0 0.16rem, transparent 0.16rem 0.5rem),
+    #ffed00;
+  box-shadow: 0.42rem 0.42rem 0 rgba(5, 5, 5, 0.92), 0 0 1.35rem rgba(255, 237, 0, 0.42), inset 0 -0.18rem 0 rgba(5, 5, 5, 0.28);
+  text-shadow: none;
+}
+
+.geek-page .back-link::before {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.72rem;
+  left: 0.72rem;
+  height: 0.13rem;
+  content: "";
+  background: #050505;
+  box-shadow: 0 0.34rem 0 rgba(5, 5, 5, 0.18);
+  opacity: 0.62;
+  pointer-events: none;
+}
+
 .geek-home-section .button-primary:hover,
 .geek-home-section .button-primary:focus-visible,
 .geek-home-section .button-secondary:hover,
@@ -4740,6 +4766,16 @@ h4 {
   box-shadow: 0.42rem 0.42rem 0 rgba(255, 0, 60, 0.72);
   outline: none;
   transform: translateY(-2px);
+}
+
+.geek-page .back-link:hover,
+.geek-page .back-link:focus-visible {
+  border-color: #050505;
+  color: #ffed00;
+  background:
+    linear-gradient(135deg, rgba(255, 237, 0, 0.22), transparent 34%),
+    #050505;
+  box-shadow: 0.42rem 0.42rem 0 rgba(255, 0, 60, 0.78), 0 0 1.6rem rgba(255, 237, 0, 0.48);
 }
 
 .geek-home-console {
