@@ -5649,6 +5649,42 @@ h4 {
   }
 }
 
+.geek-page .geek-hub-copy .geek-cyber-back {
+  display: inline-flex;
+  width: max-content;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 2.08rem;
+  margin-bottom: 1.05rem;
+  border: 1px solid #050505;
+  padding: 0.42rem 0.82rem;
+  clip-path: polygon(0 0, calc(100% - 0.56rem) 0, 100% 0.56rem, 100% 100%, 0.56rem 100%, 0 100%);
+  color: #050505;
+  font-size: 0.68rem;
+  letter-spacing: 0;
+  line-height: 1;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0) 48%),
+    linear-gradient(135deg, #fff95b 0%, #fcee09 62%, #cfc400 100%);
+  box-shadow: 0.24rem 0.24rem 0 rgba(5, 5, 5, 0.92), 0 0 1rem rgba(252, 238, 9, 0.34), inset 0 -0.1rem 0 rgba(5, 5, 5, 0.2);
+  text-shadow: none;
+}
+
+.geek-page .geek-hub-copy .geek-cyber-back::before,
+.geek-page .geek-hub-copy .geek-cyber-back::after {
+  display: none;
+}
+
+.geek-page .geek-hub-copy .geek-cyber-back:hover,
+.geek-page .geek-hub-copy .geek-cyber-back:focus-visible {
+  border-color: #050505;
+  color: #fcee09;
+  background:
+    linear-gradient(135deg, rgba(252, 238, 9, 0.18), transparent 42%),
+    #050505;
+  box-shadow: 0.24rem 0.24rem 0 rgba(252, 238, 9, 0.9), 0 0 1.15rem rgba(252, 238, 9, 0.42);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
