@@ -3221,109 +3221,6 @@ h4 {
   background: var(--blue);
 }
 
-.monitors-page .products-section {
-  background:
-    radial-gradient(circle at 18% 12%, rgba(0, 240, 255, 0.14), transparent 28rem),
-    radial-gradient(circle at 82% 32%, rgba(37, 125, 167, 0.22), transparent 24rem),
-    linear-gradient(180deg, #06090b 0%, #100d0b 100%);
-}
-
-.monitor-showcase-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.78rem;
-}
-
-.monitors-page .affiliate-product-card {
-  isolation: isolate;
-  min-height: 21.2rem;
-  border-color: rgba(0, 240, 255, 0.26);
-  padding: 0.72rem;
-  background:
-    linear-gradient(135deg, rgba(0, 240, 255, 0.11), transparent 40%, rgba(250, 235, 209, 0.035)),
-    rgba(0, 0, 0, 0.34);
-  box-shadow:
-    0 20px 54px rgba(0, 0, 0, 0.3),
-    0 0 24px rgba(0, 240, 255, 0.12),
-    inset 0 0 32px rgba(0, 240, 255, 0.07);
-}
-
-.monitors-page .affiliate-product-card::after {
-  position: absolute;
-  inset: 0.65rem 0.8rem auto;
-  z-index: 0;
-  height: 1px;
-  content: "";
-  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.78), transparent);
-  box-shadow: 0 0 18px rgba(0, 240, 255, 0.38);
-  animation: monitorLedPulse 4.4s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.monitors-page .affiliate-product-card:hover,
-.monitors-page .affiliate-product-card:focus-within {
-  border-color: rgba(0, 240, 255, 0.68);
-  box-shadow:
-    0 26px 70px rgba(0, 0, 0, 0.36),
-    0 0 34px rgba(0, 240, 255, 0.22),
-    inset 0 0 42px rgba(0, 240, 255, 0.12);
-}
-
-.monitors-page .product-media {
-  min-height: 13.7rem;
-  border-color: rgba(0, 240, 255, 0.24);
-  background:
-    radial-gradient(circle at 50% 16%, rgba(0, 240, 255, 0.18), transparent 42%),
-    radial-gradient(circle at 50% 76%, rgba(37, 125, 167, 0.34), transparent 52%),
-    linear-gradient(145deg, rgba(6, 16, 20, 0.92), rgba(0, 0, 0, 0.34));
-  box-shadow:
-    inset 0 0 34px rgba(0, 240, 255, 0.1),
-    0 18px 38px rgba(0, 0, 0, 0.22);
-}
-
-.monitors-page .product-media::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background:
-    linear-gradient(90deg, rgba(0, 240, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(rgba(0, 240, 255, 0.07) 1px, transparent 1px);
-  background-size: 2.6rem 2.6rem;
-  opacity: 0.34;
-  pointer-events: none;
-}
-
-.monitors-page .product-media::after {
-  inset: auto 14% 1rem;
-  height: 0.72rem;
-  background: rgba(0, 240, 255, 0.18);
-  filter: blur(16px);
-}
-
-.monitors-page .product-media img {
-  width: min(100%, 18.8rem);
-  height: 12.2rem;
-  transform: scale(1.04);
-  filter: saturate(1.08) contrast(1.08) drop-shadow(0 22px 28px rgba(0, 0, 0, 0.46)) drop-shadow(0 0 18px rgba(0, 240, 255, 0.16));
-}
-
-.monitors-page .product-info h4 {
-  min-height: 2.25rem;
-  font-size: 0.98rem;
-}
-
-.monitors-page .product-card .product-buy-link {
-  border-color: rgba(0, 240, 255, 0.42);
-  background: linear-gradient(180deg, #d8feff, #61f0ff);
-  box-shadow: 0 0 18px rgba(0, 240, 255, 0.18);
-}
-
-.monitors-page .product-card .product-buy-link:hover,
-.monitors-page .product-card .product-buy-link:focus-visible {
-  color: #061014;
-  background: #ffffff;
-  box-shadow: 0 0 28px rgba(0, 240, 255, 0.35);
-}
-
 .product-tag {
   position: relative;
   display: inline-flex;
@@ -3439,19 +3336,6 @@ h4 {
   100% {
     transform: translateX(120%);
     opacity: 0;
-  }
-}
-
-@keyframes monitorLedPulse {
-  0%,
-  100% {
-    opacity: 0.56;
-    transform: scaleX(0.86);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scaleX(1);
   }
 }
 
@@ -3836,18 +3720,6 @@ h4 {
 
   .tech-pick-featured img {
     height: 9.8rem;
-  }
-
-  .monitors-page .affiliate-product-card {
-    min-height: 20.4rem;
-  }
-
-  .monitors-page .product-media {
-    min-height: 13.1rem;
-  }
-
-  .monitors-page .product-media img {
-    height: 11.8rem;
   }
 
   .geek-hub-highlights {
@@ -4240,19 +4112,6 @@ h4 {
 
   .category-card strong {
     font-size: 0.94rem;
-  }
-
-  .monitors-page .affiliate-product-card {
-    min-height: auto;
-  }
-
-  .monitors-page .product-media {
-    min-height: 11.9rem;
-  }
-
-  .monitors-page .product-media img {
-    width: min(100%, 16.8rem);
-    height: 10.4rem;
   }
 
   .tech-picks-panel {
