@@ -4499,11 +4499,13 @@ h4 {
   left: 50%;
   bottom: 45%;
   z-index: 4;
-  width: clamp(2.6rem, 7vw, 4.3rem);
+  width: clamp(2.75rem, 8vw, 4.7rem);
   height: auto;
   object-fit: contain;
   image-rendering: pixelated;
+  transform-origin: 50% 82%;
   filter: drop-shadow(0 0 0.72rem rgba(255, 255, 255, 0.52)) drop-shadow(0 0.35rem 0 rgba(5, 5, 5, 0.45));
+  will-change: left, bottom, opacity, transform;
   animation: geekMarioMushroom 4.8s ease-in-out infinite;
 }
 
@@ -5108,16 +5110,23 @@ h4 {
   0%,
   23% {
     left: 51%;
-    bottom: 45%;
+    bottom: 44%;
     opacity: 0;
-    transform: translate(-50%, 1rem) scale(0.48);
+    transform: translate(-50%, 1.1rem) scale(0.16);
   }
 
-  28% {
+  27% {
     left: 51%;
-    bottom: 63%;
+    bottom: 62%;
     opacity: 1;
-    transform: translate(-50%, 0) scale(0.92);
+    transform: translate(-50%, 0) scale(0.78);
+  }
+
+  32% {
+    left: 51%;
+    bottom: 58%;
+    opacity: 1;
+    transform: translate(-50%, 0.2rem) scale(1.05);
   }
 
   42% {
@@ -5134,12 +5143,19 @@ h4 {
     transform: translate(-50%, 0) scale(1);
   }
 
-  78%,
+  76% {
+    left: 76%;
+    bottom: 24%;
+    opacity: 1;
+    transform: translate(-50%, -0.4rem) scale(0.86);
+  }
+
+  82%,
   100% {
     left: 76%;
     bottom: 26%;
     opacity: 0;
-    transform: translate(-50%, -0.6rem) scale(0.22);
+    transform: translate(-50%, -0.7rem) scale(0.14);
   }
 }
 
