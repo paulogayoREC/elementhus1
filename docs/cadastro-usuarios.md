@@ -356,7 +356,7 @@ php -S localhost:8000
 http://localhost:8000
 ```
 
-O cadastro não funciona abrindo o `index.html` diretamente pelo navegador, porque os endpoints PHP precisam do servidor PHP ativo.
+O cadastro não funciona abrindo o `home.html` diretamente pelo navegador, porque os endpoints PHP precisam do servidor PHP ativo.
 
 ## Segurança aplicada
 
