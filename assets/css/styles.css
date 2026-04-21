@@ -4725,29 +4725,44 @@ h4 {
   box-shadow: inset 0 -0.22rem 0 rgba(0, 240, 255, 0.34);
 }
 
-.geek-page .back-link {
+.geek-hub-copy .geek-cyber-back {
   position: relative;
   overflow: hidden;
-  border-color: #ffed00;
+  min-width: min(100%, 14.8rem);
+  border: 1px solid #050505;
   color: #050505;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.34), transparent 30%),
-    repeating-linear-gradient(135deg, rgba(5, 5, 5, 0.12) 0 0.16rem, transparent 0.16rem 0.5rem),
-    #ffed00;
-  box-shadow: 0.42rem 0.42rem 0 rgba(5, 5, 5, 0.92), 0 0 1.35rem rgba(255, 237, 0, 0.42), inset 0 -0.18rem 0 rgba(5, 5, 5, 0.28);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.32), transparent 42%),
+    linear-gradient(135deg, #fff938 0%, #fcee09 58%, #d7c900 100%);
+  box-shadow: 0.5rem 0.5rem 0 rgba(5, 5, 5, 0.92), 0 0 1.5rem rgba(252, 238, 9, 0.44), inset 0 -0.16rem 0 rgba(5, 5, 5, 0.18);
   text-shadow: none;
+  clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 0, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 0 100%);
+  isolation: isolate;
 }
 
-.geek-page .back-link::before {
+.geek-hub-copy .geek-cyber-back::before {
   position: absolute;
-  top: 0.5rem;
-  right: 0.72rem;
-  left: 0.72rem;
-  height: 0.13rem;
+  top: 0.63rem;
+  right: 0.88rem;
+  left: 0.82rem;
+  z-index: 1;
+  height: 0.08rem;
   content: "";
   background: #050505;
-  box-shadow: 0 0.34rem 0 rgba(5, 5, 5, 0.18);
-  opacity: 0.62;
+  box-shadow: -0.82rem 0.42rem 0 #050505, 0 1.72rem 0 rgba(5, 5, 5, 0.22);
+  opacity: 0.86;
+  pointer-events: none;
+}
+
+.geek-hub-copy .geek-cyber-back::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(100deg, transparent 0 30%, rgba(255, 255, 255, 0.62) 42%, transparent 54% 100%);
+  opacity: 0.42;
+  transform: translateX(-120%);
+  animation: cyberBackSheen 2.8s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -4768,14 +4783,14 @@ h4 {
   transform: translateY(-2px);
 }
 
-.geek-page .back-link:hover,
-.geek-page .back-link:focus-visible {
+.geek-hub-copy .geek-cyber-back:hover,
+.geek-hub-copy .geek-cyber-back:focus-visible {
   border-color: #050505;
   color: #ffed00;
   background:
-    linear-gradient(135deg, rgba(255, 237, 0, 0.22), transparent 34%),
+    linear-gradient(135deg, rgba(255, 237, 0, 0.28), transparent 38%),
     #050505;
-  box-shadow: 0.42rem 0.42rem 0 rgba(255, 0, 60, 0.78), 0 0 1.6rem rgba(255, 237, 0, 0.48);
+  box-shadow: 0.5rem 0.5rem 0 rgba(252, 238, 9, 0.86), 0 0 1.75rem rgba(252, 238, 9, 0.52);
 }
 
 .geek-home-console {
@@ -5469,6 +5484,21 @@ h4 {
 
   68% {
     transform: translateY(0.04rem) rotate(4deg) scale(0.98);
+  }
+}
+
+@keyframes cyberBackSheen {
+  0%,
+  42% {
+    transform: translateX(-120%);
+  }
+
+  68% {
+    transform: translateX(120%);
+  }
+
+  100% {
+    transform: translateX(120%);
   }
 }
 
