@@ -30,9 +30,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260420-indicacoes-categorias-vazias">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260420-mundo-geek">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
     <script src="assets/js/main.js?v=20260420-comments-db" defer></script>
+    <script src="assets/js/mundo-geek.js?v=20260420-mundo-geek" defer></script>
     <script src="assets/js/auth.js?v=20260420-reset-senha" defer></script>
   </head>
   <body>
@@ -56,7 +57,7 @@
 
         <div class="site-menu" id="site-menu" data-menu>
           <div class="nav-links">
-            <a href="#editorias">Editorias</a>
+            <a href="#editorias">Notícias Tech</a>
             <a href="indicacoes.html">Indicações</a>
             <button class="nav-share-button" type="button" data-share-site data-share-url="https://encontreaquitech.com/" aria-label="Compartilhar Encontre Aqui Tech" title="Compartilhar">
               <span class="nav-share-icon" aria-hidden="true">
@@ -113,7 +114,7 @@
     </header>
 
     <main id="conteudo">
-      <section class="hero-section" aria-labelledby="hero-title">
+      <section class="hero-section" aria-labelledby="hero-title" data-section-name="Sessão Capa">
         <div class="space-grid" aria-hidden="true"></div>
         <div class="hero-media" aria-hidden="true">
           <img class="hero-astronaut" src="assets/img/astro001-cutout.png" alt="">
@@ -126,8 +127,8 @@
             Notícias, novidades, curiosidades, alertas e tutoriais com uma linguagem direta para quem vive conectado.
           </p>
           <div class="hero-actions" aria-label="Ações principais">
-            <a class="button button-primary" href="#editorias">Explorar editorias</a>
-            <a class="button button-secondary" href="indicacoes.html">Ver indicações</a>
+            <a class="button button-primary" href="#editorias">Notícias Tech</a>
+            <a class="button button-secondary" href="indicacoes.html">Vitrine Tech</a>
           </div>
         </div>
 
@@ -138,12 +139,12 @@
         </div>
       </section>
 
-      <section class="section feature-band" aria-labelledby="feature-title">
+      <section class="section feature-band" aria-labelledby="feature-title" data-section-name="Sessão Vitrine Tech">
         <div class="section-inner feature-layout">
           <div class="feature-copy">
-            <p class="eyebrow">Indicações</p>
+            <p class="eyebrow">Nossas Indicações</p>
             <h2 id="feature-title">Produtos tech escolhidos com critério.</h2>
-            <a class="button button-primary" href="indicacoes.html">Abrir vitrine tech</a>
+            <a class="button button-primary" href="indicacoes.html">Abrir Vitrine Tech</a>
           </div>
           <div class="signal-panel" aria-label="Status da vitrine">
             <span>Monitores</span>
@@ -170,10 +171,10 @@
         </div>
       </section>
 
-      <section class="section editorial-section" id="editorias" aria-labelledby="editorias-title">
+      <section class="section editorial-section" id="editorias" aria-labelledby="editorias-title" data-section-name="Sessão Info Tech">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Editorias</p>
+            <p class="eyebrow">Notícias Tech</p>
             <h2 id="editorias-title">Assuntos que merecem estar no seu radar.</h2>
           </div>
 
@@ -251,19 +252,73 @@
         </div>
       </section>
 
-      <section class="section intro-band" aria-labelledby="intro-title">
-        <div class="section-inner intro-layout">
-          <div>
-            <p class="eyebrow">Radar ligado</p>
-            <h2 id="intro-title">Um ponto de encontro para tecnologia do dia a dia.</h2>
+      <section class="section geek-home-section" id="mundo-geek" aria-labelledby="mundo-geek-title" data-section-name="Sessão Geek">
+        <div class="section-inner geek-home-shell">
+          <div class="geek-home-copy">
+            <p class="eyebrow">Mundo Geek</p>
+            <span class="geek-home-subtitle">Exclusividade visual, repertório pop e curadoria com acabamento premium.</span>
+            <h2 id="mundo-geek-title">Uma editoria feita para quem gosta de cultura Geek com visual forte, olhar atual e atmosfera refinada.</h2>
+            <p class="geek-home-description">
+              Games, filmes e séries, animes, HQs, colecionáveis e tecnologia Geek reunidos em um espaço imersivo, elegante e pronto para crescer com identidade própria dentro do Encontre Aqui Tech.
+            </p>
+            <div class="geek-home-categories" aria-label="Categorias da editoria Mundo Geek">
+              <a href="mundo-geek.html#games">Games</a>
+              <a href="mundo-geek.html#filmes-series">Filmes e Séries</a>
+              <a href="mundo-geek.html#animes-mangas">Animes e Mangás</a>
+              <a href="mundo-geek.html#hqs">HQs</a>
+              <a href="mundo-geek.html#cultura-pop">Cultura Pop</a>
+              <a href="mundo-geek.html#tecnologia-geek">Tecnologia Geek</a>
+              <a href="mundo-geek.html#colecionaveis">Colecionáveis</a>
+            </div>
+            <div class="geek-home-actions">
+              <a class="button button-primary geek-home-button" href="mundo-geek.html">Entrar em Mundo Geek</a>
+            </div>
           </div>
-          <p>
-            Acompanhe temas que ajudam você a escolher melhor, se proteger online, aprender ferramentas e conversar sobre o que está mudando no mundo digital.
-          </p>
+
+          <div class="geek-home-stage">
+            <article class="geek-home-visual" data-geek-tilt>
+              <img src="assets/img/mundo-geek/mundo-geek-hero.webp" alt="Ambiente futurista elegante com setup premium, skyline neon e referências visuais do universo geek.">
+              <div class="geek-home-visual-copy">
+                <span>Editoria exclusiva</span>
+                <strong>Onde tecnologia, entretenimento e cultura pop se encontram com assinatura visual própria.</strong>
+              </div>
+            </article>
+
+            <div class="geek-home-signal-grid">
+              <article class="geek-home-signal" data-geek-tilt>
+                <img src="assets/img/category-icons/games.png" alt="" width="320" height="320" loading="lazy" decoding="async">
+                <div>
+                  <span>Games</span>
+                  <strong>Lançamentos, experiência e plataformas que merecem atenção.</strong>
+                </div>
+              </article>
+              <article class="geek-home-signal" data-geek-tilt>
+                <img src="assets/img/category-icons/fones.png" alt="" width="320" height="320" loading="lazy" decoding="async">
+                <div>
+                  <span>Imersão</span>
+                  <strong>Som, presença visual e atmosfera para quem leva entretenimento a sério.</strong>
+                </div>
+              </article>
+              <article class="geek-home-signal" data-geek-tilt>
+                <img src="assets/img/category-icons/notebooks.png" alt="" width="320" height="320" loading="lazy" decoding="async">
+                <div>
+                  <span>Tecnologia Geek</span>
+                  <strong>Setup, telas e gadgets com alma de cultura pop.</strong>
+                </div>
+              </article>
+              <article class="geek-home-signal" data-geek-tilt>
+                <img src="assets/img/category-icons/pc-gamming.png" alt="" width="320" height="320" loading="lazy" decoding="async">
+                <div>
+                  <span>Curadoria</span>
+                  <strong>Uma editoria pronta para receber matérias, listas e especiais exclusivos.</strong>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section community-section" id="comunidade" aria-labelledby="comunidade-title">
+      <section class="section community-section" id="comunidade" aria-labelledby="comunidade-title" data-section-name="Sessão Comentários">
         <div class="section-inner">
           <div class="section-heading">
             <p class="eyebrow">Interações com o público</p>
@@ -318,7 +373,7 @@
         </div>
       </section>
 
-      <section class="section about-section" id="sobre" aria-labelledby="sobre-title">
+      <section class="section about-section" id="sobre" aria-labelledby="sobre-title" data-section-name="Sessão Criador">
         <div class="section-inner about-layout">
           <div class="portrait-wrap">
             <img src="assets/img/paulo-gayo.jpg" alt="Foto profissional de Paulo Gayo">
