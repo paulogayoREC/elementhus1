@@ -4850,8 +4850,10 @@ h4 {
   overflow: hidden;
   padding: 7.2rem 0 4.5rem;
   background:
-    linear-gradient(90deg, var(--cp-neon) 0 58%, rgba(57, 255, 20, 0.6) 58% 64%, rgba(5, 5, 5, 0.98) 64%),
-    var(--cp-neon);
+    radial-gradient(circle at 74% 44%, rgba(57, 255, 20, 0.22), transparent 22rem),
+    radial-gradient(circle at 86% 18%, rgba(0, 240, 255, 0.18), transparent 20rem),
+    linear-gradient(112deg, rgba(65, 3, 13, 0.98) 0 46%, rgba(108, 7, 24, 0.86) 46% 59%, rgba(5, 5, 5, 0.96) 59%),
+    #170408;
 }
 
 .geek-hub-hero::before {
@@ -4860,8 +4862,9 @@ h4 {
   z-index: 1;
   content: "";
   background:
-    linear-gradient(90deg, rgba(57, 255, 20, 0.96) 0 45%, rgba(57, 255, 20, 0.7) 45% 57%, transparent 57%),
-    repeating-linear-gradient(90deg, transparent 0 7.4rem, rgba(5, 5, 5, 0.12) 7.4rem 7.48rem);
+    linear-gradient(90deg, rgba(5, 5, 5, 0.72) 0 42%, rgba(65, 3, 13, 0.62) 42% 62%, transparent 62%),
+    radial-gradient(circle at 26% 42%, rgba(57, 255, 20, 0.14), transparent 24rem),
+    repeating-linear-gradient(90deg, transparent 0 7.4rem, rgba(255, 0, 60, 0.18) 7.4rem 7.48rem);
   pointer-events: none;
 }
 
@@ -4875,7 +4878,7 @@ h4 {
   content: "";
   clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%, 18% 44%);
   background:
-    linear-gradient(180deg, rgba(255, 0, 60, 0.82), rgba(255, 42, 109, 0.44) 38%, rgba(5, 5, 5, 0.98) 39%),
+    linear-gradient(180deg, rgba(255, 0, 60, 0.56), rgba(57, 255, 20, 0.16) 38%, rgba(5, 5, 5, 0.98) 39%),
     repeating-linear-gradient(180deg, rgba(0, 240, 255, 0.18) 0 1px, transparent 1px 9px);
   box-shadow: -1rem 0 0 rgba(0, 240, 255, 0.82);
   pointer-events: none;
@@ -4885,9 +4888,11 @@ h4 {
   position: absolute;
   inset: 0 0 0 auto;
   z-index: 0;
-  width: min(60rem, 56vw);
-  clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%);
-  background: var(--cp-black);
+  width: min(72rem, 64vw);
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  background:
+    linear-gradient(135deg, rgba(255, 0, 60, 0.28), rgba(5, 5, 5, 0.7)),
+    var(--cp-black);
 }
 
 .geek-hub-hero-bg::after {
@@ -4895,7 +4900,8 @@ h4 {
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(57, 255, 20, 0.28), transparent 34%, rgba(255, 0, 60, 0.34)),
+    linear-gradient(90deg, rgba(65, 3, 13, 0.92) 0 7%, rgba(255, 0, 60, 0.22) 30%, rgba(57, 255, 20, 0.16) 62%, rgba(5, 5, 5, 0.38)),
+    radial-gradient(circle at 58% 44%, rgba(57, 255, 20, 0.18), transparent 24rem),
     repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 6px);
   mix-blend-mode: screen;
   pointer-events: none;
@@ -4905,25 +4911,26 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.76;
-  filter: hue-rotate(250deg) saturate(1.8) contrast(1.22) brightness(0.84);
+  object-position: center;
+  opacity: 0.88;
+  filter: saturate(1.08) contrast(1.14) brightness(0.78);
 }
 
 .geek-hub-hero-layout {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(18rem, 0.46fr);
+  grid-template-columns: minmax(0, 0.68fr);
   gap: 1.2rem;
   align-items: end;
 }
 
 .geek-hub-copy {
-  max-width: 55rem;
+  max-width: 48rem;
   border: 0;
   padding: 0;
   clip-path: none;
-  color: var(--cp-black);
+  color: rgba(255, 255, 255, 0.9);
   background: transparent;
   box-shadow: none;
   backdrop-filter: none;
@@ -4932,6 +4939,84 @@ h4 {
 .geek-hub-copy::before,
 .geek-hub-copy::after {
   display: none;
+}
+
+.geek-location-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+  border-color: rgba(57, 255, 20, 0.82);
+  color: var(--cp-neon);
+  background: rgba(5, 5, 5, 0.82);
+  box-shadow: 0.36rem 0.36rem 0 rgba(255, 0, 60, 0.56), 0 0 1.35rem rgba(57, 255, 20, 0.18);
+}
+
+.geek-location-icon {
+  position: relative;
+  display: inline-grid;
+  width: 1.35rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(0, 240, 255, 0.16);
+  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.42), 0 0 1rem rgba(0, 240, 255, 0.3);
+  animation: geekGpsPulse 1.8s ease-in-out infinite;
+}
+
+.geek-location-icon::after {
+  position: absolute;
+  inset: -0.38rem;
+  border: 1px solid rgba(0, 240, 255, 0.42);
+  border-radius: 50%;
+  content: "";
+  opacity: 0;
+  animation: geekGpsRing 1.8s ease-out infinite;
+}
+
+.geek-location-icon img {
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.42rem rgba(0, 240, 255, 0.72)) saturate(1.2);
+}
+
+.geek-hub-hero .geek-hub-copy h1 {
+  max-width: 10ch;
+  color: var(--cp-neon);
+  text-shadow: 0.12rem 0 rgba(0, 240, 255, 0.7), -0.1rem 0 rgba(255, 0, 60, 0.68), 0 0 2rem rgba(57, 255, 20, 0.36);
+}
+
+.geek-hub-hero .geek-hub-lead {
+  position: relative;
+  max-width: 44rem;
+  color: rgba(255, 255, 255, 0.86);
+  text-shadow: 0 0.2rem 0.9rem rgba(0, 0, 0, 0.36);
+}
+
+.geek-emoji-orbit {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+.geek-emoji-orbit span {
+  display: inline-block;
+  filter: drop-shadow(0 0 0.5rem rgba(57, 255, 20, 0.42));
+  animation: geekEmojiPop 2.35s ease-in-out infinite;
+}
+
+.geek-emoji-orbit span:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.geek-emoji-orbit span:nth-child(3) {
+  animation-delay: 360ms;
+}
+
+.geek-emoji-orbit span:nth-child(4) {
+  animation-delay: 540ms;
 }
 
 .geek-hub-highlights {
@@ -5313,6 +5398,44 @@ h4 {
   }
 }
 
+@keyframes geekGpsPulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-0.12rem) scale(1.08);
+  }
+}
+
+@keyframes geekGpsRing {
+  0% {
+    opacity: 0.62;
+    transform: scale(0.72);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.42);
+  }
+}
+
+@keyframes geekEmojiPop {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  42% {
+    transform: translateY(-0.28rem) rotate(-5deg) scale(1.16);
+  }
+
+  68% {
+    transform: translateY(0.04rem) rotate(4deg) scale(0.98);
+  }
+}
+
 @media (max-width: 1080px) {
   .geek-home-hero,
   .geek-hub-hero-layout,
@@ -5349,8 +5472,8 @@ h4 {
   }
 
   .geek-hub-hero-bg {
-    width: min(36rem, 58vw);
-    opacity: 0.48;
+    width: min(46rem, 64vw);
+    opacity: 0.64;
   }
 
   .geek-hub-highlights {
@@ -5364,9 +5487,19 @@ h4 {
   }
 
   .geek-home-section::after,
-  .geek-hub-hero-bg,
   .geek-hub-hero::after {
     display: none;
+  }
+
+  .geek-hub-hero-bg {
+    display: block;
+    width: 100%;
+    clip-path: none;
+    opacity: 0.28;
+  }
+
+  .geek-hub-hero-bg img {
+    object-position: 62% center;
   }
 
   .geek-home-hero {
