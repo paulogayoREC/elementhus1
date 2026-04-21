@@ -5242,7 +5242,7 @@ h4 {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(1.15rem, 2.8vw, 2rem) 0;
+  padding: clamp(1.85rem, 3.8vw, 3rem) 0;
   color: #06120d;
   background:
     linear-gradient(90deg, rgba(80, 0, 228, 0.88) 0 8.5%, transparent 8.5%),
@@ -5253,15 +5253,15 @@ h4 {
 
 .geek-cup-section::before {
   position: absolute;
-  top: clamp(0.35rem, 1vw, 0.75rem);
-  right: clamp(0.8rem, 4vw, 4rem);
-  z-index: 0;
-  width: clamp(9rem, 20vw, 16rem);
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(0.8rem, 3.4vw, 3.2rem);
+  z-index: 1;
+  width: clamp(14rem, 24vw, 22rem);
   aspect-ratio: 16 / 9;
   content: "";
   background: url("../img/mundo-geek/copa-2026/copa-2026-symbol.webp") center / contain no-repeat;
-  filter: saturate(1.08) contrast(1.05);
-  opacity: 0.64;
+  filter: drop-shadow(0.5rem 0.7rem 0 rgba(6, 18, 13, 0.48)) saturate(1.12) contrast(1.04);
+  opacity: 0.96;
   pointer-events: none;
 }
 
@@ -5280,45 +5280,42 @@ h4 {
 
 .geek-cup-shell {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  padding-right: clamp(0rem, 22vw, 21rem);
 }
 
 .geek-cup-heading {
   display: grid;
-  grid-template-columns: auto minmax(8rem, 0.55fr) minmax(12rem, 0.44fr);
-  gap: clamp(0.52rem, 1.3vw, 0.9rem);
+  grid-template-columns: max-content minmax(12rem, 0.7fr);
+  gap: clamp(0.7rem, 1.6vw, 1.1rem);
   align-items: center;
-  margin-bottom: clamp(0.6rem, 1.4vw, 0.9rem);
+  margin-bottom: clamp(0.85rem, 1.8vw, 1.24rem);
   border: 1px solid rgba(6, 18, 13, 0.22);
-  padding: clamp(0.42rem, 1.1vw, 0.62rem);
+  padding: clamp(0.58rem, 1.35vw, 0.84rem);
   clip-path: polygon(0 0, calc(100% - 0.82rem) 0, 100% 0.82rem, 100% 100%, 0.82rem 100%, 0 100%);
   background: rgba(255, 255, 255, 0.86);
   box-shadow: 0.22rem 0.22rem 0 rgba(6, 18, 13, 0.9);
 }
 
-.geek-cup-heading .eyebrow {
+.geek-cup-title-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: max-content;
-  border-color: #06120d;
+  max-width: 100%;
+  border: 1px solid #06120d;
   margin: 0;
-  padding: 0.24rem 0.4rem;
+  padding: 0.42rem 0.72rem;
   color: #fff;
-  font-size: 0.68rem;
-  letter-spacing: 0;
-  background: #06120d;
-  box-shadow: 0.14rem 0.14rem 0 rgba(187, 255, 0, 0.88);
-}
-
-.geek-cup-heading h2 {
-  max-width: none;
-  margin: 0;
-  color: #06120d;
-  font-family: var(--font-secondary);
-  font-size: clamp(1.55rem, 3.3vw, 3rem);
+  font-family: var(--font-cyber);
+  font-size: clamp(1rem, 1.8vw, 1.52rem);
   font-weight: 800;
-  line-height: 0.82;
+  line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
-  text-shadow: 0.06rem 0.06rem 0 rgba(80, 0, 228, 0.24);
+  background: #06120d;
+  box-shadow: 0.2rem 0.2rem 0 rgba(187, 255, 0, 0.9);
+  text-shadow: none;
 }
 
 .geek-cup-heading p:not(.eyebrow) {
@@ -5338,7 +5335,7 @@ h4 {
 .geek-cup-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.4rem), 1fr));
-  gap: clamp(0.38rem, 1vw, 0.56rem);
+  gap: clamp(0.5rem, 1.25vw, 0.72rem);
 }
 
 .geek-cup-card {
@@ -5421,8 +5418,8 @@ h4 {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 0.2rem;
-  align-content: start;
+  gap: 0.3rem;
+  align-content: center;
   padding: 0.42rem 0.46rem;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.86)),
@@ -5455,16 +5452,6 @@ h4 {
   font-weight: 800;
   line-height: 1;
   letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.geek-cup-price {
-  margin: 0;
-  color: #006d43;
-  font-family: var(--font-cyber);
-  font-size: 0.5rem;
-  font-weight: 800;
-  line-height: 1.1;
   text-transform: uppercase;
 }
 
@@ -5504,15 +5491,19 @@ h4 {
 .geek-cup-note {
   width: max-content;
   max-width: 100%;
-  margin: clamp(0.55rem, 1.2vw, 0.78rem) 0 0;
-  border: 1px solid rgba(6, 18, 13, 0.2);
-  padding: 0.34rem 0.46rem;
-  color: rgba(6, 18, 13, 0.78);
+  margin: clamp(0.9rem, 1.7vw, 1.24rem) 0 0;
+  border: 1px solid #06120d;
+  padding: 0.58rem 0.8rem;
+  color: #ffe66a;
   font-family: var(--font-cyber);
-  font-size: 0.58rem;
+  font-size: clamp(0.78rem, 1.25vw, 0.98rem);
   font-weight: 800;
-  line-height: 1.35;
-  background: rgba(255, 255, 255, 0.72);
+  line-height: 1;
+  text-transform: uppercase;
+  background:
+    linear-gradient(135deg, rgba(187, 255, 0, 0.16), transparent 44%),
+    #06120d;
+  box-shadow: 0.22rem 0.22rem 0 rgba(187, 255, 0, 0.92), 0 0 1.1rem rgba(187, 255, 0, 0.22);
 }
 
 .geek-hub-panel {
@@ -5823,7 +5814,18 @@ h4 {
     align-items: center;
   }
 
-  .geek-cup-heading h2 {
+  .geek-cup-shell {
+    padding-right: 0;
+  }
+
+  .geek-cup-section::before {
+    top: 0.8rem;
+    right: 0.75rem;
+    width: 14rem;
+    opacity: 0.24;
+  }
+
+  .geek-cup-title-tag {
     max-width: none;
   }
 
@@ -5930,14 +5932,14 @@ h4 {
   }
 
   .geek-cup-section::before {
-    top: 0.35rem;
+    top: 0.45rem;
     right: 0.45rem;
-    width: 9.5rem;
-    opacity: 0.38;
+    width: 8.5rem;
+    opacity: 0.2;
   }
 
   .geek-cup-section {
-    padding: 1rem 0 1.22rem;
+    padding: 1.35rem 0 1.55rem;
   }
 
   .geek-cup-heading {
@@ -5948,10 +5950,12 @@ h4 {
     box-shadow: 0.14rem 0.14rem 0 rgba(6, 18, 13, 0.9);
   }
 
-  .geek-cup-heading h2 {
+  .geek-cup-title-tag {
     max-width: 100%;
-    font-size: 1.52rem;
-    line-height: 0.84;
+    width: 100%;
+    padding: 0.36rem 0.42rem;
+    font-size: 1.05rem;
+    line-height: 1;
   }
 
   .geek-cup-heading p:not(.eyebrow) {
@@ -5994,10 +5998,6 @@ h4 {
     font-size: 0.64rem;
   }
 
-  .geek-cup-price {
-    font-size: 0.5rem;
-  }
-
   .geek-cup-link,
   .geek-cup-note {
     width: 100%;
@@ -6010,8 +6010,9 @@ h4 {
   }
 
   .geek-cup-note {
-    margin-top: 0.5rem;
-    font-size: 0.54rem;
+    margin-top: 0.74rem;
+    padding: 0.52rem 0.6rem;
+    font-size: 0.72rem;
   }
 
   .geek-hub-hero {
