@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-04-19",
+  "updatedAt": "2026-04-21",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Ainda vale a pena montar PC com CPU Intel Raptor Lake em 2026?",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/ainda-vale-a-pena-montar-pc-com-cpu-intel-raptor-lake-em-2026/",
-          "date": "2026-04-18",
+          "title": "Investigation: Are RAM prices dropping, or is it all illusion?",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3116546/investigation-are-ram-prices-dropping-or-is-it-all-illusion.html",
+          "date": "2026-04-20",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Montar ou fazer um upgrade de PC em 2026 tornou-se uma missão financeiramente quase impossível. Se você acompanha o mercado de peças de computadores, sabe que a situação já não é a mesma desde meados do fim de..."
+          "summary": "Rising prices are the biggest tech story of 2026 . Well, the biggest consumer tech story, anyway — the biggest story in a broader sense is “AI” in general. And that’s the answer to why prices are going up. AI d..."
         },
         {
-          "title": "5+ Things to Know About the Next Mac Studio",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/04/17/mac-studio-rumor-recap-april/",
-          "date": "2026-04-17",
+          "title": "Tim Cook deixa a Apple com valor de mercado 10 vezes maior; relembre seu legado",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/mercado/tim-cook-deixa-a-apple-com-valor-de-mercado-10-vezes-maior-relembre-seu-legado/",
+          "date": "2026-04-20",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Apple is working on an updated version of the Mac Studio that's expected at some point in 2026, and with supplies of existing machines running low, we thought we'd highlight what's next for Apple's most powerfu..."
+          "summary": "A Apple anunciou nesta segunda-feira (20) que Tim Cook deixará o cargo de CEO em 1º de setembro de 2026, encerrando uma gestão de quase 15 anos à frente da empresa. Ele assumirá o posto de chairman executivo, e..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Microsoft's new college deal is a half-hearted answer to the $500 MacBook Neo",
-          "source": "Engadget",
-          "url": "https://www.engadget.com/computing/laptops/microsofts-new-college-deal-is-a-half-hearted-answer-to-the-500-macbook-neo-215336362.html?src=rss",
-          "date": "2026-04-15",
+          "title": "Best PCIe 4.0 SSDs 2026: 5 top picks from experts",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/394512/the-best-pcie-40-ssd.html",
+          "date": "2026-04-20",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Apple's MacBook Neo is a $600 (or $500 for students) shot across the bow at affordable Windows laptops, and it seems like Microsoft has ready its first response. The newly announced \"Microsoft College Offer\" is..."
+          "summary": "Recent computing equipment typically supports the 16Gbps PCIe 4.0 protocol as its baseline data transfer/SSD storage technology. While Gen 4 is slowly being supplanted by 32Gbps PCIe 5.0 (most computers mix the..."
         },
         {
-          "title": "Best Free and Open Source Compilers for Developers in 2026",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/programming/best-free-and-open-source-compilers-for-developers-in-2026",
-          "date": "2026-04-19",
+          "title": "Best PC computer deals: Top picks from desktops to all-in-ones",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/813362/best-pc-computer-deals.html",
+          "date": "2026-04-20",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Overview: Over 90% of production toolchains now rely on open-source compilers, driven by flexibility, cost efficiency, and strong community ecosystems Compilers like Rust and Zig are gaining traction for memory..."
+          "summary": "At a glance Top gaming desktop computer deals HP Omen 16L —$1,130 (10% off on Amazon) Acer Nitro 60 —$1,970 (14% off on BestBuy) Thermaltake LCGS Quartz i1460 —$1,000 (9% off on Amazon) Top mini PC deals GMKtec..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "The real threat to the PC isn’t death. It’s losing control",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3116637/the-real-threat-to-the-pc-isnt-death-its-losing-control.html",
-          "date": "2026-04-17",
+          "title": "O que esperar de Superman: O Homem do Amanhã?",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/entretenimento/o-que-esperar-de-superman-o-homem-do-amanha/",
+          "date": "2026-04-20",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "A couple of months ago, I floated the idea of renting a PC. Specifically a Valve Steam Machine , in the hopes of getting the concept to take. I wanted it to live. But the problem with thought exercises is they..."
+          "summary": "As filmagens de Superman: O Homem do Amanhã , segundo longa-metragem da saga estrelada por David Corenswet, começaram e a película promete ser ainda mais ambiciosa do que seu antecessor. Sob a direção de James..."
         },
         {
-          "title": "How robots learn: A brief, contemporary history",
-          "source": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/04/17/1135416/how-robots-learn-brief-contemporary-history/",
-          "date": "2026-04-17",
+          "title": "Beijing's robot half-marathon is back for its second year with far less embarassing results",
+          "source": "Engadget",
+          "url": "https://www.engadget.com/ai/beijings-robot-half-marathon-is-back-for-its-second-year-with-far-less-embarassing-results-191308396.html?src=rss",
+          "date": "2026-04-19",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Roboticists used to dream big but build small. They’d hope to match or exceed the extraordinary complexity of the human body, and then they’d spend their career refining robotic arms for auto plants. Aim for C..."
+          "summary": "To make up for an incredibly laughable inaugural event , Beijing is running back its humanoid robot half-marathon. Fortunately, the event that pits humanoid robots made by Chinese companies against each other a..."
         }
       ]
     },
@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
+          "title": "CISA Adds 8 Exploited Flaws to KEV, Sets April-May 2026 Federal Deadlines",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/04/cisa-adds-8-exploited-flaws-to-kev-sets.html",
+          "date": "2026-04-21",
+          "tag": "Alerta",
+          "featured": true,
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added eight new vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, including three flaws impacting Cisco Catalyst SD..."
+        },
+        {
           "title": "Mirai Variant Nexcorium Exploits CVE-2024-3721 to Hijack TBK DVRs for DDoS Botnet",
           "source": "The Hacker News",
           "url": "https://thehackernews.com/2026/04/mirai-variant-nexcorium-exploits-cve.html",
           "date": "2026-04-18",
           "tag": "Alerta",
-          "featured": true,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "Threat actors are exploiting security flaws in TBK DVR and end‑of‑life (EoL) TP-Link Wi-Fi routers to deploy Mirai-botnet variants on compromised devices, according to findings from Fortinet FortiGuard Labs and..."
-        },
-        {
-          "title": "Apache ActiveMQ CVE-2026-34197 Added to CISA KEV Amid Active Exploitation",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/04/apache-activemq-cve-2026-34197-added-to.html",
-          "date": "2026-04-17",
-          "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "A recently disclosed high-severity security flaw in Apache ActiveMQ Classic has come under active exploitation in the wild, per the U.S. Cybersecurity and Infrastructure Security Agency (CISA). To that end, the..."
+          "summary": "Threat actors are exploiting security flaws in TBK DVR and end‑of‑life (EoL) TP-Link Wi-Fi routers to deploy Mirai-botnet variants on compromised devices, according to findings from Fortinet FortiGuard Labs and..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Windows has a built-in ransomware shield. Most people never turn it on",
+          "title": "Best Chromebooks 2026: Top picks for work, school, and more",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2245853/how-to-turn-on-microsoft-windows-built-in-ransomware-protection.html",
-          "date": "2026-04-17",
+          "url": "https://www.pcworld.com/article/608636/best-chromebooks.html",
+          "date": "2026-04-20",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Ransomware is nasty stuff. This type of malware encrypts files on your PC so that you can’t access them—unless you pay the attacker to unlock the data. In other words, your files are held hostage until you coug..."
+          "summary": "If you’re in the market for an affordable laptop, you can’t really get much better than a Chromebook. They’re fast, easy to use, and often cost less than traditional Windows laptops. You can even stream games o..."
         },
         {
-          "title": "Top Docker Innovations and Best Practices for 2026 Production Success",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/tech-news/top-docker-innovations-and-best-practices-for-2026-production-success",
-          "date": "2026-04-19",
+          "title": "This prompt trick forces AI to stop flattering you and think harder",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3119323/this-prompt-trick-forces-ai-to-stop-flattering-you-and-think-harder.html",
+          "date": "2026-04-20",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Overview: AI-native containers now use predictive resource scaling, improving uptime while reducing unnecessary compute costs. Using verified base images and lightweight systems like Alpine Linux reduces vulner..."
+          "summary": "I wish I had nickel for every time ChatGPT, Claude, or Gemini told me I’d hit the nail on the head, stumbled onto a genius idea, or otherwise patted me on the back for a half-formed idea or ill-conceived plan..."
         }
       ]
     }
