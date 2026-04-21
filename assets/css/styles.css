@@ -3286,6 +3286,15 @@ h4 {
     linear-gradient(180deg, #050706 0%, #09110a 42%, #040504 100%);
 }
 
+.geek-home-shell {
+  position: relative;
+  display: grid;
+}
+
+.geek-home-copy {
+  max-width: 58rem;
+}
+
 .geek-home-section::before,
 .geek-hub-categories-section::before,
 .geek-hub-panels-section::before {
