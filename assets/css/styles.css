@@ -5506,6 +5506,152 @@ h4 {
   box-shadow: 0.22rem 0.22rem 0 rgba(187, 255, 0, 0.92), 0 0 1.1rem rgba(187, 255, 0, 0.22);
 }
 
+.geek-world-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(57, 255, 20, 0.18), transparent 20rem),
+    radial-gradient(circle at 12% 80%, rgba(0, 240, 255, 0.14), transparent 22rem),
+    linear-gradient(135deg, #050505, #13030a 48%, #050505);
+}
+
+.geek-world-section::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 4.4rem 4.4rem;
+  mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+  pointer-events: none;
+}
+
+.geek-world-heading {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: clamp(1rem, 2.4vw, 1.8rem);
+}
+
+.geek-world-heading .eyebrow {
+  margin: 0;
+  color: var(--cp-black);
+  background: var(--cp-neon);
+  box-shadow: 0.28rem 0.28rem 0 rgba(0, 240, 255, 0.78);
+}
+
+.geek-world-heading h2 {
+  max-width: 18ch;
+  margin: 0;
+  color: var(--cp-neon);
+  font-family: var(--font-cyber);
+  font-size: clamp(2.2rem, 5vw, 4.7rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-shadow: 0.12rem 0 rgba(0, 240, 255, 0.7), -0.1rem 0 rgba(255, 0, 60, 0.6);
+}
+
+.geek-world-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.8vw, 1.15rem);
+}
+
+.geek-world-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(4.8rem, 8vw, 6.4rem) minmax(0, 1fr);
+  gap: clamp(0.72rem, 1.4vw, 1rem);
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(0, 240, 255, 0.55);
+  padding: clamp(0.82rem, 1.5vw, 1.05rem);
+  clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 1rem 100%, 0 calc(100% - 1rem));
+  color: rgba(255, 255, 255, 0.82);
+  background:
+    radial-gradient(circle at 14% 24%, rgba(57, 255, 20, 0.16), transparent 10rem),
+    linear-gradient(135deg, rgba(255, 0, 60, 0.16), transparent 42%),
+    rgba(5, 5, 5, 0.92);
+  box-shadow: 0.42rem 0.42rem 0 rgba(255, 0, 60, 0.52);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.geek-world-card::before {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  left: 0.7rem;
+  height: 0.12rem;
+  content: "";
+  background: var(--cp-cyan);
+  box-shadow: 0 0 1rem rgba(0, 240, 255, 0.42);
+  pointer-events: none;
+}
+
+.geek-world-card:hover,
+.geek-world-card:focus-within {
+  border-color: var(--cp-neon);
+  box-shadow: 0.58rem 0.58rem 0 rgba(0, 240, 255, 0.64), 0 0 1.8rem rgba(255, 0, 60, 0.22);
+  transform: translateY(-0.12rem);
+}
+
+.geek-world-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 0 1rem rgba(0, 240, 255, 0.36)) saturate(1.22);
+}
+
+.geek-world-card span {
+  display: inline-flex;
+  width: max-content;
+  max-width: 100%;
+  border: 1px solid rgba(57, 255, 20, 0.68);
+  padding: 0.22rem 0.38rem;
+  color: var(--cp-black);
+  font-family: var(--font-cyber);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  background: var(--cp-neon);
+}
+
+.geek-world-card h3 {
+  margin: 0.55rem 0 0;
+  color: var(--cp-neon);
+  font-family: var(--font-cyber);
+  font-size: clamp(1.05rem, 1.9vw, 1.34rem);
+  font-weight: 800;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.geek-world-card p {
+  margin: 0.52rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-cyber);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.geek-world-card-wide {
+  grid-column: 1 / -1;
+  grid-template-columns: clamp(5.8rem, 10vw, 8.2rem) minmax(0, 1fr);
+  background:
+    radial-gradient(circle at 10% 26%, rgba(57, 255, 20, 0.22), transparent 12rem),
+    linear-gradient(115deg, rgba(0, 240, 255, 0.16), rgba(255, 0, 60, 0.14)),
+    rgba(5, 5, 5, 0.94);
+}
+
 .geek-hub-panel {
   display: grid;
   gap: 1rem;
@@ -5834,6 +5980,23 @@ h4 {
     max-width: none;
   }
 
+  .geek-world-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .geek-world-heading h2 {
+    max-width: 14ch;
+  }
+
+  .geek-world-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .geek-world-card-wide {
+    grid-column: auto;
+  }
+
   .geek-hub-hero-bg {
     width: min(46rem, 64vw);
     opacity: 0.64;
@@ -6014,6 +6177,30 @@ h4 {
     margin-top: 0.74rem;
     padding: 0.52rem 0.6rem;
     font-size: 0.72rem;
+  }
+
+  .geek-world-heading h2 {
+    max-width: 100%;
+    font-size: 2.05rem;
+  }
+
+  .geek-world-card,
+  .geek-world-card-wide {
+    grid-template-columns: 4.2rem minmax(0, 1fr);
+    gap: 0.68rem;
+    padding: 0.82rem;
+  }
+
+  .geek-world-card span {
+    font-size: 0.64rem;
+  }
+
+  .geek-world-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .geek-world-card p {
+    font-size: 0.86rem;
   }
 
   .geek-hub-hero {
