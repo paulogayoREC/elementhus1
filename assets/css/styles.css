@@ -5566,40 +5566,61 @@ h4 {
 }
 
 .geek-world-card {
+  --world-accent: var(--cp-neon);
+  --world-accent-rgb: 57, 255, 20;
+  --world-secondary: var(--cp-cyan);
+  --world-secondary-rgb: 0, 240, 255;
+  --world-ink: #050505;
   position: relative;
   display: grid;
   grid-template-columns: clamp(4.8rem, 8vw, 6.4rem) minmax(0, 1fr);
   gap: clamp(0.72rem, 1.4vw, 1rem);
   align-items: center;
   overflow: hidden;
-  border: 1px solid rgba(0, 240, 255, 0.55);
+  border: 1px solid rgba(var(--world-secondary-rgb), 0.66);
   padding: clamp(0.82rem, 1.5vw, 1.05rem);
   clip-path: polygon(0 0, calc(100% - 1rem) 0, 100% 1rem, 100% 100%, 1rem 100%, 0 calc(100% - 1rem));
   color: rgba(255, 255, 255, 0.82);
   background:
-    radial-gradient(circle at 14% 24%, rgba(57, 255, 20, 0.16), transparent 10rem),
-    linear-gradient(135deg, rgba(255, 0, 60, 0.16), transparent 42%),
+    radial-gradient(circle at 12% 22%, rgba(var(--world-accent-rgb), 0.2), transparent 10rem),
+    linear-gradient(135deg, rgba(var(--world-secondary-rgb), 0.18), transparent 38%),
+    linear-gradient(110deg, transparent 0 68%, rgba(var(--world-accent-rgb), 0.14) 68% 76%, transparent 76%),
     rgba(5, 5, 5, 0.92);
-  box-shadow: 0.42rem 0.42rem 0 rgba(255, 0, 60, 0.52);
+  box-shadow: 0.42rem 0.42rem 0 rgba(var(--world-secondary-rgb), 0.52), 0 0 1.4rem rgba(var(--world-accent-rgb), 0.14);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .geek-world-card::before {
   position: absolute;
-  top: 0.7rem;
-  right: 0.7rem;
-  left: 0.7rem;
-  height: 0.12rem;
+  top: 0.72rem;
+  right: 0.72rem;
+  left: 0.72rem;
+  height: 0.14rem;
   content: "";
-  background: var(--cp-cyan);
-  box-shadow: 0 0 1rem rgba(0, 240, 255, 0.42);
+  background: linear-gradient(90deg, var(--world-accent), var(--world-secondary), var(--world-accent));
+  background-size: 220% 100%;
+  box-shadow: 0 0 1rem rgba(var(--world-accent-rgb), 0.54), 0 0 1.5rem rgba(var(--world-secondary-rgb), 0.24);
+  animation: geekWorldLedFlow 3.8s linear infinite;
+  pointer-events: none;
+}
+
+.geek-world-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(112deg, transparent 0 38%, rgba(255, 255, 255, 0.13) 44%, transparent 52%),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 7px);
+  opacity: 0.44;
+  transform: translateX(-18%);
+  animation: geekWorldScan 5.4s ease-in-out infinite;
   pointer-events: none;
 }
 
 .geek-world-card:hover,
 .geek-world-card:focus-within {
-  border-color: var(--cp-neon);
-  box-shadow: 0.58rem 0.58rem 0 rgba(0, 240, 255, 0.64), 0 0 1.8rem rgba(255, 0, 60, 0.22);
+  border-color: var(--world-accent);
+  box-shadow: 0.58rem 0.58rem 0 rgba(var(--world-accent-rgb), 0.68), 0 0 2rem rgba(var(--world-secondary-rgb), 0.28);
   transform: translateY(-0.12rem);
 }
 
@@ -5607,32 +5628,35 @@ h4 {
   width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
-  filter: drop-shadow(0 0 1rem rgba(0, 240, 255, 0.36)) saturate(1.22);
+  filter: drop-shadow(0 0 1rem rgba(var(--world-secondary-rgb), 0.42)) saturate(1.24);
+  animation: geekWorldIconPulse 3.2s ease-in-out infinite;
 }
 
 .geek-world-card span {
   display: inline-flex;
   width: max-content;
   max-width: 100%;
-  border: 1px solid rgba(57, 255, 20, 0.68);
+  border: 1px solid rgba(var(--world-accent-rgb), 0.72);
   padding: 0.22rem 0.38rem;
-  color: var(--cp-black);
+  color: var(--world-ink);
   font-family: var(--font-cyber);
   font-size: 0.78rem;
   font-weight: 800;
   line-height: 1;
   text-transform: uppercase;
-  background: var(--cp-neon);
+  background: var(--world-accent);
+  box-shadow: 0 0 1rem rgba(var(--world-accent-rgb), 0.28);
 }
 
 .geek-world-card h3 {
   margin: 0.55rem 0 0;
-  color: var(--cp-neon);
+  color: var(--world-accent);
   font-family: var(--font-cyber);
   font-size: clamp(1.05rem, 1.9vw, 1.34rem);
   font-weight: 800;
   line-height: 1.08;
   text-transform: uppercase;
+  text-shadow: 0 0 1rem rgba(var(--world-accent-rgb), 0.24);
 }
 
 .geek-world-card p {
@@ -5646,9 +5670,44 @@ h4 {
 .geek-world-card-wide {
   grid-column: 1 / -1;
   grid-template-columns: clamp(5.8rem, 10vw, 8.2rem) minmax(0, 1fr);
+}
+
+.geek-world-collectibles {
+  --world-accent: #fcee09;
+  --world-accent-rgb: 252, 238, 9;
+  --world-secondary: #00f0ff;
+  --world-secondary-rgb: 0, 240, 255;
+}
+
+.geek-world-games {
+  --world-accent: #39ff14;
+  --world-accent-rgb: 57, 255, 20;
+  --world-secondary: #ff003c;
+  --world-secondary-rgb: 255, 0, 60;
+}
+
+.geek-world-movies {
+  --world-accent: #00f0ff;
+  --world-accent-rgb: 0, 240, 255;
+  --world-secondary: #7b2cff;
+  --world-secondary-rgb: 123, 44, 255;
+}
+
+.geek-world-books {
+  --world-accent: #ff4fd8;
+  --world-accent-rgb: 255, 79, 216;
+  --world-secondary: #fcee09;
+  --world-secondary-rgb: 252, 238, 9;
+}
+
+.geek-world-pop {
+  --world-accent: #ff7a00;
+  --world-accent-rgb: 255, 122, 0;
+  --world-secondary: #39ff14;
+  --world-secondary-rgb: 57, 255, 20;
   background:
-    radial-gradient(circle at 10% 26%, rgba(57, 255, 20, 0.22), transparent 12rem),
-    linear-gradient(115deg, rgba(0, 240, 255, 0.16), rgba(255, 0, 60, 0.14)),
+    radial-gradient(circle at 10% 26%, rgba(var(--world-accent-rgb), 0.24), transparent 12rem),
+    linear-gradient(115deg, rgba(var(--world-secondary-rgb), 0.18), rgba(255, 0, 60, 0.16)),
     rgba(5, 5, 5, 0.94);
 }
 
@@ -5902,6 +5961,45 @@ h4 {
 
   68% {
     transform: translateY(0.04rem) rotate(4deg) scale(0.98);
+  }
+}
+
+@keyframes geekWorldLedFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 220% 50%;
+  }
+}
+
+@keyframes geekWorldScan {
+  0%,
+  42% {
+    opacity: 0.22;
+    transform: translateX(-42%);
+  }
+
+  64% {
+    opacity: 0.46;
+    transform: translateX(34%);
+  }
+
+  100% {
+    opacity: 0.22;
+    transform: translateX(64%);
+  }
+}
+
+@keyframes geekWorldIconPulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-0.12rem) scale(1.035);
   }
 }
 
