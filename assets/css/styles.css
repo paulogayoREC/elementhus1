@@ -2797,23 +2797,27 @@ h4 {
 .category-card .category-icon {
   position: relative;
   display: inline-grid;
-  width: 2.24rem;
-  height: 2.24rem;
-  min-width: 2.24rem;
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
   place-items: center;
   overflow: hidden;
   padding: 0;
-  color: var(--cream);
-  font-family: var(--font-secondary);
-  font-size: 1.16rem;
-  line-height: 1;
-  text-transform: none;
+  border: 1px solid rgba(37, 125, 167, 0.46);
   background:
-    radial-gradient(circle at 50% 26%, rgba(250, 235, 209, 0.2), transparent 42%),
-    linear-gradient(145deg, rgba(37, 125, 167, 0.28), rgba(0, 0, 0, 0.2));
+    radial-gradient(circle at 50% 24%, rgba(250, 235, 209, 0.22), transparent 44%),
+    linear-gradient(145deg, rgba(37, 125, 167, 0.26), rgba(7, 6, 5, 0.24));
   box-shadow: inset 0 0 20px rgba(37, 125, 167, 0.16), 0 0 18px rgba(37, 125, 167, 0.18);
   animation: categoryIconFloat 3.4s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px rgba(37, 125, 167, 0.42));
+}
+
+.category-card .category-icon::before {
+  position: absolute;
+  inset: 1px;
+  content: "";
+  border: 1px solid rgba(250, 235, 209, 0.09);
+  border-radius: 7px;
+  pointer-events: none;
 }
 
 .category-card .category-icon::after {
@@ -2826,20 +2830,48 @@ h4 {
   pointer-events: none;
 }
 
+.category-card .category-icon img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 0 12px rgba(37, 125, 167, 0.28));
+  animation: categoryIconArtFloat 4.4s ease-in-out infinite;
+}
+
 .category-card:nth-child(2n) .category-icon {
   animation-delay: 180ms;
+}
+
+.category-card:nth-child(2n) .category-icon img {
+  animation-delay: 320ms;
 }
 
 .category-card:nth-child(3n) .category-icon {
   animation-delay: 360ms;
 }
 
+.category-card:nth-child(3n) .category-icon img {
+  animation-delay: 480ms;
+}
+
 .category-card:nth-child(4n) .category-icon {
   animation-delay: 540ms;
 }
 
+.category-card:nth-child(4n) .category-icon img {
+  animation-delay: 640ms;
+}
+
 .category-card:nth-child(5n) .category-icon {
   animation-delay: 720ms;
+}
+
+.category-card:nth-child(5n) .category-icon img {
+  animation-delay: 800ms;
 }
 
 .category-card:hover .category-icon,
@@ -2849,7 +2881,11 @@ h4 {
     radial-gradient(circle at 50% 26%, rgba(250, 235, 209, 0.3), transparent 44%),
     linear-gradient(145deg, rgba(37, 125, 167, 0.42), rgba(194, 159, 115, 0.16));
   box-shadow: inset 0 0 22px rgba(37, 125, 167, 0.22), 0 0 26px rgba(37, 125, 167, 0.38);
-  filter: drop-shadow(0 0 16px rgba(37, 125, 167, 0.68));
+}
+
+.category-card:hover .category-icon img,
+.category-card:focus-visible .category-icon img {
+  filter: drop-shadow(0 0 16px rgba(37, 125, 167, 0.52));
 }
 
 .category-card strong {
@@ -3183,6 +3219,21 @@ h4 {
 
   72% {
     transform: translate3d(-0.04rem, -0.04rem, 0) rotate(-1.6deg);
+  }
+}
+
+@keyframes categoryIconArtFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0.03rem, -0.08rem, 0) scale(1.04);
+  }
+
+  76% {
+    transform: translate3d(-0.03rem, -0.03rem, 0) scale(0.985);
   }
 }
 
