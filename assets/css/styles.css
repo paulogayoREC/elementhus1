@@ -609,6 +609,58 @@ h4 {
   background: rgba(37, 125, 167, 0.18);
 }
 
+.hero-geek-button {
+  position: relative;
+  overflow: hidden;
+  border-color: #39ff14;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 0.78rem) 0, 100% 0.78rem, 100% 100%, 0.78rem 100%, 0 calc(100% - 0.78rem));
+  color: #39ff14;
+  font-family: var(--font-cyber);
+  text-transform: uppercase;
+  background:
+    linear-gradient(135deg, rgba(57, 255, 20, 0.18), transparent 42%),
+    linear-gradient(90deg, rgba(5, 5, 5, 0.94), rgba(5, 5, 5, 0.72));
+  box-shadow: 0.42rem 0.42rem 0 rgba(0, 240, 255, 0.52), inset 0 0 0 1px rgba(57, 255, 20, 0.28), 0 0 24px rgba(57, 255, 20, 0.22);
+  text-shadow: 0.08rem 0 rgba(0, 240, 255, 0.64);
+}
+
+.hero-geek-button::before,
+.hero-geek-button::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.hero-geek-button::before {
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(57, 255, 20, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(57, 255, 20, 0.1) 1px, transparent 1px);
+  background-size: 0.82rem 0.82rem;
+  opacity: 0.42;
+}
+
+.hero-geek-button::after {
+  top: 0.52rem;
+  right: 0.62rem;
+  left: 0.62rem;
+  height: 0.14rem;
+  background: #00f0ff;
+  box-shadow: 0 0 1rem rgba(0, 240, 255, 0.62);
+}
+
+.hero-geek-button:hover,
+.hero-geek-button:focus-visible {
+  border-color: #00f0ff;
+  color: #050505;
+  background:
+    linear-gradient(135deg, rgba(0, 240, 255, 0.42), transparent 44%),
+    #39ff14;
+  box-shadow: 0.42rem 0.42rem 0 rgba(255, 0, 60, 0.72), 0 0 32px rgba(57, 255, 20, 0.48);
+  text-shadow: none;
+}
+
 .mission-strip {
   position: absolute;
   right: 0;
