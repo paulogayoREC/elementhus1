@@ -94,7 +94,7 @@ try {
 
             $pdo->commit();
 
-            $resetUrl = build_site_url('/resetar-senha.html?token=' . rawurlencode($token));
+            $resetUrl = build_site_url('/resetar-senha?token=' . rawurlencode($token));
             $emailContent = password_reset_email($user, $resetUrl, $expiresMinutes);
 
             if (!send_html_mail((string) $user['email'], $emailContent['subject'], $emailContent['html'], $emailContent['text'])) {

@@ -272,7 +272,7 @@ Se essas variáveis não existirem, o sistema usa `seguranca@encontreaquitech.co
 O link enviado aponta para:
 
 ```txt
-https://encontreaquitech.com/resetar-senha.html?token=TOKEN_DE_USO_UNICO
+https://encontreaquitech.com/resetar-senha?token=TOKEN_DE_USO_UNICO
 ```
 
 Para o domínio `encontreaquitech.com`, o projeto já está preparado para usar:

@@ -1,0 +1,20 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Keep the homepage canonical without the physical index file.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[?\s] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
+
+# Redirect public .html URLs to clean equivalents while preserving queries.
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[?\s] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# Avoid trailing slashes on clean URLs backed by .html files.
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)/$ /$1 [R=301,L,NE]
+
+# Serve clean URLs from their matching .html files.
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)$ $1.html [L]

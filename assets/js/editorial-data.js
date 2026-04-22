@@ -18,7 +18,7 @@ window.editorialData = {
         {
           "title": "Tarifas travam data centers de IA e expõem o gargalo da infraestrutura",
           "source": "Encontre Aqui Tech",
-          "url": "noticias.html#previous-news-title",
+          "url": "/noticias#previous-news-title",
           "date": "2026-04-19",
           "tag": "Radar tech",
           "featured": false,
