@@ -5,6 +5,7 @@ declare(strict_types=1);
 require dirname(__DIR__) . '/app/bootstrap.php';
 require dirname(__DIR__) . '/app/Database.php';
 require dirname(__DIR__) . '/app/CommentStorage.php';
+require dirname(__DIR__) . '/app/ArticleCommentStorage.php';
 require dirname(__DIR__) . '/app/PasswordResetStorage.php';
 
 function db_check_is_debug(): bool
@@ -139,6 +140,7 @@ function db_check_diagnostics(?Throwable $exception = null): array
             'app/Database.php' => db_check_file_status($projectRoot . '/app/Database.php'),
             'app/bootstrap.php' => db_check_file_status($projectRoot . '/app/bootstrap.php'),
             'app/CommentStorage.php' => db_check_file_status($projectRoot . '/app/CommentStorage.php'),
+            'app/ArticleCommentStorage.php' => db_check_file_status($projectRoot . '/app/ArticleCommentStorage.php'),
             'app/PasswordResetStorage.php' => db_check_file_status($projectRoot . '/app/PasswordResetStorage.php'),
         ],
         'private_config_candidates' => array_map(
@@ -213,10 +215,22 @@ try {
         ], 500, $exception);
     }
 
+    try {
+        ensure_article_comments_table($pdo);
+        $pdo->query('SELECT id FROM article_comments WHERE 1 = 0');
+    } catch (Throwable $exception) {
+        error_log($exception->getMessage());
+        db_check_response([
+            'ok' => false,
+            'stage' => 'article_comments_table',
+            'message' => 'Conexão com o banco OK, mas a tabela article_comments não foi encontrada ou está incompleta.',
+        ], 500, $exception);
+    }
+
     db_check_response([
         'ok' => true,
         'stage' => 'ready',
-        'message' => 'Banco conectado e tabelas users/password_resets/community_comments disponíveis.',
+        'message' => 'Banco conectado e tabelas users/password_resets/community_comments/article_comments disponíveis.',
     ]);
 } catch (PDOException $exception) {
     error_log($exception->getMessage());

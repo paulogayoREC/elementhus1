@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260420-comments-db">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260422-editorial-premium">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260420-comments-db" defer></script>
+    <script src="assets/js/main.js?v=20260422-article-comments" defer></script>
     <script src="assets/js/auth.js?v=20260420-reset-senha" defer></script>
   </head>
   <body class="topic-page">
@@ -83,7 +83,8 @@
 
         <section class="section article-body-section">
           <div class="section-inner article-layout">
-            <div class="article-content">
+            <div class="article-main-column">
+              <div class="article-content">
               <p>
                 Hoje, quando se fala em software, é comum encontrar aplicações cada vez mais pesadas, cheias de camadas, recursos extras e consumo elevado de memória. Mas uma lembrança curiosa da história do Windows mostra que nem sempre foi assim. Segundo um relato resgatado recentemente, a primeira versão do Task Manager criada por Dave Plummer tinha apenas 80 KB, um tamanho extremamente pequeno até para os padrões mais modestos da atualidade.
               </p>
@@ -99,6 +100,38 @@
               <p>
                 Essa história vai além da nostalgia. Ela mostra como limitações técnicas podem estimular decisões mais cuidadosas no desenvolvimento de software. Em uma era marcada por máquinas muito mais potentes, o antigo Task Manager ainda serve como lembrete de que desempenho, eficiência e experiência do usuário continuam sendo pilares importantes para qualquer aplicação bem construída.
               </p>
+              </div>
+
+              <section class="article-comment-panel" aria-labelledby="comments-curiosidades-task-manager-title">
+                <div class="article-comment-heading">
+                  <span>Comentários</span>
+                  <h2 id="comments-curiosidades-task-manager-title">Comente esta curiosidade</h2>
+                </div>
+                <div class="article-comment-layout">
+                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="curiosidades-task-manager-80kb" data-content-title="Quando o Task Manager cabia em apenas 80 KB">
+                    <label>
+                      <span>Nome</span>
+                      <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                    </label>
+                    <label>
+                      <span>Comentário</span>
+                      <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou desta curiosidade?" data-article-comment-message required></textarea>
+                    </label>
+                    <div class="feedback-actions-row">
+                      <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                      <button class="button button-primary" type="submit">Publicar comentário</button>
+                    </div>
+                    <p class="form-note" data-article-comment-status data-content-slug="curiosidades-task-manager-80kb" aria-live="polite"></p>
+                  </form>
+
+                  <aside class="comment-stream" aria-labelledby="recent-comments-curiosidades-task-manager-title">
+                    <div class="comment-stream-heading">
+                      <h3 id="recent-comments-curiosidades-task-manager-title">Comentários recentes</h3>
+                    </div>
+                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="curiosidades-task-manager-80kb"></div>
+                  </aside>
+                </div>
+              </section>
             </div>
 
             <aside class="article-aside" aria-label="Pontos principais da curiosidade">
@@ -110,6 +143,72 @@
                 <li>A história reforça que eficiência ainda é parte essencial de um bom software.</li>
               </ul>
             </aside>
+          </div>
+        </section>
+
+        <section class="section article-archive-section" aria-labelledby="curiosidades-archive-title">
+          <div class="section-inner">
+            <div class="article-archive-heading">
+              <h2 id="curiosidades-archive-title">Continue curioso</h2>
+              <p>Histórias anteriores aparecem em formato compacto para abrir sem perder o ritmo da leitura principal.</p>
+            </div>
+
+            <div class="article-archive-grid" data-archive-limit="5">
+              <details class="article-archive-card">
+                <summary>
+                  <span class="article-archive-thumb">
+                    <img src="assets/img/post-instagram-eat.png" alt="Arte do Encontre Aqui Tech com identidade visual espacial." loading="lazy" decoding="async">
+                  </span>
+                  <span class="article-archive-summary-copy">
+                    <span class="article-archive-date"><time datetime="2026-04-16">16 abr. 2026</time></span>
+                    <h3>Impressoras 3D da Bambu ganham mistura de cores com filamentos</h3>
+                    <p>Atualização permite simular tons e gradientes combinando dois ou três filamentos em uma mesma impressão.</p>
+                  </span>
+                  <span class="article-archive-toggle" aria-hidden="true"></span>
+                </summary>
+
+                <div class="article-archive-body">
+                  <p>
+                    A Bambu Lab atualizou seu ecossistema de impressão 3D com recursos capazes de prever combinações de cores a partir de dois ou três filamentos. A ideia lembra a mistura visual usada em impressão tradicional: pontos e camadas diferentes criam a percepção de novos tons sem exigir um filamento específico para cada cor.
+                  </p>
+                  <p>
+                    Para makers e criadores, esse tipo de recurso amplia as possibilidades de acabamento sem tornar o fluxo de trabalho tão complexo. Também mostra como software e calibração estão virando diferenciais importantes em impressoras 3D, especialmente quando o objetivo é entregar peças mais expressivas sem elevar demais o custo do material.
+                  </p>
+                  <a class="article-archive-source" href="https://www.tomshardware.com/3d-printing/bambu-updates-its-3d-printers-to-print-unique-hues-or-gradients-using-two-or-three-filaments-company-acknowledges-orcaslicer-fullspectrum-fork-as-the-basis-for-the-color-prediction-part-of-the-new-feature" target="_blank" rel="noopener noreferrer">Fonte consultada: Tom's Hardware</a>
+
+                  <section class="article-comment-panel article-comment-panel-compact" aria-labelledby="comments-curiosidades-bambu-title">
+                    <div class="article-comment-heading">
+                      <span>Comentários</span>
+                      <h2 id="comments-curiosidades-bambu-title">Comente este conteúdo</h2>
+                    </div>
+                    <div class="article-comment-layout">
+                      <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="curiosidades-bambu-3d-cores" data-content-title="Impressoras 3D da Bambu ganham mistura de cores com filamentos">
+                        <label>
+                          <span>Nome</span>
+                          <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                        </label>
+                        <label>
+                          <span>Comentário</span>
+                          <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
+                        </label>
+                        <div class="feedback-actions-row">
+                          <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                          <button class="button button-primary" type="submit">Publicar comentário</button>
+                        </div>
+                        <p class="form-note" data-article-comment-status data-content-slug="curiosidades-bambu-3d-cores" aria-live="polite"></p>
+                      </form>
+
+                      <aside class="comment-stream" aria-labelledby="recent-comments-curiosidades-bambu-title">
+                        <div class="comment-stream-heading">
+                          <h3 id="recent-comments-curiosidades-bambu-title">Comentários recentes</h3>
+                        </div>
+                        <div class="comment-list is-empty" data-article-comment-list data-content-slug="curiosidades-bambu-3d-cores"></div>
+                      </aside>
+                    </div>
+                  </section>
+                </div>
+              </details>
+            </div>
           </div>
         </section>
       </article>

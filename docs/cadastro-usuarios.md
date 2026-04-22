@@ -8,18 +8,21 @@
 - `api/request-password-reset.php`: recebe o e-mail e dispara link seguro de redefinição.
 - `api/reset-password.php`: valida token de uso único e grava a nova senha.
 - `api/comments.php`: lista e publica comentários/avaliações no MySQL.
+- `api/article-comments.php`: lista e publica comentários vinculados a cada notícia, novidade, curiosidade, alerta ou tutorial.
 - `api/logout.php`: encerra a sessão.
 - `app/bootstrap.php`: sessão, respostas JSON, CSRF e validações comuns.
 - `app/Database.php`: conexão PDO com MySQL.
 - `app/Mailer.php`: envio de e-mails HTML/texto para recuperação de senha e confirmação de alteração.
 - `app/PasswordResetStorage.php`: criação defensiva da tabela `password_resets` quando o fluxo de reset roda.
 - `app/CommentStorage.php`: criação defensiva e payload público da tabela `community_comments`.
+- `app/ArticleCommentStorage.php`: criação defensiva e payload público da tabela `article_comments`.
 - `config/database.php`: lê credenciais por variável de ambiente ou arquivo privado.
 - `config/database.private.example.php`: modelo de configuração privada.
 - `config/legal.php`: versões dos Termos, Política e dados de contato para o fluxo de aceite.
-- `database/schema.sql`: SQL para criar a tabela `users`.
+- `database/schema.sql`: SQL consolidado para criar as tabelas principais.
 - `database/migrations/20260420_create_password_resets_table.sql`: cria a tabela de tokens de redefinição.
 - `database/migrations/20260420_create_community_comments_table.sql`: cria a tabela de comentários e avaliações.
+- `database/migrations/20260422_create_article_comments_table.sql`: cria a tabela de comentários por conteúdo.
 - `database/migrations/20260419_add_terms_acceptance_fields.sql`: migração para bancos já criados antes dos campos de aceite.
 - `assets/js/auth.js`: modal de Login/Cadastro e validação no front-end.
 - `assets/js/password-reset.js`: formulário da página de nova senha.
@@ -155,6 +158,34 @@ CREATE TABLE IF NOT EXISTS community_comments (
 
 O mesmo script está em `database/migrations/20260420_create_community_comments_table.sql`. O endpoint `api/comments.php` também tenta criar a tabela automaticamente se ela ainda não existir.
 
+Para salvar comentários de cada conteúdo editorial no MySQL, execute:
+
+```sql
+CREATE TABLE IF NOT EXISTS article_comments (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  content_slug VARCHAR(120) NOT NULL,
+  page_slug VARCHAR(120) NOT NULL,
+  content_title VARCHAR(190) NOT NULL,
+  user_id BIGINT UNSIGNED NULL,
+  name VARCHAR(48) NOT NULL,
+  message TEXT NOT NULL,
+  status VARCHAR(24) NOT NULL DEFAULT 'published',
+  submitted_ip VARCHAR(45) NULL,
+  submitted_user_agent VARCHAR(255) NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  KEY article_comments_content_status_created_index (content_slug, status, created_at),
+  KEY article_comments_page_created_index (page_slug, created_at),
+  KEY article_comments_user_created_index (user_id, created_at),
+  CONSTRAINT article_comments_user_id_foreign
+    FOREIGN KEY (user_id) REFERENCES users (id)
+    ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+O mesmo script está em `database/migrations/20260422_create_article_comments_table.sql`. O endpoint `api/article-comments.php` também tenta criar a tabela automaticamente se ela ainda não existir.
+
 ## Onde personalizar Termos e Privacidade
 
 Atualize `config/legal.php` quando mudar versão, contato ou responsável:
@@ -284,7 +315,7 @@ https://encontreaquitech.com/api/db-check.php
 Se estiver tudo certo, a resposta será parecida com:
 
 ```json
-{"ok":true,"stage":"ready","message":"Banco conectado e tabela users disponível."}
+{"ok":true,"stage":"ready","message":"Banco conectado e tabelas users/password_resets/community_comments/article_comments disponíveis."}
 ```
 
 Se a resposta citar `users_table`, a conexão funcionou, mas falta criar a tabela `users` no phpMyAdmin usando `database/schema.sql`.
@@ -292,6 +323,8 @@ Se a resposta citar `users_table`, a conexão funcionou, mas falta criar a tabel
 Se a resposta citar `password_resets_table`, execute `database/migrations/20260420_create_password_resets_table.sql`.
 
 Se a resposta citar `community_comments_table`, execute `database/migrations/20260420_create_community_comments_table.sql`.
+
+Se a resposta citar `article_comments_table`, execute `database/migrations/20260422_create_article_comments_table.sql`.
 
 Se a resposta citar `connection`, confira host, nome do banco, usuário, senha e permissões do usuário MySQL.
 
@@ -373,6 +406,7 @@ O cadastro não funciona abrindo o `index.html` diretamente pelo navegador, porq
 - Tempo mínimo de resposta no pedido de reset para reduzir diferença perceptível entre conta existente e inexistente.
 - E-mail de confirmação após a senha ser alterada.
 - Comentários e avaliações salvos em `community_comments`, com validação no servidor, CSRF no envio e limite simples de 3 comentários a cada 2 minutos por IP.
+- Comentários de conteúdos editoriais salvos em `article_comments`, separados por `content_slug`, com validação no servidor, CSRF no envio e limite simples de 3 comentários por conteúdo a cada 2 minutos por IP.
 - Listagem pública limitada aos comentários com `status = published` e sem exposição de IP, user-agent ou e-mail.
 - Cookie de sessão com `HttpOnly`, `SameSite=Lax` e `Secure` quando estiver em HTTPS.
 - Saídas de usuário no front-end feitas com `textContent`.

@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260420-comments-db">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260422-editorial-premium">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260420-comments-db" defer></script>
+    <script src="assets/js/main.js?v=20260422-article-comments" defer></script>
     <script src="assets/js/auth.js?v=20260420-reset-senha" defer></script>
   </head>
   <body class="topic-page">
@@ -83,7 +83,8 @@
 
         <section class="section article-body-section">
           <div class="section-inner article-layout">
-            <div class="article-content">
+            <div class="article-main-column">
+              <div class="article-content">
               <p>
                 O Google deu mais um passo importante na corrida da inteligência artificial ao lançar um aplicativo nativo do Gemini para Mac. A novidade marca a chegada oficial da plataforma ao ambiente macOS, permitindo que os usuários acessem a ferramenta de forma mais rápida e integrada ao sistema, sem depender exclusivamente do navegador. A disponibilidade começou em 15 de abril de 2026, e o app funciona em máquinas com macOS 15 ou superior.
               </p>
@@ -102,6 +103,38 @@
               <p>
                 Mais do que um simples lançamento, a chegada do Gemini para Mac sinaliza uma tendência clara do mercado: a inteligência artificial está deixando de ser apenas uma ferramenta acessada pelo navegador e passando a ocupar um espaço fixo dentro do sistema operacional. Para o Google, isso representa uma oportunidade de tornar o Gemini mais útil, mais constante e mais competitivo em um cenário cada vez mais disputado.
               </p>
+              </div>
+
+              <section class="article-comment-panel" aria-labelledby="comments-novidades-gemini-title">
+                <div class="article-comment-heading">
+                  <span>Comentários</span>
+                  <h2 id="comments-novidades-gemini-title">Comente esta novidade</h2>
+                </div>
+                <div class="article-comment-layout">
+                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="novidades-gemini-mac" data-content-title="Gemini para Mac leva a IA para dentro do desktop">
+                    <label>
+                      <span>Nome</span>
+                      <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                    </label>
+                    <label>
+                      <span>Comentário</span>
+                      <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou desta novidade?" data-article-comment-message required></textarea>
+                    </label>
+                    <div class="feedback-actions-row">
+                      <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                      <button class="button button-primary" type="submit">Publicar comentário</button>
+                    </div>
+                    <p class="form-note" data-article-comment-status data-content-slug="novidades-gemini-mac" aria-live="polite"></p>
+                  </form>
+
+                  <aside class="comment-stream" aria-labelledby="recent-comments-novidades-gemini-title">
+                    <div class="comment-stream-heading">
+                      <h3 id="recent-comments-novidades-gemini-title">Comentários recentes</h3>
+                    </div>
+                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="novidades-gemini-mac"></div>
+                  </aside>
+                </div>
+              </section>
             </div>
 
             <aside class="article-aside" aria-label="Pontos principais da novidade">
@@ -113,6 +146,72 @@
                 <li>A disputa por IA agora também passa pela presença constante dentro do sistema operacional.</li>
               </ul>
             </aside>
+          </div>
+        </section>
+
+        <section class="section article-archive-section" aria-labelledby="novidades-archive-title">
+          <div class="section-inner">
+            <div class="article-archive-heading">
+              <h2 id="novidades-archive-title">Continue explorando</h2>
+              <p>Conteúdos anteriores ficam compactos para manter a página leve e convidar o visitante a abrir apenas o que quiser ler.</p>
+            </div>
+
+            <div class="article-archive-grid" data-archive-limit="5">
+              <details class="article-archive-card">
+                <summary>
+                  <span class="article-archive-thumb">
+                    <img src="assets/img/amazon-delivery-hero.png" alt="Astronauta do Encontre Aqui Tech em composição visual tecnológica." loading="lazy" decoding="async">
+                  </span>
+                  <span class="article-archive-summary-copy">
+                    <span class="article-archive-date"><time datetime="2026-04-16">16 abr. 2026</time></span>
+                    <h3>Meta aumenta preço dos Quest por escassez de RAM ligada à IA</h3>
+                    <p>A demanda por memória em data centers de IA começa a pressionar também produtos de consumo, incluindo headsets de realidade virtual.</p>
+                  </span>
+                  <span class="article-archive-toggle" aria-hidden="true"></span>
+                </summary>
+
+                <div class="article-archive-body">
+                  <p>
+                    A expansão acelerada da inteligência artificial vem disputando componentes com outros setores da tecnologia. No caso dos headsets Meta Quest, a pressão sobre módulos de memória usados em data centers aparece como um dos fatores que ajudam a explicar aumentos de preço em produtos voltados ao consumidor final.
+                  </p>
+                  <p>
+                    O episódio mostra como a corrida por infraestrutura de IA não fica limitada a servidores e chips especializados. Quando fornecedores priorizam grandes encomendas para data centers, categorias como realidade virtual, notebooks, smartphones e acessórios também podem sentir o impacto na disponibilidade e no custo de componentes.
+                  </p>
+                  <a class="article-archive-source" href="https://www.tomshardware.com/virtual-reality/meta-raising-quest-headset-prices-due-to-ai-driven-ram-shortage-quest-3-to-cost-usd600-quest-3s-usd350-from-april-19" target="_blank" rel="noopener noreferrer">Fonte consultada: Tom's Hardware</a>
+
+                  <section class="article-comment-panel article-comment-panel-compact" aria-labelledby="comments-novidades-meta-title">
+                    <div class="article-comment-heading">
+                      <span>Comentários</span>
+                      <h2 id="comments-novidades-meta-title">Comente este conteúdo</h2>
+                    </div>
+                    <div class="article-comment-layout">
+                      <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="novidades-meta-quest-ram-ia" data-content-title="Meta aumenta preço dos Quest por escassez de RAM ligada à IA">
+                        <label>
+                          <span>Nome</span>
+                          <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                        </label>
+                        <label>
+                          <span>Comentário</span>
+                          <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
+                        </label>
+                        <div class="feedback-actions-row">
+                          <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                          <button class="button button-primary" type="submit">Publicar comentário</button>
+                        </div>
+                        <p class="form-note" data-article-comment-status data-content-slug="novidades-meta-quest-ram-ia" aria-live="polite"></p>
+                      </form>
+
+                      <aside class="comment-stream" aria-labelledby="recent-comments-novidades-meta-title">
+                        <div class="comment-stream-heading">
+                          <h3 id="recent-comments-novidades-meta-title">Comentários recentes</h3>
+                        </div>
+                        <div class="comment-list is-empty" data-article-comment-list data-content-slug="novidades-meta-quest-ram-ia"></div>
+                      </aside>
+                    </div>
+                  </section>
+                </div>
+              </details>
+            </div>
           </div>
         </section>
       </article>

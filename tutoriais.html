@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260420-comments-db">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260422-editorial-premium">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260420-comments-db" defer></script>
+    <script src="assets/js/main.js?v=20260422-article-comments" defer></script>
     <script src="assets/js/auth.js?v=20260420-reset-senha" defer></script>
   </head>
   <body class="topic-page">
@@ -83,7 +83,8 @@
 
         <section class="section article-body-section">
           <div class="section-inner article-layout">
-            <div class="article-content">
+            <div class="article-main-column">
+              <div class="article-content">
               <p>
                 O Google Maps recebeu mudanças importantes para quem costuma contribuir com fotos e vídeos de lugares visitados. Segundo tutorial publicado pelo Canaltech, o aplicativo passou a facilitar o envio de mídias, sugerir conteúdos com base na sua galeria e usar recursos de inteligência artificial para ajudar na criação de legendas.
               </p>
@@ -147,6 +148,38 @@
                 <li>Confira o local, a legenda e a privacidade da imagem.</li>
                 <li>Publique apenas conteúdos úteis para outros usuários.</li>
               </ol>
+              </div>
+
+              <section class="article-comment-panel" aria-labelledby="comments-tutoriais-maps-title">
+                <div class="article-comment-heading">
+                  <span>Comentários</span>
+                  <h2 id="comments-tutoriais-maps-title">Comente este tutorial</h2>
+                </div>
+                <div class="article-comment-layout">
+                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="tutoriais-google-maps-fotos-videos" data-content-title="Google Maps: como postar fotos e vídeos com os novos recursos">
+                    <label>
+                      <span>Nome</span>
+                      <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                    </label>
+                    <label>
+                      <span>Comentário</span>
+                      <textarea name="message" rows="4" maxlength="500" placeholder="Este tutorial ajudou você?" data-article-comment-message required></textarea>
+                    </label>
+                    <div class="feedback-actions-row">
+                      <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                      <button class="button button-primary" type="submit">Publicar comentário</button>
+                    </div>
+                    <p class="form-note" data-article-comment-status data-content-slug="tutoriais-google-maps-fotos-videos" aria-live="polite"></p>
+                  </form>
+
+                  <aside class="comment-stream" aria-labelledby="recent-comments-tutoriais-maps-title">
+                    <div class="comment-stream-heading">
+                      <h3 id="recent-comments-tutoriais-maps-title">Comentários recentes</h3>
+                    </div>
+                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="tutoriais-google-maps-fotos-videos"></div>
+                  </aside>
+                </div>
+              </section>
             </div>
 
             <aside class="article-aside" aria-label="Pontos principais do tutorial">
@@ -158,6 +191,72 @@
                 <li>Contribuições boas ajudam outras pessoas e podem contar para o Local Guides.</li>
               </ul>
             </aside>
+          </div>
+        </section>
+
+        <section class="section article-archive-section" aria-labelledby="tutoriais-archive-title">
+          <div class="section-inner">
+            <div class="article-archive-heading">
+              <h2 id="tutoriais-archive-title">Outros guias úteis</h2>
+              <p>Guias anteriores ficam dobrados em cards rápidos para o visitante abrir quando quiser seguir aprendendo.</p>
+            </div>
+
+            <div class="article-archive-grid" data-archive-limit="5">
+              <details class="article-archive-card">
+                <summary>
+                  <span class="article-archive-thumb">
+                    <img src="assets/img/amazon-delivery-hero.png" alt="Cena tecnológica do Encontre Aqui Tech com astronauta." loading="lazy" decoding="async">
+                  </span>
+                  <span class="article-archive-summary-copy">
+                    <span class="article-archive-date"><time datetime="2026-04-14">14 abr. 2026</time></span>
+                    <h3>Como testar o novo app do Gemini no Windows</h3>
+                    <p>O aplicativo do Google aproxima o Gemini do fluxo de trabalho no PC com atalhos, busca local, Drive e Lens.</p>
+                  </span>
+                  <span class="article-archive-toggle" aria-hidden="true"></span>
+                </summary>
+
+                <div class="article-archive-body">
+                  <p>
+                    O novo app do Google para Windows oferece mais uma forma de acessar o Gemini diretamente no desktop. A proposta é reduzir a dependência do navegador e colocar o assistente mais perto do fluxo de trabalho, com acionamento por atalho e integração com recursos como busca local, Google Drive e Lens.
+                  </p>
+                  <p>
+                    Para testar, o caminho é acompanhar a liberação do aplicativo, manter a conta Google conectada e revisar permissões antes de usar recursos que acessam arquivos, tela ou serviços integrados. Como toda ferramenta de IA com contexto do dispositivo, vale equilibrar praticidade e privacidade.
+                  </p>
+                  <a class="article-archive-source" href="https://www.engadget.com/apps/googles-new-windows-app-is-yet-another-way-to-access-gemini-214000564.html" target="_blank" rel="noopener noreferrer">Fonte consultada: Engadget</a>
+
+                  <section class="article-comment-panel article-comment-panel-compact" aria-labelledby="comments-tutoriais-gemini-windows-title">
+                    <div class="article-comment-heading">
+                      <span>Comentários</span>
+                      <h2 id="comments-tutoriais-gemini-windows-title">Comente este conteúdo</h2>
+                    </div>
+                    <div class="article-comment-layout">
+                      <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="tutoriais-gemini-windows" data-content-title="Como testar o novo app do Gemini no Windows">
+                        <label>
+                          <span>Nome</span>
+                          <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                        </label>
+                        <label>
+                          <span>Comentário</span>
+                          <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
+                        </label>
+                        <div class="feedback-actions-row">
+                          <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                          <button class="button button-primary" type="submit">Publicar comentário</button>
+                        </div>
+                        <p class="form-note" data-article-comment-status data-content-slug="tutoriais-gemini-windows" aria-live="polite"></p>
+                      </form>
+
+                      <aside class="comment-stream" aria-labelledby="recent-comments-tutoriais-gemini-windows-title">
+                        <div class="comment-stream-heading">
+                          <h3 id="recent-comments-tutoriais-gemini-windows-title">Comentários recentes</h3>
+                        </div>
+                        <div class="comment-list is-empty" data-article-comment-list data-content-slug="tutoriais-gemini-windows"></div>
+                      </aside>
+                    </div>
+                  </section>
+                </div>
+              </details>
+            </div>
           </div>
         </section>
       </article>

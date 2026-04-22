@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260422-noticias-imagem">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260422-editorial-premium">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260420-comments-db" defer></script>
+    <script src="assets/js/main.js?v=20260422-article-comments" defer></script>
     <script src="assets/js/auth.js?v=20260420-reset-senha" defer></script>
   </head>
   <body class="topic-page">
@@ -83,7 +83,8 @@
 
         <section class="section article-body-section article-body-section-featured">
           <div class="section-inner article-layout">
-            <div class="article-content">
+            <div class="article-main-column">
+              <div class="article-content">
               <p>
                 A Apple se prepara para uma mudança histórica em sua liderança. Em comunicado oficial, a empresa confirmou que Tim Cook deixará o cargo de CEO em 1º de setembro de 2026 e passará a atuar como chairman executivo. Para assumir o comando da companhia, o escolhido foi John Ternus, executivo ligado diretamente à área de engenharia de hardware e ao desenvolvimento de alguns dos principais produtos da gigante de Cupertino.
               </p>
@@ -103,6 +104,38 @@
               <p>
                 Para os usuários, investidores e parceiros da marca, o ponto de atenção agora é simples: a Apple entra em uma fase em que seu histórico de design, integração e hardware premium precisará conversar de forma mais direta com a velocidade da IA. A nova liderança terá a missão de preservar a confiança construída por Cook, sem perder o ritmo de inovação que o mercado espera de Cupertino.
               </p>
+              </div>
+
+              <section class="article-comment-panel" aria-labelledby="comments-noticias-tim-cook-title">
+                <div class="article-comment-heading">
+                  <span>Comentários</span>
+                  <h2 id="comments-noticias-tim-cook-title">Comente esta notícia</h2>
+                </div>
+                <div class="article-comment-layout">
+                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="noticias-tim-cook-apple-transicao" data-content-title="Tim Cook deixa o comando da Apple e abre espaço para uma nova fase na empresa">
+                    <label>
+                      <span>Nome</span>
+                      <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                    </label>
+                    <label>
+                      <span>Comentário</span>
+                      <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou desta notícia?" data-article-comment-message required></textarea>
+                    </label>
+                    <div class="feedback-actions-row">
+                      <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                      <button class="button button-primary" type="submit">Publicar comentário</button>
+                    </div>
+                    <p class="form-note" data-article-comment-status data-content-slug="noticias-tim-cook-apple-transicao" aria-live="polite"></p>
+                  </form>
+
+                  <aside class="comment-stream" aria-labelledby="recent-comments-noticias-tim-cook-title">
+                    <div class="comment-stream-heading">
+                      <h3 id="recent-comments-noticias-tim-cook-title">Comentários recentes</h3>
+                    </div>
+                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="noticias-tim-cook-apple-transicao"></div>
+                  </aside>
+                </div>
+              </section>
             </div>
 
             <aside class="article-aside" aria-label="Pontos principais da notícia">
@@ -117,39 +150,77 @@
           </div>
         </section>
 
-        <section class="section article-body-section article-subfeature-section" aria-labelledby="previous-news-title">
-          <div class="section-inner article-layout article-subfeature-layout">
-            <div class="article-content">
-              <figure class="article-subfeature-media">
-                <img src="assets/img/noticias/ai-data-centers-tariffs-preview.webp" alt="Corredor de data center com racks de servidores e iluminação azul." loading="lazy" decoding="async">
-                <figcaption>Infraestrutura física, energia e cadeia de suprimentos viram peças centrais na corrida por capacidade de IA.</figcaption>
-              </figure>
-              <h2 id="previous-news-title">Tarifas travam data centers de IA e expõem o gargalo da infraestrutura</h2>
-              <p>
-                A corrida pela liderança em inteligência artificial não depende apenas de chips avançados, modelos poderosos e promessas políticas. Na prática, ela também passa por algo menos chamativo, mas absolutamente decisivo: infraestrutura. Nos Estados Unidos, o esforço para acelerar a expansão de AI data centers enfrenta obstáculos cada vez mais concretos, e parte desse problema vem das próprias medidas comerciais adotadas pelo governo. Segundo a Ars Technica, tarifas sobre importações chinesas vêm dificultando o avanço de projetos essenciais para sustentar o crescimento da IA no país.
-              </p>
-              <p>
-                O ponto central é que um data center não depende só de GPUs e servidores de última geração. Para funcionar, ele precisa de uma base robusta de energia, resfriamento, transformadores, switchgear e diversos componentes industriais que fazem toda a operação sair do papel. Quando tarifas encarecem ou atrasam a chegada desses itens, o impacto aparece diretamente no cronograma das obras e no custo final dos projetos. A consequência é um cenário em que a ambição de liderar a IA esbarra em gargalos logísticos e estruturais.
-              </p>
-              <p>
-                Esse tipo de contradição chama atenção porque a política industrial anunciada para fortalecer a tecnologia nacional acaba gerando pressão justamente sobre a cadeia que deveria ser acelerada. Em vez de impulsionar a construção de novos polos de computação, as barreiras comerciais podem desacelerar investimentos, aumentar incertezas e dificultar a expansão da capacidade necessária para treinar e operar sistemas de IA em larga escala.
-              </p>
-              <p>
-                Ao mesmo tempo, a discussão não envolve apenas competitividade internacional. O crescimento dos AI data centers também levanta preocupações sobre consumo de energia, custos para a rede elétrica e capacidade de atendimento futuro. Em março, grandes empresas de tecnologia prometeram arcar com mais custos ligados à geração de energia para suas operações, numa tentativa de reduzir críticas sobre o peso dessa expansão para consumidores e comunidades locais. Ainda assim, especialistas apontam que promessa empresarial não elimina, por si só, os desafios reais de infraestrutura e execução.
-              </p>
-              <p>
-                No fim das contas, a lição é clara: vencer a disputa global da inteligência artificial não depende apenas de discursos, incentivos ou sanções comerciais. Sem planejamento industrial coerente, segurança energética e uma cadeia de suprimentos capaz de acompanhar a velocidade do setor, até os projetos mais ambiciosos podem perder ritmo. E é justamente aí que a discussão sobre IA deixa de ser apenas tecnológica para se tornar também econômica, logística e estratégica.
-              </p>
+        <section class="section article-archive-section" aria-labelledby="noticias-archive-title">
+          <div class="section-inner">
+            <div class="article-archive-heading">
+              <h2 id="noticias-archive-title">Continue no radar</h2>
+              <p>Conteúdos anteriores ficam compactos, com imagem, data e uma chamada clara para abrir apenas o que interessar.</p>
             </div>
 
-            <aside class="article-aside" aria-label="Pontos principais da notícia">
-              <h2>Infraestrutura no radar</h2>
-              <ul>
-                <li>A matéria complementa o destaque principal da editoria.</li>
-                <li>O gargalo envolve energia, resfriamento, equipamentos industriais e prazos de obra.</li>
-                <li>O tema ajuda a acompanhar a disputa por infraestrutura de IA.</li>
-              </ul>
-            </aside>
+            <div class="article-archive-grid" data-archive-limit="5">
+              <details class="article-archive-card">
+                <summary>
+                  <span class="article-archive-thumb">
+                    <img src="assets/img/noticias/ai-data-centers-tariffs-preview.webp" alt="Corredor de data center com racks de servidores e iluminação azul." loading="lazy" decoding="async">
+                  </span>
+                  <span class="article-archive-summary-copy">
+                    <span class="article-archive-date"><time datetime="2026-04-19">19 abr. 2026</time></span>
+                    <h3 id="previous-news-title">Tarifas travam data centers de IA e expõem o gargalo da infraestrutura</h3>
+                    <p>Infraestrutura física, energia e cadeia de suprimentos viram peças centrais na corrida por capacidade de IA.</p>
+                  </span>
+                  <span class="article-archive-toggle" aria-hidden="true"></span>
+                </summary>
+
+                <div class="article-archive-body">
+                  <p>
+                    A corrida pela liderança em inteligência artificial não depende apenas de chips avançados, modelos poderosos e promessas políticas. Na prática, ela também passa por algo menos chamativo, mas absolutamente decisivo: infraestrutura. Nos Estados Unidos, o esforço para acelerar a expansão de AI data centers enfrenta obstáculos cada vez mais concretos, e parte desse problema vem das próprias medidas comerciais adotadas pelo governo. Segundo a Ars Technica, tarifas sobre importações chinesas vêm dificultando o avanço de projetos essenciais para sustentar o crescimento da IA no país.
+                  </p>
+                  <p>
+                    O ponto central é que um data center não depende só de GPUs e servidores de última geração. Para funcionar, ele precisa de uma base robusta de energia, resfriamento, transformadores, switchgear e diversos componentes industriais que fazem toda a operação sair do papel. Quando tarifas encarecem ou atrasam a chegada desses itens, o impacto aparece diretamente no cronograma das obras e no custo final dos projetos. A consequência é um cenário em que a ambição de liderar a IA esbarra em gargalos logísticos e estruturais.
+                  </p>
+                  <p>
+                    Esse tipo de contradição chama atenção porque a política industrial anunciada para fortalecer a tecnologia nacional acaba gerando pressão justamente sobre a cadeia que deveria ser acelerada. Em vez de impulsionar a construção de novos polos de computação, as barreiras comerciais podem desacelerar investimentos, aumentar incertezas e dificultar a expansão da capacidade necessária para treinar e operar sistemas de IA em larga escala.
+                  </p>
+                  <p>
+                    Ao mesmo tempo, a discussão não envolve apenas competitividade internacional. O crescimento dos AI data centers também levanta preocupações sobre consumo de energia, custos para a rede elétrica e capacidade de atendimento futuro. Em março, grandes empresas de tecnologia prometeram arcar com mais custos ligados à geração de energia para suas operações, numa tentativa de reduzir críticas sobre o peso dessa expansão para consumidores e comunidades locais. Ainda assim, especialistas apontam que promessa empresarial não elimina, por si só, os desafios reais de infraestrutura e execução.
+                  </p>
+                  <p>
+                    No fim das contas, a lição é clara: vencer a disputa global da inteligência artificial não depende apenas de discursos, incentivos ou sanções comerciais. Sem planejamento industrial coerente, segurança energética e uma cadeia de suprimentos capaz de acompanhar a velocidade do setor, até os projetos mais ambiciosos podem perder ritmo. E é justamente aí que a discussão sobre IA deixa de ser apenas tecnológica para se tornar também econômica, logística e estratégica.
+                  </p>
+
+                  <section class="article-comment-panel article-comment-panel-compact" aria-labelledby="comments-noticias-data-centers-title">
+                    <div class="article-comment-heading">
+                      <span>Comentários</span>
+                      <h2 id="comments-noticias-data-centers-title">Comente este conteúdo</h2>
+                    </div>
+                    <div class="article-comment-layout">
+                      <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="noticias-ai-data-centers-tarifas" data-content-title="Tarifas travam data centers de IA e expõem o gargalo da infraestrutura">
+                        <label>
+                          <span>Nome</span>
+                          <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                        </label>
+                        <label>
+                          <span>Comentário</span>
+                          <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
+                        </label>
+                        <div class="feedback-actions-row">
+                          <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                          <button class="button button-primary" type="submit">Publicar comentário</button>
+                        </div>
+                        <p class="form-note" data-article-comment-status data-content-slug="noticias-ai-data-centers-tarifas" aria-live="polite"></p>
+                      </form>
+
+                      <aside class="comment-stream" aria-labelledby="recent-comments-noticias-data-centers-title">
+                        <div class="comment-stream-heading">
+                          <h3 id="recent-comments-noticias-data-centers-title">Comentários recentes</h3>
+                        </div>
+                        <div class="comment-list is-empty" data-article-comment-list data-content-slug="noticias-ai-data-centers-tarifas"></div>
+                      </aside>
+                    </div>
+                  </section>
+                </div>
+              </details>
+            </div>
           </div>
         </section>
       </article>

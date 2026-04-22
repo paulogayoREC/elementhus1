@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260420-comments-db">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260422-editorial-premium">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260420-comments-db" defer></script>
+    <script src="assets/js/main.js?v=20260422-article-comments" defer></script>
     <script src="assets/js/auth.js?v=20260420-reset-senha" defer></script>
   </head>
   <body class="topic-page">
@@ -83,7 +83,8 @@
 
         <section class="section article-body-section">
           <div class="section-inner article-layout">
-            <div class="article-content">
+            <div class="article-main-column">
+              <div class="article-content">
               <p>
                 A segurança digital voltou ao centro das atenções depois que três falhas zero-day relacionadas ao Microsoft Defender passaram a ser associadas a atividades reais de ataque. De acordo com informações divulgadas nesta semana, as vulnerabilidades foram observadas em uso por criminosos para ampliar privilégios dentro de sistemas já comprometidos, o que aumenta o risco de movimentação lateral, persistência e aprofundamento da invasão.
               </p>
@@ -102,6 +103,38 @@
               <p>
                 Para quem administra ambientes Windows, o alerta é claro: aplicar correções assim que disponíveis, revisar sinais de atividade suspeita e acompanhar indicadores de pós-comprometimento passa a ser ainda mais importante. Quando uma falha permite elevar privilégios ou enfraquecer a camada de proteção do endpoint, o problema deixa de ser apenas técnico e passa a representar um risco direto para a continuidade das operações. Essa leitura decorre do comportamento das falhas descritas no relatório.
               </p>
+              </div>
+
+              <section class="article-comment-panel" aria-labelledby="comments-alertas-defender-title">
+                <div class="article-comment-heading">
+                  <span>Comentários</span>
+                  <h2 id="comments-alertas-defender-title">Comente este alerta</h2>
+                </div>
+                <div class="article-comment-layout">
+                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-defender-zero-days" data-content-title="Zero-days no Defender acendem alerta em ambientes Windows">
+                    <label>
+                      <span>Nome</span>
+                      <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                    </label>
+                    <label>
+                      <span>Comentário</span>
+                      <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste alerta?" data-article-comment-message required></textarea>
+                    </label>
+                    <div class="feedback-actions-row">
+                      <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                      <button class="button button-primary" type="submit">Publicar comentário</button>
+                    </div>
+                    <p class="form-note" data-article-comment-status data-content-slug="alertas-defender-zero-days" aria-live="polite"></p>
+                  </form>
+
+                  <aside class="comment-stream" aria-labelledby="recent-comments-alertas-defender-title">
+                    <div class="comment-stream-heading">
+                      <h3 id="recent-comments-alertas-defender-title">Comentários recentes</h3>
+                    </div>
+                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-defender-zero-days"></div>
+                  </aside>
+                </div>
+              </section>
             </div>
 
             <aside class="article-aside" aria-label="Pontos principais do alerta">
@@ -113,6 +146,72 @@
                 <li>Atualização rápida, monitoramento e revisão de privilégios reduzem exposição.</li>
               </ul>
             </aside>
+          </div>
+        </section>
+
+        <section class="section article-archive-section" aria-labelledby="alertas-archive-title">
+          <div class="section-inner">
+            <div class="article-archive-heading">
+              <h2 id="alertas-archive-title">Mais alertas</h2>
+              <p>Alertas anteriores ficam em cards expansíveis para consulta rápida, sem competir com o conteúdo mais recente.</p>
+            </div>
+
+            <div class="article-archive-grid" data-archive-limit="5">
+              <details class="article-archive-card">
+                <summary>
+                  <span class="article-archive-thumb">
+                    <img src="assets/img/astro001-cutout.png" alt="Astronauta do Encontre Aqui Tech associado a alerta digital." loading="lazy" decoding="async">
+                  </span>
+                  <span class="article-archive-summary-copy">
+                    <span class="article-archive-date"><time datetime="2026-04-15">15 abr. 2026</time></span>
+                    <h3>Patch Tuesday de abril corrige falhas críticas em SAP, Adobe, Microsoft e Fortinet</h3>
+                    <p>Rodada de correções reúne vulnerabilidades críticas, exploração ativa e atenção extra para ambientes corporativos.</p>
+                  </span>
+                  <span class="article-archive-toggle" aria-hidden="true"></span>
+                </summary>
+
+                <div class="article-archive-body">
+                  <p>
+                    O Patch Tuesday de abril reuniu correções importantes para produtos usados em ambientes corporativos, incluindo plataformas da SAP, Adobe, Microsoft e Fortinet. Esse tipo de rodada exige atenção porque concentra falhas de impacto alto, algumas com potencial de exploração ativa ou uso em cadeias de ataque maiores.
+                  </p>
+                  <p>
+                    Para equipes de TI e segurança, a prioridade é mapear sistemas expostos, validar dependências críticas e aplicar atualizações com janela de manutenção bem planejada. Em ambientes maiores, a correção também deve vir acompanhada de monitoramento para identificar sinais de exploração anterior ao patch.
+                  </p>
+                  <a class="article-archive-source" href="https://thehackernews.com/2026/04/april-patch-tuesday-fixes-critical.html" target="_blank" rel="noopener noreferrer">Fonte consultada: The Hacker News</a>
+
+                  <section class="article-comment-panel article-comment-panel-compact" aria-labelledby="comments-alertas-patch-title">
+                    <div class="article-comment-heading">
+                      <span>Comentários</span>
+                      <h2 id="comments-alertas-patch-title">Comente este conteúdo</h2>
+                    </div>
+                    <div class="article-comment-layout">
+                      <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-patch-tuesday-abril" data-content-title="Patch Tuesday de abril corrige falhas críticas em SAP, Adobe, Microsoft e Fortinet">
+                        <label>
+                          <span>Nome</span>
+                          <input type="text" name="name" maxlength="48" autocomplete="name" placeholder="Seu nome" required>
+                        </label>
+                        <label>
+                          <span>Comentário</span>
+                          <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
+                        </label>
+                        <div class="feedback-actions-row">
+                          <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                          <button class="button button-primary" type="submit">Publicar comentário</button>
+                        </div>
+                        <p class="form-note" data-article-comment-status data-content-slug="alertas-patch-tuesday-abril" aria-live="polite"></p>
+                      </form>
+
+                      <aside class="comment-stream" aria-labelledby="recent-comments-alertas-patch-title">
+                        <div class="comment-stream-heading">
+                          <h3 id="recent-comments-alertas-patch-title">Comentários recentes</h3>
+                        </div>
+                        <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-patch-tuesday-abril"></div>
+                      </aside>
+                    </div>
+                  </section>
+                </div>
+              </details>
+            </div>
           </div>
         </section>
       </article>

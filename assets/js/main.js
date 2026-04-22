@@ -9,6 +9,10 @@ const feedbackCount = document.querySelector("[data-feedback-count]");
 const feedbackName = feedbackForm?.querySelector('input[name="name"]');
 const feedbackNameStorageKey = "encontreAquiTechFeedback:name";
 const feedbackMessageLimit = 500;
+const articleCommentForms = Array.from(document.querySelectorAll("[data-article-comment-form]"));
+const articleCommentLists = Array.from(document.querySelectorAll("[data-article-comment-list]"));
+const articleCommentNameStorageKey = "encontreAquiTechArticleComment:name";
+const articleCommentMessageLimit = 500;
 const mainScriptElement = document.currentScript;
 const feedbackApiBase = mainScriptElement?.src
   ? new URL("../../api/", mainScriptElement.src).toString()
@@ -17,6 +21,9 @@ const feedbackState = {
   csrfToken: "",
   items: [],
   apiAvailable: true
+};
+const articleCommentState = {
+  itemsBySlug: new Map()
 };
 const editorialCategories = window.editorialData?.categories || {};
 
@@ -125,7 +132,7 @@ renderHomeEditorialHighlights();
 renderTopicEditorialLists();
 
 const revealTargets = document.querySelectorAll(
-  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside"
+  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
 );
 
 const setHeaderState = () => {
@@ -283,6 +290,27 @@ document.querySelectorAll('a[href="#"]').forEach((link) => {
   });
 });
 
+const openHashTargetDetails = () => {
+  if (!window.location.hash) return;
+
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  const target = document.getElementById(id);
+  const details = target?.closest("details");
+
+  if (details instanceof HTMLDetailsElement) {
+    details.open = true;
+  }
+};
+
+window.addEventListener("hashchange", openHashTargetDetails);
+openHashTargetDetails();
+
+document.querySelectorAll("[data-archive-limit]").forEach((grid) => {
+  const limit = Math.max(1, Number(grid.dataset.archiveLimit) || 5);
+  const cards = Array.from(grid.querySelectorAll(".article-archive-card"));
+  cards.slice(limit).forEach((card) => card.remove());
+});
+
 const feedbackApiRequest = async (endpoint, options = {}) => {
   const [path, query = ""] = endpoint.split("?");
   const headers = {
@@ -403,6 +431,186 @@ const loadFeedbackItems = async () => {
   }
 };
 
+const formatCommentTimestamp = (value) => {
+  if (!value) return "";
+
+  const normalized = String(value).includes("T")
+    ? String(value)
+    : String(value).replace(" ", "T");
+  const date = new Date(normalized.endsWith("Z") ? normalized : `${normalized}Z`);
+
+  if (Number.isNaN(date.getTime())) {
+    return String(value);
+  }
+
+  return new Intl.DateTimeFormat("pt-BR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format(date);
+};
+
+const getArticleCommentSlugs = () => (
+  [...new Set(articleCommentLists.map((list) => list.dataset.contentSlug).filter(Boolean))]
+);
+
+const renderArticleCommentItems = (contentSlug) => {
+  const lists = articleCommentLists.filter((list) => list.dataset.contentSlug === contentSlug);
+  const items = articleCommentState.itemsBySlug.get(contentSlug) || [];
+
+  lists.forEach((list) => {
+    list.textContent = "";
+    list.classList.toggle("is-empty", !items.length);
+
+    items.slice(0, 5).forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "comment-card article-comment-card";
+
+      const meta = document.createElement("div");
+      meta.className = "comment-meta";
+
+      const name = document.createElement("strong");
+      name.textContent = item.name || "Visitante";
+
+      const date = document.createElement("time");
+      date.dateTime = item.createdAt || "";
+      date.textContent = formatCommentTimestamp(item.createdAt);
+
+      const message = document.createElement("p");
+      message.textContent = item.message;
+
+      meta.append(name, date);
+      card.append(meta, message);
+      list.append(card);
+    });
+  });
+};
+
+const loadArticleCommentItems = async (contentSlug) => {
+  if (!contentSlug) return;
+
+  try {
+    const data = await feedbackApiRequest(`article-comments?content=${encodeURIComponent(contentSlug)}&limit=5`);
+    articleCommentState.itemsBySlug.set(contentSlug, Array.isArray(data.comments) ? data.comments : []);
+    renderArticleCommentItems(contentSlug);
+  } catch {
+    articleCommentState.itemsBySlug.set(contentSlug, []);
+    renderArticleCommentItems(contentSlug);
+
+    document
+      .querySelectorAll(`[data-article-comment-status][data-content-slug="${contentSlug}"]`)
+      .forEach((status) => {
+        status.textContent = "Comentários disponíveis quando o site estiver conectado ao PHP e MySQL.";
+      });
+  }
+};
+
+const updateArticleCommentCount = (form) => {
+  const message = form.querySelector("[data-article-comment-message]");
+  const count = form.querySelector("[data-article-comment-count]");
+
+  if (!message || !count) return;
+
+  const currentLength = message.value.length;
+  count.textContent = `${currentLength}/${articleCommentMessageLimit} caracteres`;
+  count.classList.toggle("is-near-limit", currentLength >= articleCommentMessageLimit * 0.9);
+};
+
+const restoreArticleCommentName = (form) => {
+  const name = form.querySelector('input[name="name"]');
+  if (!name) return;
+
+  const storedName = window.localStorage.getItem(articleCommentNameStorageKey);
+  if (storedName && !name.value) {
+    name.value = storedName;
+  }
+};
+
+const currentPageSlug = () => {
+  const page = window.location.pathname.split("/").filter(Boolean).pop() || "index.html";
+  return page;
+};
+
+const setupArticleCommentForms = () => {
+  articleCommentForms.forEach((form) => {
+    restoreArticleCommentName(form);
+    updateArticleCommentCount(form);
+
+    const messageField = form.querySelector("[data-article-comment-message]");
+    messageField?.addEventListener("input", () => updateArticleCommentCount(form));
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const contentSlug = form.dataset.contentSlug || "";
+      const contentTitle = form.dataset.contentTitle || "";
+      const status = form.querySelector("[data-article-comment-status]");
+      const submitButton = form.querySelector('button[type="submit"]');
+      const nextItem = {
+        contentSlug,
+        pageSlug: currentPageSlug(),
+        contentTitle,
+        name: String(formData.get("name") || "").trim().slice(0, 48),
+        message: String(formData.get("message") || "").trim().slice(0, articleCommentMessageLimit)
+      };
+
+      if (!nextItem.contentSlug || !nextItem.contentTitle || !nextItem.name || nextItem.message.length < 3) {
+        if (status) {
+          status.textContent = "Preencha nome e comentário antes de publicar.";
+        }
+        return;
+      }
+
+      if (submitButton) submitButton.disabled = true;
+      if (status) {
+        status.textContent = "Publicando comentário...";
+      }
+
+      try {
+        await ensureFeedbackSession();
+
+        if (!feedbackState.csrfToken) {
+          throw new Error("Sessão indisponível. Atualize a página e tente novamente.");
+        }
+
+        const data = await feedbackApiRequest("article-comments", {
+          method: "POST",
+          body: JSON.stringify(nextItem)
+        });
+
+        window.localStorage.setItem(articleCommentNameStorageKey, nextItem.name);
+        if (data.comment) {
+          const previousItems = articleCommentState.itemsBySlug.get(contentSlug) || [];
+          articleCommentState.itemsBySlug.set(contentSlug, [data.comment, ...previousItems].slice(0, 5));
+          renderArticleCommentItems(contentSlug);
+        } else {
+          await loadArticleCommentItems(contentSlug);
+        }
+
+        form.reset();
+        const name = form.querySelector('input[name="name"]');
+        if (name) {
+          name.value = nextItem.name;
+        }
+        updateArticleCommentCount(form);
+
+        if (status) {
+          status.textContent = data.message || "Comentário publicado.";
+        }
+      } catch (error) {
+        if (status) {
+          status.textContent = error.payload?.message || error.message || "Não foi possível publicar o comentário agora.";
+        }
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
+  });
+};
+
 feedbackMessage?.addEventListener("input", updateFeedbackCount);
 
 feedbackForm?.addEventListener("submit", async (event) => {
@@ -471,3 +679,8 @@ restoreFeedbackName();
 updateFeedbackCount();
 renderFeedbackItems();
 loadFeedbackItems();
+setupArticleCommentForms();
+getArticleCommentSlugs().forEach((contentSlug) => {
+  renderArticleCommentItems(contentSlug);
+  loadArticleCommentItems(contentSlug);
+});

@@ -4,6 +4,8 @@
 
 Os conteudos da secao **Editorias** ficam em `assets/js/editorial-data.js`.
 
+As regras para adicionar novos conteudos nas paginas editoriais ficam em `docs/regras-editoriais.md`.
+
 Para atualizar manualmente no seu computador:
 
 ```sh
