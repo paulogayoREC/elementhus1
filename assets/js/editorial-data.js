@@ -6,24 +6,24 @@ window.editorialData = {
       "label": "Noticias",
       "items": [
         {
-          "title": "Investigation: Are RAM prices dropping, or is it all illusion?",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3116546/investigation-are-ram-prices-dropping-or-is-it-all-illusion.html",
-          "date": "2026-04-20",
-          "tag": "Radar tech",
+          "title": "Tim Cook deixa o comando da Apple e abre espaço para uma nova fase",
+          "source": "Apple Newsroom",
+          "url": "https://www.apple.com/newsroom/2026/04/tim-cook-transitions-to-executive-chairman-john-ternus-to-become-ceo/",
+          "date": "2026-04-21",
+          "tag": "Liderança tech",
           "featured": true,
-          "image": "assets/img/astronaut-earth.png",
-          "summary": "Rising prices are the biggest tech story of 2026 . Well, the biggest consumer tech story, anyway — the biggest story in a broader sense is “AI” in general. And that’s the answer to why prices are going up. AI d..."
+          "image": "assets/img/noticias/tim-cook-apple-transicao-preview.webp",
+          "summary": "Tim Cook deixará o cargo de CEO em 1º de setembro de 2026 e passará a atuar como chairman executivo. John Ternus assume o comando em uma fase marcada por hardware premium, software, chips e IA."
         },
         {
-          "title": "Tim Cook deixa a Apple com valor de mercado 10 vezes maior; relembre seu legado",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/mercado/tim-cook-deixa-a-apple-com-valor-de-mercado-10-vezes-maior-relembre-seu-legado/",
-          "date": "2026-04-20",
+          "title": "Tarifas travam data centers de IA e expõem o gargalo da infraestrutura",
+          "source": "Encontre Aqui Tech",
+          "url": "noticias.html#previous-news-title",
+          "date": "2026-04-19",
           "tag": "Radar tech",
           "featured": false,
-          "image": "assets/img/astronaut-earth.png",
-          "summary": "A Apple anunciou nesta segunda-feira (20) que Tim Cook deixará o cargo de CEO em 1º de setembro de 2026, encerrando uma gestão de quase 15 anos à frente da empresa. Ele assumirá o posto de chairman executivo, e..."
+          "image": "assets/img/noticias/ai-data-centers-tariffs-preview.webp",
+          "summary": "A corrida pela liderança em inteligência artificial também passa por energia, resfriamento, equipamentos industriais e uma cadeia de suprimentos capaz de acompanhar a velocidade do setor."
         }
       ]
     },
