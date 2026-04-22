@@ -203,12 +203,7 @@ return [
 ];
 ```
 
-Revise também os textos públicos em:
-
-```txt
-termos-de-uso/index.html
-politica-de-privacidade/index.html
-```
+Revise também os textos exibidos no pop-up rolável de cadastro em `assets/js/auth.js`.
 
 ## Onde colocar DB_HOST, DB_NAME, DB_USER e DB_PASS
 

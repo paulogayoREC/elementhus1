@@ -12,6 +12,142 @@ const authPasswordIsStrong = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}
 
 const getFirstName = (name) => String(name || "Visitante").trim().split(/\s+/)[0] || "Visitante";
 
+const authLegalDocuments = {
+  terms: {
+    title: "Termos de Uso",
+    kicker: "Documento legal",
+    updated: "Versão vigente: 19 abr. 2026",
+    html: `
+      <section>
+        <h4>1. Identificação do site e responsável</h4>
+        <p>Estes Termos de Uso regulam o acesso e o uso do site Encontre Aqui Tech, disponível no domínio encontreaquitech.com, mantido por Paulo Gayo.</p>
+      </section>
+      <section>
+        <h4>2. Finalidade da plataforma</h4>
+        <p>O Encontre Aqui Tech é uma plataforma de conteúdo sobre tecnologia, notícias, novidades, curiosidades, alertas de segurança, tutoriais e indicações de produtos ou serviços relacionados ao universo digital.</p>
+        <p>A área de cadastro pode ser usada para permitir acesso a recursos do site, preferências, interações, comunicações, funcionalidades futuras e uma experiência mais personalizada.</p>
+      </section>
+      <section>
+        <h4>3. Cadastro e uso da conta</h4>
+        <ul>
+          <li>O usuário deve informar dados verdadeiros, atualizados e compatíveis com sua identidade.</li>
+          <li>O cadastro exige nome, e-mail, senha e aceite destes Termos de Uso e da Política de Privacidade.</li>
+          <li>O usuário é responsável por manter seus dados de acesso protegidos.</li>
+          <li>O Encontre Aqui Tech poderá implementar verificação de e-mail, recuperação de senha e controles adicionais de segurança quando necessário.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>4. Responsabilidades do usuário</h4>
+        <p>Ao usar o site, o usuário concorda em não praticar atos que violem leis, direitos de terceiros, a segurança da plataforma ou a boa-fé nas interações.</p>
+        <ul>
+          <li>Não tentar acessar contas, dados ou áreas restritas sem autorização.</li>
+          <li>Não enviar conteúdo ilícito, ofensivo, discriminatório, enganoso ou que infrinja propriedade intelectual.</li>
+          <li>Não explorar falhas técnicas, automatizar acessos abusivos ou comprometer a disponibilidade do site.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>5. Segurança da conta e senha</h4>
+        <p>A senha deve ser forte, pessoal e mantida em sigilo. O Encontre Aqui Tech não solicita senha por e-mail, redes sociais ou mensagens diretas.</p>
+        <p>Em caso de suspeita de acesso indevido, o usuário deve trocar sua senha e comunicar o canal de contato informado neste documento.</p>
+      </section>
+      <section>
+        <h4>6. Suspensão ou exclusão de conta</h4>
+        <p>Contas poderão ser suspensas ou excluídas quando houver indícios de fraude, abuso, violação destes Termos, uso indevido de recursos, determinação legal ou risco à segurança do site e de outros usuários.</p>
+        <p>Sempre que razoável e tecnicamente possível, o usuário poderá ser informado sobre a medida adotada.</p>
+      </section>
+      <section>
+        <h4>7. Propriedade intelectual</h4>
+        <p>Textos, identidade visual, estrutura, imagens, marcas, elementos gráficos, códigos e demais conteúdos do site podem estar protegidos por direitos autorais, marcas e outras normas de propriedade intelectual.</p>
+        <p>O acesso ao site não transfere ao usuário qualquer direito sobre esses elementos, salvo autorização expressa ou previsão legal aplicável.</p>
+      </section>
+      <section>
+        <h4>8. Limitação de responsabilidade</h4>
+        <p>O conteúdo do Encontre Aqui Tech tem finalidade informativa e editorial. O site busca manter as informações úteis e atualizadas, mas não garante ausência total de erros, indisponibilidades, alterações de terceiros ou mudanças posteriores em produtos, serviços, preços, regras ou tecnologias mencionadas.</p>
+        <p>Indicações de produtos podem conter links de afiliado quando aplicável. O usuário deve avaliar informações, condições de compra, garantia e políticas de terceiros antes de tomar decisões.</p>
+      </section>
+      <section>
+        <h4>9. Alterações dos Termos</h4>
+        <p>Estes Termos podem ser atualizados para refletir mudanças legais, técnicas, operacionais ou novas funcionalidades. A versão vigente será indicada no cadastro.</p>
+        <p>Quando uma alteração relevante impactar usuários cadastrados, o site poderá solicitar novo aceite ou informar a mudança por meios razoáveis.</p>
+      </section>
+      <section>
+        <h4>10. Canal de contato</h4>
+        <p>Dúvidas sobre estes Termos podem ser enviadas para contato@encontreaquitech.com.</p>
+      </section>
+    `
+  },
+  privacy: {
+    title: "Política de Privacidade",
+    kicker: "Privacidade e dados",
+    updated: "Versão vigente: 19 abr. 2026",
+    html: `
+      <section>
+        <h4>1. Identificação do controlador</h4>
+        <p>Esta Política de Privacidade descreve práticas de tratamento de dados pessoais relacionadas ao site Encontre Aqui Tech, mantido por Paulo Gayo, no domínio encontreaquitech.com.</p>
+      </section>
+      <section>
+        <h4>2. Dados que podem ser coletados</h4>
+        <p>No cadastro e uso da área de conta, o site pode coletar e armazenar:</p>
+        <ul>
+          <li>Nome completo informado pelo usuário.</li>
+          <li>E-mail usado para identificação e comunicação.</li>
+          <li>Senha em formato de hash seguro, nunca em texto puro.</li>
+          <li>Data e hora de criação da conta e de aceite dos documentos legais.</li>
+          <li>Versão dos Termos de Uso e da Política de Privacidade aceita.</li>
+          <li>Endereço IP e user agent associados ao aceite, quando tecnicamente disponíveis.</li>
+          <li>Logs técnicos básicos de acesso, segurança e funcionamento do servidor, quando gerados pela hospedagem ou pelo sistema.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>3. Finalidades do tratamento</h4>
+        <ul>
+          <li>Criar e administrar contas de usuários.</li>
+          <li>Permitir login, autenticação, segurança e recuperação de acesso quando implementada.</li>
+          <li>Registrar o aceite dos Termos de Uso e da Política de Privacidade.</li>
+          <li>Melhorar a experiência do usuário e organizar funcionalidades futuras.</li>
+          <li>Enviar comunicações relacionadas ao site, segurança, conta ou novidades, respeitando preferências e regras aplicáveis.</li>
+          <li>Prevenir abuso, fraude, tentativas de acesso indevido e incidentes de segurança.</li>
+          <li>Cumprir obrigações legais, regulatórias ou ordens de autoridades competentes.</li>
+        </ul>
+      </section>
+      <section>
+        <h4>4. Bases legais aplicáveis</h4>
+        <p>O tratamento de dados poderá se apoiar, conforme o caso, em bases previstas na LGPD, como execução de contrato ou procedimentos preliminares relacionados à conta, cumprimento de obrigação legal ou regulatória, legítimo interesse para segurança e melhoria do serviço, consentimento quando exigido e exercício regular de direitos.</p>
+        <p>A base legal adequada pode variar conforme a funcionalidade efetivamente ativada no site.</p>
+      </section>
+      <section>
+        <h4>5. Compartilhamento de dados</h4>
+        <p>Dados pessoais podem ser processados por provedores necessários à operação do site, como hospedagem, banco de dados, infraestrutura, ferramentas de segurança, serviços de e-mail e recursos operacionais. Atualmente, a hospedagem informada para publicação é a Hostinger.</p>
+        <p>Também poderá haver compartilhamento quando necessário para cumprir obrigação legal, ordem judicial, requisição de autoridade competente, proteção de direitos ou apuração de incidentes.</p>
+      </section>
+      <section>
+        <h4>6. Armazenamento e proteção</h4>
+        <p>O site adota medidas técnicas e organizacionais compatíveis com seu porte e finalidade, incluindo conexão com banco por PDO, uso de prepared statements, hash de senha e controles de sessão.</p>
+        <p>Nenhum sistema é absolutamente imune a riscos. Em caso de incidente relevante, serão avaliadas as medidas técnicas, administrativas e legais cabíveis.</p>
+      </section>
+      <section>
+        <h4>7. Cookies e tecnologias similares</h4>
+        <p>O site pode usar cookies essenciais para sessão de login, segurança e funcionamento da conta. Esses cookies são necessários para manter o usuário autenticado e não dependem de escolha promocional.</p>
+        <p>Se no futuro forem adicionados analytics, publicidade, remarketing, pixels ou ferramentas equivalentes, esta Política deverá ser atualizada para explicar finalidades, provedores e opções de controle.</p>
+      </section>
+      <section>
+        <h4>8. Direitos do titular</h4>
+        <p>Nos termos da LGPD, o usuário pode solicitar, quando aplicável, confirmação de tratamento, acesso, correção, atualização, anonimização, bloqueio, eliminação, portabilidade, informação sobre compartilhamento, revogação de consentimento e revisão de decisões automatizadas, se houver.</p>
+        <p>Algumas solicitações podem depender de validação de identidade, preservação de registros necessários, cumprimento de obrigações legais ou exercício regular de direitos.</p>
+      </section>
+      <section>
+        <h4>9. Retenção e exclusão de dados</h4>
+        <p>Dados de conta tendem a ser mantidos enquanto o usuário mantiver cadastro ativo ou enquanto forem necessários para cumprir finalidades legítimas, obrigações legais, segurança, prevenção de fraude ou exercício regular de direitos.</p>
+        <p>Solicitações de exclusão podem ser enviadas ao canal de privacidade. A exclusão poderá preservar registros mínimos quando houver obrigação legal, necessidade de segurança ou outra base legal aplicável.</p>
+      </section>
+      <section>
+        <h4>10. Contato para privacidade</h4>
+        <p>Solicitações sobre dados pessoais podem ser enviadas para privacidade@encontreaquitech.com.</p>
+      </section>
+    `
+  }
+};
+
 const closeSiteMenuForAuth = () => {
   document.querySelector("[data-menu]")?.classList.remove("is-open");
   document.querySelector("[data-header]")?.classList.remove("menu-active");
@@ -117,7 +253,7 @@ const createAuthModal = () => {
           </label>
           <label class="auth-check">
             <input type="checkbox" name="terms_accepted" required>
-            <span>Li e concordo com os <a href="/termos-de-uso/" target="_blank" rel="noopener">Termos de Uso</a> e a <a href="/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
+            <span>Li e concordo com os <button class="auth-inline-legal" type="button" data-auth-legal-open="terms">Termos de Uso</button> e a <button class="auth-inline-legal" type="button" data-auth-legal-open="privacy">Política de Privacidade</button>.</span>
           </label>
           <small class="auth-field-error" data-error-for="terms_accepted"></small>
           <p class="auth-password-hint">Use maiúscula, minúscula e número.</p>
@@ -127,6 +263,20 @@ const createAuthModal = () => {
       </div>
 
       <p class="auth-status" data-auth-status aria-live="polite"></p>
+
+      <div class="auth-legal-panel" data-auth-legal-panel role="dialog" aria-modal="true" aria-labelledby="auth-legal-title" hidden>
+        <div class="auth-legal-card">
+          <div class="auth-legal-toolbar">
+            <div>
+              <span data-auth-legal-kicker>Documento legal</span>
+              <h3 id="auth-legal-title" data-auth-legal-title>Termos de Uso</h3>
+              <p data-auth-legal-updated></p>
+            </div>
+            <button class="auth-legal-close" type="button" data-auth-legal-close aria-label="Fechar leitura">Fechar</button>
+          </div>
+          <div class="auth-legal-scroll" data-auth-legal-content tabindex="0"></div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -176,6 +326,7 @@ const initAuth = () => {
   if (!triggers.length) return;
 
   const modal = createAuthModal();
+  const dialog = modal.querySelector(".auth-dialog");
   const status = modal.querySelector("[data-auth-status]");
   const tabs = modal.querySelectorAll("[data-auth-tab]");
   const panels = modal.querySelectorAll("[data-auth-panel]");
@@ -187,6 +338,35 @@ const initAuth = () => {
   const loginHelp = modal.querySelector("[data-auth-login-help]");
   const registerForm = modal.querySelector("[data-auth-register]");
   const logoutButton = modal.querySelector("[data-auth-logout]");
+  const legalPanel = modal.querySelector("[data-auth-legal-panel]");
+  const legalTitle = modal.querySelector("[data-auth-legal-title]");
+  const legalKicker = modal.querySelector("[data-auth-legal-kicker]");
+  const legalUpdated = modal.querySelector("[data-auth-legal-updated]");
+  const legalContent = modal.querySelector("[data-auth-legal-content]");
+
+  const closeLegalDocument = () => {
+    if (!legalPanel) return;
+
+    legalPanel.hidden = true;
+    dialog?.classList.remove("has-legal-panel");
+    if (legalContent) {
+      legalContent.innerHTML = "";
+    }
+  };
+
+  const openLegalDocument = (documentKey) => {
+    const documentData = authLegalDocuments[documentKey];
+    if (!documentData || !legalPanel || !legalTitle || !legalKicker || !legalUpdated || !legalContent) return;
+
+    legalTitle.textContent = documentData.title;
+    legalKicker.textContent = documentData.kicker;
+    legalUpdated.textContent = documentData.updated;
+    legalContent.innerHTML = documentData.html;
+    legalContent.scrollTop = 0;
+    legalPanel.hidden = false;
+    dialog?.classList.add("has-legal-panel");
+    window.setTimeout(() => legalContent.focus(), 40);
+  };
 
   modal.querySelectorAll("[data-auth-password-toggle]").forEach((button) => {
     const field = button.closest(".auth-password-field");
@@ -273,6 +453,7 @@ const initAuth = () => {
   };
 
   const closeModal = () => {
+    closeLegalDocument();
     modal.hidden = true;
     document.body.classList.remove("auth-open");
     setStatus();
@@ -342,8 +523,25 @@ const initAuth = () => {
     button.addEventListener("click", () => selectPanel(button.dataset.authSwitch));
   });
 
+  modal.querySelectorAll("[data-auth-legal-open]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      openLegalDocument(button.dataset.authLegalOpen);
+    });
+  });
+
+  modal.querySelectorAll("[data-auth-legal-close]").forEach((button) => {
+    button.addEventListener("click", closeLegalDocument);
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !modal.hidden) {
+      if (legalPanel && !legalPanel.hidden) {
+        closeLegalDocument();
+        return;
+      }
+
       closeModal();
     }
   });

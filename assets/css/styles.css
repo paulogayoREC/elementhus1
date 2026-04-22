@@ -1660,6 +1660,10 @@ h4 {
   pointer-events: none;
 }
 
+.auth-dialog.has-legal-panel {
+  overflow: hidden;
+}
+
 .auth-close {
   position: absolute;
   top: 0.7rem;
@@ -1834,16 +1838,24 @@ h4 {
   text-transform: none;
 }
 
-.auth-check a {
+.auth-check a,
+.auth-inline-legal {
+  border: 0;
+  padding: 0;
   color: var(--cream);
+  font: inherit;
   font-weight: 800;
+  cursor: pointer;
+  background: transparent;
   text-decoration: underline;
   text-decoration-color: rgba(37, 125, 167, 0.72);
   text-underline-offset: 0.18rem;
 }
 
 .auth-check a:hover,
-.auth-check a:focus-visible {
+.auth-check a:focus-visible,
+.auth-inline-legal:hover,
+.auth-inline-legal:focus-visible {
   color: #63d0ff;
   outline: none;
 }
@@ -1983,6 +1995,149 @@ h4 {
   min-height: 2.65rem;
   padding: 0.68rem 0.85rem;
   font-size: 0.76rem;
+}
+
+.auth-legal-panel[hidden] {
+  display: none;
+}
+
+.auth-legal-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  padding: 0.72rem;
+  background:
+    linear-gradient(145deg, rgba(37, 125, 167, 0.16), transparent 42%, rgba(194, 159, 115, 0.08)),
+    rgba(8, 7, 6, 0.96);
+  backdrop-filter: blur(14px);
+}
+
+.auth-legal-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(37, 125, 167, 0.56);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(250, 235, 209, 0.055), transparent),
+    rgba(0, 0, 0, 0.34);
+  box-shadow: inset 0 0 26px rgba(37, 125, 167, 0.08), 0 18px 54px rgba(0, 0, 0, 0.34);
+}
+
+.auth-legal-toolbar {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: start;
+  border-bottom: 1px solid rgba(250, 235, 209, 0.11);
+  padding: 0.78rem;
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.auth-legal-toolbar::before {
+  position: absolute;
+  top: 0;
+  right: 0.75rem;
+  left: 0.75rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(99, 208, 255, 0.82), transparent);
+  pointer-events: none;
+}
+
+.auth-legal-toolbar span {
+  color: var(--bronze);
+  font-family: var(--font-primary);
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.auth-legal-toolbar h3 {
+  margin: 0.22rem 0 0.2rem;
+  color: var(--cream);
+  font-size: 1.08rem;
+  line-height: 1.1;
+}
+
+.auth-legal-toolbar p {
+  margin: 0;
+  color: rgba(250, 235, 209, 0.58);
+  font-family: var(--font-primary);
+  font-size: 0.64rem;
+  font-weight: 800;
+}
+
+.auth-legal-close {
+  border: 1px solid rgba(250, 235, 209, 0.16);
+  border-radius: 8px;
+  padding: 0.42rem 0.58rem;
+  color: rgba(250, 235, 209, 0.78);
+  font-family: var(--font-primary);
+  font-size: 0.62rem;
+  font-weight: 800;
+  cursor: pointer;
+  background: rgba(250, 235, 209, 0.055);
+}
+
+.auth-legal-close:hover,
+.auth-legal-close:focus-visible {
+  border-color: rgba(37, 125, 167, 0.72);
+  color: var(--cream);
+  background: rgba(37, 125, 167, 0.16);
+  outline: none;
+}
+
+.auth-legal-scroll {
+  min-height: 0;
+  overflow: auto;
+  padding: 0.82rem;
+  scrollbar-width: thin;
+  outline: none;
+}
+
+.auth-legal-scroll section {
+  border: 1px solid rgba(250, 235, 209, 0.09);
+  border-radius: 8px;
+  padding: 0.78rem;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.auth-legal-scroll section + section {
+  margin-top: 0.58rem;
+}
+
+.auth-legal-scroll h4 {
+  margin: 0 0 0.42rem;
+  color: var(--cream);
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.auth-legal-scroll p,
+.auth-legal-scroll li {
+  color: rgba(250, 235, 209, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.52;
+}
+
+.auth-legal-scroll p {
+  margin: 0 0 0.52rem;
+}
+
+.auth-legal-scroll p:last-child,
+.auth-legal-scroll ul:last-child {
+  margin-bottom: 0;
+}
+
+.auth-legal-scroll ul {
+  display: grid;
+  gap: 0.36rem;
+  margin: 0.2rem 0 0.52rem;
+  padding-left: 1.05rem;
 }
 
 .reset-page {
