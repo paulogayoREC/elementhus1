@@ -2690,6 +2690,74 @@ h4 {
   font-size: 0.82rem;
 }
 
+.article-subfeature-section {
+  padding: 2.25rem 0 4.2rem;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(37, 125, 167, 0.16), transparent 22rem),
+    linear-gradient(180deg, #070605, #0e0b09 52%, #070605);
+}
+
+.article-subfeature-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.3fr);
+  gap: 1.35rem;
+}
+
+.article-subfeature-section .article-content {
+  border-color: rgba(37, 125, 167, 0.28);
+  background:
+    linear-gradient(135deg, rgba(37, 125, 167, 0.13), transparent 48%, rgba(194, 159, 115, 0.08)),
+    rgba(250, 235, 209, 0.04);
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.24), inset 0 0 36px rgba(37, 125, 167, 0.06);
+}
+
+.article-subfeature-media {
+  overflow: hidden;
+  margin: 0 0 1rem;
+  border: 1px solid rgba(37, 125, 167, 0.34);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.article-subfeature-media img {
+  width: 100%;
+  aspect-ratio: 16 / 6.8;
+  object-fit: cover;
+  opacity: 0.88;
+  filter: saturate(1.02) contrast(1.04);
+}
+
+.article-subfeature-media figcaption {
+  border-top: 1px solid rgba(250, 235, 209, 0.1);
+  padding: 0.72rem 0.82rem;
+  color: rgba(250, 235, 209, 0.66);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.article-subfeature-section .article-aside {
+  border-color: rgba(37, 125, 167, 0.28);
+  background:
+    linear-gradient(180deg, rgba(37, 125, 167, 0.12), rgba(250, 235, 209, 0.035)),
+    rgba(0, 0, 0, 0.28);
+}
+
+.article-subfeature-section .article-content h2 {
+  max-width: 40ch;
+  margin-top: 0;
+  font-size: 1.24rem;
+}
+
+.article-subfeature-section .article-content p {
+  color: rgba(250, 235, 209, 0.74);
+  font-size: 0.92rem;
+  line-height: 1.62;
+}
+
+.article-subfeature-section .article-content p:first-of-type {
+  color: rgba(250, 235, 209, 0.82);
+  font-size: 0.96rem;
+}
+
 .article-aside-kicker {
   display: inline-flex;
   margin-bottom: 0.85rem;
