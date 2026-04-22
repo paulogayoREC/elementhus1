@@ -549,17 +549,18 @@ const setupArticleCommentForms = () => {
       const contentTitle = form.dataset.contentTitle || "";
       const status = form.querySelector("[data-article-comment-status]");
       const submitButton = form.querySelector('button[type="submit"]');
+      const submittedName = String(formData.get("name") || "").trim().slice(0, 48);
       const nextItem = {
         contentSlug,
         pageSlug: currentPageSlug(),
         contentTitle,
-        name: String(formData.get("name") || "").trim().slice(0, 48),
+        name: submittedName || "Visitante",
         message: String(formData.get("message") || "").trim().slice(0, articleCommentMessageLimit)
       };
 
-      if (!nextItem.contentSlug || !nextItem.contentTitle || !nextItem.name || nextItem.message.length < 3) {
+      if (!nextItem.contentSlug || !nextItem.contentTitle || nextItem.message.length < 3) {
         if (status) {
-          status.textContent = "Preencha nome e comentário antes de publicar.";
+          status.textContent = "Escreva um comentário antes de publicar.";
         }
         return;
       }

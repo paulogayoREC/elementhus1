@@ -2662,9 +2662,14 @@ h4 {
 }
 
 .article-comment-heading {
-  display: grid;
-  gap: 0.35rem;
-  margin-bottom: 0.85rem;
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .article-comment-heading span {
@@ -2677,13 +2682,13 @@ h4 {
 
 .article-comment-heading h2 {
   margin-bottom: 0;
-  font-size: 1.16rem;
+  font-size: 1.02rem;
 }
 
 .article-comment-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.74fr);
-  gap: 0.75rem;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
   align-items: start;
 }
 
@@ -2692,8 +2697,92 @@ h4 {
   box-shadow: none;
 }
 
+.article-comment-panel .feedback-form {
+  padding: 0.58rem;
+}
+
+.article-comment-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.article-comment-form label {
+  min-width: 0;
+}
+
+.article-comment-form label:has(input[name="name"]) {
+  display: none;
+}
+
+.article-comment-form label:has(textarea) {
+  grid-column: 1;
+}
+
+.article-comment-form label:has(textarea) span {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.article-comment-form textarea {
+  min-height: 2.75rem;
+  height: 2.75rem;
+  padding: 0.68rem 0.75rem;
+  line-height: 1.35;
+}
+
+.article-comment-form .feedback-actions-row {
+  grid-column: 2;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.article-comment-form .character-count {
+  display: none;
+}
+
+.article-comment-form .button {
+  min-height: 2.75rem;
+  padding: 0.62rem 0.9rem;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.article-comment-form .button::before {
+  content: "Publicar";
+  font-size: 0.78rem;
+}
+
+.article-comment-form .form-note {
+  grid-column: 1 / -1;
+  margin: -0.15rem 0 0;
+}
+
+.article-comment-panel .comment-stream {
+  padding: 0.58rem;
+}
+
+.article-comment-panel .comment-stream-heading {
+  margin-bottom: 0.35rem;
+}
+
+.article-comment-panel .comment-stream-heading h3 {
+  font-size: 0.88rem;
+}
+
 .article-comment-panel .comment-list {
-  max-height: 10rem;
+  min-height: 2.25rem;
+  max-height: 7.8rem;
+}
+
+.article-comment-panel .comment-card {
+  padding: 0.48rem;
 }
 
 .article-comment-panel-compact {
