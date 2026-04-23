@@ -2754,21 +2754,65 @@ h4 {
   text-align: center;
 }
 
-.footer-layout a {
+.footer-affiliate {
   justify-self: end;
 }
 
-.footer-layout p:first-child,
-.footer-layout a {
+.footer-layout p:first-child {
   color: var(--cream);
   font-family: var(--font-primary);
   font-weight: 800;
 }
 
-.footer-layout a:hover,
-.footer-layout a:focus-visible {
-  color: var(--blue);
-  outline: none;
+.footer-affiliate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  min-height: 2.45rem;
+  padding: 0.46rem 0.9rem 0.5rem;
+  border: 1px solid rgba(250, 235, 209, 0.12);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(250, 235, 209, 0.06), rgba(250, 235, 209, 0.02)),
+    rgba(250, 235, 209, 0.03);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 12px 24px rgba(0, 0, 0, 0.14);
+  opacity: 0.94;
+}
+
+.footer-affiliate-brand {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  padding-bottom: 0.46rem;
+  color: var(--cream);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.footer-affiliate-brand::after {
+  position: absolute;
+  left: 0.12rem;
+  right: -0.08rem;
+  bottom: 0.03rem;
+  height: 0.5rem;
+  content: "";
+  border-bottom: 2px solid #ff9900;
+  border-radius: 0 0 999px 999px;
+  opacity: 0.95;
+  transform: skewX(-10deg);
+}
+
+.footer-affiliate-label {
+  color: rgba(250, 235, 209, 0.82);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .topic-page {
@@ -4687,9 +4731,13 @@ h4 {
   }
 
   .footer-layout p:nth-child(2),
-  .footer-layout a {
+  .footer-affiliate {
     justify-self: start;
     text-align: left;
+  }
+
+  .footer-affiliate {
+    margin-top: 0.15rem;
   }
 }
 
@@ -5315,6 +5363,21 @@ h4 {
   .footer-layout {
     padding: 1.15rem 0;
     font-size: 0.88rem;
+  }
+
+  .footer-affiliate {
+    gap: 0.58rem;
+    min-height: 2.28rem;
+    padding: 0.42rem 0.76rem 0.46rem;
+  }
+
+  .footer-affiliate-brand {
+    font-size: 0.88rem;
+  }
+
+  .footer-affiliate-label {
+    font-size: 0.64rem;
+    letter-spacing: 0.1em;
   }
 
 }
