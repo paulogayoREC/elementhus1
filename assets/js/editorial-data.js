@@ -1,5 +1,5 @@
 window.editorialData = {
-  "updatedAt": "2026-04-21",
+  "updatedAt": "2026-04-22",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Best PCIe 4.0 SSDs 2026: 5 top picks from experts",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/394512/the-best-pcie-40-ssd.html",
-          "date": "2026-04-20",
-          "tag": "Novidade",
+          "title": "Google acelera aposta em IA para empresas e muda o desenvolvimento de software",
+          "source": "Encontre Aqui Tech",
+          "url": "/novidades-tecnologicas",
+          "date": "2026-04-22",
+          "tag": "IA corporativa",
           "featured": true,
-          "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Recent computing equipment typically supports the 16Gbps PCIe 4.0 protocol as its baseline data transfer/SSD storage technology. While Gen 4 is slowly being supplanted by 32Gbps PCIe 5.0 (most computers mix the..."
+          "image": "assets/img/novidades/google-cloud-next-ai-preview.webp",
+          "summary": "No Cloud Next ’26, o Google reforçou AI agents, TPUs de 8ª geração e revelou que 75% do novo código interno já conta com geração por IA antes da validação de engenheiros."
         },
         {
-          "title": "Best PC computer deals: Top picks from desktops to all-in-ones",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/813362/best-pc-computer-deals.html",
-          "date": "2026-04-20",
-          "tag": "Novidade",
+          "title": "Gemini para Mac leva a IA para dentro do desktop",
+          "source": "Encontre Aqui Tech",
+          "url": "/novidades-tecnologicas#novidades-gemini-mac",
+          "date": "2026-04-15",
+          "tag": "Nova experiência",
           "featured": false,
-          "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "At a glance Top gaming desktop computer deals HP Omen 16L —$1,130 (10% off on Amazon) Acer Nitro 60 —$1,970 (14% off on BestBuy) Thermaltake LCGS Quartz i1460 —$1,000 (9% off on Amazon) Top mini PC deals GMKtec..."
+          "image": "assets/img/novidades/gemini-mac-preview.webp",
+          "summary": "O aplicativo nativo do Gemini aproxima a inteligência artificial da rotina no macOS, com acesso rápido, contexto de tela e recursos multimodais."
         }
       ]
     },
