@@ -33,11 +33,58 @@
   const slotsPerDay = Math.floor(24 / rotationHours);
   const siteTimeZone = "America/Recife";
   const rotationBaseDay = getDayNumber("2026-01-01");
+  const catalogCacheKey = "eatTechShowcase:catalog:v2";
+  const catalogCacheTtl = 24 * 60 * 60 * 1000;
   let activeRotationKey = "";
   let productCatalog = [];
+  let initPromise = null;
+  let renderIntervalId = 0;
+
+  function queueIdleTask(callback, timeout = 1600) {
+    if ("requestIdleCallback" in window) {
+      return window.requestIdleCallback(callback, { timeout });
+    }
+
+    return window.setTimeout(callback, 1);
+  }
 
   function cleanText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
+  }
+
+  function readCatalogCache() {
+    try {
+      const rawValue = window.localStorage.getItem(catalogCacheKey);
+      if (!rawValue) {
+        return null;
+      }
+
+      const parsed = JSON.parse(rawValue);
+      const products = Array.isArray(parsed?.products) ? parsed.products : [];
+      const storedAt = Number(parsed?.storedAt || 0);
+
+      if (!products.length || !Number.isFinite(storedAt)) {
+        return null;
+      }
+
+      return {
+        products: normalizeCatalog(products),
+        isFresh: Date.now() - storedAt < catalogCacheTtl
+      };
+    } catch {
+      return null;
+    }
+  }
+
+  function writeCatalogCache(products) {
+    try {
+      window.localStorage.setItem(catalogCacheKey, JSON.stringify({
+        storedAt: Date.now(),
+        products
+      }));
+    } catch {
+      // localStorage pode estar indisponível; seguimos sem cache persistente.
+    }
   }
 
   function getSiteRotation(date = new Date()) {
@@ -223,6 +270,7 @@
     });
 
     activeRotationKey = rotation.key;
+    panel.removeAttribute("aria-busy");
     panel.dataset.techPicksDate = rotation.dateKey;
     panel.dataset.techPicksHours = String(rotationHours);
     panel.dataset.techPicksRotation = rotation.key;
@@ -280,17 +328,77 @@
   }
 
   async function initTechShowcase() {
-    const results = await Promise.allSettled(sourcePages.map(fetchProductsFromSource));
-    productCatalog = normalizeCatalog(
-      results.flatMap((result) => (result.status === "fulfilled" ? result.value : []))
-    );
+    if (initPromise) {
+      return initPromise;
+    }
 
-    renderTechShowcase();
+    initPromise = (async () => {
+      panel.setAttribute("aria-busy", "true");
 
-    window.setInterval(renderTechShowcase, 60000);
+      const cachedCatalog = readCatalogCache();
+      if (cachedCatalog?.products?.length >= picksPerRotation) {
+        productCatalog = cachedCatalog.products;
+        renderTechShowcase();
+
+        if (cachedCatalog.isFresh) {
+          if (!renderIntervalId) {
+            renderIntervalId = window.setInterval(renderTechShowcase, 60000);
+          }
+
+          return;
+        }
+      }
+
+      const results = await Promise.allSettled(sourcePages.map(fetchProductsFromSource));
+      const fetchedCatalog = normalizeCatalog(
+        results.flatMap((result) => (result.status === "fulfilled" ? result.value : []))
+      );
+
+      if (fetchedCatalog.length >= picksPerRotation) {
+        productCatalog = fetchedCatalog;
+        writeCatalogCache(productCatalog);
+        renderTechShowcase();
+      }
+
+      if (!renderIntervalId) {
+        renderIntervalId = window.setInterval(renderTechShowcase, 60000);
+      }
+    })().finally(() => {
+      initPromise = null;
+      panel.removeAttribute("aria-busy");
+    });
+
+    return initPromise;
   }
 
-  initTechShowcase().catch(() => {
-    productCatalog = [];
-  });
+  function scheduleTechShowcaseInit() {
+    const start = () => {
+      initTechShowcase().catch(() => {
+        productCatalog = [];
+        panel.removeAttribute("aria-busy");
+      });
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      queueIdleTask(start);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries, instance) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      instance.disconnect();
+      start();
+    }, { rootMargin: "640px 0px" });
+
+    observer.observe(panel);
+
+    queueIdleTask(() => {
+      if (panel.getBoundingClientRect().top < window.innerHeight * 1.75) {
+        observer.disconnect();
+        start();
+      }
+    }, 2400);
+  }
+
+  scheduleTechShowcaseInit();
 })();

@@ -72,14 +72,34 @@ $pageSlug = clean_text($data['pageSlug'] ?? '', 120);
 $contentTitle = clean_text($data['contentTitle'] ?? '', 190);
 $name = clean_text($data['name'] ?? '', 48);
 $message = clean_text($data['message'] ?? '', 500);
+$clientIp = client_ip() ?? 'unknown';
 $errors = [];
+
+if (honeypot_triggered($data)) {
+    json_response([
+        'ok' => false,
+        'message' => 'Não foi possível publicar o comentário informado.',
+    ], 422);
+}
+
+apply_rate_limit(
+    'article-comment-ip',
+    $clientIp,
+    10,
+    600,
+    'Você enviou comentários demais em pouco tempo. Aguarde alguns instantes antes de tentar novamente.'
+);
 
 if ($contentSlug === '') {
     $errors['contentSlug'] = 'Conteúdo não informado.';
+} elseif (!preg_match('/^[a-z0-9][a-z0-9._-]{0,119}$/i', $contentSlug)) {
+    $errors['contentSlug'] = 'Identificador do conteúdo inválido.';
 }
 
 if ($pageSlug === '') {
     $errors['pageSlug'] = 'Página não informada.';
+} elseif (!preg_match('/^[a-z0-9][a-z0-9._-]{0,119}$/i', $pageSlug)) {
+    $errors['pageSlug'] = 'Identificador da página inválido.';
 }
 
 if ($contentTitle === '') {
@@ -106,7 +126,6 @@ try {
     $pdo = Database::connection();
     ensure_article_comments_table($pdo);
 
-    $clientIp = client_ip();
     $recent = $pdo->prepare(
         'SELECT COUNT(*) AS total
          FROM article_comments

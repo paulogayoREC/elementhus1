@@ -14,8 +14,24 @@ $data = request_json();
 $token = trim((string) ($data['token'] ?? ''));
 $password = (string) ($data['password'] ?? '');
 $passwordConfirmation = (string) ($data['password_confirmation'] ?? '');
+$clientIp = client_ip() ?? 'unknown';
 
 $errors = [];
+
+if (honeypot_triggered($data)) {
+    json_response([
+        'ok' => false,
+        'message' => 'Não foi possível processar a redefinição enviada.',
+    ], 422);
+}
+
+apply_rate_limit(
+    'password-reset-submit-ip',
+    $clientIp,
+    8,
+    1800,
+    'Muitas tentativas de redefinição. Aguarde alguns minutos antes de tentar novamente.'
+);
 
 if (!preg_match('/^[a-f0-9]{64}$/', $token)) {
     $errors['token'] = 'Link de redefinição inválido ou expirado.';

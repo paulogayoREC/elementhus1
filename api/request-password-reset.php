@@ -13,6 +13,32 @@ require_csrf();
 $data = request_json();
 $email = normalize_email($data['email'] ?? '');
 $requestStartedAt = microtime(true);
+$clientIp = client_ip() ?? 'unknown';
+
+if (honeypot_triggered($data)) {
+    json_response([
+        'ok' => true,
+        'message' => 'Se este e-mail estiver cadastrado, enviaremos um link seguro para redefinir sua senha.',
+    ]);
+}
+
+apply_rate_limit(
+    'password-reset-ip',
+    $clientIp,
+    6,
+    1800,
+    'Muitas solicitações de redefinição. Aguarde alguns minutos antes de tentar novamente.'
+);
+
+if ($email !== '') {
+    apply_rate_limit(
+        'password-reset-email',
+        $email,
+        4,
+        1800,
+        'Este endereço recebeu muitas solicitações recentes. Aguarde alguns minutos antes de tentar novamente.'
+    );
+}
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     json_response([

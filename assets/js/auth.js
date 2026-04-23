@@ -5,12 +5,38 @@ const authState = {
 };
 
 const authScriptElement = document.currentScript;
+const focusableSelector = 'a[href], button:not([disabled]), textarea:not([disabled]), input:not([type="hidden"]):not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
 const authApiBase = authScriptElement?.src
   ? new URL("../../api/", authScriptElement.src).toString()
   : new URL("/api/", window.location.origin).toString();
 const authPasswordIsStrong = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
 
 const getFirstName = (name) => String(name || "Visitante").trim().split(/\s+/)[0] || "Visitante";
+const getFocusableElements = (root) => (
+  Array.from(root?.querySelectorAll(focusableSelector) || []).filter((element) => (
+    element.tabIndex >= 0
+    && !element.closest("[hidden]")
+    && !element.closest('[aria-hidden="true"]')
+    && element.getAttribute("aria-hidden") !== "true"
+  ))
+);
+const trapFocusWithin = (container, event) => {
+  if (event.key !== "Tab") return;
+
+  const focusableElements = getFocusableElements(container);
+  if (!focusableElements.length) return;
+
+  const first = focusableElements[0];
+  const last = focusableElements[focusableElements.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+};
 
 const authLegalDocuments = {
   terms: {
@@ -153,6 +179,11 @@ const closeSiteMenuForAuth = () => {
   document.querySelector("[data-header]")?.classList.remove("menu-active");
   document.body.classList.remove("menu-open");
   document.querySelector("[data-menu-toggle]")?.setAttribute("aria-expanded", "false");
+  const menuBackdrop = document.querySelector(".site-menu-backdrop");
+  menuBackdrop?.classList.remove("is-visible");
+  if (menuBackdrop) {
+    menuBackdrop.hidden = true;
+  }
 };
 
 const createAuthModal = () => {
@@ -187,7 +218,7 @@ const createAuthModal = () => {
         <form class="auth-form" data-auth-panel="login" data-auth-login novalidate>
           <label>
             <span>E-mail</span>
-            <input type="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+            <input type="email" name="email" autocomplete="username email" inputmode="email" autocapitalize="none" spellcheck="false" placeholder="voce@email.com" required>
             <small class="auth-field-error" data-error-for="login_email"></small>
           </label>
           <label>
@@ -198,6 +229,9 @@ const createAuthModal = () => {
             </span>
             <small class="auth-field-error" data-error-for="login_password"></small>
           </label>
+          <div class="bot-field" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          </div>
           <div class="auth-form-row">
             <button class="auth-link-button" type="button" data-auth-switch="forgot">Esqueci minha senha</button>
           </div>
@@ -217,9 +251,12 @@ const createAuthModal = () => {
           </div>
           <label>
             <span>E-mail</span>
-            <input type="email" name="email" autocomplete="email" maxlength="190" placeholder="voce@email.com" required>
+            <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="190" placeholder="voce@email.com" required>
             <small class="auth-field-error" data-error-for="reset_email"></small>
           </label>
+          <div class="bot-field" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          </div>
           <button class="button button-primary auth-submit" type="submit">Enviar link seguro</button>
           <p class="auth-switch">Lembrou a senha? <button type="button" data-auth-switch="login">Voltar para entrar</button></p>
         </form>
@@ -227,12 +264,12 @@ const createAuthModal = () => {
         <form class="auth-form" data-auth-panel="register" data-auth-register hidden novalidate>
           <label>
             <span>Nome completo</span>
-            <input type="text" name="name" autocomplete="name" maxlength="120" placeholder="Seu nome completo" required>
+            <input type="text" name="name" autocomplete="name" autocapitalize="words" maxlength="120" placeholder="Seu nome completo" required>
             <small class="auth-field-error" data-error-for="name"></small>
           </label>
           <label>
             <span>E-mail</span>
-            <input type="email" name="email" autocomplete="email" maxlength="190" placeholder="voce@email.com" required>
+            <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="190" placeholder="voce@email.com" required>
             <small class="auth-field-error" data-error-for="email"></small>
           </label>
           <label>
@@ -251,6 +288,9 @@ const createAuthModal = () => {
             </span>
             <small class="auth-field-error" data-error-for="password_confirmation"></small>
           </label>
+          <div class="bot-field" aria-hidden="true">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          </div>
           <label class="auth-check">
             <input type="checkbox" name="terms_accepted" required>
             <span>Li e concordo com os <button class="auth-inline-legal" type="button" data-auth-legal-open="terms">Termos de Uso</button> e a <button class="auth-inline-legal" type="button" data-auth-legal-open="privacy">Política de Privacidade</button>.</span>
@@ -339,18 +379,26 @@ const initAuth = () => {
   const registerForm = modal.querySelector("[data-auth-register]");
   const logoutButton = modal.querySelector("[data-auth-logout]");
   const legalPanel = modal.querySelector("[data-auth-legal-panel]");
+  const legalCard = modal.querySelector(".auth-legal-card");
   const legalTitle = modal.querySelector("[data-auth-legal-title]");
   const legalKicker = modal.querySelector("[data-auth-legal-kicker]");
   const legalUpdated = modal.querySelector("[data-auth-legal-updated]");
   const legalContent = modal.querySelector("[data-auth-legal-content]");
+  let lastTrigger = null;
+  let lastLegalTrigger = null;
 
   const closeLegalDocument = () => {
     if (!legalPanel) return;
+    const wasOpen = !legalPanel.hidden;
 
     legalPanel.hidden = true;
     dialog?.classList.remove("has-legal-panel");
     if (legalContent) {
       legalContent.innerHTML = "";
+    }
+
+    if (wasOpen && lastLegalTrigger instanceof HTMLElement) {
+      lastLegalTrigger.focus();
     }
   };
 
@@ -358,6 +406,7 @@ const initAuth = () => {
     const documentData = authLegalDocuments[documentKey];
     if (!documentData || !legalPanel || !legalTitle || !legalKicker || !legalUpdated || !legalContent) return;
 
+    lastLegalTrigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     legalTitle.textContent = documentData.title;
     legalKicker.textContent = documentData.kicker;
     legalUpdated.textContent = documentData.updated;
@@ -458,6 +507,10 @@ const initAuth = () => {
     document.body.classList.remove("auth-open");
     setStatus();
     setFieldErrors();
+
+    if (lastTrigger instanceof HTMLElement) {
+      lastTrigger.focus();
+    }
   };
 
   const ensureSession = async () => {
@@ -506,6 +559,7 @@ const initAuth = () => {
 
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", async () => {
+      lastTrigger = trigger;
       await ensureSession();
       openModal("login");
     });
@@ -544,6 +598,9 @@ const initAuth = () => {
 
       closeModal();
     }
+
+    if (modal.hidden) return;
+    trapFocusWithin(legalPanel && !legalPanel.hidden ? legalCard : dialog, event);
   });
 
   loginForm?.addEventListener("submit", async (event) => {
@@ -580,7 +637,8 @@ const initAuth = () => {
         method: "POST",
         body: JSON.stringify({
           email,
-          password
+          password,
+          website: String(formData.get("website") || "").trim()
         })
       });
 
@@ -624,7 +682,8 @@ const initAuth = () => {
       const data = await authApiRequest("request-password-reset", {
         method: "POST",
         body: JSON.stringify({
-          email: formData.get("email")
+          email: formData.get("email"),
+          website: String(formData.get("website") || "").trim()
         })
       });
 
@@ -667,7 +726,8 @@ const initAuth = () => {
           email: formData.get("email"),
           password: formData.get("password"),
           password_confirmation: formData.get("password_confirmation"),
-          terms_accepted: Boolean(formData.get("terms_accepted"))
+          terms_accepted: Boolean(formData.get("terms_accepted")),
+          website: String(formData.get("website") || "").trim()
         })
       });
 

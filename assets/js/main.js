@@ -14,18 +14,76 @@ const articleCommentLists = Array.from(document.querySelectorAll("[data-article-
 const articleCommentNameStorageKey = "encontreAquiTechArticleComment:name";
 const articleCommentMessageLimit = 500;
 const mainScriptElement = document.currentScript;
+const focusableSelector = 'a[href], button:not([disabled]), textarea:not([disabled]), input:not([type="hidden"]):not([disabled]), select:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
 const feedbackApiBase = mainScriptElement?.src
   ? new URL("../../api/", mainScriptElement.src).toString()
   : new URL("/api/", window.location.origin).toString();
 const feedbackState = {
   csrfToken: "",
   items: [],
-  apiAvailable: true
+  apiAvailable: true,
+  hasLoaded: false
 };
 const articleCommentState = {
-  itemsBySlug: new Map()
+  itemsBySlug: new Map(),
+  loadedSlugs: new Set()
 };
 const editorialCategories = window.editorialData?.categories || {};
+let menuBackdrop = null;
+let menuLastFocusedElement = null;
+
+const queueIdleTask = (callback, timeout = 1200) => {
+  if ("requestIdleCallback" in window) {
+    return window.requestIdleCallback(callback, { timeout });
+  }
+
+  return window.setTimeout(callback, 1);
+};
+
+const getFocusableElements = (root) => (
+  Array.from(root?.querySelectorAll(focusableSelector) || []).filter((element) => (
+    element.tabIndex >= 0
+    && !element.closest("[hidden]")
+    && !element.closest('[aria-hidden="true"]')
+    && element.getAttribute("aria-hidden") !== "true"
+  ))
+);
+
+const trapFocusWithin = (container, event) => {
+  if (event.key !== "Tab") return;
+
+  const focusableElements = getFocusableElements(container);
+  if (!focusableElements.length) return;
+
+  const first = focusableElements[0];
+  const last = focusableElements[focusableElements.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+};
+
+const ensureHoneypotField = (form) => {
+  if (!form || form.querySelector('input[name="website"]')) return;
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "bot-field";
+  wrapper.setAttribute("aria-hidden", "true");
+
+  const input = document.createElement("input");
+  input.type = "text";
+  input.name = "website";
+  input.tabIndex = -1;
+  input.autocomplete = "off";
+  input.setAttribute("aria-hidden", "true");
+
+  wrapper.append(input);
+  form.prepend(wrapper);
+};
 
 const formatEditorialDate = (value) => {
   if (!value) return "";
@@ -140,20 +198,55 @@ const setHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
 };
 
-const closeMenu = () => {
+const ensureMenuBackdrop = () => {
+  if (menuBackdrop) return menuBackdrop;
+
+  menuBackdrop = document.createElement("button");
+  menuBackdrop.type = "button";
+  menuBackdrop.className = "site-menu-backdrop";
+  menuBackdrop.hidden = true;
+  menuBackdrop.setAttribute("aria-label", "Fechar menu");
+  menuBackdrop.addEventListener("click", () => closeMenu());
+  document.body.append(menuBackdrop);
+
+  return menuBackdrop;
+};
+
+const focusFirstMenuItem = () => {
+  getFocusableElements(menu)[0]?.focus();
+};
+
+const closeMenu = ({ restoreFocus = true } = {}) => {
   if (!menu || !menuToggle) return;
   menu.classList.remove("is-open");
   header?.classList.remove("menu-active");
   document.body.classList.remove("menu-open");
   menuToggle.setAttribute("aria-expanded", "false");
+
+  if (menuBackdrop) {
+    menuBackdrop.classList.remove("is-visible");
+    menuBackdrop.hidden = true;
+  }
+
+  if (restoreFocus && menuLastFocusedElement instanceof HTMLElement) {
+    menuLastFocusedElement.focus();
+  }
 };
 
 const openMenu = () => {
   if (!menu || !menuToggle) return;
+  menuLastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : menuToggle;
   menu.classList.add("is-open");
   header?.classList.add("menu-active");
   document.body.classList.add("menu-open");
   menuToggle.setAttribute("aria-expanded", "true");
+
+  const backdrop = ensureMenuBackdrop();
+  backdrop.hidden = false;
+  window.requestAnimationFrame(() => {
+    backdrop.classList.add("is-visible");
+  });
+  window.setTimeout(focusFirstMenuItem, 40);
 };
 
 menuToggle?.addEventListener("click", () => {
@@ -166,7 +259,7 @@ menuToggle?.addEventListener("click", () => {
 });
 
 menu?.querySelectorAll("a, button").forEach((link) => {
-  link.addEventListener("click", closeMenu);
+  link.addEventListener("click", () => closeMenu({ restoreFocus: false }));
 });
 
 const createMobileShareButton = () => {
@@ -253,9 +346,18 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
   }
+
+  if (menu?.classList.contains("is-open")) {
+    trapFocusWithin(menu, event);
+  }
 });
 
 window.addEventListener("scroll", setHeaderState, { passive: true });
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 980) {
+    closeMenu({ restoreFocus: false });
+  }
+});
 setHeaderState();
 
 if ("IntersectionObserver" in window) {
@@ -431,6 +533,32 @@ const loadFeedbackItems = async () => {
   }
 };
 
+const loadFeedbackWhenVisible = () => {
+  if (!feedbackForm && !feedbackList) return;
+
+  const trigger = feedbackForm?.closest(".community-section") || feedbackList;
+  const startLoading = () => {
+    if (feedbackState.hasLoaded) return;
+    feedbackState.hasLoaded = true;
+    loadFeedbackItems();
+  };
+
+  feedbackForm?.addEventListener("focusin", startLoading, { once: true });
+
+  if (!trigger || !("IntersectionObserver" in window)) {
+    queueIdleTask(startLoading);
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, instance) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    instance.disconnect();
+    startLoading();
+  }, { rootMargin: "280px 0px" });
+
+  observer.observe(trigger);
+};
+
 const formatCommentTimestamp = (value) => {
   if (!value) return "";
 
@@ -507,6 +635,44 @@ const loadArticleCommentItems = async (contentSlug) => {
   }
 };
 
+const requestArticleCommentLoad = (contentSlug) => {
+  if (!contentSlug || articleCommentState.loadedSlugs.has(contentSlug)) {
+    return;
+  }
+
+  articleCommentState.loadedSlugs.add(contentSlug);
+  loadArticleCommentItems(contentSlug);
+};
+
+const scheduleArticleCommentLoads = () => {
+  if (!articleCommentLists.length) return;
+
+  articleCommentForms.forEach((form) => {
+    ensureHoneypotField(form);
+    form.addEventListener("focusin", () => {
+      requestArticleCommentLoad(form.dataset.contentSlug || "");
+    }, { once: true });
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    queueIdleTask(() => {
+      getArticleCommentSlugs().forEach(requestArticleCommentLoad);
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, instance) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      instance.unobserve(entry.target);
+      requestArticleCommentLoad(entry.target.dataset.contentSlug || "");
+    });
+  }, { rootMargin: "240px 0px" });
+
+  articleCommentLists.forEach((list) => observer.observe(list));
+};
+
 const updateArticleCommentCount = (form) => {
   const message = form.querySelector("[data-article-comment-message]");
   const count = form.querySelector("[data-article-comment-count]");
@@ -555,7 +721,8 @@ const setupArticleCommentForms = () => {
         pageSlug: currentPageSlug(),
         contentTitle,
         name: submittedName || "Visitante",
-        message: String(formData.get("message") || "").trim().slice(0, articleCommentMessageLimit)
+        message: String(formData.get("message") || "").trim().slice(0, articleCommentMessageLimit),
+        website: String(formData.get("website") || "").trim()
       };
 
       if (!nextItem.contentSlug || !nextItem.contentTitle || nextItem.message.length < 3) {
@@ -613,6 +780,7 @@ const setupArticleCommentForms = () => {
 };
 
 feedbackMessage?.addEventListener("input", updateFeedbackCount);
+ensureHoneypotField(feedbackForm);
 
 feedbackForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -622,6 +790,7 @@ feedbackForm?.addEventListener("submit", async (event) => {
     name: String(formData.get("name") || "").trim().slice(0, 48),
     rating: Number(formData.get("rating") || 5),
     message: String(formData.get("message") || "").trim().slice(0, feedbackMessageLimit),
+    website: String(formData.get("website") || "").trim(),
     createdAt: Date.now()
   };
 
@@ -679,9 +848,9 @@ feedbackForm?.addEventListener("submit", async (event) => {
 restoreFeedbackName();
 updateFeedbackCount();
 renderFeedbackItems();
-loadFeedbackItems();
 setupArticleCommentForms();
 getArticleCommentSlugs().forEach((contentSlug) => {
   renderArticleCommentItems(contentSlug);
-  loadArticleCommentItems(contentSlug);
 });
+loadFeedbackWhenVisible();
+scheduleArticleCommentLoads();

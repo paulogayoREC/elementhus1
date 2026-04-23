@@ -16,8 +16,24 @@ $email = normalize_email($data['email'] ?? '');
 $password = (string) ($data['password'] ?? '');
 $passwordConfirmation = (string) ($data['password_confirmation'] ?? '');
 $termsAccepted = bool_from_input($data['terms_accepted'] ?? false);
+$clientIp = client_ip() ?? 'unknown';
 
 $errors = [];
+
+if (honeypot_triggered($data)) {
+    json_response([
+        'ok' => false,
+        'message' => 'Não foi possível processar o cadastro informado.',
+    ], 422);
+}
+
+apply_rate_limit(
+    'register-ip',
+    $clientIp,
+    5,
+    1800,
+    'Muitas tentativas de cadastro. Aguarde alguns minutos antes de tentar novamente.'
+);
 
 if ($name === '') {
     $errors['name'] = 'Informe seu nome completo.';

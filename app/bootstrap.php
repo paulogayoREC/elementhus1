@@ -7,6 +7,18 @@ $isSecureRequest = (
     || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https')
 );
 
+if (function_exists('ini_set')) {
+    ini_set('session.use_strict_mode', '1');
+    ini_set('session.use_only_cookies', '1');
+    ini_set('session.cookie_httponly', '1');
+    ini_set('session.cookie_samesite', 'Lax');
+    ini_set('session.sid_length', '48');
+}
+
+if (function_exists('header_remove')) {
+    header_remove('X-Powered-By');
+}
+
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_name('eat_session');
     session_set_cookie_params([
@@ -20,7 +32,15 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 header('Content-Type: application/json; charset=utf-8');
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
 header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header('Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()');
+header('Cross-Origin-Opener-Policy: same-origin');
+header('Cross-Origin-Resource-Policy: same-origin');
 
 function json_response(array $payload, int $statusCode = 200): void
 {
@@ -61,6 +81,78 @@ function require_post(): void
     }
 }
 
+function request_method(): string
+{
+    return strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+}
+
+function current_request_origin(): ?string
+{
+    $host = trim((string) ($_SERVER['HTTP_HOST'] ?? ''));
+    if ($host === '') {
+        return null;
+    }
+
+    $isSecureRequest = (
+        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https')
+    );
+
+    return ($isSecureRequest ? 'https://' : 'http://') . strtolower($host);
+}
+
+function normalized_origin(string $url): ?string
+{
+    $parts = parse_url(trim($url));
+    if (!is_array($parts)) {
+        return null;
+    }
+
+    $scheme = strtolower((string) ($parts['scheme'] ?? ''));
+    $host = strtolower((string) ($parts['host'] ?? ''));
+    if ($scheme === '' || $host === '') {
+        return null;
+    }
+
+    $port = isset($parts['port']) ? (int) $parts['port'] : null;
+    $isDefaultPort = (
+        $port === null
+        || ($scheme === 'https' && $port === 443)
+        || ($scheme === 'http' && $port === 80)
+    );
+
+    return $scheme . '://' . $host . ($isDefaultPort ? '' : ':' . $port);
+}
+
+function require_same_origin_request(): void
+{
+    $currentOrigin = current_request_origin();
+    if ($currentOrigin === null) {
+        return;
+    }
+
+    $origin = trim((string) ($_SERVER['HTTP_ORIGIN'] ?? ''));
+    $referer = trim((string) ($_SERVER['HTTP_REFERER'] ?? ''));
+
+    if ($origin !== '') {
+        if (normalized_origin($origin) !== normalized_origin($currentOrigin)) {
+            json_response([
+                'ok' => false,
+                'message' => 'Origem da requisição não autorizada.',
+            ], 403);
+        }
+
+        return;
+    }
+
+    if ($referer !== '' && normalized_origin($referer) !== normalized_origin($currentOrigin)) {
+        json_response([
+            'ok' => false,
+            'message' => 'Origem da requisição não autorizada.',
+        ], 403);
+    }
+}
+
 function csrf_token(): string
 {
     if (empty($_SESSION['csrf_token'])) {
@@ -72,6 +164,8 @@ function csrf_token(): string
 
 function require_csrf(): void
 {
+    require_same_origin_request();
+
     $sentToken = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
     $sessionToken = $_SESSION['csrf_token'] ?? '';
 
@@ -108,6 +202,111 @@ function password_is_strong(string $password): bool
 function bool_from_input($value): bool
 {
     return in_array($value, [true, 1, '1', 'true', 'on', 'yes'], true);
+}
+
+function request_content_length(): int
+{
+    return max(0, (int) ($_SERVER['CONTENT_LENGTH'] ?? 0));
+}
+
+function limit_request_body_size(int $maxBytes = 32768): void
+{
+    if (!in_array(request_method(), ['POST', 'PUT', 'PATCH', 'DELETE'], true)) {
+        return;
+    }
+
+    if (request_content_length() <= $maxBytes) {
+        return;
+    }
+
+    json_response([
+        'ok' => false,
+        'message' => 'A solicitação excede o tamanho permitido.',
+    ], 413);
+}
+
+function honeypot_triggered(array $data, string $fieldName = 'website'): bool
+{
+    return clean_text($data[$fieldName] ?? '', 120) !== '';
+}
+
+function rate_limit_storage_path(string $scope, string $identifier): string
+{
+    $directory = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'eat-rate-limits';
+
+    if (!is_dir($directory)) {
+        @mkdir($directory, 0700, true);
+    }
+
+    return $directory . DIRECTORY_SEPARATOR . hash('sha256', $scope . '|' . $identifier) . '.json';
+}
+
+function apply_rate_limit(
+    string $scope,
+    string $identifier,
+    int $maxAttempts,
+    int $windowSeconds,
+    string $message = 'Muitas tentativas. Aguarde um pouco e tente novamente.'
+): void {
+    $normalizedIdentifier = clean_text($identifier, 200);
+    if ($normalizedIdentifier === '') {
+        $normalizedIdentifier = 'anon';
+    }
+
+    $storagePath = rate_limit_storage_path($scope, $normalizedIdentifier);
+    $handle = @fopen($storagePath, 'c+');
+
+    if ($handle === false) {
+        return;
+    }
+
+    $now = time();
+
+    try {
+        if (!flock($handle, LOCK_EX)) {
+            return;
+        }
+
+        rewind($handle);
+        $payload = json_decode(stream_get_contents($handle) ?: '{}', true);
+        $timestamps = array_values(array_filter(
+            array_map('intval', (array) ($payload['timestamps'] ?? [])),
+            static fn (int $timestamp): bool => $timestamp > ($now - $windowSeconds)
+        ));
+
+        if (count($timestamps) >= $maxAttempts) {
+            $retryAfter = max(1, $windowSeconds - ($now - $timestamps[0]));
+            header('Retry-After: ' . $retryAfter);
+
+            json_response([
+                'ok' => false,
+                'message' => $message,
+            ], 429);
+        }
+
+        $timestamps[] = $now;
+
+        rewind($handle);
+        ftruncate($handle, 0);
+        fwrite($handle, json_encode(['timestamps' => $timestamps], JSON_UNESCAPED_SLASHES));
+        fflush($handle);
+    } finally {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+    }
+}
+
+function clear_rate_limit(string $scope, string $identifier): void
+{
+    $normalizedIdentifier = clean_text($identifier, 200);
+    if ($normalizedIdentifier === '') {
+        return;
+    }
+
+    $storagePath = rate_limit_storage_path($scope, $normalizedIdentifier);
+    if (is_file($storagePath)) {
+        @unlink($storagePath);
+    }
 }
 
 function safe_database_error_message(Throwable $exception, string $fallback): string
@@ -160,3 +359,5 @@ function session_user_payload(array $user): array
         'email' => (string) $user['email'],
     ];
 }
+
+limit_request_body_size();

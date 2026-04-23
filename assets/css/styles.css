@@ -42,6 +42,8 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable both-edges;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -57,6 +59,7 @@ body {
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(37, 125, 167, 0.16);
 }
 
 body::before {
@@ -117,6 +120,25 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid rgba(99, 208, 255, 0.88);
+  outline-offset: 2px;
+}
+
+.bot-field {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .skip-link {
@@ -252,6 +274,27 @@ select {
   display: grid;
   justify-items: end;
   gap: 0.28rem;
+}
+
+.site-menu-backdrop[hidden] {
+  display: none;
+}
+
+.site-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  border: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 180ms ease;
+}
+
+.site-menu-backdrop.is-visible {
+  opacity: 1;
 }
 
 .nav-links {
@@ -400,6 +443,15 @@ select {
 .section {
   position: relative;
   padding: 6.5rem 0;
+}
+
+.feature-band,
+.editorial-section,
+.geek-home-section,
+.community-section,
+.about-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 920px;
 }
 
 .section-inner {
@@ -1889,6 +1941,7 @@ h4 {
   width: min(100%, 27.5rem);
   max-height: min(92svh, 43rem);
   overflow: auto;
+  overscroll-behavior: contain;
   border: 1px solid rgba(37, 125, 167, 0.82);
   border-radius: 8px;
   padding: 1rem;
@@ -4416,11 +4469,13 @@ h4 {
     border: 1px solid rgba(37, 125, 167, 0.5);
     border-radius: 8px;
     padding: 0.85rem;
+    padding-bottom: max(0.85rem, calc(env(safe-area-inset-bottom) + 0.55rem));
     background:
       linear-gradient(135deg, rgba(37, 125, 167, 0.18), transparent 42%, rgba(194, 159, 115, 0.08)),
       rgba(8, 7, 6, 0.96);
     box-shadow: 0 0 0 1px rgba(250, 235, 209, 0.06), 0 22px 60px rgba(0, 0, 0, 0.46), 0 0 28px rgba(37, 125, 167, 0.26);
     backdrop-filter: blur(18px);
+    overscroll-behavior: contain;
     opacity: 0;
     pointer-events: none;
     transform: translate3d(0, -0.5rem, 0) scale(0.98);

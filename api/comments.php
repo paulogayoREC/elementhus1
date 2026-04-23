@@ -57,7 +57,23 @@ $data = request_json();
 $name = clean_text($data['name'] ?? '', 48);
 $rating = (int) ($data['rating'] ?? 0);
 $message = clean_text($data['message'] ?? '', 500);
+$clientIp = client_ip() ?? 'unknown';
 $errors = [];
+
+if (honeypot_triggered($data)) {
+    json_response([
+        'ok' => false,
+        'message' => 'Não foi possível publicar o comentário informado.',
+    ], 422);
+}
+
+apply_rate_limit(
+    'community-comment-ip',
+    $clientIp,
+    8,
+    600,
+    'Você enviou comentários demais em pouco tempo. Aguarde alguns instantes antes de tentar novamente.'
+);
 
 if ($name === '' || strlen($name) < 2) {
     $errors['name'] = 'Informe seu nome.';
@@ -83,7 +99,6 @@ try {
     $pdo = Database::connection();
     ensure_community_comments_table($pdo);
 
-    $clientIp = client_ip();
     $recent = $pdo->prepare(
         'SELECT COUNT(*) AS total
          FROM community_comments

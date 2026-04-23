@@ -34,13 +34,14 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/img/astro001-cutout.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260423-noticias-bg">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260423-site-premium">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260421-vitrine-destaques" defer></script>
-    <script src="assets/js/tech-showcase.js?v=20260423-rotacao-4h" defer></script>
+    <script src="assets/js/main.js?v=20260423-ux-hardening" defer></script>
+    <script src="assets/js/tech-showcase.js?v=20260423-vitrine-cache" defer></script>
     <script src="assets/js/mundo-geek.js?v=20260420-mundo-geek" defer></script>
-    <script src="assets/js/auth.js?v=20260422-auth-legal" defer></script>
+    <script src="assets/js/auth.js?v=20260423-auth-hardening" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -123,7 +124,7 @@
       <section class="hero-section" aria-labelledby="hero-title" data-section-name="Sessão Capa">
         <div class="space-grid" aria-hidden="true"></div>
         <div class="hero-media" aria-hidden="true">
-          <img class="hero-astronaut" src="assets/img/astro001-cutout.png" alt="">
+          <img class="hero-astronaut" src="assets/img/astro001-cutout.png" alt="" width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high">
         </div>
 
         <div class="hero-content">
@@ -376,7 +377,7 @@
       <section class="section about-section" id="sobre" aria-labelledby="sobre-title" data-section-name="Sessão Criador">
         <div class="section-inner about-layout">
           <div class="portrait-wrap">
-            <img src="assets/img/paulo-gayo.jpg" alt="Foto profissional de Paulo Gayo" loading="lazy" decoding="async">
+            <img src="assets/img/paulo-gayo.jpg" alt="Foto profissional de Paulo Gayo" width="600" height="800" loading="lazy" decoding="async">
           </div>
           <div class="about-copy">
             <p class="eyebrow">Criador</p>

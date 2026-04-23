@@ -8,6 +8,23 @@ const resetApiBase = resetScriptElement?.src
   ? new URL("../../api/", resetScriptElement.src).toString()
   : new URL("/api/", window.location.origin).toString();
 const resetPasswordIsStrong = (password) => /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
+const ensureHoneypotField = (form) => {
+  if (!form || form.querySelector('input[name="website"]')) return;
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "bot-field";
+  wrapper.setAttribute("aria-hidden", "true");
+
+  const input = document.createElement("input");
+  input.type = "text";
+  input.name = "website";
+  input.tabIndex = -1;
+  input.autocomplete = "off";
+  input.setAttribute("aria-hidden", "true");
+
+  wrapper.append(input);
+  form.prepend(wrapper);
+};
 
 const resetApiRequest = async (endpoint, options = {}) => {
   const headers = {
@@ -52,6 +69,8 @@ const initPasswordReset = () => {
   const invalidPanel = document.querySelector("[data-reset-invalid]");
   const successPanel = document.querySelector("[data-reset-success]");
   if (!form || !status) return;
+
+  ensureHoneypotField(form);
 
   const setStatus = (message = "", type = "") => {
     status.textContent = message;
@@ -142,13 +161,17 @@ const initPasswordReset = () => {
         body: JSON.stringify({
           token: resetState.token,
           password,
-          password_confirmation: passwordConfirmation
+          password_confirmation: passwordConfirmation,
+          website: String(formData.get("website") || "").trim()
         })
       });
 
       resetState.csrfToken = data.csrfToken || resetState.csrfToken;
       form.reset();
       form.hidden = true;
+      if (window.history?.replaceState) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
       if (successPanel) successPanel.hidden = false;
       setStatus(data.message || "Senha alterada com segurança.", "success");
     } catch (error) {
