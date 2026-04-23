@@ -1592,7 +1592,7 @@ h4 {
 
 .portrait-wrap {
   position: relative;
-  width: min(100%, 12rem);
+  width: min(100%, 13rem);
   aspect-ratio: 1 / 1;
   margin: 0;
   justify-self: start;
@@ -1641,7 +1641,7 @@ h4 {
   aspect-ratio: 1 / 1;
   border-radius: 11px;
   object-fit: cover;
-  object-position: 50% 18%;
+  object-position: 50% 16%;
 }
 
 .about-copy {
@@ -4737,7 +4737,7 @@ h4 {
   }
 
   .portrait-wrap {
-    width: min(100%, 8.6rem);
+    width: min(100%, 9.35rem);
   }
 
   .about-copy h2 {
@@ -5176,7 +5176,7 @@ h4 {
   }
 
   .portrait-wrap {
-    width: min(100%, 8.2rem);
+    width: min(100%, 8.85rem);
     justify-self: start;
   }
 
@@ -5371,7 +5371,7 @@ h4 {
   }
 
   .portrait-wrap {
-    width: min(100%, 7.1rem);
+    width: min(100%, 7.7rem);
   }
 
   .about-story-toggle {
