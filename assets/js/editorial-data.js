@@ -103,7 +103,7 @@ window.editorialData = {
       ]
     },
     "tutoriais": {
-      "label": "Tutoriais",
+      "label": "Dicas e Tutoriais",
       "items": [
         {
           "title": "Como economizar bateria e melhorar o desempenho do Android em 2026",
