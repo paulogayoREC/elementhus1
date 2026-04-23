@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Falhas zero-day ligadas ao Microsoft Defender acendem alerta para ambientes Windows, com risco de elevação de privilégios e bloqueio de proteção.">
+    <meta name="description" content="Microsoft libera atualização emergencial para corrigir a CVE-2026-40372 no ASP.NET Core Data Protection e recomenda atualização para 10.0.7.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
-    <title>Zero-days no Defender acendem alerta em ambientes Windows | Encontre Aqui Tech</title>
+    <title>Microsoft corrige falha crítica no ASP.NET Core | Encontre Aqui Tech</title>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -60,26 +60,26 @@
       <article class="news-article" aria-labelledby="article-title">
         <header class="article-hero">
           <div class="article-hero-bg" aria-hidden="true">
-            <img src="assets/img/alertas/defender-zero-days-bg.webp" alt="">
+            <img src="assets/img/alertas/aspnet-core-cve-2026-40372-bg.webp" alt="">
           </div>
           <div class="section-inner article-hero-layout">
             <div class="article-hero-copy">
               <a class="back-link" href="/#editorias">Voltar às editorias</a>
-              <p class="eyebrow">Alertas de segurança / Endpoint</p>
-              <h1 id="article-title">Zero-days no Defender acendem alerta em ambientes Windows</h1>
+              <p class="eyebrow">Alertas de segurança / ASP.NET Core</p>
+              <h1 id="article-title">Microsoft libera atualização emergencial para corrigir falha crítica no ASP.NET Core</h1>
               <p class="article-lead">
-                Falhas associadas ao Microsoft Defender foram observadas em atividades reais de ataque e reforçam a importância de atualização, monitoramento e resposta rápida.
+                A CVE-2026-40372 afeta o ASP.NET Core Data Protection e exige atualização imediata para a versão 10.0.7 em ambientes expostos.
               </p>
               <div class="article-meta-row" aria-label="Informações da matéria">
                 <span>Encontre Aqui Tech</span>
-                <time datetime="2026-04-19">19 abr. 2026</time>
-                <span>Alerta crítico</span>
+                <time datetime="2026-04-22">22 abr. 2026</time>
+                <span>Correção emergencial</span>
               </div>
             </div>
 
             <figure class="article-hero-figure">
-              <img src="assets/img/alertas/defender-zero-days-preview.webp" alt="Símbolo de proteção digital sobre fundo azul associado a segurança no Windows.">
-              <figcaption>Falhas em ferramentas de proteção exigem atenção porque podem abrir espaço para elevação de privilégios e enfraquecimento da defesa do endpoint.</figcaption>
+              <img src="assets/img/alertas/aspnet-core-cve-2026-40372-preview.webp" alt="Logo do ASP.NET Core sobre fundo azul.">
+              <figcaption>A correção fora do ciclo tradicional reforça a urgência para equipes que dependem do ASP.NET Core Data Protection.</figcaption>
             </figure>
           </div>
         </header>
@@ -89,32 +89,34 @@
             <div class="article-main-column">
               <div class="article-content">
               <p>
-                A segurança digital voltou ao centro das atenções depois que três falhas zero-day relacionadas ao Microsoft Defender passaram a ser associadas a atividades reais de ataque. De acordo com informações divulgadas nesta semana, as vulnerabilidades foram observadas em uso por criminosos para ampliar privilégios dentro de sistemas já comprometidos, o que aumenta o risco de movimentação lateral, persistência e aprofundamento da invasão.
+                A Microsoft divulgou uma atualização emergencial de segurança para corrigir a vulnerabilidade CVE-2026-40372, identificada no ASP.NET Core Data Protection. O problema afeta versões 10.0.0 a 10.0.6 do pacote Microsoft.AspNetCore.DataProtection e chamou atenção por permitir elevação de privilégio pela rede, o que aumenta bastante o nível de risco para aplicações expostas. Segundo a empresa, a recomendação é atualizar imediatamente para a versão 10.0.7.
               </p>
               <p>
-                Os problemas ficaram conhecidos pelos nomes BlueHammer, RedSun e UnDefend. Entre eles, o BlueHammer já recebeu correção da Microsoft no pacote de atualizações mais recente e está sendo rastreado como CVE-2026-33825. Já os outros dois casos ainda chamam atenção porque, até o momento da publicação da matéria original, seguiam sem correção disponível.
+                De acordo com a Microsoft, a falha surgiu a partir de uma regressão introduzida após o Patch Tuesday, quando clientes começaram a relatar erros de descriptografia em seus sistemas. Durante a investigação, a companhia concluiu que o defeito não causava apenas instabilidade: ele também abria espaço para um cenário de exploração com impacto direto na segurança das aplicações.
               </p>
               <p>
-                Segundo o relato, o BlueHammer e o RedSun podem ser usados para Local Privilege Escalation (LPE), permitindo que um invasor obtenha permissões mais altas em uma máquina comprometida. Já o UnDefend tem outro perfil: ele pode provocar uma condição de Denial of Service (DoS) e impedir a atualização das definições de proteção, reduzindo a capacidade de resposta do Defender diante de novas ameaças.
+                Na prática, o erro estava relacionado à forma como o mecanismo de proteção de dados validava assinaturas criptográficas. Isso poderia permitir que um invasor manipulasse cargas protegidas, burlasse verificações de autenticidade e, em determinadas condições, conseguisse acesso elevado ao ambiente afetado. A gravidade do caso foi destacada também pelo The Hacker News, que apontou pontuação CVSS 9.1 e ressaltou o potencial de obtenção de privilégios de alto nível.
               </p>
               <p>
-                O caso ganhou ainda mais relevância porque a empresa Huntress afirmou ter identificado exploração ativa dessas falhas em ambiente real. De acordo com a companhia, o uso do BlueHammer teria sido observado desde 10 de abril de 2026, enquanto provas de conceito ligadas ao RedSun e ao UnDefend apareceram em 16 de abril de 2026.
+                Outro detalhe importante é que o impacto atinge especialmente aplicações executadas em Linux, macOS e outros sistemas não Windows, desde que utilizem a biblioteca vulnerável em tempo de execução. Além disso, a correção não elimina automaticamente todos os riscos derivados de um eventual abuso anterior: a própria cobertura especializada destaca que, em alguns cenários, pode ser necessário também rotacionar as chaves do Data Protection, principalmente se houver suspeita de uso indevido de tokens emitidos durante a janela de exposição.
               </p>
+              <div class="article-source-card">
+                <span>Fontes consultadas</span>
+                <a href="https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/" target="_blank" rel="noopener noreferrer">Microsoft .NET Blog: .NET 10.0.7 Out-of-Band Security Update</a>
+                <a href="https://thehackernews.com/2026/04/microsoft-patches-critical-aspnet-core.html" target="_blank" rel="noopener noreferrer">The Hacker News: Microsoft Patches Critical ASP.NET Core CVE-2026-40372 Privilege Escalation Bug</a>
+              </div>
               <p>
-                Na prática, esse tipo de cenário reforça um ponto importante para empresas e usuários corporativos: mesmo ferramentas amplamente adotadas de proteção também precisam ser acompanhadas de perto quando surgem falhas críticas. Soluções de segurança não devem ser vistas como uma barreira absoluta, mas como parte de uma estratégia mais ampla, que inclui atualização rápida, monitoramento constante, revisão de privilégios e resposta a incidentes. Essa conclusão é uma inferência baseada no tipo de impacto descrito na matéria sobre elevação de privilégio e bloqueio de atualizações.
-              </p>
-              <p>
-                Para quem administra ambientes Windows, o alerta é claro: aplicar correções assim que disponíveis, revisar sinais de atividade suspeita e acompanhar indicadores de pós-comprometimento passa a ser ainda mais importante. Quando uma falha permite elevar privilégios ou enfraquecer a camada de proteção do endpoint, o problema deixa de ser apenas técnico e passa a representar um risco direto para a continuidade das operações. Essa leitura decorre do comportamento das falhas descritas no relatório.
+                Para empresas e equipes de desenvolvimento, o episódio serve como alerta sobre a importância de acompanhar atualizações fora do ciclo tradicional de patches. Quando um fornecedor publica um pacote emergencial, isso normalmente indica que o risco é relevante o suficiente para exigir ação imediata, sem esperar a próxima rodada mensal de correções. Nesse caso, a orientação é clara: revisar ambientes que usem ASP.NET Core Data Protection, atualizar para 10.0.7, recompilar as aplicações e republicar os serviços o quanto antes.
               </p>
               </div>
 
-              <section class="article-comment-panel" aria-labelledby="comments-alertas-defender-title">
+              <section class="article-comment-panel" aria-labelledby="comments-alertas-aspnet-core-title">
                 <div class="article-comment-heading">
                   <span>Comentários</span>
-                  <h2 id="comments-alertas-defender-title">Comente este alerta</h2>
+                  <h2 id="comments-alertas-aspnet-core-title">Comente este alerta</h2>
                 </div>
                 <div class="article-comment-layout">
-                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-defender-zero-days" data-content-title="Zero-days no Defender acendem alerta em ambientes Windows">
+                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-aspnet-core-cve-2026-40372" data-content-title="Microsoft libera atualização emergencial para corrigir falha crítica no ASP.NET Core">
                     <label>
                       <span>Comentário</span>
                       <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste alerta?" data-article-comment-message required></textarea>
@@ -122,14 +124,14 @@
                     <div class="feedback-actions-row">
                       <button class="button button-primary" type="submit">Publicar comentário</button>
                     </div>
-                    <p class="form-note" data-article-comment-status data-content-slug="alertas-defender-zero-days" aria-live="polite"></p>
+                    <p class="form-note" data-article-comment-status data-content-slug="alertas-aspnet-core-cve-2026-40372" aria-live="polite"></p>
                   </form>
 
-                  <aside class="comment-stream" aria-labelledby="recent-comments-alertas-defender-title">
+                  <aside class="comment-stream" aria-labelledby="recent-comments-alertas-aspnet-core-title">
                     <div class="comment-stream-heading">
-                      <h3 id="recent-comments-alertas-defender-title">Comentários recentes</h3>
+                      <h3 id="recent-comments-alertas-aspnet-core-title">Comentários recentes</h3>
                     </div>
-                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-defender-zero-days"></div>
+                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-aspnet-core-cve-2026-40372"></div>
                   </aside>
                 </div>
               </section>
@@ -139,9 +141,9 @@
               <span class="article-aside-kicker">Radar do alerta</span>
               <h2>O risco prático</h2>
               <ul>
-                <li>Falhas ligadas ao Defender foram associadas a atividades reais de ataque.</li>
-                <li>BlueHammer e RedSun podem ampliar privilégios em sistemas comprometidos.</li>
-                <li>Atualização rápida, monitoramento e revisão de privilégios reduzem exposição.</li>
+                <li>A CVE-2026-40372 afeta Microsoft.AspNetCore.DataProtection 10.0.0 a 10.0.6.</li>
+                <li>A exploração pode permitir elevação de privilégio pela rede em aplicações vulneráveis.</li>
+                <li>A orientação é atualizar para 10.0.7, recompilar e republicar os serviços afetados.</li>
               </ul>
             </aside>
           </div>
@@ -155,6 +157,67 @@
             </div>
 
             <div class="article-archive-grid" data-archive-limit="5">
+              <details class="article-archive-card" id="alertas-defender-zero-days">
+                <summary>
+                  <span class="article-archive-thumb">
+                    <img src="assets/img/alertas/defender-zero-days-preview.webp" alt="Símbolo de proteção digital sobre fundo azul associado a segurança no Windows." loading="lazy" decoding="async">
+                  </span>
+                  <span class="article-archive-summary-copy">
+                    <span class="article-archive-date"><time datetime="2026-04-19">19 abr. 2026</time></span>
+                    <h3>Zero-days no Defender acendem alerta em ambientes Windows</h3>
+                    <p>Falhas associadas ao Microsoft Defender foram observadas em atividades reais de ataque e reforçam a importância de atualização, monitoramento e resposta rápida.</p>
+                  </span>
+                  <span class="article-archive-toggle" aria-hidden="true"></span>
+                </summary>
+
+                <div class="article-archive-body">
+                  <p>
+                    A segurança digital voltou ao centro das atenções depois que três falhas zero-day relacionadas ao Microsoft Defender passaram a ser associadas a atividades reais de ataque. De acordo com informações divulgadas nesta semana, as vulnerabilidades foram observadas em uso por criminosos para ampliar privilégios dentro de sistemas já comprometidos, o que aumenta o risco de movimentação lateral, persistência e aprofundamento da invasão.
+                  </p>
+                  <p>
+                    Os problemas ficaram conhecidos pelos nomes BlueHammer, RedSun e UnDefend. Entre eles, o BlueHammer já recebeu correção da Microsoft no pacote de atualizações mais recente e está sendo rastreado como CVE-2026-33825. Já os outros dois casos ainda chamam atenção porque, até o momento da publicação da matéria original, seguiam sem correção disponível.
+                  </p>
+                  <p>
+                    Segundo o relato, o BlueHammer e o RedSun podem ser usados para Local Privilege Escalation (LPE), permitindo que um invasor obtenha permissões mais altas em uma máquina comprometida. Já o UnDefend tem outro perfil: ele pode provocar uma condição de Denial of Service (DoS) e impedir a atualização das definições de proteção, reduzindo a capacidade de resposta do Defender diante de novas ameaças.
+                  </p>
+                  <p>
+                    O caso ganhou ainda mais relevância porque a empresa Huntress afirmou ter identificado exploração ativa dessas falhas em ambiente real. De acordo com a companhia, o uso do BlueHammer teria sido observado desde 10 de abril de 2026, enquanto provas de conceito ligadas ao RedSun e ao UnDefend apareceram em 16 de abril de 2026.
+                  </p>
+                  <p>
+                    Na prática, esse tipo de cenário reforça um ponto importante para empresas e usuários corporativos: mesmo ferramentas amplamente adotadas de proteção também precisam ser acompanhadas de perto quando surgem falhas críticas. Soluções de segurança não devem ser vistas como uma barreira absoluta, mas como parte de uma estratégia mais ampla, que inclui atualização rápida, monitoramento constante, revisão de privilégios e resposta a incidentes.
+                  </p>
+                  <p>
+                    Para quem administra ambientes Windows, o alerta é claro: aplicar correções assim que disponíveis, revisar sinais de atividade suspeita e acompanhar indicadores de pós-comprometimento passa a ser ainda mais importante. Quando uma falha permite elevar privilégios ou enfraquecer a camada de proteção do endpoint, o problema deixa de ser apenas técnico e passa a representar um risco direto para a continuidade das operações.
+                  </p>
+
+                  <section class="article-comment-panel article-comment-panel-compact" aria-labelledby="comments-alertas-defender-title">
+                    <div class="article-comment-heading">
+                      <span>Comentários</span>
+                      <h2 id="comments-alertas-defender-title">Comente este conteúdo</h2>
+                    </div>
+                    <div class="article-comment-layout">
+                      <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-defender-zero-days" data-content-title="Zero-days no Defender acendem alerta em ambientes Windows">
+                        <label>
+                          <span>Comentário</span>
+                          <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
+                        </label>
+                        <div class="feedback-actions-row">
+                          <button class="button button-primary" type="submit">Publicar comentário</button>
+                        </div>
+                        <p class="form-note" data-article-comment-status data-content-slug="alertas-defender-zero-days" aria-live="polite"></p>
+                      </form>
+
+                      <aside class="comment-stream" aria-labelledby="recent-comments-alertas-defender-title">
+                        <div class="comment-stream-heading">
+                          <h3 id="recent-comments-alertas-defender-title">Comentários recentes</h3>
+                        </div>
+                        <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-defender-zero-days"></div>
+                      </aside>
+                    </div>
+                  </section>
+                </div>
+              </details>
+
               <details class="article-archive-card">
                 <summary>
                   <span class="article-archive-thumb">

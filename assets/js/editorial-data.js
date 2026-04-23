@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
-          "title": "CISA Adds 8 Exploited Flaws to KEV, Sets April-May 2026 Federal Deadlines",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/04/cisa-adds-8-exploited-flaws-to-kev-sets.html",
-          "date": "2026-04-21",
-          "tag": "Alerta",
+          "title": "Microsoft corrige falha crítica no ASP.NET Core",
+          "source": "Encontre Aqui Tech",
+          "url": "/alertas-seguranca",
+          "date": "2026-04-22",
+          "tag": "Correção emergencial",
           "featured": true,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added eight new vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, including three flaws impacting Cisco Catalyst SD..."
+          "image": "assets/img/alertas/aspnet-core-cve-2026-40372-preview.webp",
+          "summary": "A CVE-2026-40372 afeta o ASP.NET Core Data Protection e exige atualização imediata do Microsoft.AspNetCore.DataProtection para 10.0.7."
         },
         {
-          "title": "Mirai Variant Nexcorium Exploits CVE-2024-3721 to Hijack TBK DVRs for DDoS Botnet",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/04/mirai-variant-nexcorium-exploits-cve.html",
-          "date": "2026-04-18",
-          "tag": "Alerta",
+          "title": "Zero-days no Defender acendem alerta em ambientes Windows",
+          "source": "Encontre Aqui Tech",
+          "url": "/alertas-seguranca#alertas-defender-zero-days",
+          "date": "2026-04-19",
+          "tag": "Endpoint",
           "featured": false,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "Threat actors are exploiting security flaws in TBK DVR and end‑of‑life (EoL) TP-Link Wi-Fi routers to deploy Mirai-botnet variants on compromised devices, according to findings from Fortinet FortiGuard Labs and..."
+          "image": "assets/img/alertas/defender-zero-days-preview.webp",
+          "summary": "Falhas associadas ao Microsoft Defender foram observadas em atividades reais de ataque e reforçam a importância de atualização, monitoramento e resposta rápida."
         }
       ]
     },
