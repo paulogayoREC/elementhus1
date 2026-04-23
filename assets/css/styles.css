@@ -739,7 +739,7 @@ h4 {
 }
 
 .editorial-section::before {
-  z-index: 1;
+  z-index: 2;
   opacity: 0.34;
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.16), #000 42%, rgba(0, 0, 0, 0.72));
 }
@@ -747,28 +747,39 @@ h4 {
 .editorial-section::after {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   content: "";
   background-image:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.98) 0%, rgba(8, 7, 6, 0.9) 33%, rgba(8, 7, 6, 0.56) 58%, rgba(8, 7, 6, 0.88) 100%),
-    linear-gradient(180deg, rgba(5, 5, 5, 0.22), rgba(26, 20, 16, 0.76)),
-    url("../img/noticias/noticias-tech-section-bg.webp");
-  background-repeat: no-repeat;
-  background-position:
-    center,
-    center,
-    right clamp(-8rem, -5vw, -3rem) center;
-  background-size:
-    100% 100%,
-    100% 100%,
-    min(46rem, 48vw) auto;
-  opacity: 0.92;
+    radial-gradient(circle at 78% 42%, rgba(37, 125, 167, 0.24), transparent 29rem),
+    linear-gradient(90deg, rgba(5, 5, 5, 0.98) 0%, rgba(8, 7, 6, 0.86) 32%, rgba(8, 7, 6, 0.28) 62%, rgba(8, 7, 6, 0.66) 100%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.14), rgba(26, 20, 16, 0.62));
   pointer-events: none;
+}
+
+.editorial-section-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.editorial-section-bg img {
+  position: absolute;
+  top: 50%;
+  right: clamp(-5rem, -2vw, -1.5rem);
+  width: min(50rem, 52vw);
+  max-width: none;
+  height: auto;
+  opacity: 0.92;
+  filter: saturate(1.08) contrast(1.08) drop-shadow(0 0 42px rgba(37, 125, 167, 0.28));
+  mix-blend-mode: screen;
+  transform: translateY(-50%);
 }
 
 .editorial-section .section-inner {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .editorial-section .section-heading {
@@ -4328,16 +4339,12 @@ h4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .editorial-section::after {
-    background-position:
-      center,
-      center,
-      right -12rem top 5rem;
-    background-size:
-      100% 100%,
-      100% 100%,
-      38rem auto;
-    opacity: 0.76;
+  .editorial-section-bg img {
+    top: 7rem;
+    right: -8rem;
+    width: 36rem;
+    opacity: 0.68;
+    transform: none;
   }
 
   .category-card-grid {
@@ -4750,16 +4757,12 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .editorial-section::after {
-    background-position:
-      center,
-      center,
-      right -8rem top 2rem;
-    background-size:
-      100% 100%,
-      100% 100%,
-      30rem auto;
-    opacity: 0.58;
+  .editorial-section-bg img {
+    top: 1.5rem;
+    right: -9rem;
+    width: 30rem;
+    opacity: 0.5;
+    transform: none;
   }
 
   .editorial-section .topic-card {
