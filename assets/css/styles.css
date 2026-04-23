@@ -6639,6 +6639,8 @@ h4 {
     rgba(5, 5, 5, 0.94);
   box-shadow: 0.58rem 0.58rem 0 rgba(var(--topic-secondary-rgb), 0.46), 0 0 2.4rem rgba(var(--topic-accent-rgb), 0.12);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .geek-topic-band::before {
@@ -6668,10 +6670,12 @@ h4 {
 }
 
 .geek-topic-band:hover,
-.geek-topic-band:focus-within {
+.geek-topic-band:focus-within,
+.geek-topic-band:focus-visible {
   border-color: var(--topic-accent);
   box-shadow: 0.72rem 0.72rem 0 rgba(var(--topic-accent-rgb), 0.62), 0 0 2.8rem rgba(var(--topic-secondary-rgb), 0.24);
   transform: translateY(-0.16rem);
+  outline: none;
 }
 
 .geek-topic-visual {
@@ -6799,6 +6803,343 @@ h4 {
   --topic-accent-rgb: 255, 122, 0;
   --topic-secondary: #39ff14;
   --topic-secondary-rgb: 57, 255, 20;
+}
+
+.geek-topic-detail-page {
+  background:
+    radial-gradient(circle at 16% 14%, rgba(var(--topic-accent-rgb), 0.12), transparent 20rem),
+    radial-gradient(circle at 88% 18%, rgba(var(--topic-secondary-rgb), 0.12), transparent 20rem),
+    linear-gradient(135deg, #040404, #14050d 52%, #040404);
+}
+
+.geek-topic-detail-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 0 4rem;
+  background:
+    linear-gradient(180deg, rgba(4, 4, 4, 0.38), rgba(4, 4, 4, 0.82)),
+    linear-gradient(90deg, rgba(var(--topic-accent-rgb), 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(var(--topic-secondary-rgb), 0.08) 1px, transparent 1px),
+    #050505;
+  background-size: auto, 4.6rem 4.6rem, 4.6rem 4.6rem, auto;
+}
+
+.geek-topic-detail-hero::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(circle at 18% 22%, rgba(var(--topic-accent-rgb), 0.2), transparent 18rem),
+    radial-gradient(circle at 82% 28%, rgba(var(--topic-secondary-rgb), 0.18), transparent 16rem),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 28%, rgba(var(--topic-accent-rgb), 0.08) 72%, transparent 86%);
+  pointer-events: none;
+}
+
+.geek-topic-detail-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.72fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.geek-topic-detail-copy {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.geek-topic-detail-copy h1 {
+  max-width: 11ch;
+  margin: 0;
+  color: var(--topic-accent);
+  font-family: var(--font-cyber);
+  font-size: clamp(2.9rem, 7vw, 5.6rem);
+  font-weight: 800;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-shadow: 0.14rem 0 rgba(var(--topic-secondary-rgb), 0.65), -0.1rem 0 rgba(255, 0, 60, 0.32), 0 0 1.8rem rgba(var(--topic-accent-rgb), 0.22);
+}
+
+.geek-topic-detail-copy p:not(.eyebrow) {
+  max-width: 44rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-cyber);
+  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  line-height: 1.46;
+}
+
+.geek-topic-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.geek-topic-detail-visual {
+  position: relative;
+  z-index: 1;
+  justify-self: end;
+}
+
+.geek-topic-detail-frame {
+  position: relative;
+  width: min(100%, 25rem);
+  overflow: hidden;
+  border: 1px solid rgba(var(--topic-secondary-rgb), 0.62);
+  padding: clamp(0.75rem, 1.6vw, 1rem);
+  clip-path: polygon(0 0, calc(100% - 1.05rem) 0, 100% 1.05rem, 100% 100%, 1.05rem 100%, 0 calc(100% - 1.05rem));
+  background:
+    radial-gradient(circle at 16% 18%, rgba(var(--topic-accent-rgb), 0.24), transparent 12rem),
+    linear-gradient(145deg, rgba(var(--topic-secondary-rgb), 0.08), rgba(var(--topic-accent-rgb), 0.12)),
+    rgba(5, 5, 5, 0.92);
+  box-shadow: 0.72rem 0.72rem 0 rgba(var(--topic-secondary-rgb), 0.34), 0 0 2.6rem rgba(var(--topic-accent-rgb), 0.16);
+}
+
+.geek-topic-detail-frame::before,
+.geek-topic-detail-frame::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.geek-topic-detail-frame::before {
+  inset: 0.75rem 0.75rem auto;
+  height: 0.14rem;
+  background: linear-gradient(90deg, var(--topic-accent), var(--topic-secondary), var(--topic-accent));
+  box-shadow: 0 0 1rem rgba(var(--topic-accent-rgb), 0.44);
+}
+
+.geek-topic-detail-frame::after {
+  inset: 0;
+  background:
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 10px),
+    linear-gradient(120deg, transparent 0 44%, rgba(255, 255, 255, 0.1) 50%, transparent 56%);
+  opacity: 0.5;
+}
+
+.geek-topic-detail-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(var(--topic-accent-rgb), 0.38);
+  clip-path: polygon(0 0, calc(100% - 0.7rem) 0, 100% 0.7rem, 100% 100%, 0.7rem 100%, 0 100%);
+  filter: saturate(1.08) contrast(1.05) drop-shadow(0 0 1.2rem rgba(var(--topic-secondary-rgb), 0.26));
+}
+
+.geek-topic-detail-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(var(--topic-secondary-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--topic-accent-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #050505, #12040c 48%, #050505);
+  background-size: 4.6rem 4.6rem, 4.6rem 4.6rem, auto;
+}
+
+.geek-topic-detail-section::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(circle at 10% 28%, rgba(var(--topic-accent-rgb), 0.14), transparent 16rem),
+    radial-gradient(circle at 88% 78%, rgba(var(--topic-secondary-rgb), 0.12), transparent 16rem);
+  pointer-events: none;
+}
+
+.geek-topic-detail-shell,
+.geek-topic-detail-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.geek-topic-detail-shell {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.geek-topic-detail-intro {
+  display: grid;
+  gap: 0.55rem;
+  max-width: 44rem;
+}
+
+.geek-topic-detail-intro h2 {
+  margin-bottom: 0;
+  color: var(--topic-accent);
+  font-family: var(--font-cyber);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.geek-topic-detail-intro p:not(.eyebrow) {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-cyber);
+  font-size: 1rem;
+  line-height: 1.46;
+}
+
+.geek-topic-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.geek-topic-detail-card {
+  --geek-reveal-y: 1rem;
+  --geek-tilt-x: 0deg;
+  --geek-tilt-y: 0deg;
+  --geek-glow-x: 50%;
+  --geek-glow-y: 50%;
+  position: relative;
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+  min-height: 20rem;
+  overflow: hidden;
+  border: 1px solid rgba(var(--topic-secondary-rgb), 0.58);
+  padding: 1.05rem;
+  clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% 0.9rem, 100% 100%, 0.9rem 100%, 0 100%);
+  color: rgba(255, 255, 255, 0.86);
+  background:
+    radial-gradient(circle at var(--geek-glow-x) var(--geek-glow-y), rgba(var(--topic-secondary-rgb), 0.18), transparent 16rem),
+    linear-gradient(135deg, rgba(var(--topic-accent-rgb), 0.12), transparent 34%),
+    rgba(5, 5, 5, 0.94);
+  box-shadow: 0.48rem 0.48rem 0 rgba(var(--topic-accent-rgb), 0.36);
+  transform: translate3d(0, var(--geek-reveal-y), 0) perspective(1100px) rotateX(var(--geek-tilt-x)) rotateY(var(--geek-tilt-y));
+  transform-style: preserve-3d;
+  transition: opacity 520ms ease, transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.geek-topic-detail-card::before {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  left: 0.75rem;
+  height: 0.12rem;
+  content: "";
+  background: linear-gradient(90deg, var(--topic-accent), var(--topic-secondary));
+  box-shadow: 0 0 1rem rgba(var(--topic-secondary-rgb), 0.34);
+  pointer-events: none;
+}
+
+.geek-topic-detail-card:hover,
+.geek-topic-detail-card:focus-within {
+  border-color: var(--topic-accent);
+  box-shadow: 0.68rem 0.68rem 0 rgba(var(--topic-secondary-rgb), 0.44), 0 0 1.8rem rgba(var(--topic-accent-rgb), 0.18);
+}
+
+.geek-topic-detail-card-tag {
+  display: inline-flex;
+  width: max-content;
+  border: 1px solid rgba(var(--topic-accent-rgb), 0.72);
+  padding: 0.28rem 0.52rem;
+  color: #050505;
+  font-family: var(--font-cyber);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  background: var(--topic-accent);
+  box-shadow: 0.18rem 0.18rem 0 rgba(var(--topic-secondary-rgb), 0.56);
+}
+
+.geek-topic-detail-card h3 {
+  margin: 0;
+  color: var(--topic-accent);
+  font-family: var(--font-cyber);
+  font-size: 1.5rem;
+  line-height: 0.96;
+  text-transform: uppercase;
+  text-shadow: 0.1rem 0 rgba(var(--topic-secondary-rgb), 0.4);
+}
+
+.geek-topic-detail-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: var(--font-cyber);
+  font-size: 0.96rem;
+  line-height: 1.42;
+}
+
+.geek-topic-detail-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: var(--font-cyber);
+  font-size: 0.88rem;
+  line-height: 1.38;
+}
+
+.geek-topic-detail-list li::marker {
+  color: var(--topic-accent);
+}
+
+.geek-topic-detail-cta-section {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(var(--topic-secondary-rgb), 0.16), transparent 18rem),
+    linear-gradient(135deg, rgba(5, 5, 5, 0.98), rgba(var(--topic-accent-rgb), 0.12));
+}
+
+.geek-topic-detail-cta {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(var(--topic-secondary-rgb), 0.52);
+  padding: 1.1rem 1.2rem;
+  clip-path: polygon(0 0, calc(100% - 0.9rem) 0, 100% 0.9rem, 100% 100%, 0.9rem 100%, 0 100%);
+  background:
+    linear-gradient(135deg, rgba(var(--topic-accent-rgb), 0.16), transparent 32%),
+    rgba(5, 5, 5, 0.94);
+  box-shadow: 0.46rem 0.46rem 0 rgba(var(--topic-secondary-rgb), 0.36);
+}
+
+.geek-topic-detail-cta::before {
+  position: absolute;
+  inset: 0.78rem 0.78rem auto;
+  height: 0.12rem;
+  content: "";
+  background: linear-gradient(90deg, var(--topic-accent), var(--topic-secondary));
+  pointer-events: none;
+}
+
+.geek-topic-detail-cta-copy {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.geek-topic-detail-cta-copy strong {
+  color: var(--topic-accent);
+  font-family: var(--font-cyber);
+  font-size: 1.38rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.geek-topic-detail-cta-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-cyber);
+  font-size: 0.92rem;
+  line-height: 1.42;
+}
+
+.geek-motion-ready .geek-topic-detail-page [data-geek-reveal] {
+  opacity: 0;
+}
+
+.geek-motion-ready .geek-topic-detail-page [data-geek-reveal].is-geek-visible {
+  opacity: 1;
+  transition: opacity 520ms ease, transform 520ms ease;
 }
 
 .geek-hub-panel {
@@ -7184,6 +7525,19 @@ h4 {
     grid-template-columns: minmax(5.6rem, 7.4rem) minmax(0, 1fr);
   }
 
+  .geek-topic-detail-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.62fr);
+  }
+
+  .geek-topic-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .geek-topic-detail-cta {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
   .geek-hub-hero-bg {
     width: min(46rem, 64vw);
     opacity: 0.64;
@@ -7391,6 +7745,75 @@ h4 {
 
   .geek-topic-band p {
     font-size: 0.9rem;
+  }
+
+  .geek-topic-detail-hero {
+    padding: 6rem 0 3.2rem;
+  }
+
+  .geek-topic-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .geek-topic-detail-copy {
+    max-width: none;
+  }
+
+  .geek-topic-detail-copy h1 {
+    max-width: 100%;
+    font-size: 2.7rem;
+  }
+
+  .geek-topic-detail-copy p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .geek-topic-detail-actions,
+  .geek-topic-detail-cta .geek-topic-detail-actions {
+    width: 100%;
+  }
+
+  .geek-topic-detail-visual {
+    justify-self: start;
+  }
+
+  .geek-topic-detail-frame {
+    width: min(100%, 14rem);
+  }
+
+  .geek-topic-detail-intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .geek-topic-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .geek-topic-detail-card {
+    min-height: auto;
+    padding: 0.95rem;
+  }
+
+  .geek-topic-detail-card h3 {
+    font-size: 1.28rem;
+  }
+
+  .geek-topic-detail-card p,
+  .geek-topic-detail-list {
+    font-size: 0.86rem;
+  }
+
+  .geek-topic-detail-cta {
+    padding: 1rem;
+  }
+
+  .geek-topic-detail-cta-copy strong {
+    font-size: 1.16rem;
+  }
+
+  .geek-topic-detail-cta-copy p {
+    font-size: 0.86rem;
   }
 
   .geek-hub-hero {
