@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-04-22",
+  "updatedAt": "2026-04-23",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Tim Cook deixa o comando da Apple e abre espaço para uma nova fase",
-          "source": "Apple Newsroom",
-          "url": "https://www.apple.com/newsroom/2026/04/tim-cook-transitions-to-executive-chairman-john-ternus-to-become-ceo/",
-          "date": "2026-04-21",
-          "tag": "Liderança tech",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-04-22",
+          "tag": "Radar tech",
           "featured": true,
-          "image": "assets/img/noticias/tim-cook-apple-transicao-preview.webp",
-          "summary": "Tim Cook deixará o cargo de CEO em 1º de setembro de 2026 e passará a atuar como chairman executivo. John Ternus assume o comando em uma fase marcada por hardware premium, software, chips e IA."
+          "image": "assets/img/astronaut-earth.png",
+          "summary": "Picking the right laptop for your lifestyle can be really stressful, especially with so many models and price points out there in the universe. Do you go with a bigger screen because you’ve heard it can help bo..."
         },
         {
-          "title": "Tarifas travam data centers de IA e expõem o gargalo da infraestrutura",
-          "source": "Encontre Aqui Tech",
-          "url": "/noticias#previous-news-title",
-          "date": "2026-04-19",
+          "title": "Google Rolls Out TPU 8t and 8i to Supercharge AI Training Speed",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/tech-news/google-rolls-out-tpu-8t-and-8i-to-supercharge-ai-training-speed",
+          "date": "2026-04-23",
           "tag": "Radar tech",
           "featured": false,
-          "image": "assets/img/noticias/ai-data-centers-tariffs-preview.webp",
-          "summary": "A corrida pela liderança em inteligência artificial também passa por energia, resfriamento, equipamentos industriais e uma cadeia de suprimentos capaz de acompanhar a velocidade do setor."
+          "image": "assets/img/astronaut-earth.png",
+          "summary": "Google has introduced two new chips in its eighth-generation Tensor Processing Unit (TPU) lineup. This is an important effort to meet the demand for processing AI workloads. The two chips, TPU 8t and TPU 8i, ha..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Google acelera aposta em IA para empresas e muda o desenvolvimento de software",
-          "source": "Encontre Aqui Tech",
-          "url": "/novidades-tecnologicas",
-          "date": "2026-04-22",
-          "tag": "IA corporativa",
+          "title": "Oppo announces the Find X9 Ultra with a 50MP 10x optical zoom telephoto camera",
+          "source": "Engadget",
+          "url": "https://www.engadget.com/mobile/smartphones/oppo-find-x9-ultra--50mp-10x-optical-zoom-telephoto-release-date-price-170052539.html?src=rss",
+          "date": "2026-04-21",
+          "tag": "Novidade",
           "featured": true,
-          "image": "assets/img/novidades/google-cloud-next-ai-preview.webp",
-          "summary": "No Cloud Next ’26, o Google reforçou AI agents, TPUs de 8ª geração e revelou que 75% do novo código interno já conta com geração por IA antes da validação de engenheiros."
+          "image": "assets/img/astronauta-eat-cutout.png",
+          "summary": "Elbowing for attention alongside Vivo and Xiaomi, Oppo has finally launched its long-teased “ultra” version of its flagship smartphone. The Find X9 Ultra is another camera-first smartphone from Oppo, with an ev..."
         },
         {
-          "title": "Gemini para Mac leva a IA para dentro do desktop",
-          "source": "Encontre Aqui Tech",
-          "url": "/novidades-tecnologicas#novidades-gemini-mac",
-          "date": "2026-04-15",
-          "tag": "Nova experiência",
+          "title": "Control: Ultimate Edition is out for the iPhone and iPad",
+          "source": "Engadget",
+          "url": "https://www.engadget.com/gaming/control-ultimate-edition-is-out-for-the-iphone-and-ipad-150532940.html?src=rss",
+          "date": "2026-04-22",
+          "tag": "Novidade",
           "featured": false,
-          "image": "assets/img/novidades/gemini-mac-preview.webp",
-          "summary": "O aplicativo nativo do Gemini aproxima a inteligência artificial da rotina no macOS, com acesso rápido, contexto de tela e recursos multimodais."
+          "image": "assets/img/astronauta-eat-cutout.png",
+          "summary": "Control is one of my favorite adventure games of the last decade or so, a mind-bending trip through an ever-changing building where you get to use telekinesis to battle some pretty freaky enemies. It was a grap..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "Robô doméstico une mobilidade, câmera 4K e visual quase carismático",
-          "source": "Encontre Aqui Tech",
-          "url": "/curiosidades",
-          "date": "2026-04-22",
-          "tag": "Casa inteligente",
+          "title": "Musk pledges to fix 2019-2023 Teslas that can't fully self drive",
+          "source": "Engadget",
+          "url": "https://www.engadget.com/transportation/evs/musk-pledges-to-fix-2019-2023-teslas-that-cant-fully-self-drive-095002120.html?src=rss",
+          "date": "2026-04-23",
+          "tag": "Cultura digital",
           "featured": true,
-          "image": "assets/img/curiosidades/ebo-max-robo-domestico-preview.webp",
-          "summary": "O EBO Max, da Enabot, combina câmera 4K, navegação V-SLAM, videochamadas, rondas programadas e uma presença quase companheira para circular pela casa."
+          "image": "assets/img/post-instagram-eat.png",
+          "summary": "Tesla still doesn’t have a solid pathway for how to give Hardware 3 cars Full Self-Driving (FSD) capabilities, based on what Elon Musk said during the company’s latest earnings call . The automaker has known fo..."
         },
         {
-          "title": "Quando o Task Manager cabia em apenas 80 KB",
-          "source": "Encontre Aqui Tech",
-          "url": "/curiosidades#curiosidades-task-manager-80kb",
-          "date": "2026-04-19",
-          "tag": "História do software",
+          "title": "The Morning After: The next CEO of Apple will be hardware exec John Ternus",
+          "source": "Engadget",
+          "url": "https://www.engadget.com/general/the-morning-after-engadget-newsletter-111546149.html?src=rss",
+          "date": "2026-04-21",
+          "tag": "Cultura digital",
           "featured": false,
-          "image": "assets/img/curiosidades/task-manager-80kb-preview.webp",
-          "summary": "A primeira versão do Task Manager mostra como software leve, engenharia cuidadosa e foco no usuário continuam atuais."
+          "image": "assets/img/post-instagram-eat.png",
+          "summary": "Apple’s current SVP of hardware engineering John Ternus will take over as the new CEO when Tim Cook steps down this September . Cook said in a statement: “It has been the greatest privilege of my life to be the..."
         }
       ]
     },
@@ -81,49 +81,49 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
-          "title": "Microsoft corrige falha crítica no ASP.NET Core",
-          "source": "Encontre Aqui Tech",
-          "url": "/alertas-seguranca",
-          "date": "2026-04-22",
-          "tag": "Correção emergencial",
+          "title": "No Exploit Needed: How Attackers Walk Through the Front Door via Identity-Based Attacks",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/04/no-exploit-needed-how-attackers-walk.html",
+          "date": "2026-04-21",
+          "tag": "Alerta",
           "featured": true,
-          "image": "assets/img/alertas/aspnet-core-cve-2026-40372-preview.webp",
-          "summary": "A CVE-2026-40372 afeta o ASP.NET Core Data Protection e exige atualização imediata do Microsoft.AspNetCore.DataProtection para 10.0.7."
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "The cybersecurity industry has spent the last several years chasing sophisticated threats like zero-days, supply chain compromises, and AI-generated exploits. However, the most reliable entry point for attacker..."
         },
         {
-          "title": "Zero-days no Defender acendem alerta em ambientes Windows",
-          "source": "Encontre Aqui Tech",
-          "url": "/alertas-seguranca#alertas-defender-zero-days",
-          "date": "2026-04-19",
-          "tag": "Endpoint",
+          "title": "CISA Adds 8 Exploited Flaws to KEV, Sets April-May 2026 Federal Deadlines",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/04/cisa-adds-8-exploited-flaws-to-kev-sets.html",
+          "date": "2026-04-21",
+          "tag": "Alerta",
           "featured": false,
-          "image": "assets/img/alertas/defender-zero-days-preview.webp",
-          "summary": "Falhas associadas ao Microsoft Defender foram observadas em atividades reais de ataque e reforçam a importância de atualização, monitoramento e resposta rápida."
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added eight new vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, including three flaws impacting Cisco Catalyst SD..."
         }
       ]
     },
     "tutoriais": {
-      "label": "Dicas e Tutoriais",
+      "label": "Tutoriais",
       "items": [
         {
-          "title": "Como economizar bateria e melhorar o desempenho do Android em 2026",
-          "source": "Encontre Aqui Tech",
-          "url": "/tutoriais",
+          "title": "Hands-on: Framework finally made a modular laptop feel as premium as its mission",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3120596/hands-on-with-the-framework-laptop-13-pro-a-killer-upgrade.html",
           "date": "2026-04-22",
-          "tag": "Guia Android",
+          "tag": "Guia pratico",
           "featured": true,
-          "image": "assets/img/tutoriais/android-bateria-desempenho-2026-preview.webp",
-          "summary": "Ajustes em segundo plano, tela, armazenamento e temperatura ajudam o celular Android a ficar mais rápido, estável e econômico."
+          "image": "assets/img/amazon-delivery-hero.png",
+          "summary": "I usually give Framework laptops a bit of a pass. After all, they’re the upgradeable, modular laptop that you’ll want to live with for years, right? Not the new Framework Laptop 13 Pro. It’s something you’ll wa..."
         },
         {
-          "title": "Google Maps: como postar fotos e vídeos com os novos recursos",
-          "source": "Encontre Aqui Tech",
-          "url": "/tutoriais#tutoriais-google-maps-fotos-videos",
-          "date": "2026-04-19",
-          "tag": "Guia prático",
+          "title": "Fastest VPN 2026: Expert picks of the top 5 VPN speed demons",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/616724/fastest-vpn.html",
+          "date": "2026-04-22",
+          "tag": "Guia pratico",
           "featured": false,
-          "image": "assets/img/tutoriais/google-maps-contribuir-preview.webp",
-          "summary": "Veja como liberar permissões, usar sugestões automáticas, revisar legendas com IA e acompanhar o impacto das contribuições."
+          "image": "assets/img/amazon-delivery-hero.png",
+          "summary": "When looking for a top-notch VPN, the two most important things to watch out for are privacy and speed. While privacy is crucial to a good VPN, speed shouldn’t be overlooked. Faster speeds mean quicker file dow..."
         }
       ]
     }
