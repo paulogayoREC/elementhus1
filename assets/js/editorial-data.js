@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Best Chromebooks 2026: Top picks for work, school, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/608636/best-chromebooks.html",
-          "date": "2026-04-20",
-          "tag": "Guia pratico",
+          "title": "Como economizar bateria e melhorar o desempenho do Android em 2026",
+          "source": "Encontre Aqui Tech",
+          "url": "/tutoriais",
+          "date": "2026-04-22",
+          "tag": "Guia Android",
           "featured": true,
-          "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "If you’re in the market for an affordable laptop, you can’t really get much better than a Chromebook. They’re fast, easy to use, and often cost less than traditional Windows laptops. You can even stream games o..."
+          "image": "assets/img/tutoriais/android-bateria-desempenho-2026-preview.webp",
+          "summary": "Ajustes em segundo plano, tela, armazenamento e temperatura ajudam o celular Android a ficar mais rápido, estável e econômico."
         },
         {
-          "title": "This prompt trick forces AI to stop flattering you and think harder",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3119323/this-prompt-trick-forces-ai-to-stop-flattering-you-and-think-harder.html",
-          "date": "2026-04-20",
-          "tag": "Guia pratico",
+          "title": "Google Maps: como postar fotos e vídeos com os novos recursos",
+          "source": "Encontre Aqui Tech",
+          "url": "/tutoriais#tutoriais-google-maps-fotos-videos",
+          "date": "2026-04-19",
+          "tag": "Guia prático",
           "featured": false,
-          "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "I wish I had nickel for every time ChatGPT, Claude, or Gemini told me I’d hit the nail on the head, stumbled onto a genius idea, or otherwise patted me on the back for a half-formed idea or ill-conceived plan..."
+          "image": "assets/img/tutoriais/google-maps-contribuir-preview.webp",
+          "summary": "Veja como liberar permissões, usar sugestões automáticas, revisar legendas com IA e acompanhar o impacto das contribuições."
         }
       ]
     }
