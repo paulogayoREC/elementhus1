@@ -28,26 +28,43 @@
     { category: "Games", url: "indicacoes/games.html" }
   ];
 
-  const picksPerDay = 5;
+  const picksPerRotation = 5;
+  const rotationHours = 4;
+  const slotsPerDay = Math.floor(24 / rotationHours);
   const siteTimeZone = "America/Recife";
   const rotationBaseDay = getDayNumber("2026-01-01");
-  let activeDateKey = "";
+  let activeRotationKey = "";
   let productCatalog = [];
 
   function cleanText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
   }
 
-  function getSiteDateKey(date = new Date()) {
+  function getSiteRotation(date = new Date()) {
     const parts = new Intl.DateTimeFormat("en-CA", {
       day: "2-digit",
+      hour: "2-digit",
+      hourCycle: "h23",
       month: "2-digit",
       timeZone: siteTimeZone,
       year: "numeric"
     }).formatToParts(date);
     const dateParts = Object.fromEntries(parts.map((part) => [part.type, part.value]));
 
-    return `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
+    const dateKey = `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
+    const rawHour = Number(dateParts.hour || 0);
+    const hour = Number.isFinite(rawHour) ? Math.min(Math.max(rawHour, 0), 23) : 0;
+    const slotIndex = Math.floor(hour / rotationHours);
+    const slotStartHour = slotIndex * rotationHours;
+    const slotLabel = String(slotStartHour).padStart(2, "0");
+
+    return {
+      dateKey,
+      dayNumber: getDayNumber(dateKey),
+      key: `${dateKey}:h${slotLabel}`,
+      slotIndex,
+      slotStartHour
+    };
   }
 
   function getDayNumber(dateKey) {
@@ -92,41 +109,63 @@
     return shuffled;
   }
 
-  function pickProductsForDay(products, dayNumber, previousIds) {
-    for (let attempt = 0; attempt < 24; attempt += 1) {
-      const picked = [];
-      const pickedIds = new Set();
-      const shuffled = shuffleProducts(products, `vitrine-tech:${dayNumber}:${attempt}`);
+  function pickProductsForSlot(products, dayNumber, slotIndex, blockedIds) {
+    const picked = [];
+    const pickedIds = new Set();
+    const shuffled = shuffleProducts(products, `vitrine-tech:${dayNumber}:${slotIndex}`);
 
-      for (const product of shuffled) {
-        if (pickedIds.has(product.id) || previousIds.has(product.id)) {
-          continue;
-        }
+    for (const product of shuffled) {
+      if (pickedIds.has(product.id) || blockedIds.has(product.id)) {
+        continue;
+      }
 
-        picked.push(product);
-        pickedIds.add(product.id);
+      picked.push(product);
+      pickedIds.add(product.id);
 
-        if (picked.length === picksPerDay) {
-          return picked;
-        }
+      if (picked.length === picksPerRotation) {
+        return picked;
       }
     }
 
-    return products.filter((product) => !previousIds.has(product.id)).slice(0, picksPerDay);
+    return picked;
   }
 
-  function getDailyProducts(products, dateKey) {
-    const targetDay = getDayNumber(dateKey);
-    const firstDay = Math.min(rotationBaseDay, targetDay);
-    let previousIds = new Set();
-    let selected = [];
+  function getDayRotationPlan(products, dayNumber, previousDayIds) {
+    const slots = [];
+    const dayIds = new Set();
 
-    for (let day = firstDay; day <= targetDay; day += 1) {
-      selected = pickProductsForDay(products, day, previousIds);
-      previousIds = new Set(selected.map((product) => product.id));
+    for (let slotIndex = 0; slotIndex < slotsPerDay; slotIndex += 1) {
+      const strictBlockedIds = new Set([...previousDayIds, ...dayIds]);
+      let selected = pickProductsForSlot(products, dayNumber, slotIndex, strictBlockedIds);
+
+      if (selected.length < picksPerRotation) {
+        selected = pickProductsForSlot(products, dayNumber, slotIndex, previousDayIds);
+      }
+
+      if (selected.length < picksPerRotation) {
+        selected = pickProductsForSlot(products, dayNumber, slotIndex, new Set());
+      }
+
+      slots.push(selected);
+      selected.forEach((product) => {
+        dayIds.add(product.id);
+      });
     }
 
-    return selected;
+    return { dayIds, slots };
+  }
+
+  function getRotationProducts(products, rotation) {
+    const firstDay = Math.min(rotationBaseDay, rotation.dayNumber);
+    let previousDayIds = new Set();
+    let plan = { dayIds: new Set(), slots: [] };
+
+    for (let day = firstDay; day <= rotation.dayNumber; day += 1) {
+      plan = getDayRotationPlan(products, day, previousDayIds);
+      previousDayIds = plan.dayIds;
+    }
+
+    return plan.slots[rotation.slotIndex] || [];
   }
 
   function createPickCard(product, index) {
@@ -161,30 +200,33 @@
     return card;
   }
 
-  function renderDailyShowcase() {
-    if (productCatalog.length < picksPerDay * 2) {
+  function renderTechShowcase() {
+    if (productCatalog.length < picksPerRotation) {
       return;
     }
 
-    const dateKey = getSiteDateKey();
+    const rotation = getSiteRotation();
 
-    if (dateKey === activeDateKey) {
+    if (rotation.key === activeRotationKey) {
       return;
     }
 
-    const dailyProducts = getDailyProducts(productCatalog, dateKey);
+    const rotationProducts = getRotationProducts(productCatalog, rotation);
 
-    if (dailyProducts.length < picksPerDay) {
+    if (rotationProducts.length < picksPerRotation) {
       return;
     }
 
     panel.textContent = "";
-    dailyProducts.forEach((product, index) => {
+    rotationProducts.forEach((product, index) => {
       panel.append(createPickCard(product, index));
     });
 
-    activeDateKey = dateKey;
-    panel.dataset.techPicksDate = dateKey;
+    activeRotationKey = rotation.key;
+    panel.dataset.techPicksDate = rotation.dateKey;
+    panel.dataset.techPicksHours = String(rotationHours);
+    panel.dataset.techPicksRotation = rotation.key;
+    panel.dataset.techPicksSlot = String(rotation.slotIndex);
   }
 
   async function fetchProductsFromSource(source) {
@@ -243,9 +285,9 @@
       results.flatMap((result) => (result.status === "fulfilled" ? result.value : []))
     );
 
-    renderDailyShowcase();
+    renderTechShowcase();
 
-    window.setInterval(renderDailyShowcase, 30000);
+    window.setInterval(renderTechShowcase, 60000);
   }
 
   initTechShowcase().catch(() => {

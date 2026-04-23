@@ -27,7 +27,7 @@ Siga tambem `docs/regras-vitrine-tech.md` ao alterar produtos, categorias ou a s
 Resumo obrigatorio:
 
 - A pagina inicial deve exibir 5 produtos na sessao Vitrine Tech.
-- Os 5 produtos devem ser substituidos todos os dias a partir de 00:00 no fuso `America/Recife`.
+- Os 5 produtos devem ser substituidos a cada 4 horas no fuso `America/Recife`.
 - A selecao deve vir de produtos publicados nas paginas `indicacoes/*.html`.
-- A selecao do dia nao pode repetir produtos entre si nem repetir os produtos exibidos no dia anterior.
+- A selecao da janela nao pode repetir produtos entre si nem repetir os produtos exibidos no dia anterior.
 - Ao criar nova categoria de indicacoes, inclua a pagina em `assets/js/tech-showcase.js`.

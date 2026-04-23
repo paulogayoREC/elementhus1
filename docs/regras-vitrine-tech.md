@@ -2,14 +2,15 @@
 
 Esta regra vale para a sessao "Vitrine Tech" da pagina inicial (`index.html`).
 
-## Rotacao diaria
+## Rotacao a cada 4 horas
 
-1. A vitrine deve exibir exatamente 5 produtos por dia.
-2. A troca diaria acontece a partir de 00:00 no fuso `America/Recife`.
+1. A vitrine deve exibir exatamente 5 produtos por janela de destaque.
+2. A troca acontece a cada 4 horas no fuso `America/Recife`: 00:00, 04:00, 08:00, 12:00, 16:00 e 20:00.
 3. Os produtos devem ser escolhidos entre itens publicados nas paginas `indicacoes/*.html`.
-4. A selecao deve ser pseudoaleatoria, mas deterministica por data, para que todos os visitantes vejam a mesma vitrine do dia.
-5. A selecao do dia nao pode repetir produtos dentro dos 5 cards.
-6. A selecao do dia nao pode repetir os produtos exibidos no dia anterior.
+4. A selecao deve ser pseudoaleatoria, mas deterministica por janela de 4 horas, para que todos os visitantes vejam a mesma vitrine naquele periodo.
+5. A selecao da janela nao pode repetir produtos dentro dos 5 cards.
+6. Sempre que houver catalogo suficiente, uma janela do mesmo dia deve usar produtos diferentes dos ja destacados nas janelas anteriores daquele dia.
+7. A selecao de qualquer janela nao pode repetir produtos exibidos no dia anterior.
 
 ## Manutencao
 
