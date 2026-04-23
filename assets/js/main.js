@@ -413,6 +413,22 @@ document.querySelectorAll("[data-archive-limit]").forEach((grid) => {
   cards.slice(limit).forEach((card) => card.remove());
 });
 
+document.querySelectorAll("[data-about-story-close]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const details = button.closest("details");
+    const summary = details?.querySelector("summary");
+
+    if (!(details instanceof HTMLDetailsElement) || !(summary instanceof HTMLElement)) {
+      return;
+    }
+
+    details.open = false;
+    window.requestAnimationFrame(() => {
+      summary.focus();
+    });
+  });
+});
+
 const feedbackApiRequest = async (endpoint, options = {}) => {
   const [path, query = ""] = endpoint.split("?");
   const headers = {
