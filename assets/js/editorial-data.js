@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "O que esperar de Superman: O Homem do Amanhã?",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/entretenimento/o-que-esperar-de-superman-o-homem-do-amanha/",
-          "date": "2026-04-20",
-          "tag": "Cultura digital",
+          "title": "Robô doméstico une mobilidade, câmera 4K e visual quase carismático",
+          "source": "Encontre Aqui Tech",
+          "url": "/curiosidades",
+          "date": "2026-04-22",
+          "tag": "Casa inteligente",
           "featured": true,
-          "image": "assets/img/post-instagram-eat.png",
-          "summary": "As filmagens de Superman: O Homem do Amanhã , segundo longa-metragem da saga estrelada por David Corenswet, começaram e a película promete ser ainda mais ambiciosa do que seu antecessor. Sob a direção de James..."
+          "image": "assets/img/curiosidades/ebo-max-robo-domestico-preview.webp",
+          "summary": "O EBO Max, da Enabot, combina câmera 4K, navegação V-SLAM, videochamadas, rondas programadas e uma presença quase companheira para circular pela casa."
         },
         {
-          "title": "Beijing's robot half-marathon is back for its second year with far less embarassing results",
-          "source": "Engadget",
-          "url": "https://www.engadget.com/ai/beijings-robot-half-marathon-is-back-for-its-second-year-with-far-less-embarassing-results-191308396.html?src=rss",
+          "title": "Quando o Task Manager cabia em apenas 80 KB",
+          "source": "Encontre Aqui Tech",
+          "url": "/curiosidades#curiosidades-task-manager-80kb",
           "date": "2026-04-19",
-          "tag": "Cultura digital",
+          "tag": "História do software",
           "featured": false,
-          "image": "assets/img/post-instagram-eat.png",
-          "summary": "To make up for an incredibly laughable inaugural event , Beijing is running back its humanoid robot half-marathon. Fortunately, the event that pits humanoid robots made by Chinese companies against each other a..."
+          "image": "assets/img/curiosidades/task-manager-80kb-preview.webp",
+          "summary": "A primeira versão do Task Manager mostra como software leve, engenharia cuidadosa e foco no usuário continuam atuais."
         }
       ]
     },
