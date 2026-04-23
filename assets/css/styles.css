@@ -720,8 +720,9 @@ h4 {
 
 .editorial-section {
   overflow: hidden;
+  isolation: isolate;
   background:
-    linear-gradient(180deg, #100d0b 0%, #1a1410 100%);
+    linear-gradient(180deg, #050606 0%, #100d0b 52%, #1a1410 100%);
 }
 
 .editorial-section::before,
@@ -735,6 +736,43 @@ h4 {
   background-size: 5.5rem 5.5rem;
   opacity: 0.48;
   pointer-events: none;
+}
+
+.editorial-section::before {
+  z-index: 1;
+  opacity: 0.34;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.16), #000 42%, rgba(0, 0, 0, 0.72));
+}
+
+.editorial-section::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background-image:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.98) 0%, rgba(8, 7, 6, 0.9) 33%, rgba(8, 7, 6, 0.56) 58%, rgba(8, 7, 6, 0.88) 100%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.22), rgba(26, 20, 16, 0.76)),
+    url("../img/noticias/noticias-tech-section-bg.webp");
+  background-repeat: no-repeat;
+  background-position:
+    center,
+    center,
+    right clamp(-8rem, -5vw, -3rem) center;
+  background-size:
+    100% 100%,
+    100% 100%,
+    min(46rem, 48vw) auto;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.editorial-section .section-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.editorial-section .section-heading {
+  text-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
 }
 
 .section-heading {
@@ -774,6 +812,16 @@ h4 {
   padding: 1.4rem;
 }
 
+.editorial-section .topic-card {
+  border-color: rgba(250, 235, 209, 0.2);
+  background:
+    linear-gradient(180deg, rgba(10, 14, 16, 0.82), rgba(12, 9, 7, 0.72)),
+    rgba(0, 0, 0, 0.4);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(37, 125, 167, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
 .topic-card::before,
 .product-card::before {
   position: absolute;
@@ -795,6 +843,13 @@ h4 {
   box-shadow: 0 24px 70px rgba(37, 125, 167, 0.18), 0 20px 55px rgba(0, 0, 0, 0.28);
 }
 
+.editorial-section .topic-card:hover,
+.editorial-section .topic-card:focus-within {
+  background:
+    linear-gradient(180deg, rgba(13, 19, 22, 0.9), rgba(15, 11, 8, 0.76)),
+    rgba(0, 0, 0, 0.5);
+}
+
 .topic-card:hover::before,
 .topic-card:focus-within::before,
 .product-card:hover::before,
@@ -808,6 +863,12 @@ h4 {
   background:
     linear-gradient(135deg, rgba(37, 125, 167, 0.28), rgba(250, 235, 209, 0.08)),
     rgba(250, 235, 209, 0.055);
+}
+
+.editorial-section .topic-large {
+  background:
+    linear-gradient(135deg, rgba(37, 125, 167, 0.36), rgba(250, 235, 209, 0.08) 46%, rgba(0, 0, 0, 0.54)),
+    rgba(0, 0, 0, 0.42);
 }
 
 .topic-alert {
@@ -852,6 +913,12 @@ h4 {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.28);
   box-shadow: inset 0 0 24px rgba(37, 125, 167, 0.08);
+}
+
+.editorial-section .topic-card-preview {
+  border-color: rgba(37, 125, 167, 0.42);
+  background: rgba(0, 0, 0, 0.44);
+  box-shadow: inset 0 0 28px rgba(37, 125, 167, 0.12), 0 16px 32px rgba(0, 0, 0, 0.24);
 }
 
 .topic-card-preview img {
@@ -4261,6 +4328,18 @@ h4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .editorial-section::after {
+    background-position:
+      center,
+      center,
+      right -12rem top 5rem;
+    background-size:
+      100% 100%,
+      100% 100%,
+      38rem auto;
+    opacity: 0.76;
+  }
+
   .category-card-grid {
     gap: 0.62rem;
   }
@@ -4669,6 +4748,24 @@ h4 {
   .product-grid,
   .category-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .editorial-section::after {
+    background-position:
+      center,
+      center,
+      right -8rem top 2rem;
+    background-size:
+      100% 100%,
+      100% 100%,
+      30rem auto;
+    opacity: 0.58;
+  }
+
+  .editorial-section .topic-card {
+    background:
+      linear-gradient(180deg, rgba(10, 14, 16, 0.9), rgba(12, 9, 7, 0.82)),
+      rgba(0, 0, 0, 0.54);
   }
 
   .category-card-grid {
