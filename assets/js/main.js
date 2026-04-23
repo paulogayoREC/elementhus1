@@ -413,19 +413,32 @@ document.querySelectorAll("[data-archive-limit]").forEach((grid) => {
   cards.slice(limit).forEach((card) => card.remove());
 });
 
-document.querySelectorAll("[data-about-story-close]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const details = button.closest("details");
-    const summary = details?.querySelector("summary");
+document.addEventListener("click", (event) => {
+  const target = event.target;
 
-    if (!(details instanceof HTMLDetailsElement) || !(summary instanceof HTMLElement)) {
-      return;
-    }
+  if (!(target instanceof Element)) {
+    return;
+  }
 
-    details.open = false;
-    window.requestAnimationFrame(() => {
-      summary.focus();
-    });
+  const button = target.closest("[data-about-story-close]");
+
+  if (!(button instanceof HTMLButtonElement)) {
+    return;
+  }
+
+  const details = button.closest("details");
+  const summary = details?.querySelector("summary");
+
+  if (!(details instanceof HTMLDetailsElement) || !(summary instanceof HTMLElement)) {
+    return;
+  }
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  details.open = false;
+  window.requestAnimationFrame(() => {
+    summary.focus();
   });
 });
 

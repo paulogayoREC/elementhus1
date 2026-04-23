@@ -1802,10 +1802,15 @@ h4 {
 .about-story-close-row {
   display: flex;
   justify-content: flex-start;
+  position: relative;
+  z-index: 2;
   padding-top: 0.05rem;
 }
 
 .about-story-toggle-collapse {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
   cursor: pointer;
 }
 
