@@ -7169,6 +7169,82 @@ h4 {
   filter: saturate(1.08) contrast(1.05);
 }
 
+.geek-topic-collectibles .geek-topic-detail-hero {
+  padding: 6rem 0 2.75rem;
+}
+
+.geek-topic-collectibles .geek-topic-detail-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(14.5rem, 0.56fr);
+  gap: 1rem 1.35rem;
+  align-items: start;
+}
+
+.geek-topic-collectibles .geek-topic-detail-copy {
+  gap: 0.82rem;
+  max-width: 39rem;
+  border-radius: 24px;
+  padding: 0.95rem 1rem 1rem;
+}
+
+.geek-topic-collectibles .geek-topic-detail-copy .eyebrow {
+  margin-bottom: 0;
+  padding: 0.34rem 0.74rem;
+}
+
+.geek-topic-collectibles .geek-topic-detail-copy h1 {
+  max-width: 100%;
+  font-size: clamp(2.55rem, 5vw, 4.5rem);
+}
+
+.geek-topic-collectibles .geek-topic-detail-copy p:not(.eyebrow) {
+  max-width: 35rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.geek-topic-collectibles .geek-topic-detail-copy .geek-cyber-back {
+  min-height: 2.18rem;
+  margin-bottom: 0.15rem;
+  padding: 0.48rem 0.86rem;
+  font-size: 0.7rem;
+}
+
+.geek-topic-collectibles .geek-topic-detail-copy .button {
+  min-height: 2.7rem;
+  padding: 0.7rem 0.98rem;
+  font-size: 0.72rem;
+}
+
+.geek-topic-collectibles .geek-topic-detail-actions {
+  gap: 0.65rem;
+}
+
+.geek-topic-collectibles .geek-topic-detail-visual {
+  align-self: start;
+}
+
+.geek-topic-collectibles .geek-topic-detail-frame {
+  width: min(100%, 20.5rem);
+  border-radius: 26px;
+  padding: 0.72rem;
+}
+
+.geek-topic-collectibles .geek-topic-detail-frame::before {
+  inset: 0.78rem 0.82rem auto;
+}
+
+.geek-topic-collectibles .geek-topic-detail-frame::after {
+  right: 0.82rem;
+  bottom: 0.82rem;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 18px;
+}
+
+.geek-topic-collectibles .geek-topic-detail-frame img {
+  border-radius: 19px;
+}
+
 .geek-topic-detail-section {
   position: relative;
   overflow: hidden;
@@ -8183,6 +8259,34 @@ h4 {
     padding: 1rem;
   }
 
+  .geek-topic-collectibles .geek-topic-detail-hero {
+    padding: 5.8rem 0 2.55rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(13.5rem, 0.5fr);
+    gap: 0.95rem 1.08rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy {
+    gap: 0.74rem;
+    padding: 0.92rem 0.94rem 0.96rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy h1 {
+    font-size: clamp(2.38rem, 4.9vw, 3.85rem);
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy p:not(.eyebrow) {
+    font-size: 0.91rem;
+    line-height: 1.48;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-frame {
+    width: min(100%, 17.5rem);
+    padding: 0.68rem;
+  }
+
   .geek-affiliate-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -8499,6 +8603,37 @@ h4 {
     font-size: 0.78rem;
   }
 
+  .geek-topic-collectibles .geek-topic-detail-hero {
+    padding: 5.2rem 0 2.2rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-layout {
+    gap: 0.95rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy {
+    gap: 0.72rem;
+    padding: 0.92rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy h1 {
+    font-size: 2.18rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy p:not(.eyebrow) {
+    font-size: 0.9rem;
+    line-height: 1.54;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy .button {
+    min-height: 2.68rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-frame {
+    width: min(100%, 13.4rem);
+    padding: 0.72rem;
+  }
+
   .geek-affiliate-heading,
   .geek-affiliate-toolbar,
   .geek-affiliate-group-heading {
@@ -8620,6 +8755,14 @@ h4 {
 
   .geek-topic-detail-frame img {
     border-radius: 15px;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy h1 {
+    font-size: 1.94rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-frame {
+    width: min(100%, 12.4rem);
   }
 
   .geek-affiliate-grid {
