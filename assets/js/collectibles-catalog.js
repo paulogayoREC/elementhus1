@@ -2,10 +2,6 @@
   const collectiblesCatalogGroups = [
     {
       id: "figuras-vitrine",
-      eyebrow: "Figuras",
-      title: "Action Figures e Pecas de Vitrine",
-      description:
-        "Selecao para quem quer presenca visual forte, personagens iconicos e pecas que sustentam o clima do setup.",
       products: [
         { tag: "Action Figure", title: "Medicom Toy John Wick: Chapter 3 - Parabellum MAFEX", image: "gk50.jpg", url: "https://amzn.to/3QE7kEr" },
         { tag: "Marvel Select", title: "Thanos - Infinity Saga - Marvel Select", image: "gk49.jpg", url: "https://amzn.to/3QGPyQW" },
@@ -27,10 +23,6 @@
     },
     {
       id: "funko-plush",
-      eyebrow: "Funko & Plush",
-      title: "Funko Pop, Pelucias e Achados de Personagem",
-      description:
-        "Pecas leves para presente, colecao rapida e composicao de estante com nostalgia, humor e cultura pop reconhecivel.",
       products: [
         { tag: "Funko Pop", title: "Candide Funko POP! Homem-Aranha Amigao da Vizinhanca", image: "gk21.jpg", url: "https://amzn.to/4cEOB2T" },
         { tag: "Funko Pop", title: "Candide Funko POP! Rumi - Guerreiras do K-Pop", image: "gk22.jpg", url: "https://amzn.to/4mKvVmW" },
@@ -47,10 +39,6 @@
     },
     {
       id: "lego-builders",
-      eyebrow: "LEGO",
-      title: "LEGO, Construcao e Sets de Display",
-      description:
-        "Montagens para quem curte exibir o processo criativo na mesa, no escritorio ou em uma vitrine geek mais arquitetada.",
       products: [
         { tag: "LEGO Creator", title: "LEGO Creator Onibus Espacial 3 em 1", image: "gk13.jpg", url: "https://amzn.to/4epkS0H" },
         { tag: "LEGO Marvel", title: "LEGO Marvel Homem-Aranha vs Motocicleta Fantasma", image: "gk14.jpg", url: "https://amzn.to/3OVatiK" },
@@ -63,10 +51,6 @@
     },
     {
       id: "decor-lifestyle",
-      eyebrow: "Decor & Lifestyle",
-      title: "Decoracao Geek, Utilidades e Presente Criativo",
-      description:
-        "Objetos de uso diario, humor visual e detalhes de ambiente para deixar o universo geek presente mesmo fora da prateleira.",
       products: [
         { tag: "Chaveiro Geek", title: "Chaveiro Geek Emborrachado Game Boy", image: "gk01.jpg", url: "https://amzn.to/4tx6yry" },
         { tag: "Porta-chaves", title: "Porta-Chaves Awesome Mixtape", image: "gk02.jpg", url: "https://amzn.to/48Sd6bP" },
@@ -102,22 +86,6 @@
     groupSection.className = "geek-affiliate-group";
     groupSection.id = group.id;
     groupSection.setAttribute("data-geek-reveal", "");
-
-    const heading = document.createElement("div");
-    heading.className = "geek-affiliate-group-heading";
-
-    const eyebrow = document.createElement("p");
-    eyebrow.className = "eyebrow";
-    eyebrow.textContent = group.eyebrow;
-
-    const title = document.createElement("h3");
-    title.id = `${group.id}-title`;
-    title.textContent = group.title;
-
-    const description = document.createElement("p");
-    description.textContent = group.description;
-
-    heading.append(eyebrow, title, description);
 
     const grid = document.createElement("div");
     grid.className = "geek-affiliate-grid";
@@ -160,8 +128,7 @@
       grid.append(card);
     }
 
-    groupSection.setAttribute("aria-labelledby", title.id);
-    groupSection.append(heading, grid);
+    groupSection.append(grid);
     fragment.append(groupSection);
   }
 
