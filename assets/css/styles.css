@@ -7645,50 +7645,66 @@ h4 {
 
 .geek-affiliate-card {
   display: grid;
-  grid-template-rows: minmax(0, 15.5rem) auto;
-  border-radius: 22px;
-  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  grid-template-rows: minmax(0, 15.95rem) 1fr;
+  min-height: 27rem;
+  border-color: rgba(75, 151, 143, 0.44);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 36%),
+    linear-gradient(145deg, rgba(8, 14, 18, 0.98), rgba(4, 20, 22, 0.98) 70%, rgba(3, 31, 31, 0.92));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 18px 42px rgba(0, 0, 0, 0.34);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+.geek-affiliate-card::before {
+  content: none;
 }
 
 .geek-affiliate-card::after {
   position: absolute;
-  right: -2.4rem;
-  bottom: -2.4rem;
+  right: -3rem;
+  bottom: -3rem;
   z-index: 0;
-  width: 8rem;
-  height: 8rem;
+  width: 9rem;
+  height: 9rem;
   content: "";
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(var(--topic-secondary-rgb), 0.28), rgba(var(--topic-secondary-rgb), 0));
-  filter: blur(16px);
-  opacity: 0.38;
+  background: radial-gradient(circle, rgba(64, 164, 154, 0.26), rgba(64, 164, 154, 0));
+  filter: blur(18px);
+  opacity: 0.32;
   pointer-events: none;
 }
 
 .geek-affiliate-card:hover,
 .geek-affiliate-card:focus-within {
   transform: translateY(-4px);
-  border-color: rgba(var(--topic-accent-rgb), 0.34);
+  border-color: rgba(117, 205, 189, 0.72);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0) 36%),
+    linear-gradient(145deg, rgba(10, 18, 22, 0.99), rgba(5, 25, 27, 0.98) 70%, rgba(4, 42, 39, 0.94));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    0 26px 56px rgba(0, 0, 0, 0.28),
-    0 0 1.8rem rgba(var(--topic-accent-rgb), 0.14);
+    0 26px 56px rgba(0, 0, 0, 0.36),
+    0 0 1.8rem rgba(67, 179, 164, 0.14);
 }
 
 .geek-affiliate-card-media {
   display: grid;
   align-items: center;
-  padding: 1rem;
-  background:
-    radial-gradient(circle at 50% 26%, rgba(var(--topic-secondary-rgb), 0.16), transparent 44%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  justify-items: center;
+  margin: 1rem 1rem 0;
+  padding: 0.35rem;
+  overflow: hidden;
+  background: #f6f6f4;
 }
 
 .geek-affiliate-card-media img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 1.2rem 1.5rem rgba(0, 0, 0, 0.24));
+  filter: none;
   transition: transform 220ms ease;
 }
 
@@ -7699,42 +7715,58 @@ h4 {
 
 .geek-affiliate-card-body {
   display: grid;
+  grid-template-rows: auto auto 1fr auto;
   gap: 0.78rem;
   align-content: start;
   padding: 1rem;
-  border-top: 1px solid rgba(var(--topic-secondary-rgb), 0.14);
+  border-top: 1px solid rgba(65, 151, 145, 0.3);
 }
 
 .geek-affiliate-card-tag {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: max-content;
-  border: 1px solid rgba(var(--topic-secondary-rgb), 0.22);
+  max-width: 100%;
+  border: 1px solid rgba(143, 191, 132, 0.34);
   border-radius: 999px;
-  padding: 0.34rem 0.62rem;
+  padding: 0.34rem 0.68rem;
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-cyber);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 800;
   line-height: 1;
+  letter-spacing: 0;
   text-transform: uppercase;
+  white-space: nowrap;
   background:
-    linear-gradient(135deg, rgba(var(--topic-secondary-rgb), 0.18), rgba(var(--topic-accent-rgb), 0.12)),
-    rgba(255, 255, 255, 0.03);
+    linear-gradient(135deg, rgba(91, 111, 47, 0.68), rgba(36, 104, 99, 0.58)),
+    rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .geek-affiliate-card h4 {
   margin: 0;
-  color: rgba(255, 255, 255, 0.96);
+  color: rgba(255, 255, 255, 0.95);
   font-family: var(--font-cyber);
-  font-size: 0.98rem;
-  line-height: 1.32;
+  font-size: 0.96rem;
+  font-weight: 800;
+  line-height: 1.36;
 }
 
 .geek-affiliate-card .button {
   width: 100%;
-  min-height: 2.72rem;
+  min-height: 2.78rem;
   justify-content: center;
   margin-top: auto;
+  border-color: rgba(158, 184, 71, 0.68);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.96);
+  background:
+    linear-gradient(135deg, rgba(99, 111, 42, 0.94), rgba(32, 113, 111, 0.92));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 14px 26px rgba(0, 0, 0, 0.22);
 }
 
 .geek-topic-detail-cta-section {
@@ -7832,6 +7864,30 @@ h4 {
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 20px 34px rgba(0, 0, 0, 0.24),
     0 0 1.8rem rgba(var(--topic-accent-rgb), 0.16);
+}
+
+.geek-topic-detail-page .geek-affiliate-card .button-primary {
+  min-height: 2.78rem;
+  border-color: rgba(158, 184, 71, 0.68);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.96);
+  background:
+    linear-gradient(135deg, rgba(99, 111, 42, 0.94), rgba(32, 113, 111, 0.92));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 14px 26px rgba(0, 0, 0, 0.22);
+}
+
+.geek-topic-detail-page .geek-affiliate-card .button-primary:hover,
+.geek-topic-detail-page .geek-affiliate-card .button-primary:focus-visible {
+  border-color: rgba(194, 214, 89, 0.82);
+  color: rgba(255, 255, 255, 0.98);
+  background:
+    linear-gradient(135deg, rgba(123, 137, 48, 0.98), rgba(36, 137, 130, 0.96));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 18px 30px rgba(0, 0, 0, 0.28),
+    0 0 1.15rem rgba(96, 193, 175, 0.18);
 }
 
 .geek-motion-ready .geek-topic-detail-page [data-geek-reveal] {
@@ -8292,7 +8348,8 @@ h4 {
   }
 
   .geek-affiliate-card {
-    grid-template-rows: minmax(0, 14.2rem) auto;
+    grid-template-rows: minmax(0, 14.8rem) 1fr;
+    min-height: 26.4rem;
   }
 
   .geek-topic-detail-cta {
@@ -8670,7 +8727,8 @@ h4 {
   }
 
   .geek-affiliate-card {
-    grid-template-rows: minmax(0, 12.8rem) auto;
+    grid-template-rows: minmax(0, 12.8rem) 1fr;
+    min-height: 24.5rem;
     border-radius: 20px;
   }
 
@@ -8770,7 +8828,8 @@ h4 {
   }
 
   .geek-affiliate-card {
-    grid-template-rows: minmax(0, 13.8rem) auto;
+    grid-template-rows: minmax(0, 14rem) 1fr;
+    min-height: 27rem;
     border-radius: 18px;
   }
 
