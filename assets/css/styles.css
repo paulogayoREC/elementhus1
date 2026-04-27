@@ -8929,6 +8929,206 @@ h4 {
   }
 }
 
+@media (max-width: 700px) {
+  .geek-topic-collectibles .nav-shell {
+    gap: 0.6rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-hero {
+    padding: 4.85rem 0 1.85rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-layout {
+    gap: 0.82rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy {
+    max-width: none;
+    border-radius: 18px;
+    padding: 0.88rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy h1 {
+    font-size: clamp(2rem, 8.8vw, 2.7rem);
+    letter-spacing: 0;
+    line-height: 0.96;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy p:not(.eyebrow) {
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-frame {
+    width: min(70vw, 13.75rem);
+    border-radius: 20px;
+  }
+
+  .geek-affiliate-section {
+    padding-top: 2.2rem;
+  }
+
+  .geek-affiliate-shell,
+  .geek-affiliate-groups {
+    gap: 0.95rem;
+  }
+
+  .geek-affiliate-group {
+    gap: 0.82rem;
+    scroll-margin-top: 4.8rem;
+    contain-intrinsic-size: 1px 940px;
+  }
+
+  .geek-affiliate-card {
+    min-width: 0;
+  }
+
+  .geek-affiliate-card-media,
+  .geek-affiliate-card-body {
+    min-width: 0;
+  }
+
+  .geek-affiliate-card-tag {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .geek-affiliate-card h4 {
+    overflow-wrap: anywhere;
+  }
+
+  .geek-topic-detail-page .geek-collectibles-footer .footer-layout {
+    gap: 0.85rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .geek-topic-collectibles .section-inner,
+  .geek-topic-collectibles .nav-shell {
+    width: min(100% - 1.25rem, 1180px);
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy .geek-cyber-back {
+    min-height: 2.55rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-grid {
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card {
+    grid-template-columns: minmax(6.85rem, 34%) minmax(0, 1fr);
+    grid-template-rows: auto;
+    min-height: auto;
+    border-radius: 16px;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card-media {
+    align-self: center;
+    height: clamp(8.8rem, 31vw, 10rem);
+    min-height: 0;
+    margin: 0.72rem 0 0.72rem 0.72rem;
+    border-radius: 12px;
+    padding: 0.28rem;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card-body {
+    grid-template-rows: auto auto 1fr;
+    gap: 0.56rem;
+    align-content: stretch;
+    padding: 0.78rem;
+    border-top: 0;
+    border-left: 1px solid rgba(65, 151, 145, 0.3);
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card-tag {
+    justify-content: flex-start;
+    width: fit-content;
+    padding: 0.27rem 0.5rem;
+    font-size: 0.58rem;
+    line-height: 1.15;
+    text-align: left;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card h4 {
+    font-size: 0.84rem;
+    line-height: 1.32;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card .button {
+    align-self: end;
+    min-height: 2.36rem;
+    border-radius: 10px;
+    padding: 0.56rem 0.5rem;
+    font-size: 0.68rem;
+  }
+
+  .geek-topic-detail-page .geek-footer-button {
+    width: 100%;
+    min-height: 2.78rem;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 360px) {
+  .geek-topic-collectibles .section-inner,
+  .geek-topic-collectibles .nav-shell {
+    width: min(100% - 1rem, 1180px);
+  }
+
+  .geek-topic-collectibles .nav-shell {
+    gap: 0.42rem;
+  }
+
+  .geek-topic-collectibles .brand-name {
+    max-width: min(39vw, 8.2rem);
+    font-size: 0.7rem;
+  }
+
+  .geek-topic-collectibles .nav-share-button-mobile,
+  .geek-topic-collectibles .menu-toggle {
+    width: 2.48rem;
+    min-width: 2.48rem;
+    min-height: 2.48rem;
+  }
+
+  .geek-topic-collectibles .site-menu {
+    top: 4.15rem;
+    right: 0.5rem;
+    width: calc(100% - 1rem);
+    max-height: calc(100svh - 4.85rem);
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy {
+    padding: 0.78rem;
+  }
+
+  .geek-topic-collectibles .geek-topic-detail-copy h1 {
+    font-size: 1.88rem;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card {
+    grid-template-columns: minmax(6.25rem, 35%) minmax(0, 1fr);
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card-media {
+    height: 8.45rem;
+    margin: 0.62rem 0 0.62rem 0.62rem;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card-body {
+    gap: 0.5rem;
+    padding: 0.68rem;
+  }
+
+  .geek-topic-collectibles .geek-affiliate-card h4 {
+    font-size: 0.8rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
