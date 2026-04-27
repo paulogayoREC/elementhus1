@@ -6881,6 +6881,14 @@ h4 {
   --topic-secondary-rgb: 255, 0, 60;
 }
 
+.geek-topic-games .geek-topic-detail-layout {
+  grid-template-columns: minmax(0, 36rem);
+}
+
+.geek-topic-games .geek-topic-detail-copy {
+  max-width: 36rem;
+}
+
 .geek-topic-movies {
   --topic-accent: #00f0ff;
   --topic-accent-rgb: 0, 240, 255;
