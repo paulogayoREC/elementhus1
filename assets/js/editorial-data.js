@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-04-25",
+  "updatedAt": "2026-04-27",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
+          "title": "Report: OpenAI Developing AI-First Phone to Replace Apps with Smart Agents",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/news/report-openai-developing-ai-first-phone-to-replace-apps-with-smart-agents",
+          "date": "2026-04-27",
+          "tag": "Radar tech",
+          "featured": true,
+          "image": "assets/img/astronaut-earth.png",
+          "summary": "OpenAI is reportedly exploring a smartphone that could upend how users interact with devices, replacing traditional mobile apps with AI agents that can execute tasks on command. The device, still in early devel..."
+        },
+        {
           "title": "Investigation: RAM prices are falling. Don’t fall for it",
           "source": "PCWorld",
           "url": "https://www.pcworld.com/article/3116546/investigation-ram-prices-are-falling-dont-fall-for-it.html",
           "date": "2026-04-24",
           "tag": "Radar tech",
-          "featured": true,
-          "image": "assets/img/astronaut-earth.png",
-          "summary": "Rising prices are the biggest tech story of 2026 . Well, the biggest consumer tech story, anyway — the biggest story in a broader sense is “AI” in general. And that’s the answer to why prices are going up. AI d..."
-        },
-        {
-          "title": "AMD launched a monster chip. But Intel made the bigger splash",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3123185/amd-launched-a-monster-chip-but-intel-made-the-bigger-splash.html",
-          "date": "2026-04-24",
-          "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "I began writing about enthusiast hardware completely by accident. Picture a street cat wandering into a neighbor’s house often enough that one day it never leaves—that’s pretty much my story. Except in this cas..."
+          "summary": "Rising prices are the biggest tech story of 2026 . Well, the biggest consumer tech story, anyway — the biggest story in a broader sense is “AI” in general. And that’s the answer to why prices are going up. AI d..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
+          "title": "Lenovo IdeaPad 5a 2-in-1 review: A good laptop with a slow CPU",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3121327/lenovo-ideapad-5a-2-in-1-review.html",
+          "date": "2026-04-27",
+          "tag": "Novidade",
+          "featured": true,
+          "image": "assets/img/astronauta-eat-cutout.png",
+          "summary": "At a glance Expert's Rating Pros Spacious keyboard with numpad and good key feel Two-watt speaker system provides loud, clear audio Good range of USB-C and USB-A connectivity 1080p webcam with privacy shutter a..."
+        },
+        {
           "title": "The MacBook Neo is a glimpse into John Ternus's Apple",
           "source": "Engadget",
           "url": "https://www.engadget.com/computing/laptops/the-macbook-neo-is-a-glimpse-into-john-ternuss-apple-170000842.html?src=rss",
           "date": "2026-04-24",
           "tag": "Novidade",
-          "featured": true,
-          "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "John Ternus was unavoidable when Apple debuted the Macbook Neo. He kicked off an intimate media event for the Neo, introducing it as a transformative machine for Apple thanks to its low $599 cost ($499 for educ..."
-        },
-        {
-          "title": "Best gaming laptops 2026: 4 top options for portable performance",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/407493/best-gaming-laptops.html",
-          "date": "2026-04-24",
-          "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Not all gaming laptops deliver the same experience, which is important to know when you’re shopping for one. Some are made to push boundaries by maximizing performance, while others prioritize design or lightin..."
+          "summary": "John Ternus was unavoidable when Apple debuted the Macbook Neo. He kicked off an intimate media event for the Neo, introducing it as a transformative machine for Apple thanks to its low $599 cost ($499 for educ..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "Best Books to Learn OpenCV in 2026: Top Picks for Beginners",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/books/best-books-to-learn-opencv-in-2026-top-picks-for-beginners",
+          "title": "Your Walmart might be 3D printed — firm building more than a dozen 3D-printed Walmart expansions with concrete-printing robots",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/3d-printing/your-walmart-might-be-3d-printed-firm-building-more-than-a-dozen-3d-printed-walmart-expansions-alquist-sells-superstore-on-3d-concrete-printing-robots",
           "date": "2026-04-25",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Overview: Seven carefully selected OpenCV books guide beginners from basics to advanced concepts, combining theory, coding practice, and real-world applications for complete computer vision learning. The list b..."
+          "summary": "For years, 3D Concrete Printing (3DCP) has been an experimental novelty. Alquist 3D, based in Greeley, CO, is pushing the technology past the demonstration phase with their A1X, a robotic arm printer that lays..."
         },
         {
-          "title": "Tech Trends That Will Define the Next Five Years",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/ampstories/artificial-intelligence/tech-trends-that-will-define-the-next-five-years",
-          "date": "2026-04-25",
+          "title": "A startup with a bankrupt fintech CEO and a president’s son wants to build America’s robot army",
+          "source": "The Next Web",
+          "url": "https://thenextweb.com/news/foundation-humanoid-robot-soldiers-pentagon",
+          "date": "2026-04-26",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Artificial Intelligence Everywhere: Artificial intelligence will move beyond chatbots into autonomous decision-making systems, helping businesses predict demand, automate workflows, and deliver hyper-personaliz..."
+          "summary": "Foundation Future Industries, a San Francisco startup founded in April 2024, has secured $24 million in research contracts with the US Army, Navy, and Air Force to test humanoid robots designed to breach enemy..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "YouTube TV just got a multiview feature I’ve wanted for years — here’s how to use it",
-          "source": "Android Authority",
-          "url": "https://www.androidauthority.com/youtube-tv-customizable-multiview-how-to-make-3660768/",
-          "date": "2026-04-25",
+          "title": "Get Office 2024 & training courses for just $114",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3123052/get-office-2024-training-courses-for-just-114.html",
+          "date": "2026-04-26",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "THANK YOU, GOOGLE!."
+          "summary": "TL;DR: Get Microsoft Office 2024 Home & Business plus an 8-course training bundle for hundreds off. Many people use Microsoft Office every day—but not always to its full potential. This bundle pairs Microsoft O..."
         },
         {
-          "title": "This Oura competitor will tell you exactly how to work out each day",
-          "source": "Android Authority",
-          "url": "https://www.androidauthority.com/ultrahuman-ring-les-mills-powerplug-3660114/",
-          "date": "2026-04-22",
+          "title": "Best gaming laptops 2026: 4 top options for portable performance",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/407493/best-gaming-laptops.html",
+          "date": "2026-04-24",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Ultrahuman’s new Les Mills integration uses smart ring data to recommend daily workouts."
+          "summary": "Not all gaming laptops deliver the same experience, which is important to know when you’re shopping for one. Some are made to push boundaries by maximizing performance, while others prioritize design or lightin..."
         }
       ]
     }
