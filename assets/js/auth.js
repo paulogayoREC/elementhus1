@@ -324,7 +324,8 @@ const createAuthModal = () => {
   return wrapper;
 };
 
-const authApiRequest = async (endpoint, options = {}) => {
+const authApiRequest = async (endpoint, options = {}, requestOptions = {}) => {
+  const { retryOnExpiredSession = true } = requestOptions;
   const headers = {
     Accept: "application/json",
     ...(options.headers || {})
@@ -349,6 +350,18 @@ const authApiRequest = async (endpoint, options = {}) => {
       ok: false,
       message: "Resposta inesperada do servidor."
     };
+  }
+
+  if (response.status === 419 && options.body && retryOnExpiredSession) {
+    authState.csrfToken = "";
+    const sessionData = await authApiRequest("session", {}, { retryOnExpiredSession: false });
+    authState.apiAvailable = true;
+    authState.csrfToken = sessionData.csrfToken || "";
+    authState.user = sessionData.user || null;
+
+    if (authState.csrfToken) {
+      return authApiRequest(endpoint, options, { retryOnExpiredSession: false });
+    }
   }
 
   if (!response.ok || data.ok === false) {
@@ -522,6 +535,7 @@ const initAuth = () => {
       authState.csrfToken = data.csrfToken || "";
       authState.user = data.user || null;
       renderAuthState();
+      setStatus();
     } catch {
       authState.apiAvailable = false;
       setStatus("A área de login estará disponível quando o site estiver rodando com PHP.", "error");
@@ -560,8 +574,9 @@ const initAuth = () => {
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", async () => {
       lastTrigger = trigger;
-      await ensureSession();
       openModal("login");
+      await ensureSession();
+      renderAuthState();
     });
   });
 
