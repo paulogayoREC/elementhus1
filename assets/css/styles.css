@@ -2551,13 +2551,18 @@ h4 {
   display: inline-flex;
   width: max-content;
   margin-top: 0.72rem;
+  border: 0;
+  padding: 0;
   color: #63d0ff;
   font-family: var(--font-primary);
   font-size: 0.74rem;
   font-weight: 800;
+  line-height: 1.35;
   text-decoration: underline;
   text-decoration-color: rgba(37, 125, 167, 0.82);
   text-underline-offset: 0.2rem;
+  cursor: pointer;
+  background: transparent;
 }
 
 .reset-inline-link:hover,

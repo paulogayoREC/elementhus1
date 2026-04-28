@@ -574,7 +574,8 @@ const initAuth = () => {
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", async () => {
       lastTrigger = trigger;
-      openModal("login");
+      const requestedPanel = trigger.dataset.authOpenPanel || "login";
+      openModal(requestedPanel);
       await ensureSession();
       renderAuthState();
     });
@@ -782,7 +783,9 @@ const initAuth = () => {
     }
   });
 
-  ensureSession();
+  if (!authScriptElement?.hasAttribute("data-auth-lazy-session")) {
+    ensureSession();
+  }
 };
 
 initAuth();

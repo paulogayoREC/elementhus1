@@ -17,7 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260423-site-premium">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260428-reset-login-access">
+    <script src="assets/js/auth.js?v=20260428-auth-access-lazy" data-auth-lazy-session defer></script>
     <script src="assets/js/password-reset.js?v=20260423-reset-hardening" defer></script>
   </head>
   <body class="reset-page">
@@ -66,13 +67,13 @@
           <div class="auth-reset-intro reset-feedback-panel" data-reset-invalid hidden>
             <strong>Link indisponível</strong>
             <p>Solicite um novo envio pelo botão de login. Links de redefinição expiram e só podem ser usados uma vez.</p>
-            <a class="reset-inline-link" href="/">Voltar para o site</a>
+            <button class="reset-inline-link" type="button" data-auth-open data-auth-open-panel="forgot">Solicitar novo link</button>
           </div>
 
           <div class="auth-reset-intro reset-feedback-panel" data-reset-success hidden>
             <strong>Senha atualizada</strong>
             <p>Sua senha foi alterada com segurança. Agora entre novamente usando a nova senha.</p>
-            <a class="reset-inline-link" href="/">Entrar na Conta Tech</a>
+            <button class="reset-inline-link" type="button" data-auth-open>Entrar na Conta Tech</button>
           </div>
 
           <p class="auth-status" data-reset-status aria-live="polite"></p>
