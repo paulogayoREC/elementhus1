@@ -9151,6 +9151,300 @@ h4 {
   }
 }
 
+@media (max-width: 768px) {
+  .site-header.menu-active {
+    z-index: 80;
+  }
+
+  .brand-mark {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-name {
+    min-width: 0;
+  }
+
+  .nav-share-button-mobile,
+  .menu-toggle {
+    flex: 0 0 auto;
+  }
+
+  .site-menu {
+    right: max(0.75rem, env(safe-area-inset-right));
+    width: min(24rem, calc(100% - 1.5rem));
+  }
+
+  .hero-section,
+  .feature-band,
+  .editorial-section,
+  .geek-home-section,
+  .community-section,
+  .about-section {
+    overflow-x: clip;
+  }
+
+  .section-heading {
+    margin-bottom: 1.45rem;
+  }
+
+  .feature-layout,
+  .community-layout {
+    gap: 1.05rem;
+  }
+
+  .tech-picks-panel,
+  .topic-card,
+  .product-card,
+  .feedback-form,
+  .comment-stream,
+  .about-story-card[open] {
+    max-width: 100%;
+  }
+
+  .topic-card-preview-copy strong,
+  .tech-pick-card strong,
+  .comment-card p,
+  .about-story-body p {
+    overflow-wrap: anywhere;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea,
+  .feedback-actions-row .button,
+  .article-comment-form textarea,
+  .article-comment-form .button,
+  .topic-card a,
+  .product-card a,
+  .about-story-toggle,
+  .article-archive-toggle,
+  .geek-cup-link,
+  .geek-affiliate-chip,
+  .geek-affiliate-card .button,
+  .geek-topic-collectibles .geek-affiliate-card .button {
+    min-height: 2.75rem;
+  }
+
+  .star-picker label {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .comment-list {
+    max-height: min(22rem, 52svh);
+  }
+
+  .article-comment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .article-comment-form label:has(textarea),
+  .article-comment-form .feedback-actions-row {
+    grid-column: 1;
+  }
+
+  .article-comment-form .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-layout {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header.menu-active {
+    z-index: 80;
+  }
+}
+
+@media (max-width: 430px) {
+  .section-inner,
+  .hero-content,
+  .nav-shell {
+    width: min(100% - 1.1rem, 1180px);
+  }
+
+  .nav-shell {
+    gap: 0.5rem;
+  }
+
+  .brand-mark {
+    max-width: calc(100% - 6.5rem);
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    max-width: calc(100% - 2.5rem);
+  }
+
+  .nav-share-button-mobile,
+  .menu-toggle {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
+
+  .menu-toggle {
+    grid-template-columns: 1.05rem;
+    overflow: hidden;
+    padding: 0.52rem;
+    font-size: 0;
+  }
+
+  .menu-toggle span {
+    width: 1.05rem;
+  }
+
+  .site-menu {
+    top: 4.25rem;
+    right: 0.55rem;
+    width: calc(100% - 1.1rem);
+    max-height: calc(100svh - 4.95rem);
+  }
+
+  .site-menu,
+  .comment-list,
+  .auth-dialog {
+    scrollbar-width: thin;
+  }
+
+  .hero-section {
+    display: block;
+    min-height: auto;
+    padding: 4.65rem 0 0;
+  }
+
+  .hero-content {
+    padding-bottom: 1.35rem;
+  }
+
+  .hero-media {
+    top: 5.2rem;
+    right: -6.8rem;
+    width: 16.4rem;
+    opacity: 0.24;
+  }
+
+  .hero-actions {
+    gap: 0.65rem;
+  }
+
+  .mission-strip {
+    position: relative;
+  }
+
+  .mission-strip span {
+    min-height: 2.75rem;
+  }
+
+  .section {
+    padding: 2.7rem 0;
+  }
+
+  .feature-copy .button {
+    margin-top: 0.15rem;
+  }
+
+  .tech-pick-card {
+    padding: 0.72rem;
+  }
+
+  .tech-pick-card img,
+  .tech-pick-featured img {
+    height: 7.6rem;
+  }
+
+  .community-section .section-heading h2,
+  .about-copy h2 {
+    font-size: clamp(1.55rem, 7vw, 1.9rem);
+  }
+
+  .feedback-form,
+  .comment-stream {
+    padding: 0.78rem;
+  }
+
+  .star-picker {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.18rem;
+  }
+
+  .star-picker label {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .portrait-wrap {
+    width: min(100%, 8.1rem);
+  }
+
+  .about-story-body {
+    padding: 0.82rem;
+  }
+
+  .geek-home-hero h2,
+  .geek-hub-hero h1 {
+    font-size: clamp(2.05rem, 11vw, 2.45rem);
+    line-height: 0.96;
+  }
+
+  .geek-home-subtitle,
+  .geek-hub-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .geek-home-console {
+    min-height: 22.5rem;
+  }
+
+  .geek-home-console-album {
+    inset: 1.8rem 0.4rem 7.2rem;
+    height: calc(100% - 9rem);
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-name {
+    font-size: 0.7rem;
+  }
+
+  h1,
+  .article-hero h1,
+  .topic-hero h1 {
+    font-size: clamp(1.78rem, 8.8vw, 1.95rem);
+  }
+
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .mission-strip span {
+    padding: 0.34rem 0.18rem;
+    font-size: 0.48rem;
+  }
+
+  .tech-pick-card strong {
+    min-height: 0;
+  }
+
+  .feedback-form span,
+  .rating-field legend {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .geek-topic-collectibles .nav-share-button-mobile,
+  .geek-topic-collectibles .menu-toggle {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
