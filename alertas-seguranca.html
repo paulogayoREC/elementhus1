@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Microsoft libera atualização emergencial para corrigir a CVE-2026-40372 no ASP.NET Core Data Protection e recomenda atualização para 10.0.7.">
+    <meta name="description" content="Falha CVE-2026-32202 no Windows Shell é explorada para expor credenciais NTLM por meio de arquivos .LNK maliciosos.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
-    <title>Microsoft corrige falha crítica no ASP.NET Core | Encontre Aqui Tech</title>
+    <title>Falha no Windows Shell expõe credenciais NTLM | Encontre Aqui Tech</title>
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260423-site-premium">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260428-alertas-windows-shell">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
     <script src="assets/js/main.js?v=20260423-ux-hardening" defer></script>
     <script src="assets/js/auth.js?v=20260428-auth-scoped-session" defer></script>
@@ -44,7 +44,7 @@
           <div class="nav-links">
             <a href="/#editorias">Editorias</a>
             <a href="/indicacoes">Indicações</a>
-            <button class="nav-share-button" type="button" data-share-site data-share-url="https://encontreaquitech.com/" aria-label="Compartilhar Encontre Aqui Tech" title="Compartilhar">
+            <button class="nav-share-button" type="button" data-share-site data-share-url="https://encontreaquitech.com/alertas-seguranca" aria-label="Compartilhar alertas de segurança do Encontre Aqui Tech" title="Compartilhar">
               <span class="nav-share-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" focusable="false">
                   <path d="M18 16.1c-.9 0-1.7.4-2.2 1l-7-4.1c.1-.3.2-.6.2-1s-.1-.7-.2-1l7-4.1c.5.6 1.3 1 2.2 1 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .3.1.7.2 1l-7 4.1c-.5-.6-1.3-1-2.2-1-1.7 0-3 1.3-3 3s1.3 3 3 3c.9 0 1.7-.4 2.2-1l7 4.1c-.1.3-.2.6-.2.9 0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-2.9-3-2.9Z"></path>
@@ -62,78 +62,89 @@
       <article class="news-article" aria-labelledby="article-title">
         <header class="article-hero">
           <div class="article-hero-bg" aria-hidden="true">
-            <img src="assets/img/alertas/aspnet-core-cve-2026-40372-bg.webp" alt="">
+            <img src="assets/img/alertas/windows-shell-cve-2026-32202-bg.png" alt="">
           </div>
           <div class="section-inner article-hero-layout">
             <div class="article-hero-copy">
               <a class="back-link" href="/#editorias">Voltar às editorias</a>
-              <p class="eyebrow">Alertas de segurança / ASP.NET Core</p>
-              <h1 id="article-title">Microsoft libera atualização emergencial para corrigir falha crítica no ASP.NET Core</h1>
+              <p class="eyebrow">Alertas de segurança / Windows Shell</p>
+              <h1 id="article-title">Falha no Windows Shell é explorada para roubo de credenciais sem interação do usuário</h1>
               <p class="article-lead">
-                A CVE-2026-40372 afeta o ASP.NET Core Data Protection e exige atualização imediata para a versão 10.0.7 em ambientes expostos.
+                A CVE-2026-32202 pode fazer o Windows autenticar automaticamente em um servidor controlado por invasores e expor hashes Net-NTLMv2.
               </p>
               <div class="article-meta-row" aria-label="Informações da matéria">
                 <span>Encontre Aqui Tech</span>
-                <time datetime="2026-04-22">22 abr. 2026</time>
-                <span>Correção emergencial</span>
+                <time datetime="2026-04-28">28 abr. 2026</time>
+                <span>Credenciais NTLM</span>
               </div>
             </div>
 
             <figure class="article-hero-figure">
-              <img src="assets/img/alertas/aspnet-core-cve-2026-40372-preview.webp" alt="Logo do ASP.NET Core sobre fundo azul.">
-              <figcaption>A correção fora do ciclo tradicional reforça a urgência para equipes que dependem do ASP.NET Core Data Protection.</figcaption>
+              <img src="assets/img/alertas/windows-shell-cve-2026-32202-cover.jpg" alt="Monitor com janelas de terminal e logotipo do Windows em verde.">
+              <figcaption>Arquivos de atalho maliciosos podem abusar de recursos legítimos do Windows para iniciar autenticações indesejadas.</figcaption>
             </figure>
           </div>
         </header>
 
-        <section class="section article-body-section">
+        <section class="section article-body-section article-body-section-featured">
           <div class="section-inner article-layout">
             <div class="article-main-column">
               <div class="article-content">
-              <p>
-                A Microsoft divulgou uma atualização emergencial de segurança para corrigir a vulnerabilidade CVE-2026-40372, identificada no ASP.NET Core Data Protection. O problema afeta versões 10.0.0 a 10.0.6 do pacote Microsoft.AspNetCore.DataProtection e chamou atenção por permitir elevação de privilégio pela rede, o que aumenta bastante o nível de risco para aplicações expostas. Segundo a empresa, a recomendação é atualizar imediatamente para a versão 10.0.7.
-              </p>
-              <p>
-                De acordo com a Microsoft, a falha surgiu a partir de uma regressão introduzida após o Patch Tuesday, quando clientes começaram a relatar erros de descriptografia em seus sistemas. Durante a investigação, a companhia concluiu que o defeito não causava apenas instabilidade: ele também abria espaço para um cenário de exploração com impacto direto na segurança das aplicações.
-              </p>
-              <p>
-                Na prática, o erro estava relacionado à forma como o mecanismo de proteção de dados validava assinaturas criptográficas. Isso poderia permitir que um invasor manipulasse cargas protegidas, burlasse verificações de autenticidade e, em determinadas condições, conseguisse acesso elevado ao ambiente afetado. A gravidade do caso foi destacada também pelo The Hacker News, que apontou pontuação CVSS 9.1 e ressaltou o potencial de obtenção de privilégios de alto nível.
-              </p>
-              <p>
-                Outro detalhe importante é que o impacto atinge especialmente aplicações executadas em Linux, macOS e outros sistemas não Windows, desde que utilizem a biblioteca vulnerável em tempo de execução. Além disso, a correção não elimina automaticamente todos os riscos derivados de um eventual abuso anterior: a própria cobertura especializada destaca que, em alguns cenários, pode ser necessário também rotacionar as chaves do Data Protection, principalmente se houver suspeita de uso indevido de tokens emitidos durante a janela de exposição.
-              </p>
-              <div class="article-source-card">
-                <span>Fontes consultadas</span>
-                <a href="https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/" target="_blank" rel="noopener noreferrer">Microsoft .NET Blog: .NET 10.0.7 Out-of-Band Security Update</a>
-                <a href="https://thehackernews.com/2026/04/microsoft-patches-critical-aspnet-core.html" target="_blank" rel="noopener noreferrer">The Hacker News: Microsoft Patches Critical ASP.NET Core CVE-2026-40372 Privilege Escalation Bug</a>
-              </div>
-              <p>
-                Para empresas e equipes de desenvolvimento, o episódio serve como alerta sobre a importância de acompanhar atualizações fora do ciclo tradicional de patches. Quando um fornecedor publica um pacote emergencial, isso normalmente indica que o risco é relevante o suficiente para exigir ação imediata, sem esperar a próxima rodada mensal de correções. Nesse caso, a orientação é clara: revisar ambientes que usem ASP.NET Core Data Protection, atualizar para 10.0.7, recompilar as aplicações e republicar os serviços o quanto antes.
-              </p>
+                <p>
+                  Uma nova preocupação de segurança acende o alerta para usuários e administradores de ambientes Windows. A Microsoft confirmou a exploração ativa da vulnerabilidade CVE-2026-32202, uma falha no Windows Shell capaz de expor credenciais NTLM sem que a vítima precise abrir arquivos ou clicar em links maliciosos.
+                </p>
+                <p>
+                  O problema está relacionado ao processamento de arquivos de atalho do Windows, conhecidos pela extensão .LNK. De acordo com análises de segurança, um arquivo especialmente criado pode fazer com que o sistema tente se autenticar automaticamente em um servidor controlado por criminosos. Nesse processo, hashes de credenciais Net-NTLMv2 podem ser capturados e posteriormente usados em ataques de retransmissão ou tentativas de quebra offline.
+                </p>
+                <p>
+                  O ponto mais preocupante é o baixo nível de interação necessário para que o ataque aconteça. Em determinados cenários, basta que o usuário navegue até uma pasta contendo o arquivo malicioso para que o Windows inicie a comunicação indesejada. Isso torna a ameaça especialmente perigosa em ambientes corporativos, onde compartilhamentos de rede, arquivos compactados e anexos recebidos por e-mail fazem parte da rotina.
+                </p>
+                <div class="article-source-card">
+                  <span>Fontes consultadas</span>
+                  <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32202" target="_blank" rel="noopener noreferrer">Microsoft MSRC: CVE-2026-32202 Windows Shell Spoofing Vulnerability</a>
+                  <a href="https://www.akamai.com/blog/security-research/incomplete-patch-apt28s-zero-day-cve-2026-32202" target="_blank" rel="noopener noreferrer">Akamai: análise técnica do vetor zero-click em arquivos LNK</a>
+                  <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32202" target="_blank" rel="noopener noreferrer">NVD: CVE-2026-32202 e registro no catálogo de exploração conhecida</a>
+                </div>
+                <p>
+                  A falha também chama atenção por estar ligada a uma correção anterior considerada incompleta. A vulnerabilidade tem relação com a CVE-2026-21510, que já havia sido explorada por grupos avançados de ameaça, incluindo o APT28, também conhecido como Fancy Bear. A confirmação de exploração ativa aumenta a urgência para aplicação das atualizações de segurança mais recentes.
+                </p>
+                <p>
+                  A recomendação principal é que empresas e usuários mantenham o Windows atualizado, especialmente com os pacotes de segurança disponibilizados pela Microsoft em abril de 2026. Além disso, equipes de TI devem reforçar controles sobre autenticação NTLM, bloquear conexões SMB desnecessárias para a internet e monitorar tentativas incomuns de autenticação na rede.
+                </p>
+                <p>
+                  Arquivos .LNK recebidos por e-mail, baixados da internet ou encontrados em pastas compartilhadas devem ser tratados com cautela. Embora pareçam simples atalhos, eles podem ser usados como porta de entrada para ataques mais sofisticados, principalmente quando combinados com técnicas de engenharia social.
+                </p>
+                <p>
+                  O caso reforça uma tendência cada vez mais comum no cenário de cibersegurança: criminosos exploram recursos legítimos do próprio sistema operacional para reduzir a necessidade de interação da vítima e dificultar a detecção por ferramentas tradicionais. Por isso, além de instalar correções, é essencial adotar uma postura preventiva, com políticas de acesso mais restritivas, segmentação de rede e acompanhamento constante de alertas de segurança.
+                </p>
+                <p>
+                  Para organizações, o momento é de ação imediata. A exploração ativa da CVE-2026-32202 mostra que falhas aparentemente simples podem se transformar rapidamente em ameaças relevantes quando afetam mecanismos centrais do sistema. Manter sistemas atualizados e revisar configurações de rede deixou de ser uma boa prática opcional para se tornar uma medida indispensável de proteção.
+                </p>
               </div>
 
-              <section class="article-comment-panel" aria-labelledby="comments-alertas-aspnet-core-title">
+              <section class="article-comment-panel" aria-labelledby="comments-alertas-windows-shell-title">
                 <div class="article-comment-heading">
                   <span>Comentários</span>
-                  <h2 id="comments-alertas-aspnet-core-title">Comente este alerta</h2>
+                  <h2 id="comments-alertas-windows-shell-title">Comente este alerta</h2>
                 </div>
                 <div class="article-comment-layout">
-                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-aspnet-core-cve-2026-40372" data-content-title="Microsoft libera atualização emergencial para corrigir falha crítica no ASP.NET Core">
+                  <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-windows-shell-cve-2026-32202-ntlm" data-content-title="Falha no Windows Shell é explorada para roubo de credenciais sem interação do usuário">
                     <label>
                       <span>Comentário</span>
                       <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste alerta?" data-article-comment-message required></textarea>
                     </label>
+                    <p class="character-count" data-article-comment-count>0/500 caracteres</p>
                     <div class="feedback-actions-row">
                       <button class="button button-primary" type="submit">Publicar comentário</button>
                     </div>
-                    <p class="form-note" data-article-comment-status data-content-slug="alertas-aspnet-core-cve-2026-40372" aria-live="polite"></p>
+                    <p class="form-note" data-article-comment-status data-content-slug="alertas-windows-shell-cve-2026-32202-ntlm" aria-live="polite"></p>
                   </form>
 
-                  <aside class="comment-stream" aria-labelledby="recent-comments-alertas-aspnet-core-title">
+                  <aside class="comment-stream" aria-labelledby="recent-comments-alertas-windows-shell-title">
                     <div class="comment-stream-heading">
-                      <h3 id="recent-comments-alertas-aspnet-core-title">Comentários recentes</h3>
+                      <h3 id="recent-comments-alertas-windows-shell-title">Comentários recentes</h3>
                     </div>
-                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-aspnet-core-cve-2026-40372"></div>
+                    <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-windows-shell-cve-2026-32202-ntlm"></div>
                   </aside>
                 </div>
               </section>
@@ -143,9 +154,9 @@
               <span class="article-aside-kicker">Radar do alerta</span>
               <h2>O risco prático</h2>
               <ul>
-                <li>A CVE-2026-40372 afeta Microsoft.AspNetCore.DataProtection 10.0.0 a 10.0.6.</li>
-                <li>A exploração pode permitir elevação de privilégio pela rede em aplicações vulneráveis.</li>
-                <li>A orientação é atualizar para 10.0.7, recompilar e republicar os serviços afetados.</li>
+                <li>A CVE-2026-32202 afeta o Windows Shell e envolve arquivos de atalho .LNK.</li>
+                <li>O ataque pode disparar autenticação SMB e expor hashes Net-NTLMv2.</li>
+                <li>A prioridade é aplicar as correções de abril de 2026 e restringir NTLM/SMB desnecessários.</li>
               </ul>
             </aside>
           </div>
@@ -159,6 +170,70 @@
             </div>
 
             <div class="article-archive-grid" data-archive-limit="5">
+              <details class="article-archive-card">
+                <summary>
+                  <span class="article-archive-thumb">
+                    <img src="assets/img/alertas/aspnet-core-cve-2026-40372-preview.webp" alt="Logo do ASP.NET Core sobre fundo azul." loading="lazy" decoding="async">
+                  </span>
+                  <span class="article-archive-summary-copy">
+                    <span class="article-archive-date"><time datetime="2026-04-22">22 abr. 2026</time></span>
+                    <h3>Microsoft libera atualização emergencial para corrigir falha crítica no ASP.NET Core</h3>
+                    <p>A CVE-2026-40372 afeta o ASP.NET Core Data Protection e exige atualização imediata para 10.0.7 em ambientes expostos.</p>
+                  </span>
+                  <span class="article-archive-toggle" aria-hidden="true"></span>
+                </summary>
+
+                <div class="article-archive-body">
+                  <p>
+                    A Microsoft divulgou uma atualização emergencial de segurança para corrigir a vulnerabilidade CVE-2026-40372, identificada no ASP.NET Core Data Protection. O problema afeta versões 10.0.0 a 10.0.6 do pacote Microsoft.AspNetCore.DataProtection e chamou atenção por permitir elevação de privilégio pela rede, o que aumenta bastante o nível de risco para aplicações expostas. Segundo a empresa, a recomendação é atualizar imediatamente para a versão 10.0.7.
+                  </p>
+                  <p>
+                    De acordo com a Microsoft, a falha surgiu a partir de uma regressão introduzida após o Patch Tuesday, quando clientes começaram a relatar erros de descriptografia em seus sistemas. Durante a investigação, a companhia concluiu que o defeito não causava apenas instabilidade: ele também abria espaço para um cenário de exploração com impacto direto na segurança das aplicações.
+                  </p>
+                  <p>
+                    Na prática, o erro estava relacionado à forma como o mecanismo de proteção de dados validava assinaturas criptográficas. Isso poderia permitir que um invasor manipulasse cargas protegidas, burlasse verificações de autenticidade e, em determinadas condições, conseguisse acesso elevado ao ambiente afetado. A gravidade do caso foi destacada também pelo The Hacker News, que apontou pontuação CVSS 9.1 e ressaltou o potencial de obtenção de privilégios de alto nível.
+                  </p>
+                  <p>
+                    Outro detalhe importante é que o impacto atinge especialmente aplicações executadas em Linux, macOS e outros sistemas não Windows, desde que utilizem a biblioteca vulnerável em tempo de execução. Além disso, a correção não elimina automaticamente todos os riscos derivados de um eventual abuso anterior: a própria cobertura especializada destaca que, em alguns cenários, pode ser necessário também rotacionar as chaves do Data Protection, principalmente se houver suspeita de uso indevido de tokens emitidos durante a janela de exposição.
+                  </p>
+                  <div class="article-source-card">
+                    <span>Fontes consultadas</span>
+                    <a href="https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/" target="_blank" rel="noopener noreferrer">Microsoft .NET Blog: .NET 10.0.7 Out-of-Band Security Update</a>
+                    <a href="https://thehackernews.com/2026/04/microsoft-patches-critical-aspnet-core.html" target="_blank" rel="noopener noreferrer">The Hacker News: Microsoft Patches Critical ASP.NET Core CVE-2026-40372 Privilege Escalation Bug</a>
+                  </div>
+                  <p>
+                    Para empresas e equipes de desenvolvimento, o episódio serve como alerta sobre a importância de acompanhar atualizações fora do ciclo tradicional de patches. Quando um fornecedor publica um pacote emergencial, isso normalmente indica que o risco é relevante o suficiente para exigir ação imediata, sem esperar a próxima rodada mensal de correções. Nesse caso, a orientação é clara: revisar ambientes que usem ASP.NET Core Data Protection, atualizar para 10.0.7, recompilar as aplicações e republicar os serviços o quanto antes.
+                  </p>
+
+                  <section class="article-comment-panel article-comment-panel-compact" aria-labelledby="comments-alertas-aspnet-core-title">
+                    <div class="article-comment-heading">
+                      <span>Comentários</span>
+                      <h2 id="comments-alertas-aspnet-core-title">Comente este conteúdo</h2>
+                    </div>
+                    <div class="article-comment-layout">
+                      <form class="feedback-form article-comment-form" data-article-comment-form data-content-slug="alertas-aspnet-core-cve-2026-40372" data-content-title="Microsoft libera atualização emergencial para corrigir falha crítica no ASP.NET Core">
+                        <label>
+                          <span>Comentário</span>
+                          <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
+                        </label>
+                        <p class="character-count" data-article-comment-count>0/500 caracteres</p>
+                        <div class="feedback-actions-row">
+                          <button class="button button-primary" type="submit">Publicar comentário</button>
+                        </div>
+                        <p class="form-note" data-article-comment-status data-content-slug="alertas-aspnet-core-cve-2026-40372" aria-live="polite"></p>
+                      </form>
+
+                      <aside class="comment-stream" aria-labelledby="recent-comments-alertas-aspnet-core-title">
+                        <div class="comment-stream-heading">
+                          <h3 id="recent-comments-alertas-aspnet-core-title">Comentários recentes</h3>
+                        </div>
+                        <div class="comment-list is-empty" data-article-comment-list data-content-slug="alertas-aspnet-core-cve-2026-40372"></div>
+                      </aside>
+                    </div>
+                  </section>
+                </div>
+              </details>
+
               <details class="article-archive-card" id="alertas-defender-zero-days">
                 <summary>
                   <span class="article-archive-thumb">
@@ -203,6 +278,7 @@
                           <span>Comentário</span>
                           <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
                         </label>
+                        <p class="character-count" data-article-comment-count>0/500 caracteres</p>
                         <div class="feedback-actions-row">
                           <button class="button button-primary" type="submit">Publicar comentário</button>
                         </div>
@@ -253,6 +329,7 @@
                           <span>Comentário</span>
                           <textarea name="message" rows="4" maxlength="500" placeholder="O que você achou deste conteúdo?" data-article-comment-message required></textarea>
                         </label>
+                        <p class="character-count" data-article-comment-count>0/500 caracteres</p>
                         <div class="feedback-actions-row">
                           <button class="button button-primary" type="submit">Publicar comentário</button>
                         </div>
