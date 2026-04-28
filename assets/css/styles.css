@@ -6872,6 +6872,8 @@ h4 {
   --topic-accent-rgb: 252, 238, 9;
   --topic-secondary: #00f0ff;
   --topic-secondary-rgb: 0, 240, 255;
+  --collectibles-gold-rgb: 236, 175, 48;
+  --collectibles-honey-rgb: 255, 219, 94;
 }
 
 .geek-topic-detail-page {
@@ -6909,6 +6911,21 @@ h4 {
   right: -8rem;
   bottom: 10vh;
   background: rgba(var(--topic-secondary-rgb), 0.42);
+}
+
+.geek-topic-collectibles.geek-topic-detail-page {
+  background:
+    radial-gradient(circle at 15% 8%, rgba(var(--collectibles-honey-rgb), 0.24), transparent 25rem),
+    radial-gradient(circle at 84% 18%, rgba(var(--collectibles-gold-rgb), 0.18), transparent 24rem),
+    linear-gradient(135deg, #171003, #281a04 48%, #070604);
+}
+
+.geek-topic-collectibles.geek-topic-detail-page::before {
+  background: rgba(var(--collectibles-honey-rgb), 0.42);
+}
+
+.geek-topic-collectibles.geek-topic-detail-page::after {
+  background: rgba(var(--collectibles-gold-rgb), 0.32);
 }
 
 .geek-topic-detail-page main,
@@ -7225,6 +7242,14 @@ h4 {
 
 .geek-topic-collectibles .geek-topic-detail-hero {
   padding: 5.35rem 0 1.45rem;
+  background:
+    linear-gradient(180deg, rgba(62, 42, 5, 0.36), rgba(9, 7, 3, 0.86)),
+    radial-gradient(circle at 20% 18%, rgba(var(--collectibles-honey-rgb), 0.24), transparent 18rem),
+    radial-gradient(circle at 82% 22%, rgba(var(--topic-secondary-rgb), 0.12), transparent 17rem),
+    linear-gradient(90deg, rgba(var(--collectibles-honey-rgb), 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(var(--collectibles-gold-rgb), 0.08) 1px, transparent 1px),
+    #100b03;
+  background-size: auto, auto, auto, 4.6rem 4.6rem, 4.6rem 4.6rem, auto;
 }
 
 .geek-topic-collectibles .geek-topic-detail-layout {
@@ -7509,6 +7534,22 @@ h4 {
   background-size: 4.6rem 4.6rem;
   opacity: 0.34;
   pointer-events: none;
+}
+
+.geek-topic-collectibles .geek-affiliate-section {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(var(--collectibles-honey-rgb), 0.16), transparent 21rem),
+    radial-gradient(circle at 88% 18%, rgba(var(--collectibles-gold-rgb), 0.2), transparent 19rem),
+    radial-gradient(circle at 48% 100%, rgba(var(--topic-secondary-rgb), 0.08), transparent 24rem),
+    linear-gradient(180deg, #100b03, #241804 52%, #090704);
+}
+
+.geek-topic-collectibles .geek-affiliate-section::before {
+  background:
+    linear-gradient(rgba(var(--collectibles-honey-rgb), 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--collectibles-gold-rgb), 0.05) 1px, transparent 1px);
+  background-size: 4.6rem 4.6rem;
+  opacity: 0.28;
 }
 
 .geek-affiliate-shell {
