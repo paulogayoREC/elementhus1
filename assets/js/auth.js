@@ -1,3 +1,6 @@
+(() => {
+  "use strict";
+
 const authState = {
   csrfToken: "",
   user: null,
@@ -789,3 +792,4 @@ const initAuth = () => {
 };
 
 initAuth();
+})();
