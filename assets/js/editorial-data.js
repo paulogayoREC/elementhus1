@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-04-29",
+  "updatedAt": "2026-05-01",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Do lixo ao lucro: Intel cresce em 2026 vendendo silício que seria descartado",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/do-lixo-ao-lucro-intel-cresce-em-2026-vendendo-silicio-que-seria-descartado/",
-          "date": "2026-04-28",
+          "title": "The India AI Impact Summit Aftermath: $200 Billion in Promises, But What Actually Gets Built?",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/artificial-intelligence/the-india-ai-impact-summit-aftermath-200-billion-in-promises-but-what-actually-gets-built",
+          "date": "2026-05-01",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Existem oportunidades em qualquer situação. A atual crise na indústria de hardware é ruim para o consumidor por conta dos preços que não param de subir, mas extremamente lucrativa para as empresas, que têm vend..."
+          "summary": "The India AI Impact Summit created a powerful moment for the country’s technology ambitions. Headlines spoke about massive investments, global partnerships, and a future where India stands strong in artificial..."
         },
         {
-          "title": "Google plans to invest even more money into Anthropic",
-          "source": "Engadget",
-          "url": "https://www.engadget.com/ai/google-plans-to-invest-even-more-money-into-anthropic-185000776.html?src=rss",
-          "date": "2026-04-24",
+          "title": "Apple Reports Record-Breaking 2Q 2026 Results: $29.6B Profit on $111.2B Revenue",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/04/30/apple-2q-2026-earnings/",
+          "date": "2026-04-30",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Google plans to invest up to $40 billion into Anthropic in what could be viewed as a circular deal with the AI startup (and frequent competitor), Bloomberg reports . The search giant has invested in Anthropic a..."
+          "summary": "Apple today announced financial results for the second fiscal quarter of 2026, which corresponds to the first calendar quarter of the year. For the quarter, Apple posted revenue of $111.2 billion and net quarte..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "McAfee+ Ultimate review: Comprehensive security that needs more polish",
+          "title": "Best password managers: 6 trustworthy options",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2178063/mcafee-ultimate-review.html",
-          "date": "2026-04-29",
+          "url": "https://www.pcworld.com/article/407092/best-password-managers-reviews-and-buying-advice.html",
+          "date": "2026-04-30",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "At a glance Expert's Rating Pros Solid antivirus protection Comprehensive protection against online threats Cons Notable performance impact on some PCs User interface is a little scattered Many of the tools and..."
+          "summary": "People are bad at passwords. Most don’t bother with the unique, complex phrases or character strings that make a good password. Worse, they share weak passwords with others. The best password managers fix these..."
         },
         {
-          "title": "Avast Premium Security review: Strong protection focused on PC security",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2223912/avast-premium-security-review-2.html",
-          "date": "2026-04-28",
+          "title": "OnePlus Pad 4: India Price, Key Specs & More",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/photo/oneplus-pad-4-india-price-key-specs-more",
+          "date": "2026-05-01",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "At a glance Expert's Rating Pros Top-notch antivirus protection More granular control over settings, including scan depth Streamlined, easy to navigate interface Cons Slower PCs may see a performance impact dur..."
+          "summary": "Introducing OnePlus Pad 4 The OnePlus Pad 4 arrives in India as a premium Android tablet aimed at productivity and entertainment. With flagship hardware, a large high-resolution display, and a massive battery..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "When Robots Have Their ChatGPT Moment, Remember These Pincers",
-          "source": "Wired",
-          "url": "https://www.wired.com/story/when-robots-have-their-chatgpt-moment-remember-these-pincers/",
-          "date": "2026-04-29",
+          "title": "OpenAI-backed 1X opens California factory targeting 10,000 home humanoid robots in year one",
+          "source": "The Next Web",
+          "url": "https://thenextweb.com/news/1x-neo-humanoid-factory-hayward-10000-home-robots",
+          "date": "2026-05-01",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "From sorting chicken nuggets to screwing in light bulbs, Eka’s robots are eerily lifelike. But do they have real physical smarts?."
+          "summary": "The Norway-founded company’s vertically integrated NEO factory in Hayward marks the first US-scale push to put a general-purpose humanoid robot into private homes, with shipments planned this year and a competi..."
         },
         {
-          "title": "All3 raises $25m to automate construction with legged robots and AI design software",
-          "source": "The Next Web",
-          "url": "https://thenextweb.com/news/all3-25m-seed-construction-robots-ai-housing",
-          "date": "2026-04-29",
+          "title": "6 melhores cinebiografias musicais para assistir no streaming",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/entretenimento/melhores-cinebiografias-musicais-para-assistir-streaming/",
+          "date": "2026-04-30",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "The London-founded startup wants to replace the entire construction value chain, from architect’s brief to move-in-ready building, using AI and a purpose-built on-site robot called the Mantis. Construction is t..."
+          "summary": "Cinebiografias musicais costumam ser a porta de entrada para muita gente aos detalhes íntimos e mais surpreendentes sobre a vida de astros que mudaram a história da música. O sucesso do filme Michael , por exem..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Best external drives 2026: Fast SSDs and roomy hard drives",
+          "title": "Docusign Alternatives for Teams: What to Look For (and What to Avoid)",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/406861/best-external-drives.html",
-          "date": "2026-04-28",
+          "url": "https://www.pcworld.com/article/3126678/docusign-alternatives-for-teams-what-to-look-for-and-what-to-avoid.html",
+          "date": "2026-04-30",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "External USB/Thunderbolt SSDs and/or hard drives (aka direct-attached storage, or DAS) are a super-convenient way to add storage capacity to your system as well as back it up. External drives are also extremely..."
+          "summary": "Choose Nitro Sign for predictable pricing & fewer surprises Free Trial (function () { document.querySelector(\"#sticky-promo-block a\").addEventListener(\"click\", function(e) { const debug = document.location.host..."
         },
         {
-          "title": "Best VPN services: 7 top picks for every VPN need",
+          "title": "Adobe Acrobat Alternatives for Teams in 2026",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/406870/best-vpn-services-2.html",
-          "date": "2026-04-28",
+          "url": "https://www.pcworld.com/article/3126597/adobe-acrobat-alternatives-for-teams-in-2026.html",
+          "date": "2026-04-30",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "A VPN, or virtual private network, is one of the best tools you can use to boost your online privacy and security. It’s necessary protection on public Wi-Fi, and it’s a handy way to mask your location on any ne..."
+          "summary": "Try Nitro PDF today Learn more (function () { document.querySelector(\"#sticky-promo-block a\").addEventListener(\"click\", function(e) { const debug = document.location.host.search(/lndo.site|go-vip.net/) !== -1..."
         }
       ]
     }
