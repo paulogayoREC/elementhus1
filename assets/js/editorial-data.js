@@ -1,19 +1,19 @@
 window.editorialData = {
-  "updatedAt": "2026-05-01",
+  "updatedAt": "2026-05-03",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "The India AI Impact Summit Aftermath: $200 Billion in Promises, But What Actually Gets Built?",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/artificial-intelligence/the-india-ai-impact-summit-aftermath-200-billion-in-promises-but-what-actually-gets-built",
+          "title": "Apple to Unveil macOS 27 Next Month With These New Features",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/01/macos-27-rumors/",
           "date": "2026-05-01",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The India AI Impact Summit created a powerful moment for the country’s technology ambitions. Headlines spoke about massive investments, global partnerships, and a future where India stands strong in artificial..."
+          "summary": "Apple will unveil its latest software platforms during its WWDC 2026 keynote on Monday, June 8 , and one of them will be macOS 27 for the Mac. The first developer beta of macOS 27 will likely be available immed..."
         },
         {
           "title": "Apple Reports Record-Breaking 2Q 2026 Results: $29.6B Profit on $111.2B Revenue",
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Best password managers: 6 trustworthy options",
+          "title": "AVG Internet Security review: Reliable, budget-friendly antivirus software",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/407092/best-password-managers-reviews-and-buying-advice.html",
-          "date": "2026-04-30",
+          "url": "https://www.pcworld.com/article/407275/avg-internet-security-review.html",
+          "date": "2026-05-01",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "People are bad at passwords. Most don’t bother with the unique, complex phrases or character strings that make a good password. Worse, they share weak passwords with others. The best password managers fix these..."
+          "summary": "At a Glance Expert's Rating Pros Top-rated antivirus protection Expanded protection against malicious websites and remote attacks Clean, straightforward interface Cons Some PCs may experience a performance hit..."
         },
         {
-          "title": "OnePlus Pad 4: India Price, Key Specs & More",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/photo/oneplus-pad-4-india-price-key-specs-more",
-          "date": "2026-05-01",
+          "title": "Top Stories: MacBook Ultra, Vision Pro, and iPhone Ultra Rumors",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/02/top-stories-macbook-ultra-rumors/",
+          "date": "2026-05-02",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Introducing OnePlus Pad 4 The OnePlus Pad 4 arrives in India as a premium Android tablet aimed at productivity and entertainment. With flagship hardware, a large high-resolution display, and a massive battery..."
+          "summary": "It was another jam-packed week of Apple news this week, with fresh rumors on the touchscreen \"MacBook Ultra\" and the foldable \"iPhone Ultra,\" as well as Apple's 20th-anniversary iPhone coming next year. This we..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "OpenAI-backed 1X opens California factory targeting 10,000 home humanoid robots in year one",
-          "source": "The Next Web",
-          "url": "https://thenextweb.com/news/1x-neo-humanoid-factory-hayward-10000-home-robots",
-          "date": "2026-05-01",
+          "title": "We built AI to save us from email, and it somehow made email even more soul-sucking",
+          "source": "Digital Trends",
+          "url": "https://www.digitaltrends.com/computing/we-built-ai-to-save-us-from-email-and-it-somehow-made-email-even-more-soul-sucking/",
+          "date": "2026-05-02",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "The Norway-founded company’s vertically integrated NEO factory in Hayward marks the first US-scale push to put a general-purpose humanoid robot into private homes, with shipments planned this year and a competi..."
+          "summary": "The grim future of AI is more than just job-stealing robots. It even has bots endlessly emailing other bots while humans pretend this is progress."
         },
         {
-          "title": "6 melhores cinebiografias musicais para assistir no streaming",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/entretenimento/melhores-cinebiografias-musicais-para-assistir-streaming/",
-          "date": "2026-04-30",
+          "title": "Meta buys robotics startup to bolster its humanoid AI ambitions",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/",
+          "date": "2026-05-01",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Cinebiografias musicais costumam ser a porta de entrada para muita gente aos detalhes íntimos e mais surpreendentes sobre a vida de astros que mudaram a história da música. O sucesso do filme Michael , por exem..."
+          "summary": "Meta bought humanoid startup Assured Robot Intelligence to beef up its AI models for robots, the company said."
         }
       ]
     },
@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
+          "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
+          "date": "2026-05-03",
+          "tag": "Alerta",
+          "featured": true,
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, ci..."
+        },
+        {
           "title": "CISA Adds Actively Exploited ConnectWise and Windows Flaws to KEV",
           "source": "The Hacker News",
           "url": "https://thehackernews.com/2026/04/cisa-adds-actively-exploited.html",
           "date": "2026-04-29",
           "tag": "Alerta",
-          "featured": true,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added two security flaws impacting ConnectWise ScreenConnect and Microsoft Windows to its Known Exploited Vulnerabilities (KEV) catalo..."
-        },
-        {
-          "title": "Researchers Discover Critical GitHub CVE-2026-3854 RCE Flaw Exploitable via Single Git Push",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/04/researchers-discover-critical-github.html",
-          "date": "2026-04-28",
-          "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "Cybersecurity researchers have disclosed details of a critical security vulnerability impacting GitHub.com and GitHub Enterprise Server that could allow an authenticated user to obtain remote code execution wit..."
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added two security flaws impacting ConnectWise ScreenConnect and Microsoft Windows to its Known Exploited Vulnerabilities (KEV) catalo..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Docusign Alternatives for Teams: What to Look For (and What to Avoid)",
+          "title": "It’s World Password Day! 4 free, easy ways to improve your security",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3126678/docusign-alternatives-for-teams-what-to-look-for-and-what-to-avoid.html",
-          "date": "2026-04-30",
+          "url": "https://www.pcworld.com/article/696828/its-world-password-day-4-free-easy-ways-to-improve-your-security.html",
+          "date": "2026-05-01",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Choose Nitro Sign for predictable pricing & fewer surprises Free Trial (function () { document.querySelector(\"#sticky-promo-block a\").addEventListener(\"click\", function(e) { const debug = document.location.host..."
+          "summary": "A ton of arbitrary holidays exist (ahem, Tin Can Day ), but World Password Day is one fully supported by the PCWorld staff. We’re all for ditching weak passwords — especially when strengthening your online secu..."
         },
         {
-          "title": "Adobe Acrobat Alternatives for Teams in 2026",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3126597/adobe-acrobat-alternatives-for-teams-in-2026.html",
-          "date": "2026-04-30",
+          "title": "Como montar um “console PC” para jogar na sala",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/hardware/como-montar-um-console-pc-para-jogar-na-sala/",
+          "date": "2026-05-02",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Try Nitro PDF today Learn more (function () { document.querySelector(\"#sticky-promo-block a\").addEventListener(\"click\", function(e) { const debug = document.location.host.search(/lndo.site|go-vip.net/) !== -1..."
+          "summary": "Com os preços proibitivos e a dificuldade de encontrar componentes com bom custo-benefício, o sonho do setup high-end na sala muitas vezes acaba engavetado. Mas a verdade é que o seu PC atual, aquele que talvez..."
         }
       ]
     }
