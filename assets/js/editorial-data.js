@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-05",
+  "updatedAt": "2026-05-07",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Apple to Unveil macOS 27 Next Month With These New Features",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/05/01/macos-27-rumors/",
-          "date": "2026-05-01",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-05-06",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Apple will unveil its latest software platforms during its WWDC 2026 keynote on Monday, June 8 , and one of them will be macOS 27 for the Mac. The first developer beta of macOS 27 will likely be available immed..."
+          "summary": "Finding the right laptop for your lifestyle is more complicated than you may think. One quick search in Google and you’re hit with a tidal wave of countless models and price points. It’s a lot to sort through a..."
         },
         {
-          "title": "Apple Eyes Intel and Samsung as Backup US Chipmakers",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/05/05/apple-talks-intel-samsung-us-chipmakers/",
-          "date": "2026-05-05",
+          "title": "World Password Day: Fix these 4 security mistakes before hackers find them",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/696828/world-password-day-fix-these-4-security-mistakes-before-hackers-find-them.html",
+          "date": "2026-05-07",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Apple has held \"exploratory\" talks with Intel and Samsung about manufacturing the main processors for its devices in the United States, reports Bloomberg ($). Apple is said to have had early-stage talks with In..."
+          "summary": "So many arbitrary holidays exist (ahem, Tin Can Day ), but World Password Day is one fully supported by the PCWorld staff. We’re all for ditching weak passwords — especially when strengthening your online secur..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Asus ROG Zephyrus Duo review: A dual-screen gaming laptop for work and play",
+          "title": "Lenovo Yoga Slim 7x Gen 11 review: Powerful but inconsistent",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3127514/asus-rog-zephyrus-duo-review.html",
-          "date": "2026-05-04",
+          "url": "https://www.pcworld.com/article/3126806/lenovo-yoga-slim-7x-gen-11-review.html",
+          "date": "2026-05-06",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "At a glance Expert's Rating Pros Great design offers dual-screen perks with few downsides Large and responsive touchpad Two gorgeous OLED displays Solid six-speaker sound system Long-lasting battery life in hyb..."
+          "summary": "At a glance Expert's Rating Pros USB4 ports on both sides Good balance of performance and battery Colorful, accurate display Cons Battery life isn’t class leading Only USB4 ports Emulation saps performance GPU..."
         },
         {
-          "title": "Tenha o Microsoft 365 Personal por apenas R$ 76,63 e garanta produtividade total",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/software/tenha-o-microsoft-365-personal-por-apenas-r-7663-e-garanta-produtividade-total/",
-          "date": "2026-05-04",
+          "title": "Best mini PC deals: Top Intel and AMD picks for performance, gaming, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/2999556/best-mini-pc-deals-top-picks-for-performance-gaming-and-more.html",
+          "date": "2026-05-06",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Manter seus arquivos seguros e ter as ferramentas certas para trabalhar ou estudar não precisa custar uma fortuna. Se você está cansado de lidar com softwares instáveis ou se preocupa com a segurança dos seus d..."
+          "summary": "At a glance Top AMD mini PC deal picks GMKtec M8 —$390 (19% off on Amazon) Bosgame E5 —$320 (20% of on Amazon) Geekom AI A7 Max —$699 (26% off on Amazon) Top Intel mini PC deal picks GMKtec M2 Pro S —$440 (20%..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "Aiper EcoSurfer S2 review: Mostly hands-off pool cleaning that works",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3125386/aiper-ecosurfer-s2-review.html",
-          "date": "2026-05-04",
+          "title": "\"Beto Carrero dos robôs\": novo parque abre portas com tema inédito",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/produtos/beto-carrero-dos-robos-novo-parque-abre-portas-com-tema-inedito/",
+          "date": "2026-05-06",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "At a glance Expert's Rating Pros Exceptional battery life Handsome design Well-priced against the competition Cons Motor is slightly underpowered Generally slow speed Filter basket can be difficult to remove Ou..."
+          "summary": "A Galaxy Corporation, empresa de tecnologia de IA e entretenimento que gerencia artistas coreanos, inaugurou o primeiro parque temático de robôs do mundo. O \"Beto Carrero dos robôs\" promete combinar tecnologia..."
         },
         {
-          "title": "One of iRobot's co-founders is now making weird little robot companions",
-          "source": "Engadget",
-          "url": "https://www.engadget.com/2164170/one-of-irobots-co-founders-is-now-making-weird-little-robot-companions/",
-          "date": "2026-05-04",
+          "title": "Top 5 Cryptos to Watch Right Now as Market Interest Shifts Toward Emerging Tokens Like Little Pepe ($LILPEPE)",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/cryptocurrency-analytics-insight/top-5-cryptos-to-watch-right-now-as-market-interest-shifts-toward-emerging-tokens-like-little-pepe-lilpepe",
+          "date": "2026-05-07",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "They are like pets, but without all of that pesky love."
+          "summary": "It has been observed that there are numerous examples of capital migration in the crypto sector in 2026, where one can see that the investors' focus is changing from mainstream cryptos to alternative cryptocurr..."
         }
       ]
     },
@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
+          "title": "Mirai-Based xlabs_v1 Botnet Exploits ADB to Hijack IoT Devices for DDoS Attacks",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/05/mirai-based-xlabsv1-botnet-exploits-adb.html",
+          "date": "2026-05-06",
+          "tag": "Alerta",
+          "featured": true,
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "Cybersecurity researchers have exposed a new Mirai-derived botnet that self-identifies as xlabs_v1 and targets internet-exposed devices running Android Debug Bridge (ADB) to enlist them in a network capable of..."
+        },
+        {
           "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
           "source": "The Hacker News",
           "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
           "date": "2026-05-03",
           "tag": "Alerta",
-          "featured": true,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, ci..."
-        },
-        {
-          "title": "CISA Adds Actively Exploited ConnectWise and Windows Flaws to KEV",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/04/cisa-adds-actively-exploited.html",
-          "date": "2026-04-29",
-          "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added two security flaws impacting ConnectWise ScreenConnect and Microsoft Windows to its Known Exploited Vulnerabilities (KEV) catalo..."
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, ci..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Best free password managers 2026: Online security doesn’t have to cost a thing",
+          "title": "Chrome silently downloads a 4GB AI model. Here’s how to remove it",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/394076/best-free-password-managers.html",
-          "date": "2026-05-04",
+          "url": "https://www.pcworld.com/article/3132803/chrome-silently-downloads-a-4gb-ai-model-heres-how-to-remove-it.html",
+          "date": "2026-05-06",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "You should use a password manager. Data breaches now happen frequently, and that huge collection of stolen info makes cracking passwords even easier. It’s not only the “password12345” variety at risk, either, b..."
+          "summary": "Google’s Chrome browser is already a notorious storage hog, but now comes word that it’s crowding our PC drives in a new way: with a local AI model. That model, spotted by That Privacy Guy , gets silently downl..."
         },
         {
-          "title": "Best laptops under $500: Affordable picks that will satisfy",
+          "title": "Why is my Wi-Fi still slow after upgrading my internet plan?",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/699203/best-laptops-under-500.html",
-          "date": "2026-05-04",
+          "url": "https://www.pcworld.com/article/3071239/why-is-my-wi-fi-still-slow-after-upgrading-my-internet-plan.html",
+          "date": "2026-05-06",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Trying to find a good laptop under $500? Yeah, it’s the wild west out there. One quick Google search and you’re up to your ears in results… most of them pretty underwhelming. So, what actually matters here? Per..."
+          "summary": "A faster internet plan doesn’t always translate to faster real-world Wi-Fi – your router may be limiting the speeds your devices receive. Older routers struggle with walls, distance, and multiple connected devi..."
         }
       ]
     }
