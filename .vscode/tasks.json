@@ -4,9 +4,9 @@
     {
       "label": "GitHub: salvar versao",
       "type": "shell",
-      "command": "bash",
+      "command": "${workspaceFolder}/scripts/salvar-github.cmd",
       "args": [
-        "${workspaceFolder}/scripts/salvar-github.sh"
+        "${input:commitMessage}"
       ],
       "group": {
         "kind": "build",
@@ -18,6 +18,14 @@
         "clear": true
       },
       "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "commitMessage",
+      "type": "promptString",
+      "description": "Mensagem do commit",
+      "default": "Atualizacao"
     }
   ]
 }
