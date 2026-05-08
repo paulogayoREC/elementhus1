@@ -1,81 +1,194 @@
 ---
 name: encontreaquitech-project-guide
-description: Project-specific guide for working on the Encontre Aqui Tech website repository. Use when Codex edits, reviews, debugs, documents, or plans changes in this project, especially files under HTML pages, assets/css, assets/js, api, app, config, database, indicacoes, docs, or scripts.
+description: guia base do projeto encontreaquitech.com para orientar o codex ao trabalhar no código do site. use quando a tarefa envolver criar páginas, ajustar componentes, corrigir bugs, revisar rotas, alterar estilos, mexer em integrações, rodar comandos, revisar build, lint, testes ou entender a estrutura do repositório. esta skill deve fazer o codex seguir os padrões reais do projeto, evitar alterações desnecessárias e explicar claramente os arquivos modificados.
 ---
 
-# Encontre Aqui Tech Project Guide
+# EncontreAquiTech Project Guide
 
-Use this skill as the project map before making changes in this repository.
+## Objetivo
 
-## First Moves
+Usar esta Skill como guia principal ao trabalhar no código do site `encontreaquitech.com`.
 
-- Read `AGENTS.md` before editing. It contains mandatory editorial and Vitrine Tech rules.
-- Prefer reading the local files over assuming framework conventions.
-- Treat this as a static HTML plus PHP site, not a Node/React/Next project.
-- Do not run package-manager commands unless a manifest is added later.
-- Do not read, print, edit, or commit `private/database.php` or real credentials.
-- Keep changes narrow. This project has duplicated HTML, so broad refactors are risky.
+Antes de alterar qualquer arquivo, entender a estrutura atual do projeto, identificar o padrão existente e fazer mudanças mínimas, seguras e consistentes.
 
-## Stack
+## Regras principais
 
-- Frontend: static `.html` pages, global CSS, vanilla JavaScript.
-- Backend: procedural PHP endpoints in `api/`.
-- Shared PHP: `app/` files loaded with `require`.
-- Database: MySQL/MariaDB through PDO.
-- Server target: Apache/Hostinger, with `.htaccess` clean URL rewrites.
-- Automation: Python script for editorial feed updates.
-- CI: GitHub Actions workflow for `scripts/update-editorias.py`.
-- No npm, yarn, pnpm, Vite, Next, Tailwind, Composer, or formal build pipeline is currently present.
+1. Ler o projeto antes de alterar arquivos.
+2. Preferir seguir padrões já existentes em vez de criar uma arquitetura nova.
+3. Fazer a menor alteração possível para resolver a tarefa.
+4. Não renomear pastas, arquivos, seletores, slugs ou rotas sem necessidade clara.
+5. Não remover código aparentemente não usado sem confirmar impacto.
+6. Não alterar configurações sensíveis sem explicar o motivo.
+7. Não expor secrets, tokens, chaves de API, senhas ou conteúdo de arquivos `.env`/`private`.
+8. Sempre informar quais arquivos foram alterados e por quê.
+9. Sempre que possível, rodar validações compatíveis com este projeto.
+10. Caso não consiga rodar algum comando, explicar o motivo.
 
-## Directory Map
+## Antes de começar qualquer tarefa
 
-- `index.html`: homepage.
-- root `*.html`: top-level routes/pages.
-- `indicacoes/*.html`: product category pages used by Vitrine Tech.
-- `assets/css/styles.css`: single global stylesheet.
-- `assets/js/main.js`: shared UI behavior, editorial rendering, comments, menu, sharing.
-- `assets/js/auth.js`: login/register modal and auth client.
-- `assets/js/password-reset.js`: reset password page behavior.
-- `assets/js/tech-showcase.js`: Vitrine Tech product rotation.
-- `assets/js/editorial-data.js`: generated/editorial feed data used on the homepage.
-- `assets/js/mundo-geek.js`: geek page motion/reveal behavior.
-- `assets/js/collectibles-catalog.js`: collectibles catalog rendering.
-- `api/`: public PHP endpoints.
-- `app/`: PHP support code: bootstrap, database, mail, storage helpers.
-- `config/`: public config defaults and legal metadata.
-- `database/`: schema and manual migrations.
-- `docs/`: project rules and operational docs.
-- `scripts/`: local/GitHub automation scripts.
-- `.github/workflows/update-editorias.yml`: scheduled editorials update.
+Executar mentalmente este checklist:
 
-## Routes
+- Qual é o objetivo exato da solicitação?
+- A mudança envolve página, HTML repetido, estilo, rota, API, banco, formulário, comentário, produto ou configuração?
+- Já existe algum arquivo parecido que deve ser usado como referência?
+- Existe risco de quebrar layout, SEO, URL limpa, comentário, login, Vitrine Tech ou integração externa?
+- É necessário rodar algum comando antes ou depois?
+- A tarefa toca uma das regras obrigatórias de `AGENTS.md`, `docs/regras-editoriais.md` ou `docs/regras-vitrine-tech.md`?
 
-The `.htaccess` file serves clean URLs from matching `.html` files.
+## Stack do projeto
 
-- `/` maps to `index.html`.
-- `/noticias` maps to `noticias.html`.
-- `/indicacoes/monitores` maps to `indicacoes/monitores.html`.
+- Framework: nenhum framework front-end; site em HTML estático com PHP.
+- Front-end: HTML, CSS puro e JavaScript vanilla.
+- Back-end: PHP procedural com arquivos em `api/` e helpers em `app/`.
+- Linguagens: HTML, CSS, JavaScript, PHP, SQL e Python para automação.
+- Estilização: CSS global em `assets/css/styles.css`; não usa Tailwind.
+- Gerenciador de pacotes: nenhum. Não há `package.json`, npm, yarn, pnpm ou Composer.
+- Banco de dados: MySQL/MariaDB via PDO.
+- ORM: nenhum.
+- Ambiente de deploy: Apache/Hostinger, com `.htaccess` e arquivos de segurança por pasta.
+- CI/automação: GitHub Actions roda `scripts/update-editorias.py`.
 
-Preserve this model unless the user explicitly requests a routing change.
+## Estrutura do projeto
 
-## Reusable UI Contracts
+- Páginas principais:
+  - `index.html`: página inicial.
+  - `noticias.html`
+  - `novidades-tecnologicas.html`
+  - `curiosidades.html`
+  - `alertas-seguranca.html`
+  - `tutoriais.html`
+  - `indicacoes.html`
+  - `mundo-geek.html`
+  - `colecionaveis-geek.html`
+  - `resetar-senha.html`
 
-There is no component framework. Reuse happens through repeated HTML patterns, CSS classes, and `data-*` hooks.
+- Páginas de produtos:
+  - `indicacoes/*.html`
+  - Essas páginas alimentam a Vitrine Tech da página inicial.
 
-Preserve these selectors unless intentionally changing the related feature:
+- Componentes reutilizáveis:
+  - Não existe pasta `components/`.
+  - A reutilização é feita por padrões repetidos de HTML, classes CSS e atributos `data-*`.
+  - Exemplos: header, menu, cards editoriais, cards de produto, formulários de comentário, modal de login.
 
-- Header/menu: `.site-header`, `.nav-shell`, `[data-header]`, `[data-menu]`, `[data-menu-toggle]`.
-- Auth: `[data-auth-open]`, `assets/js/auth.js`.
-- Homepage comments: `[data-feedback-form]`, `[data-feedback-list]`, `[data-feedback-status]`.
-- Article comments: `[data-article-comment-form]`, `[data-content-slug]`, `[data-content-title]`, `[data-article-comment-message]`, `[data-article-comment-count]`, `[data-article-comment-status]`, `[data-article-comment-list]`.
-- Homepage editorial cards: `[data-editorial-feature]`, `[data-feature-slot]`, `[data-topic-list]`.
-- Vitrine Tech: `[data-tech-picks-panel]`.
-- Product cards consumed by Vitrine Tech: `.affiliate-product-card`, `.product-media img`, `.product-info h4`, `.product-buy-link`.
-- Geek animations: `[data-geek-reveal]`, `[data-geek-tilt]`.
+- Estilos:
+  - `assets/css/styles.css`: CSS global único.
+  - Não criar Tailwind, Bootstrap ou outra camada de CSS sem pedido explícito.
 
-## Editorial Pages
+- JavaScript:
+  - `assets/js/main.js`: menu, animações, comentários, cards editoriais, compartilhamento e comportamentos gerais.
+  - `assets/js/auth.js`: modal de login/cadastro, sessão e fluxo de autenticação no front-end.
+  - `assets/js/password-reset.js`: página de redefinição de senha.
+  - `assets/js/tech-showcase.js`: rotação da Vitrine Tech.
+  - `assets/js/editorial-data.js`: dados editoriais gerados/atualizados por script.
+  - `assets/js/mundo-geek.js`: efeitos do Mundo Geek.
+  - `assets/js/collectibles-catalog.js`: catálogo de colecionáveis.
 
-For these pages, follow `docs/regras-editoriais.md` before editing content:
+- APIs:
+  - `api/session.php`
+  - `api/register.php`
+  - `api/login.php`
+  - `api/logout.php`
+  - `api/request-password-reset.php`
+  - `api/reset-password.php`
+  - `api/comments.php`
+  - `api/article-comments.php`
+  - `api/db-check.php`
+
+- Backend compartilhado:
+  - `app/bootstrap.php`: sessão, JSON, CSRF, headers, validações e rate limit.
+  - `app/Database.php`: conexão PDO.
+  - `app/Mailer.php`: envio de e-mail com `mail()`.
+  - `app/CommentStorage.php`: comentários gerais.
+  - `app/ArticleCommentStorage.php`: comentários por matéria/conteúdo.
+  - `app/PasswordResetStorage.php`: tokens de redefinição de senha.
+
+- Banco de dados:
+  - `database/schema.sql`: schema consolidado.
+  - `database/migrations/*.sql`: migrações manuais.
+
+- Configurações:
+  - `config/database.php`: resolução de credenciais por env ou arquivo privado.
+  - `config/database.private.example.php`: exemplo seguro.
+  - `config/legal.php`: dados legais, versões dos termos e contatos.
+
+- Documentação/regras:
+  - `AGENTS.md`
+  - `docs/regras-editoriais.md`
+  - `docs/regras-vitrine-tech.md`
+  - `docs/cadastro-usuarios.md`
+
+- Automação:
+  - `scripts/update-editorias.py`
+  - `scripts/salvar-github.ps1`
+  - `scripts/salvar-github.cmd`
+  - `scripts/salvar-github.sh`
+  - `.github/workflows/update-editorias.yml`
+
+## Rotas e páginas
+
+As rotas são arquivos `.html` servidos com URLs limpas por `.htaccess`.
+
+- `/` serve `index.html`.
+- `/noticias` serve `noticias.html`.
+- `/indicacoes/monitores` serve `indicacoes/monitores.html`.
+
+Preservar a lógica do `.htaccess` ao alterar páginas ou links internos.
+
+Em páginas dentro de `indicacoes/`, usar caminhos relativos com `../assets/...`.
+
+## Padrões de HTML e seletores
+
+Preservar seletores usados pelo JavaScript:
+
+- Menu/header:
+  - `[data-header]`
+  - `[data-menu]`
+  - `[data-menu-toggle]`
+  - `.site-header`
+  - `.nav-shell`
+
+- Autenticação:
+  - `[data-auth-open]`
+  - `[data-auth-open-panel]`
+
+- Comentários da página inicial:
+  - `[data-feedback-form]`
+  - `[data-feedback-list]`
+  - `[data-feedback-status]`
+  - `[data-feedback-message]`
+  - `[data-feedback-count]`
+
+- Comentários de matérias:
+  - `[data-article-comment-form]`
+  - `[data-content-slug]`
+  - `[data-content-title]`
+  - `[data-article-comment-message]`
+  - `[data-article-comment-count]`
+  - `[data-article-comment-status]`
+  - `[data-article-comment-list]`
+
+- Editorias da home:
+  - `[data-editorial-feature]`
+  - `[data-feature-slot]`
+  - `[data-topic-list]`
+
+- Vitrine Tech:
+  - `[data-tech-picks-panel]`
+  - `.affiliate-product-card`
+  - `.product-media img`
+  - `.product-info h4`
+  - `.product-buy-link`
+
+- Mundo Geek:
+  - `[data-geek-reveal]`
+  - `[data-geek-tilt]`
+
+Não trocar esses seletores sem atualizar também os scripts dependentes.
+
+## Regras editoriais
+
+Antes de alterar estas páginas, ler `docs/regras-editoriais.md`:
 
 - `noticias.html`
 - `novidades-tecnologicas.html`
@@ -83,147 +196,142 @@ For these pages, follow `docs/regras-editoriais.md` before editing content:
 - `alertas-seguranca.html`
 - `tutoriais.html`
 
-When adding new editorial content:
+Ao adicionar novo conteúdo:
 
-- Make the new content the main featured article.
-- Move the previous main article into the compact expandable archive.
-- Keep at most 5 previous contents in `.article-archive-grid[data-archive-limit="5"]`.
-- Preserve title, subtitle, added date, image, and comment form for featured and archived content.
-- Keep stable `data-content-slug` values for existing articles so old comments remain attached.
-- Do not label older content visually as secondary.
-- Preserve the premium article treatment already established in `noticias.html`.
+- O novo conteúdo sempre vira o destaque principal.
+- O destaque principal precisa ter título, subtítulo, data de adição, imagem e formulário de comentário.
+- O destaque anterior deve descer para a área compacta expansível.
+- A área compacta usa `.article-archive-grid[data-archive-limit="5"]`.
+- Manter no máximo 5 conteúdos anteriores.
+- Não classificar visualmente conteúdos anteriores como secundários.
+- Preservar slugs existentes em `data-content-slug`, pois eles vinculam comentários já publicados.
+- Manter imagens antigas com `loading="lazy"` e `decoding="async"` quando aplicável.
+- Usar `noticias.html` como referência visual premium.
 
-## Vitrine Tech
+## Regra da Vitrine Tech
 
-Follow `docs/regras-vitrine-tech.md` before changing products, categories, or homepage Vitrine Tech.
+Antes de alterar produtos, categorias, `index.html` ou `assets/js/tech-showcase.js`, ler `docs/regras-vitrine-tech.md`.
 
-Key rules:
+Regras obrigatórias:
 
-- The homepage must show exactly 5 products.
-- Rotation is every 4 hours in `America/Recife`.
-- Products come from published `indicacoes/*.html` pages.
-- Products must not repeat within the same window or repeat items from the previous day when catalog size allows.
-- Keep the static fallback cards in `index.html` for no-JS cases.
-- When creating a new `indicacoes` category, add it to `sourcePages` in `assets/js/tech-showcase.js`.
-- Preserve product selectors used by the scraper/parser.
+- A página inicial deve exibir exatamente 5 produtos.
+- A troca acontece a cada 4 horas no fuso `America/Recife`.
+- A seleção vem das páginas `indicacoes/*.html`.
+- Não pode repetir produtos dentro da mesma janela.
+- Sempre que houver catálogo suficiente, não deve repetir produtos exibidos no dia anterior.
+- O HTML estático em `index.html` deve permanecer como fallback caso o JavaScript não carregue.
+- Ao criar nova categoria de indicação, incluir a página no array `sourcePages` em `assets/js/tech-showcase.js`.
+- Preservar `.affiliate-product-card`, `.product-media img`, `.product-info h4` e `.product-buy-link`.
 
-## Backend And Data
+## Banco de dados e API
 
-API endpoints:
+O projeto usa MySQL via PDO, sem ORM.
 
-- `api/session.php`: session and CSRF token.
-- `api/register.php`: account creation.
-- `api/login.php`: login.
-- `api/logout.php`: logout.
-- `api/request-password-reset.php`: password reset request.
-- `api/reset-password.php`: password reset submission.
-- `api/comments.php`: homepage/community comments.
-- `api/article-comments.php`: comments tied to editorial content.
-- `api/db-check.php`: database diagnostics.
+Tabelas principais:
 
-Shared backend files:
+- `users`
+- `password_resets`
+- `community_comments`
+- `article_comments`
 
-- `app/bootstrap.php`: JSON responses, session security, CSRF, validation, rate limiting, headers.
-- `app/Database.php`: PDO connection.
-- `app/Mailer.php`: HTML/text email through PHP `mail()`.
-- `app/CommentStorage.php`: community comments table helper.
-- `app/ArticleCommentStorage.php`: article comments table helper.
-- `app/PasswordResetStorage.php`: reset-token table helper.
+Cuidados:
 
-Database:
+- Manter prepared statements.
+- Manter `require_csrf()` em ações que alteram estado.
+- Manter rate limits e honeypot.
+- Não retornar e-mail, IP, user-agent, hash de senha ou token em payload público.
+- Em mudanças de schema, atualizar `database/schema.sql` e criar/ajustar migration quando necessário.
+- Testar endpoints via servidor PHP local quando possível.
 
-- Schema lives in `database/schema.sql`.
-- Migrations live in `database/migrations/*.sql`.
-- There is no ORM.
-- Tables include `users`, `password_resets`, `community_comments`, and `article_comments`.
+## Comandos do projeto
 
-Security expectations:
+Não há comandos de build, lint ou test configurados em `package.json`, pois não existe `package.json`.
 
-- Keep prepared statements.
-- Keep CSRF checks on state-changing requests.
-- Keep rate limits and honeypot fields.
-- Keep output user data sanitized or written with `textContent`.
-- Do not expose IP, user-agent, e-mail, password hashes, tokens, or DB credentials in public responses.
-
-## Styles
-
-- Use `assets/css/styles.css` for global styles.
-- Do not add Tailwind or a new CSS framework casually.
-- Continue the existing class style: kebab-case class names, section-specific class groups, responsive media queries.
-- Preserve global variables in `:root` unless changing design tokens intentionally.
-- Check mobile breakpoints after layout changes because many pages share the same CSS.
-
-## JavaScript Patterns
-
-- Use vanilla JavaScript.
-- Prefer `const` and `let`.
-- Use `data-*` hooks for behavior.
-- Keep API base URL logic based on `document.currentScript` when adding scripts that call `api/`.
-- Use `fetch` with JSON for PHP endpoints.
-- Preserve localStorage keys unless migrating data intentionally.
-
-## Naming
-
-- Files: kebab-case, especially HTML pages and category pages.
-- CSS classes: kebab-case.
-- JavaScript DOM hooks: `data-kebab-case`.
-- PHP functions: snake_case.
-- SQL tables/columns: snake_case.
-- Content slugs: stable, descriptive, lowercase kebab-case.
-
-## Commands
-
-Run locally with PHP when API endpoints are needed:
+Rodar localmente quando precisar de PHP/API:
 
 ```bash
 php -S localhost:8000
 ```
 
-Update editorial data manually:
+Atualizar editorias manualmente:
 
 ```bash
 python scripts/update-editorias.py
 ```
 
-Commit/push helper scripts:
+Salvar no GitHub pelos scripts existentes:
 
 ```bash
 scripts/salvar-github.cmd "Mensagem do commit"
+```
+
+```bash
 scripts/salvar-github.sh "Mensagem do commit"
 ```
 
-There are no formal build, test, or lint commands at this time.
+Diagnóstico de banco em ambiente servido:
 
-## Files To Avoid Changing Casually
+```text
+/api/db-check.php
+```
 
-- `private/database.php`: sensitive local credentials; do not inspect or edit.
-- `.htaccess`: clean URLs and Apache behavior.
-- `_headers`: CSP, cache, and security headers.
-- `app/.htaccess`, `config/.htaccess`, `database/.htaccess`: deny direct public access.
-- `config/database.php`: credential discovery logic.
-- `database/schema.sql` and `database/migrations/*.sql`: production data impact.
-- `assets/js/editorial-data.js`: generated by script/workflow.
-- `assets/js/tech-showcase.js`: business-critical Vitrine Tech rotation.
-- favicon, manifest, and image assets unless the task is visual/content maintenance.
+Se o usuário pedir build/lint/test, explicar que o projeto ainda não possui esses scripts formais e oferecer validação alternativa adequada ao tipo de mudança.
 
-## Risk Checklist
+## Padrões de nomenclatura
 
-Before finishing a change, check for these risks:
+- Arquivos HTML: kebab-case, por exemplo `alertas-seguranca.html`.
+- Categorias de indicação: kebab-case em `indicacoes/`.
+- Classes CSS: kebab-case.
+- Atributos de comportamento: `data-kebab-case`.
+- Funções PHP: snake_case.
+- Tabelas e colunas SQL: snake_case.
+- Slugs de conteúdo: lowercase kebab-case, estáveis e descritivos.
+- JavaScript: preferir `const`/`let`, funções pequenas e DOM APIs nativas.
 
-- Clean URLs still work with `.htaccess`.
-- CSP in `_headers` allows any new external resource.
-- Auth and comments still fetch the correct PHP endpoints.
-- Existing article `data-content-slug` values were not changed accidentally.
-- Vitrine Tech still finds products via `.affiliate-product-card`, `.product-media img`, `.product-info h4`, and `.product-buy-link`.
-- Editorial archive still has no more than 5 previous items.
-- New images have correct relative paths, `alt`, `loading`, and `decoding` where appropriate.
-- Pages under `indicacoes/` use `../assets/...` paths.
-- No real credentials, tokens, or private files were touched.
+## Arquivos que não devem ser alterados sem necessidade
 
-## Verification Guidance
+- `private/database.php`: credenciais reais; não ler, não exibir e não alterar.
+- `.env` e `.env.*`: secrets; não ler nem exibir.
+- `.htaccess`: URLs limpas e regras Apache.
+- `_headers`: CSP, cache e cabeçalhos de segurança.
+- `app/.htaccess`, `config/.htaccess`, `database/.htaccess`: bloqueio de acesso público.
+- `config/database.php`: resolução de credenciais.
+- `database/schema.sql` e `database/migrations/*.sql`: impacto direto em produção.
+- `assets/js/editorial-data.js`: arquivo gerado por automação, mexer apenas quando a tarefa for editorial/curadoria.
+- `assets/js/tech-showcase.js`: regra crítica da Vitrine Tech.
+- Favicons, manifesto e imagens de marca, salvo mudança visual solicitada.
 
-- For static-only edits, inspect the affected HTML/CSS/JS and test in browser when possible.
-- For PHP/API changes, run with `php -S localhost:8000` and test endpoint behavior.
-- For database-related changes, compare with `database/schema.sql` and the relevant migration.
-- For editorial automation, run `python scripts/update-editorias.py` only when intentionally updating generated editorial data.
-- If no automated tests exist for the touched area, state the manual verification performed and the remaining risk.
+## Riscos ao alterar o projeto
+
+- Quebrar URLs limpas ao mexer em `.htaccess`.
+- Quebrar CSP ou carregamento de recursos externos ao alterar `_headers`.
+- Quebrar login, cadastro, sessão ou comentários ao alterar `auth.js`, `main.js`, `bootstrap.php` ou endpoints em `api/`.
+- Perder vínculo de comentários ao renomear `data-content-slug`.
+- Quebrar a Vitrine Tech ao mudar estrutura dos cards de produto.
+- Quebrar páginas em `indicacoes/` por usar caminho `assets/...` em vez de `../assets/...`.
+- Criar inconsistência visual por mudar um HTML repetido e esquecer páginas similares.
+- Perder alteração manual em `assets/js/editorial-data.js` quando o workflow atualizar o arquivo.
+- Introduzir dependência de Node/Tailwind/Composer sem infraestrutura do projeto.
+
+## Validação antes de finalizar
+
+Escolher validação conforme a mudança:
+
+- HTML/CSS/JS estático: revisar no navegador e conferir console quando possível.
+- Alteração de rota/link: conferir URL limpa esperada.
+- API/PHP: rodar `php -S localhost:8000` e testar endpoint ou fluxo afetado.
+- Banco: comparar com `database/schema.sql` e migrations.
+- Editorias: conferir regras de destaque, arquivo, slug, imagem, data e limite de 5 arquivos anteriores.
+- Vitrine Tech: verificar 5 produtos, `sourcePages`, seletores dos cards e fallback no `index.html`.
+
+Se não houver teste automatizado para a área, informar a validação manual realizada e o risco restante.
+
+## Resposta final esperada
+
+Ao concluir uma tarefa neste projeto, explicar de forma objetiva:
+
+- Quais arquivos foram alterados.
+- Por que cada alteração foi feita.
+- Quais comandos/validações foram executados.
+- Quais comandos não puderam ser executados e por quê.
+- Qual risco residual ainda existe, se houver.
