@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-07",
+  "updatedAt": "2026-05-09",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-05-06",
+          "title": "Apple's AirTag-Sized AI Pendant: Five Features Rumored So Far",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/08/ai-pendant-five-features/",
+          "date": "2026-05-08",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Finding the right laptop for your lifestyle is more complicated than you may think. One quick search in Google and you’re hit with a tidal wave of countless models and price points. It’s a lot to sort through a..."
+          "summary": "Apple is developing a wearable AI device that's been described as a pin or pendant, and that could compete with a similar AI product coming from OpenAI's Jony Ive. It wasn't clear if the wearable would actually..."
         },
         {
-          "title": "World Password Day: Fix these 4 security mistakes before hackers find them",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/696828/world-password-day-fix-these-4-security-mistakes-before-hackers-find-them.html",
-          "date": "2026-05-07",
+          "title": "Leaker processado pela Apple vazou visual de mais um novo iPhone; veja vídeo",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/smartphone/leaker-processado-pela-apple-vazou-visual-de-mais-um-novo-iphone-veja-video/",
+          "date": "2026-05-08",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "So many arbitrary holidays exist (ahem, Tin Can Day ), but World Password Day is one fully supported by the PCWorld staff. We’re all for ditching weak passwords — especially when strengthening your online secur..."
+          "summary": "Jon Prosser, YouTuber atualmente processado pela Apple por vazamentos ligados ao iOS 26, publicou um novo render do iPhone 18 Pro . O vídeo exibe um celular com novidades no visual e nas tecnologias de conectiv..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Lenovo Yoga Slim 7x Gen 11 review: Powerful but inconsistent",
+          "title": "Best gaming laptops 2026: 4 top options for portable performance",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3126806/lenovo-yoga-slim-7x-gen-11-review.html",
-          "date": "2026-05-06",
+          "url": "https://www.pcworld.com/article/407493/best-gaming-laptops.html",
+          "date": "2026-05-08",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "At a glance Expert's Rating Pros USB4 ports on both sides Good balance of performance and battery Colorful, accurate display Cons Battery life isn’t class leading Only USB4 ports Emulation saps performance GPU..."
+          "summary": "Not all gaming laptops deliver the same experience, which is important to know when you’re shopping for one. Some are made to push boundaries by maximizing performance, while others prioritize design or lightin..."
         },
         {
-          "title": "Best mini PC deals: Top Intel and AMD picks for performance, gaming, and more",
+          "title": "Tested! The best USB-C cables for charging and data transfers",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2999556/best-mini-pc-deals-top-picks-for-performance-gaming-and-more.html",
-          "date": "2026-05-06",
+          "url": "https://www.pcworld.com/article/395115/the-best-usb-c-cables-for-charging-and-transferring-data.html",
+          "date": "2026-05-08",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "At a glance Top AMD mini PC deal picks GMKtec M8 —$390 (19% off on Amazon) Bosgame E5 —$320 (20% of on Amazon) Geekom AI A7 Max —$699 (26% off on Amazon) Top Intel mini PC deal picks GMKtec M2 Pro S —$440 (20%..."
+          "summary": "Try shopping for a USB-C cable and you’ll be struck by the confusing disparities in cable pricing and performance claims. These are just cables, right? Can they really be that different? At PCWorld we’ve used o..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "\"Beto Carrero dos robôs\": novo parque abre portas com tema inédito",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/produtos/beto-carrero-dos-robos-novo-parque-abre-portas-com-tema-inedito/",
-          "date": "2026-05-06",
+          "title": "Here is Yarbo’s promise to fix the robot mower that ran me over",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/tech/926989/yarbo-robot-lawn-mower-hack-company-update-security-promise",
+          "date": "2026-05-09",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "A Galaxy Corporation, empresa de tecnologia de IA e entretenimento que gerencia artistas coreanos, inaugurou o primeiro parque temático de robôs do mundo. O \"Beto Carrero dos robôs\" promete combinar tecnologia..."
+          "summary": "Yesterday, I told you how a hacker ran me over with a robot lawn mower. We explained how thousands of these bladed Chinese robots, made by Yarbo, could be hijacked with ease - exposing people's GPS coordinates..."
         },
         {
-          "title": "Top 5 Cryptos to Watch Right Now as Market Interest Shifts Toward Emerging Tokens Like Little Pepe ($LILPEPE)",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/cryptocurrency-analytics-insight/top-5-cryptos-to-watch-right-now-as-market-interest-shifts-toward-emerging-tokens-like-little-pepe-lilpepe",
-          "date": "2026-05-07",
+          "title": "You, too, can build this Arduino Nano Tamagotchi with a 3D-printed shell",
+          "source": "XDA Developers",
+          "url": "https://www.xda-developers.com/you-too-can-build-this-arduino-nano-tamagotchi-with-a-3d-printed-shell/",
+          "date": "2026-05-09",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "It has been observed that there are numerous examples of capital migration in the crypto sector in 2026, where one can see that the investors' focus is changing from mainstream cryptos to alternative cryptocurr..."
+          "summary": "It comes with a nice OLED upgrade, too."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Chrome silently downloads a 4GB AI model. Here’s how to remove it",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3132803/chrome-silently-downloads-a-4gb-ai-model-heres-how-to-remove-it.html",
-          "date": "2026-05-06",
+          "title": "Oferta boa ou cilada? Como saber se hardware em promoção é verdade ou maquiagem",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/hardware/oferta-boa-ou-cilada-como-saber-se-hardware-em-promocao-e-verdade-ou-maquiagem/",
+          "date": "2026-05-08",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Google’s Chrome browser is already a notorious storage hog, but now comes word that it’s crowding our PC drives in a new way: with a local AI model. That model, spotted by That Privacy Guy , gets silently downl..."
+          "summary": "Você provavelmente já passou por isto: abre uma loja online e se depara com um banner gigantesco anunciando um componente que você namora há meses com um desconto que parece agressivo demais para ser verdade. O..."
         },
         {
-          "title": "Why is my Wi-Fi still slow after upgrading my internet plan?",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3071239/why-is-my-wi-fi-still-slow-after-upgrading-my-internet-plan.html",
-          "date": "2026-05-06",
+          "title": "Veja como remover arquivo de modelo de IA que Chrome baixa sem permissão",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/software/veja-como-remover-arquivo-de-modelo-de-ia-que-chrome-baixa-sem-permissao/",
+          "date": "2026-05-08",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "A faster internet plan doesn’t always translate to faster real-world Wi-Fi – your router may be limiting the speeds your devices receive. Older routers struggle with walls, distance, and multiple connected devi..."
+          "summary": "Uma denúncia do pesquisador de segurança Alexander Hanff revelou que o Chrome pode baixar até 4 GB de arquivos de um modelo de IA sem pedir permissão para o usuário . No entanto, existe um caminho para remover..."
         }
       ]
     }
