@@ -30,6 +30,7 @@ Mapa curto para orientar o Codex no projeto `encontreaquitech.com` sem carregar 
 - Banco: `database/schema.sql`, `database/migrations/*.sql`, `app/Database.php`, `config/database.php`.
 - SEO e indexacao: paginas `.html`, `robots.txt`, `site.webmanifest`, `_headers`.
 - Automacao editorial: `scripts/update-editorias.py`, `.github/workflows/update-editorias.yml`, `assets/js/editorial-data.js`.
+- Modo manutencao: `manutencao.html`, `.htaccess`, `maintenance.flag`, `assets/css/styles.css`, `robots.txt`.
 
 ## Arquivos sensiveis
 

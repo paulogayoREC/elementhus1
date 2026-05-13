@@ -45,6 +45,13 @@ Combine apenas as skills necessarias para a tarefa atual.
 - Vitrine Tech, produtos ou indicacoes: leia `docs/regras-vitrine-tech.md`.
 - Cadastro, login ou usuarios: leia `docs/cadastro-usuarios.md` somente se necessario.
 
+## Modo manutencao
+
+- Pagina oculta: `manutencao.html`.
+- Quando o usuario pedir `manutencao on` ou `manutenção on`, crie `maintenance.flag` na raiz do projeto.
+- Quando o usuario pedir `manutencao off` ou `manutenção off`, remova `maintenance.flag`.
+- Com `maintenance.flag` presente, o `.htaccess` entrega `manutencao.html` como resposta 503 para rotas publicas, mantendo assets liberados.
+
 ## Validacao
 
 - HTML/CSS/JS: revisar no navegador e console quando possivel.
