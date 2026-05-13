@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-11",
+  "updatedAt": "2026-05-13",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Quanto a Samsung lucra em celular vendido no Brasil? Especialistas explicam",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/smartphone/quanto-a-samsung-lucra-em-celular-vendido-no-brasil-especialistas-explicam/",
-          "date": "2026-05-10",
+          "title": "US Stock Market Live Updates: S&P 500 Drifts as Oil Slides, Tech Tries to Rebound With Earnings Ahead",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/business/us-stock-market-live-updates-sp-500-drifts-as-oil-slides-tech-tries-to-rebound-with-earnings-ahead",
+          "date": "2026-05-13",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Você paga caro no seu Galaxy S ou no seu dobrável da linha Z, mas será que o lucro real da Samsung é tão alto assim? Entenda os fatores que influenciam os valores de produção e venda dos smartphones. Comparativ..."
+          "summary": "Earnings Picture Retail names are splitting the market after morning results. Home Depot is down 2.4% after cutting its full-year sales outlook, citing softer big-ticket spending. Walmart is up 1.5% thanks to a..."
         },
         {
-          "title": "Quanto custa fabricar um celular? Veja quanto vira lucro no Brasil",
+          "title": "Claude fora do ar? Usuários reclamam de instabilidade no serviço de IA hoje (12)",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/smartphone/quanto-custa-fabricar-um-celular-veja-quanto-vira-lucro-no-brasil/",
-          "date": "2026-05-09",
+          "url": "https://canaltech.com.br/inteligencia-artificial/claude-fora-do-ar-usuarios-reclamam-de-instabilidade-no-servico-de-ia-hoje-12/",
+          "date": "2026-05-12",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "O preço dos smartphones no Brasil é alto, mas será que todo o valor pago em um celular novo se torna lucro? Descubra como impostos e custos operacionais devoram essa margem no país. Quanto custa um celular com..."
+          "summary": "Serviço de inteligência artificial da Anthropic, o Claude passa por instabilidades na tarde desta terça-feira (12) . De acordo com a página oficial de status da ferramenta, há “erros elevados” neste momento no..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Best gaming laptops 2026: 4 top options for portable performance",
+          "title": "Googlebooks aren’t just Android laptops. They’re a Trojan horse for Gemini",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/407493/best-gaming-laptops.html",
-          "date": "2026-05-08",
+          "url": "https://www.pcworld.com/article/3136774/googlebooks-arent-just-android-laptops-theyre-a-trojan-horse-for-gemini.html",
+          "date": "2026-05-12",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Not all gaming laptops deliver the same experience, which is important to know when you’re shopping for one. Some are made to push boundaries by maximizing performance, while others prioritize design or lightin..."
+          "summary": "We’ve been hearing about Google’s push to unite Android and ChromeOS into a new laptop operating system rumored to be called “Aluminum” for a while now. A week before this year’s Google I/O conference, the comp..."
         },
         {
-          "title": "Tested! The best USB-C cables for charging and data transfers",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/395115/the-best-usb-c-cables-for-charging-and-transferring-data.html",
-          "date": "2026-05-08",
+          "title": "Google Android Show 2026: Gemini Intelligence, Googlebooks, and All Major Announcements",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/tech-news/google-android-show-2026-gemini-intelligence-googlebooks-and-all-major-announcements",
+          "date": "2026-05-13",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Try shopping for a USB-C cable and you’ll be struck by the confusing disparities in cable pricing and performance claims. These are just cables, right? Can they really be that different? At PCWorld we’ve used o..."
+          "summary": "Overview: Google Android Show 2026 introduced Gemini Intelligence, signaling Google’s biggest AI-driven transformation for Android, ChromeOS, wearables, cars, and connected devices. From futuristic Googlebooks..."
         }
       ]
     },
@@ -66,14 +66,14 @@ window.editorialData = {
           "summary": "MIT researchers have developed a 3D-printed three-sided zipper that rapidly transforms floppy structures into rigid beams, robotic limbs, and deployable frameworks using triangular geometry."
         },
         {
-          "title": "I was wrong about robot pool cleaners — 7 myths, busted",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3124250/i-was-wrong-about-robot-pool-cleaners-7-myths-busted.html",
-          "date": "2026-05-11",
+          "title": "The Unitree GD01 Is a Giant Mecha Robot You Can Actually Buy",
+          "source": "Wired",
+          "url": "https://www.wired.com/story/unitree-gd01-mecha-robot/",
+          "date": "2026-05-12",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "In my (new!) role as the editor of PCWorld’s growing home robotics category, I was only vaguely aware of robot pool cleaners . And when I did think about them, I assumed they shared many of the same limitations..."
+          "summary": "China’s Unitree, famous for making low-cost dancing robots, will now sell you a giant, wall-smashing mecha."
         }
       ]
     },
@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
+          "title": "Hackers Used AI to Develop First Known Zero-Day 2FA Bypass for Mass Exploitation",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html",
+          "date": "2026-05-11",
+          "tag": "Alerta",
+          "featured": true,
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "Google on Monday disclosed that it identified an unknown threat actor using a zero-day exploit that it said was likely developed with an artificial intelligence (AI) system, marking the first time the technolog..."
+        },
+        {
           "title": "Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak",
           "source": "The Hacker News",
           "url": "https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html",
           "date": "2026-05-10",
           "tag": "Alerta",
-          "featured": true,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "Cybersecurity researchers have disclosed a critical security vulnerability in Ollama that, if successfully exploited, could allow a remote, unauthenticated attacker to leak its entire process memory. The out-of..."
-        },
-        {
-          "title": "Mirai-Based xlabs_v1 Botnet Exploits ADB to Hijack IoT Devices for DDoS Attacks",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/05/mirai-based-xlabsv1-botnet-exploits-adb.html",
-          "date": "2026-05-06",
-          "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "Cybersecurity researchers have exposed a new Mirai-derived botnet that self-identifies as xlabs_v1 and targets internet-exposed devices running Android Debug Bridge (ADB) to enlist them in a network capable of..."
+          "summary": "Cybersecurity researchers have disclosed a critical security vulnerability in Ollama that, if successfully exploited, could allow a remote, unauthenticated attacker to leak its entire process memory. The out-of..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Review Logitech Pro X2 Superstrike | O mouse gamer definitivo",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/review-logitech-pro-x2-superstrike/",
-          "date": "2026-05-10",
+          "title": "Best 5 VPNs for streaming Netflix and other services",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/618517/best-vpn-for-streaming-netflix.html",
+          "date": "2026-05-12",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "No mundo do PC gaming, o hardware brilha. Claro, sem um bom processador e placa de vídeo, entre outros componentes, não é nem possível rodar um game minimamente bem. Porém um setup gamer não vive só de hardware..."
+          "summary": "VPNs aren’t just useful for keeping your online activities safe and private, they’re also a great way to bypass restrictions on streaming content in other countries. The top VPN providers work hard to stay one..."
         },
         {
-          "title": "Beats headphones and earbuds surprisingly support these Android-exclusive features",
-          "source": "Android Central",
-          "url": "https://www.androidcentral.com/accessories/headphones/beats-headphones-and-earbuds-surprisingly-support-these-android-exclusive-features",
-          "date": "2026-05-10",
+          "title": "Best monitors 2026: Top picks for gaming, 4K, HDR, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/811315/best-monitors-2.html",
+          "date": "2026-05-12",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Google ecosystem features like Fast Pair, Find My Device, and Audio Switching are surprisingly available on Beats gear — here's how to use them."
+          "summary": "Need a new monitor for your PC? I’ve combed through scores of options to find the best monitors on the market right now. These picks are the result of hundreds of hours spent testing the latest models from Acer..."
         }
       ]
     }
