@@ -1,5 +1,6 @@
 ---
 name: encontreaquitech-project-guide
+
 description: guia base do projeto encontreaquitech.com para orientar o codex ao trabalhar no código do site. use quando a tarefa envolver criar páginas, ajustar componentes, corrigir bugs, revisar rotas, alterar estilos, mexer em integrações, rodar comandos, revisar build, lint, testes ou entender a estrutura do repositório. esta skill deve fazer o codex seguir os padrões reais do projeto, evitar alterações desnecessárias e explicar claramente os arquivos modificados.
 ---
 
