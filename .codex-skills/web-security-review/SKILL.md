@@ -1,6 +1,6 @@
 ---
 name: web-security-review
-description: guia universal para revisar segurança em projetos web. use quando a tarefa envolver formulários, login, autenticação, autorização, sessão, cookies, comentários, inputs, upload, api routes, xss, csrf, rate limit, validação, sanitização, variáveis de ambiente, chaves secretas ou links externos.
+description: revisar segurança web: login, sessão, cookies, inputs, uploads, APIs, XSS, CSRF, rate limit e secrets.
 ---
 
 # Web Security Review

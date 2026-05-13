@@ -1,6 +1,6 @@
 ---
 name: web-ui-components
-description: guia universal para criar, ajustar e revisar componentes visuais em projetos web. use quando a tarefa envolver layout, cards, header, footer, menu, botões, formulários, responsividade, css, tailwind, animações, dark mode, design system, acessibilidade visual ou consistência de interface.
+description: criar ou ajustar UI web: layout, componentes, CSS, responsividade, acessibilidade visual e consistência.
 ---
 
 # Web UI Components

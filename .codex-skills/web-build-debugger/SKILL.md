@@ -1,6 +1,6 @@
 ---
 name: web-build-debugger
-description: guia universal para corrigir erros de build, lint, typescript, dependências, imports, deploy e execução em projetos web. use quando a tarefa envolver npm run build, npm run dev, lint, typecheck, erro de compilação, erro de deploy, vite, next, react, node, dependências quebradas ou rotas com erro.
+description: corrigir build, lint, typecheck, deploy, imports, dependências e erros de execução em projetos web.
 ---
 
 # Web Build Debugger

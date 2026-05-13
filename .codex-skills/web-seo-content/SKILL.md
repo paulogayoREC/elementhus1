@@ -1,6 +1,6 @@
 ---
 name: web-seo-content
-description: guia universal para melhorar seo técnico e editorial em projetos web. use quando a tarefa envolver title, meta description, headings, slug, schema, structured data, open graph, twitter card, sitemap, robots.txt, artigo, blog, notícia, página institucional, indexação, links internos ou conteúdo otimizado para mecanismos de busca.
+description: otimizar SEO técnico/editorial: title, metas, headings, schema, OG, sitemap, robots, artigos e links internos.
 ---
 
 # Web SEO Content

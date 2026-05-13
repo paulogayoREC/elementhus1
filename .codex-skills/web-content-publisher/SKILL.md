@@ -1,6 +1,6 @@
 ---
 name: web-content-publisher
-description: guia universal para criar, revisar e publicar conteúdos em sites, blogs, portais, páginas institucionais e projetos web editoriais. use quando a tarefa envolver artigo, notícia, tutorial, alerta, post de blog, página de conteúdo, categoria, resumo, chamada, imagem, tom de voz, revisão textual ou publicação editorial.
+description: criar/revisar conteúdo editorial web: artigos, notícias, tutoriais, categorias, resumo, imagens e tom de voz.
 ---
 
 # Web Content Publisher

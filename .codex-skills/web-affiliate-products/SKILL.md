@@ -1,6 +1,6 @@
 ---
 name: web-affiliate-products
-description: guia universal para criar e revisar vitrines, cards e páginas com produtos, links afiliados, recomendações e monetização em projetos web. use quando a tarefa envolver amazon, afiliados, produto, preço, botão comprar, vitrine, comparativo, review, recomendação, tracking, disclosure comercial ou links externos patrocinados.
+description: criar/revisar produtos e links afiliados: cards, vitrines, comparativos, botões, disclosure e links externos.
 ---
 
 # Web Affiliate Products

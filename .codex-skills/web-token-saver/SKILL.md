@@ -1,6 +1,6 @@
 ---
 name: web-token-saver
-description: guia para economizar contexto e tokens ao trabalhar com codex em projetos web. use quando a tarefa envolver análise, edição, debug, refatoração ou revisão de código sem necessidade de carregar o repositório inteiro. ajuda o codex a abrir poucos arquivos, evitar leitura ampla, fazer alterações pequenas e explicar decisões com clareza.
+description: economizar contexto em tarefas web; use para leitura seletiva, edição pontual, debug e revisão sem abrir o repo inteiro.
 ---
 
 # Web Token Saver

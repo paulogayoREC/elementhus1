@@ -1,6 +1,6 @@
 ---
 name: web-performance-auditor
-description: guia universal para auditar e melhorar performance de projetos web. use quando a tarefa envolver velocidade, lighthouse, core web vitals, lcp, cls, inp, bundle, imagens, lazy loading, build pesado, carregamento lento, scripts externos, renderização inicial ou otimização de páginas.
+description: auditar performance web: Core Web Vitals, imagens, bundle, carregamento, scripts e renderização inicial.
 ---
 
 # Web Performance Auditor
