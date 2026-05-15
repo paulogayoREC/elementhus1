@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-13",
+  "updatedAt": "2026-05-15",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "US Stock Market Live Updates: S&P 500 Drifts as Oil Slides, Tech Tries to Rebound With Earnings Ahead",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/business/us-stock-market-live-updates-sp-500-drifts-as-oil-slides-tech-tries-to-rebound-with-earnings-ahead",
-          "date": "2026-05-13",
+          "title": "Six Popular iPhone Apps Now Available on CarPlay",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/14/four-popular-iphone-apps-now-on-carplay/",
+          "date": "2026-05-14",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Earnings Picture Retail names are splitting the market after morning results. Home Depot is down 2.4% after cutting its full-year sales outlook, citing softer big-ticket spending. Walmart is up 1.5% thanks to a..."
+          "summary": "Apple's CarPlay system for accessing iPhone apps on a vehicle's dashboard screen has received six popular apps in recent weeks: ChatGPT, Perplexity, Grok, Google Meet, WhatsApp, and the indie artist streaming p..."
         },
         {
-          "title": "Claude fora do ar? Usuários reclamam de instabilidade no serviço de IA hoje (12)",
+          "title": "Fornecedora da Apple, Foxconn é invadida e confirma roubo de 8 TB de dados",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/claude-fora-do-ar-usuarios-reclamam-de-instabilidade-no-servico-de-ia-hoje-12/",
-          "date": "2026-05-12",
+          "url": "https://canaltech.com.br/seguranca/fornecedora-da-apple-foxconn-e-invadida-e-confirma-roubo-de-8-tb-de-dados/",
+          "date": "2026-05-14",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Serviço de inteligência artificial da Anthropic, o Claude passa por instabilidades na tarde desta terça-feira (12) . De acordo com a página oficial de status da ferramenta, há “erros elevados” neste momento no..."
+          "summary": "A fabricante Foxconn , principal fornecedora de chips da Apple e uma das maiores fabricantes de eletrônicos do mundo, confirmou que suas operações na América do Norte foram alvo de um ataque de ransomware . De..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Googlebooks aren’t just Android laptops. They’re a Trojan horse for Gemini",
+          "title": "AMD is bringing FSR 4 to older Radeon cards, but you’ll have to wait",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3136774/googlebooks-arent-just-android-laptops-theyre-a-trojan-horse-for-gemini.html",
-          "date": "2026-05-12",
+          "url": "https://www.pcworld.com/article/3139796/amd-is-bringing-fsr-4-to-older-radeon-cards-but-youll-have-to-wait.html",
+          "date": "2026-05-14",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "We’ve been hearing about Google’s push to unite Android and ChromeOS into a new laptop operating system rumored to be called “Aluminum” for a while now. A week before this year’s Google I/O conference, the comp..."
+          "summary": "FidelityFX Super Resolution (FSR) is AMD’s alternative to upscaler tech like Nvidia DLSS, and it’s pretty good. But the latest frame generation goodies in FSR 4 are only available to the latest Radeon 9000-seri..."
         },
         {
-          "title": "Google Android Show 2026: Gemini Intelligence, Googlebooks, and All Major Announcements",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/tech-news/google-android-show-2026-gemini-intelligence-googlebooks-and-all-major-announcements",
-          "date": "2026-05-13",
+          "title": "Lenovo ThinkPad P16s Gen 4 review: Reliable but falling behind",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3131625/lenovo-thinkpad-p16s-gen-4-review-2.html",
+          "date": "2026-05-14",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Overview: Google Android Show 2026 introduced Gemini Intelligence, signaling Google’s biggest AI-driven transformation for Android, ChromeOS, wearables, cars, and connected devices. From futuristic Googlebooks..."
+          "summary": "At a glance Expert's Rating Pros Vivid, sharp OLED touchscreen Mics suppress background noise wonderfully Expandable memory and storage Respectable overall performance Good keyboard and number pad Cons Prosumer..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "MIT researchers revive 40-year-old triangular zipper concept now made possible by 3D printing, creates shape-shifting robots and deployable structures — 3D-printed 'Y-Zipper' turns floppy tentacles into rigid beams in seconds",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/3d-printing/mit-researchers-revive-40-year-old-triangular-zipper-concept-now-made-possible-by-3d-printing-creates-shape-shifting-robots-and-deployable-structures-3d-printed-y-zipper-turns-floppy-tentacles-into-rigid-beams-in-seconds",
-          "date": "2026-05-10",
+          "title": "Build a Radio Wave Detector With Balls of Aluminum Foil!",
+          "source": "Wired",
+          "url": "https://www.wired.com/story/build-a-radio-wave-detector-with-balls-of-aluminum-foil/",
+          "date": "2026-05-15",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "MIT researchers have developed a 3D-printed three-sided zipper that rapidly transforms floppy structures into rigid beams, robotic limbs, and deployable frameworks using triangular geometry."
+          "summary": "Here’s how you can hack together a radio transmitter and receiver out of stuff you have at home—and explore the weirdness of wireless."
         },
         {
-          "title": "The Unitree GD01 Is a Giant Mecha Robot You Can Actually Buy",
-          "source": "Wired",
-          "url": "https://www.wired.com/story/unitree-gd01-mecha-robot/",
-          "date": "2026-05-12",
+          "title": "This viral Dutch Fish Doorbell is peak internet",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3133114/this-viral-dutch-fish-doorbell-is-peak-internet.html",
+          "date": "2026-05-15",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "China’s Unitree, famous for making low-cost dancing robots, will now sell you a giant, wall-smashing mecha."
+          "summary": "Every spring in the Dutch city of Utrecht, thousands of fish attempt to migrate through the city’s canals to reach spawning grounds, but locked flood gates stay shut for long stretches to manage water levels. S..."
         }
       ]
     },
@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
+          "title": "CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html",
+          "date": "2026-05-15",
+          "tag": "Alerta",
+          "featured": true,
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "The U.S.Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added a newly disclosed vulnerability impacting Cisco Catalyst SD-WAN Controller to its Known Exploited Vulnerabilities (KEV) catalog..."
+        },
+        {
           "title": "Hackers Used AI to Develop First Known Zero-Day 2FA Bypass for Mass Exploitation",
           "source": "The Hacker News",
           "url": "https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html",
           "date": "2026-05-11",
           "tag": "Alerta",
-          "featured": true,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "Google on Monday disclosed that it identified an unknown threat actor using a zero-day exploit that it said was likely developed with an artificial intelligence (AI) system, marking the first time the technolog..."
-        },
-        {
-          "title": "Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html",
-          "date": "2026-05-10",
-          "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "Cybersecurity researchers have disclosed a critical security vulnerability in Ollama that, if successfully exploited, could allow a remote, unauthenticated attacker to leak its entire process memory. The out-of..."
+          "summary": "Google on Monday disclosed that it identified an unknown threat actor using a zero-day exploit that it said was likely developed with an artificial intelligence (AI) system, marking the first time the technolog..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Best 5 VPNs for streaming Netflix and other services",
+          "title": "Best laptops for engineering students: Top 5 picks for power and portability",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/618517/best-vpn-for-streaming-netflix.html",
-          "date": "2026-05-12",
+          "url": "https://www.pcworld.com/article/829122/best-laptops-for-engineering-students.html",
+          "date": "2026-05-14",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "VPNs aren’t just useful for keeping your online activities safe and private, they’re also a great way to bypass restrictions on streaming content in other countries. The top VPN providers work hard to stay one..."
+          "summary": "Engineering school isn’t for the faint of heart. Between intense software and constant deadlines, your laptop has to work as hard as you do (without weighing you down). You need a machine that can handle CAD, r..."
         },
         {
-          "title": "Best monitors 2026: Top picks for gaming, 4K, HDR, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/811315/best-monitors-2.html",
-          "date": "2026-05-12",
+          "title": "The best Motorola Razr Fold preorder deals — how to buy the innovative foldable",
+          "source": "Android Central",
+          "url": "https://www.androidcentral.com/phones/motorola/best-motorola-razr-fold-deals",
+          "date": "2026-05-14",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Need a new monitor for your PC? I’ve combed through scores of options to find the best monitors on the market right now. These picks are the result of hundreds of hours spent testing the latest models from Acer..."
+          "summary": "It's official: the Motorola Razr Fold is finally available for preorder, and I've gathered all of the best early offers into this guide."
         }
       ]
     }
