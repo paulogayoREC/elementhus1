@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-17",
+  "updatedAt": "2026-05-19",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "ChatGPT se conecta ao seu app de banco para ser o seu conselheiro financeiro",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/apps/chatgpt-se-conecta-ao-seu-app-de-banco-para-ser-o-seu-conselheiro-financeiro/",
-          "date": "2026-05-15",
+          "title": "Best PC computer deals: Top picks from desktops to all-in-ones",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/813362/best-pc-computer-deals.html",
+          "date": "2026-05-19",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A OpenAI lançou nesta sexta-feira (15) uma ferramenta de finanças pessoais para o ChatGPT . A novidade permite que os usuários conectem suas contas bancárias diretamente ao chatbot para receber conselhos financ..."
+          "summary": "At a glance Top gaming desktop computer deals HP Omen 16L —$1,170 (19% off on BestBuy) Thermaltake LCGS Quartz i1460 —$984 (11% off on Amazon) Skytech King95 —$1,280 (20% off on BestBuy) Top mini PC deals GMKte..."
         },
         {
-          "title": "AI is still waiting for its VisiCalc moment",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3139886/ai-is-still-waiting-for-its-visicalc-moment.html",
-          "date": "2026-05-15",
+          "title": "O aplicativo não é o serviço: Uber, IA e a disputa pelos canais de distribuição",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/colunas/o-aplicativo-nao-e-o-servico-uber-ia-e-a-disputa-pelos-canais-de-distribuicao/",
+          "date": "2026-05-18",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The arrival of Claude for Small Business earlier this week marked an interesting moment–and a savvy strategic move–for Anthropic. Rather than saddling web browsers with more AI slop or trying to slather AI onto..."
+          "summary": "*Vinícius Guahy A recente integração entre a Uber e o Claude , permitindo que usuários solicitem corridas diretamente dentro de uma conversa com inteligência artificial, não deve ser lida apenas como mais um av..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Recurso que transforma mouse em assistente de IA já pode ser testado; veja como",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/recurso-que-transforma-mouse-em-assistente-de-ia-ja-pode-ser-testado-veja-como/",
-          "date": "2026-05-15",
+          "title": "Google I/O 2026 Live Updates: Gemini, Android 17, XR Glasses and More",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/artificial-intelligence/google-io-2026-live-updates-gemini-android-17-xr-glasses-and-more",
+          "date": "2026-05-19",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Uma das novidades dos Googlebooks, os notebooks com sistema Android e foco em IA do Google, é a presença de um “cursor mágico” do mouse para realizar ações rápidas. Os computadores ainda não foram lançados, mas..."
+          "summary": "Google I/O 2026 Event Will Include Several Focused Sessions As in past editions, the event will include several focused sessions highlighting updates across key products and platforms, including Google Chrome..."
         },
         {
-          "title": "Top Stories: iPhone 18 Pro Rumors, iOS 26.5 Released, and More",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/05/16/top-stories-iphone-18-pro-rumors/",
-          "date": "2026-05-16",
+          "title": "Tecnologia da Microsoft reduz tempo de carregamento de Forza Horizon 6 em 95%",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/games/tecnologia-da-microsoft-reduz-tempo-de-carregamento-de-forza-horizon-6-em-95/",
+          "date": "2026-05-18",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "WWDC is less than a month away, so the focus of the Apple world is turning toward what we might see in the next major operating system updates, but we're also looking ahead to the busy hardware update season in..."
+          "summary": "Lançado em outubro do ano passado, o Advanced Shader Delivery (ASD) , ferramenta da Microsoft para diminuir a compilação de shaders, mostra do que é capaz agora em Forza Horizon 6 . Uma publicação da própria do..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "Por que o crunch time ainda define o desenvolvimento de games?",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/games/por-que-o-crunch-time-ainda-define-o-desenvolvimento-de-games/",
-          "date": "2026-05-16",
+          "title": "Barclays says humanoid robots can offset 60% of China’s 37M worker shortfall by 2035",
+          "source": "The Next Web",
+          "url": "https://thenextweb.com/news/barclays-china-humanoid-robots-37-million-workforce-2035",
+          "date": "2026-05-19",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "A cerca de seis meses do lançamento, novos relatos de funcionários sugerem que a Rockstar Games começou a exigir horas extras de desenvolvedores para entregar GTA 6 a tempo. No site de empregos Glassdoor, um fu..."
+          "summary": "The British bank’s new note estimates humanoid robots can offset 60% of the projected labour-force decline by 2035, with China’s workforce shrinking by 37 million people over the next ten years. Up to 24 millio..."
         },
         {
-          "title": "OpenAI Snaps Up AI Startup Famous for Hyper-Real Celebrity Voices",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/news/openai-snaps-up-ai-startup-famous-for-hyper-real-celebrity-voices",
-          "date": "2026-05-17",
+          "title": "Humanoid Robots and Robot Pets Are No Longer Welcome on Southwest Flights",
+          "source": "CNET",
+          "url": "https://www.cnet.com/tech/services-and-software/no-robots-on-southwest-flights/",
+          "date": "2026-05-18",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "OpenAI has acquired Weights.gg, a startup that's well known for AI voice cloning . The platform became popular online after people started making realistic voice clips, songs, and memes with AI-generated versio..."
+          "summary": "Concerns over lithium-ion batteries — not the bots' personalities — keeps them off Southwest flights."
         }
       ]
     },
@@ -91,14 +91,14 @@ window.editorialData = {
           "summary": "The U.S.Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added a newly disclosed vulnerability impacting Cisco Catalyst SD-WAN Controller to its Known Exploited Vulnerabilities (KEV) catalog..."
         },
         {
-          "title": "Hackers Used AI to Develop First Known Zero-Day 2FA Bypass for Mass Exploitation",
+          "title": "Four Malicious npm Packages Deliver Infostealers and Phantom Bot DDoS Malware",
           "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html",
-          "date": "2026-05-11",
+          "url": "https://thehackernews.com/2026/05/four-malicious-npm-packages-deliver.html",
+          "date": "2026-05-18",
           "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "Google on Monday disclosed that it identified an unknown threat actor using a zero-day exploit that it said was likely developed with an artificial intelligence (AI) system, marking the first time the technolog..."
+          "summary": "Cybersecurity researchers have discovered four new npm packages containing information-stealing malware, one of which is a clone of the Shai-Hulud worm open-sourced by TeamPCP. The list of identified packages i..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Best Chromebooks 2026: Top picks for work, school, and more",
+          "title": "Best USB-C monitors 2026: 3 displays that excel at connectivity",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/608636/best-chromebooks.html",
-          "date": "2026-05-15",
+          "url": "https://www.pcworld.com/article/1377172/best-usb-c-monitors.html",
+          "date": "2026-05-18",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "If you’re in the market for an affordable laptop and don’t mind working inside Google’s ecosystem, you can’t really get much better than a Chromebook. They’re fast, easy to use, and often cost less than traditi..."
+          "summary": "USB-C is the one connection to rule them all. Its popularity has made USB-C a common sight on new monitors. A USB-C monitor can act as USB hub, giving you additional ports for connecting various USB devices, bu..."
         },
         {
-          "title": "Best portable monitors 2026: Displays that go with you",
+          "title": "Maytronics Dolphin Nautilus CC Supreme review: This pool cleaner kept the cord",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/1787210/best-portable-monitors.html",
-          "date": "2026-05-15",
+          "url": "https://www.pcworld.com/article/3134641/maytronics-dolphin-nautilus-cc-supreme-review.html",
+          "date": "2026-05-18",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Portable monitors have gained in popularity, and it’s easy to see why. They’re a boon to both desktop and laptop users. While portable monitors might not reach the large screen sizes of conventional displays, t..."
+          "summary": "At a glance Expert's Rating Pros Very good cleaning quality. Endless run time lets you clean as often as you’d like. Ample operational mode choices. Cons Cleanup is incredibly tedious. App is slow to respond; r..."
         }
       ]
     }
