@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-21",
+  "updatedAt": "2026-05-23",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-05-20",
+          "title": "ChatGPT resolve a vida de quem usa o PowerPoint com esta nova função",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/software/chatgpt-resolve-a-vida-de-quem-usa-o-powerpoint-com-esta-nova-funcao/",
+          "date": "2026-05-22",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Choosing the right laptop isn’t as simple as it should be. One quick Google search and you’re looking at countless models and spec soup–it’s a lot to sort through and digest. Suddenly you’re trying to figure ou..."
+          "summary": "O ChatGPT ganhou uma extensão para o Microsoft PowerPoint na qual é possível pedir para a IA criar ou revisar apresentações de slides. O chatbot fica disponível a partir de um painel lateral no aplicativo da MS..."
         },
         {
-          "title": "Apple Sports recebe atualização com funções para a Copa do Mundo de 2026",
+          "title": "NVIDIA dá sinais de que não se importa mais com placas de vídeo; entenda",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/apps/apple-sports-chega-ao-brasil-com-funcoes-para-a-copa-do-mundo-de-2026/",
-          "date": "2026-05-21",
+          "url": "https://canaltech.com.br/hardware/nvidia-elimina-resultados-de-vendas-de-gpus-geforce-de-seus-relatorios/",
+          "date": "2026-05-22",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Apple atualizou o aplicativo Apple Sports para a versão 4.0 e expandiu sua disponibilidade para mais de 90 novos países e regiões, que já inclui mercado brasileiro . Com a mudança, o serviço gratuito passa a..."
+          "summary": "As grandes fabricantes de placas de vídeo e processadores costumam revelar como o segmento de consumo, que tem a ver com os produtos que você e eu podemos comprar, foi em vendas em um determinado período no rel..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Lose your laptop, not your data: 7 Windows settings to enable now",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2899235/lose-your-laptop-not-your-data-7-windows-settings-to-turn-on-right-now.html",
-          "date": "2026-05-21",
+          "title": "The MacRumors Show: WWDC26 Promises Apple Intelligence and Siri Upgrades",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/22/the-macrumors-show-wwdc26-promises-siri-upgrades/",
+          "date": "2026-05-22",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "One day, you might lose your laptop. It could be stolen or it could be misplaced. But if you’re reading this right now and you still have your laptop with you, the advice is the same either way: be proactive an..."
+          "summary": "On this week's episode of The MacRumors Show , we discuss Apple's WWDC 2026 keynote date, the sweeping Siri redesign coming in iOS 27 , Apple's latest accessibility feature previews, and the hinge troubles repo..."
         },
         {
-          "title": "Google revoluciona desenvolvimento de apps para Android com esta novidade",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/apps/google-revoluciona-desenvolvimento-de-apps-para-android-com-esta-novidade/",
-          "date": "2026-05-20",
+          "title": "Xiaomi 17 Max Launches With Massive 8,000mAh Battery and Snapdragon 8 Elite Gen 5",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/news/xiaomi-17-max-launches-with-massive-8000mah-battery-and-snapdragon-8-elite-gen-5",
+          "date": "2026-05-23",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "A plataforma Google AI Studio agora pode ser usada para desenvolver aplicativos para Android inteiramente a partir de prompts , sem a necessidade de programar linhas de código. A novidade foi revelada pela empr..."
+          "summary": "Xiaomi 17 Max has launched with an 8,000mAh battery and Snapdragon 8 Elite Gen 5 processor for flagship-level performance. The smartphone focuses on extended battery life, premium hardware, and advanced AI-powe..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "How AI Job Assistants Are Changing the Job Search in 2026",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/artificial-intelligence/how-ai-job-assistants-are-changing-the-job-search-in-2026",
-          "date": "2026-05-21",
+          "title": "Robot pizza startup runs out of dough: Picnic shuts down, sells assets to mystery buyer",
+          "source": "GeekWire",
+          "url": "https://www.geekwire.com/2026/robot-pizza-startup-runs-out-of-dough-picnic-shuts-down-sells-assets-to-mystery-buyer/",
+          "date": "2026-05-22",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Finding a role in 2026 feels like running a marathon in an ever-growing crowd. Recruiters now sift through 3.5× more applications than a few years ago (apnews.com/article/a535a7932ff291a1998158d40cd82c4c). Auto..."
+          "summary": "Picnic, the Seattle startup that raised about $50 million on a vision of robots churning out pizzas in restaurants, stadiums, and other high-volume venues, has shut down and liquidated its assets after it was u..."
         },
         {
-          "title": "I Gave My OpenClaw Agent a Physical Body",
-          "source": "Wired",
-          "url": "https://www.wired.com/story/i-gave-my-openclaw-agent-physical-body-robot/",
-          "date": "2026-05-20",
+          "title": "Esqueça LED RGB: PC high-end tem telas exibindo milhares de GIFs ao mesmo tempo",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/hardware/esqueca-led-rgb-pc-high-end-tem-telas-exibindo-milhares-de-gifs-ao-mesmo-tempo/",
+          "date": "2026-05-22",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "The coding skills of AI models are about to make it much easier to build and deploy robots."
+          "summary": "Se você achava que LED RGB dava mais FPS aos PC para games, saiba que uma nova trend está surgindo: uma infinidade de GIFs dentro das máquinas através de várias telas escondendo o hardware . Pensando bem, tomar..."
         }
       ]
     },
@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
-          "title": "Microsoft Releases Mitigation for YellowKey BitLocker Bypass CVE-2026-45585 Exploit",
+          "title": "Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV",
           "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/05/microsoft-releases-mitigation-for.html",
-          "date": "2026-05-20",
+          "url": "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
+          "date": "2026-05-23",
           "tag": "Alerta",
           "featured": true,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "Microsoft on Tuesday released a mitigation for a BitLocker bypass vulnerability named YellowKey following its public disclosure last week. The zero-day flaw, now tracked as CVE-2026-45585, carries a CVSS score..."
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence..."
         },
         {
-          "title": "CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits",
+          "title": "CISA Adds Exploited Langflow and Trend Micro Apex One Vulnerabilities to KEV",
           "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html",
-          "date": "2026-05-15",
+          "url": "https://thehackernews.com/2026/05/cisa-adds-exploited-langflow-and-trend.html",
+          "date": "2026-05-22",
           "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S.Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added a newly disclosed vulnerability impacting Cisco Catalyst SD-WAN Controller to its Known Exploited Vulnerabilities (KEV) catalog..."
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Langflow and Trend Micro Apex One to its Known Exploited Vulnerabilities (KEV) catalog, citing evi..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "The best free VPNs: 5 no-cost top picks",
+          "title": "You’re probably missing these 13 useful Google Chrome tools",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/629037/best-free-vpn.html",
-          "date": "2026-05-20",
+          "url": "https://www.pcworld.com/article/2693064/youre-probably-missing-these-13-useful-google-chrome-tools.html",
+          "date": "2026-05-22",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "VPNs, or virtual private networks, are among the best tools for protecting yourself online. They help keep your browsing anonymous, secure your data from prying eyes, and block invasive trackers from following..."
+          "summary": "Around two-thirds of all internet users use Google Chrome, according to StatCounter . That’s about 3 to 4 billion people! And yet many Chrome users still aren’t using Google’s browser to its full potential. Chr..."
         },
         {
-          "title": "Por que o mouse pode se destacar na era da inteligência artificial",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/colunas/por-que-o-mouse-pode-se-destacar-na-era-da-inteligencia-artificial/",
-          "date": "2026-05-20",
+          "title": "Best laptops under $500: Affordable picks that will satisfy your needs",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/699203/best-laptops-under-500.html",
+          "date": "2026-05-21",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "A ascensão da inteligência artificial trouxe uma narrativa de que interfaces tradicionais seriam gradualmente substituídas apenas por voz, gestos ou automação. Mas, na prática, o que se observa que quanto mais..."
+          "summary": "Trying to find a good laptop under $500? Yeah, it’s the wild west out there. One quick Google search and you’re up to your ears in results… most of them pretty underwhelming. So, what actually matters here? Per..."
         }
       ]
     }
