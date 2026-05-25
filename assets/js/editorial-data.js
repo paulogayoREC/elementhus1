@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-23",
+  "updatedAt": "2026-05-25",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "ChatGPT resolve a vida de quem usa o PowerPoint com esta nova função",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/software/chatgpt-resolve-a-vida-de-quem-usa-o-powerpoint-com-esta-nova-funcao/",
-          "date": "2026-05-22",
+          "title": "Your dusty USB stick deserves a second life as a PC rescue kit",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/2523987/your-dusty-usb-stick-deserves-a-second-life-as-a-pc-rescue-kit.html",
+          "date": "2026-05-25",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "O ChatGPT ganhou uma extensão para o Microsoft PowerPoint na qual é possível pedir para a IA criar ou revisar apresentações de slides. O chatbot fica disponível a partir de um painel lateral no aplicativo da MS..."
+          "summary": "Portable apps are applications and tools that can be started directly upon clicking them, with no prior installation needed. The advantage of this is that the programs are immediately ready for use and can be s..."
         },
         {
-          "title": "NVIDIA dá sinais de que não se importa mais com placas de vídeo; entenda",
+          "title": "Como conseguir o carro da Fanta em Forza Horizon 6 sem gastar nada?",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/nvidia-elimina-resultados-de-vendas-de-gpus-geforce-de-seus-relatorios/",
+          "url": "https://canaltech.com.br/games/como-conseguir-o-carro-da-fanta-em-forza-horizon-6-sem-gastar-nada/",
           "date": "2026-05-22",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "As grandes fabricantes de placas de vídeo e processadores costumam revelar como o segmento de consumo, que tem a ver com os produtos que você e eu podemos comprar, foi em vendas em um determinado período no rel..."
+          "summary": "Em comemoração aos 25 anos do XBOX, a marca anunciou uma campanha de marketing com a Fanta e trouxe latinhas e recompensas temáticas dos principais jogos dos estúdios de games da Microsoft. A parceria chegou ao..."
         }
       ]
     },
@@ -41,14 +41,14 @@ window.editorialData = {
           "summary": "On this week's episode of The MacRumors Show , we discuss Apple's WWDC 2026 keynote date, the sweeping Siri redesign coming in iOS 27 , Apple's latest accessibility feature previews, and the hinge troubles repo..."
         },
         {
-          "title": "Xiaomi 17 Max Launches With Massive 8,000mAh Battery and Snapdragon 8 Elite Gen 5",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/news/xiaomi-17-max-launches-with-massive-8000mah-battery-and-snapdragon-8-elite-gen-5",
-          "date": "2026-05-23",
+          "title": "Windows 11 has built-in settings to reduce CPU bottlenecks. Use them",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3133897/windows-11-has-built-in-settings-to-reduce-cpu-bottlenecks-use-them.html",
+          "date": "2026-05-22",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Xiaomi 17 Max has launched with an 8,000mAh battery and Snapdragon 8 Elite Gen 5 processor for flagship-level performance. The smartphone focuses on extended battery life, premium hardware, and advanced AI-powe..."
+          "summary": "Many Windows PCs feel sluggish in everyday use, despite their hardware specifications suggesting otherwise. The reason? The processor is handling tasks that the graphics card, SSD, or network chip could process..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "Robot pizza startup runs out of dough: Picnic shuts down, sells assets to mystery buyer",
-          "source": "GeekWire",
-          "url": "https://www.geekwire.com/2026/robot-pizza-startup-runs-out-of-dough-picnic-shuts-down-sells-assets-to-mystery-buyer/",
-          "date": "2026-05-22",
+          "title": "These Robots Are Making Meals for a Nonprofit in San Francisco’s Tenderloin",
+          "source": "Wired",
+          "url": "https://www.wired.com/story/these-robots-are-making-meals-for-a-nonprofit-in-san-franciscos-tenderloin/",
+          "date": "2026-05-24",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Picnic, the Seattle startup that raised about $50 million on a vision of robots churning out pizzas in restaurants, stadiums, and other high-volume venues, has shut down and liquidated its assets after it was u..."
+          "summary": "A nonprofit in the city’s most troubled district has turned to robotic meal prep tech to make up for a dearth of human volunteers."
         },
         {
-          "title": "Esqueça LED RGB: PC high-end tem telas exibindo milhares de GIFs ao mesmo tempo",
+          "title": "Magnata põe iate de R$ 2,5 bilhões à venda por motivo inusitado",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/esqueca-led-rgb-pc-high-end-tem-telas-exibindo-milhares-de-gifs-ao-mesmo-tempo/",
-          "date": "2026-05-22",
+          "url": "https://canaltech.com.br/carros/jeff-bezos-quer-vender-seu-iate-de-r-25-bilhoes-por-motivo-inusitado/",
+          "date": "2026-05-23",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Se você achava que LED RGB dava mais FPS aos PC para games, saiba que uma nova trend está surgindo: uma infinidade de GIFs dentro das máquinas através de várias telas escondendo o hardware . Pensando bem, tomar..."
+          "summary": "Jeff Bezos , bilionário fundador da Amazon , pode colocar à venda uma propriedade para lá de extravagante. O executivo vem avaliando a possibilidade de vender seu iate Koru , avaliado em “apenas” US$ 500 milhõe..."
         }
       ]
     },
@@ -116,14 +116,14 @@ window.editorialData = {
           "summary": "Around two-thirds of all internet users use Google Chrome, according to StatCounter . That’s about 3 to 4 billion people! And yet many Chrome users still aren’t using Google’s browser to its full potential. Chr..."
         },
         {
-          "title": "Best laptops under $500: Affordable picks that will satisfy your needs",
+          "title": "Best Windows backup software 2026 for PCs and laptops",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/699203/best-laptops-under-500.html",
-          "date": "2026-05-21",
+          "url": "https://www.pcworld.com/article/407021/best-windows-backup-software.html",
+          "date": "2026-05-22",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Trying to find a good laptop under $500? Yeah, it’s the wild west out there. One quick Google search and you’re up to your ears in results… most of them pretty underwhelming. So, what actually matters here? Per..."
+          "summary": "We all know how important it is to back up your Windows PC or laptop. So much of our data is irreplaceable in the event of a disaster unless we have a backup. The best Windows backup doesn’t include just file b..."
         }
       ]
     }
