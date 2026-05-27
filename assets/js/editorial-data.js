@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-25",
+  "updatedAt": "2026-05-27",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Your dusty USB stick deserves a second life as a PC rescue kit",
+          "title": "Best laptops for college students: 7 picks for every budget",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2523987/your-dusty-usb-stick-deserves-a-second-life-as-a-pc-rescue-kit.html",
-          "date": "2026-05-25",
+          "url": "https://www.pcworld.com/article/557622/the-best-laptop-for-college.html",
+          "date": "2026-05-26",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Portable apps are applications and tools that can be started directly upon clicking them, with no prior installation needed. The advantage of this is that the programs are immediately ready for use and can be s..."
+          "summary": "The right laptop can really make or break your college experience. From navigating packed lecture halls to powering through all-nighters, reliability is key. But that doesn’t mean you need the most expensive mo..."
         },
         {
-          "title": "Como conseguir o carro da Fanta em Forza Horizon 6 sem gastar nada?",
+          "title": "Ajuste imperceptível nos MacBook Pro M6 pode melhorar bastante o desempenho",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/games/como-conseguir-o-carro-da-fanta-em-forza-horizon-6-sem-gastar-nada/",
-          "date": "2026-05-22",
+          "url": "https://canaltech.com.br/notebook/ajuste-imperceptivel-nos-macbook-pro-m6-pode-melhorar-bastante-o-desempenho/",
+          "date": "2026-05-27",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Em comemoração aos 25 anos do XBOX, a marca anunciou uma campanha de marketing com a Fanta e trouxe latinhas e recompensas temáticas dos principais jogos dos estúdios de games da Microsoft. A parceria chegou ao..."
+          "summary": "A Apple se prepara para resolver uma das maiores demandas de seus usuários: o gerenciamento térmico . Segundo novos rumores vindos do leaker ExoticSpice, a próxima geração do MacBook Pro de 14 e 16 polegadas..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "The MacRumors Show: WWDC26 Promises Apple Intelligence and Siri Upgrades",
+          "title": "Android Brands May Copy Apple's New Split iPhone Launch Strategy",
           "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/05/22/the-macrumors-show-wwdc26-promises-siri-upgrades/",
-          "date": "2026-05-22",
+          "url": "https://www.macrumors.com/2026/05/26/android-brands-may-copy-iphone-launch-strategy/",
+          "date": "2026-05-26",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "On this week's episode of The MacRumors Show , we discuss Apple's WWDC 2026 keynote date, the sweeping Siri redesign coming in iOS 27 , Apple's latest accessibility feature previews, and the hinge troubles repo..."
+          "summary": "Android manufacturers are planning to adopt Apple's split launch strategy, releasing high-end and standard models in separate windows rather than simultaneously, according to the leaker known as \" Digital Chat..."
         },
         {
-          "title": "Windows 11 has built-in settings to reduce CPU bottlenecks. Use them",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3133897/windows-11-has-built-in-settings-to-reduce-cpu-bottlenecks-use-them.html",
-          "date": "2026-05-22",
+          "title": "How to Increase FPS in Any Game on PC: Best Optimization Guide",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/photo/how-to-increase-fps-in-any-game-on-pc-best-optimization-guide",
+          "date": "2026-05-27",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Many Windows PCs feel sluggish in everyday use, despite their hardware specifications suggesting otherwise. The reason? The processor is handling tasks that the graphics card, SSD, or network chip could process..."
+          "summary": "Update Graphics Drivers Regularly: Keeping GPU drivers updated improves compatibility, fixes bugs, and boosts performance in newly released games. NVIDIA, AMD, and Intel frequently release optimized drivers des..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "These Robots Are Making Meals for a Nonprofit in San Francisco’s Tenderloin",
-          "source": "Wired",
-          "url": "https://www.wired.com/story/these-robots-are-making-meals-for-a-nonprofit-in-san-franciscos-tenderloin/",
-          "date": "2026-05-24",
+          "title": "3D-printable humanoid legs let robotics experiments run wild",
+          "source": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/05/3d-printable-humanoid-legs-let-robotics-experiments-run-wild/",
+          "date": "2026-05-26",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "A nonprofit in the city’s most troubled district has turned to robotic meal prep tech to make up for a dearth of human volunteers."
+          "summary": "Hugging Face debuts $2,500 bipedal robot project for builders and researchers."
         },
         {
-          "title": "Magnata põe iate de R$ 2,5 bilhões à venda por motivo inusitado",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/carros/jeff-bezos-quer-vender-seu-iate-de-r-25-bilhoes-por-motivo-inusitado/",
-          "date": "2026-05-23",
+          "title": "This startup is betting India’s gig economy can train the world’s robots",
+          "source": "TechCrunch",
+          "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/",
+          "date": "2026-05-26",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Jeff Bezos , bilionário fundador da Amazon , pode colocar à venda uma propriedade para lá de extravagante. O executivo vem avaliando a possibilidade de vender seu iate Koru , avaliado em “apenas” US$ 500 milhõe..."
+          "summary": "Human Archive, a startup founded by UC Berkeley and Stanford researchers, is paying gig workers in India to wear camera-equipped caps and sensor devices to collect the real-world physical training data that AI..."
         }
       ]
     },
@@ -81,24 +81,24 @@ window.editorialData = {
       "label": "Alertas de Seguranca",
       "items": [
         {
+          "title": "KnowledgeDeliver LMS Flaw Exploited to Deploy Godzilla and Cobalt Strike",
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/05/knowledgedeliver-lms-flaw-exploited-to.html",
+          "date": "2026-05-26",
+          "tag": "Alerta",
+          "featured": true,
+          "image": "assets/img/astro001-cutout.png",
+          "summary": "A now-patched high-severity security flaw affecting Digital Knowledge KnowledgeDeliver, a Learning Management System (LMS) popular in Japan, was exploited as a zero-day to deliver the Godzilla web shell and ult..."
+        },
+        {
           "title": "Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV",
           "source": "The Hacker News",
           "url": "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
           "date": "2026-05-23",
           "tag": "Alerta",
-          "featured": true,
-          "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence..."
-        },
-        {
-          "title": "CISA Adds Exploited Langflow and Trend Micro Apex One Vulnerabilities to KEV",
-          "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/05/cisa-adds-exploited-langflow-and-trend.html",
-          "date": "2026-05-22",
-          "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Langflow and Trend Micro Apex One to its Known Exploited Vulnerabilities (KEV) catalog, citing evi..."
+          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "You’re probably missing these 13 useful Google Chrome tools",
+          "title": "Best VPN services: 7 top picks for every VPN need",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2693064/youre-probably-missing-these-13-useful-google-chrome-tools.html",
-          "date": "2026-05-22",
+          "url": "https://www.pcworld.com/article/406870/best-vpn-services-2.html",
+          "date": "2026-05-26",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Around two-thirds of all internet users use Google Chrome, according to StatCounter . That’s about 3 to 4 billion people! And yet many Chrome users still aren’t using Google’s browser to its full potential. Chr..."
+          "summary": "A VPN, or virtual private network, is one of the easiest and most effective ways to improve your online privacy and security. Whether you’re protecting yourself on public Wi-Fi, hiding your IP address from trac..."
         },
         {
-          "title": "Best Windows backup software 2026 for PCs and laptops",
+          "title": "Your home office is messing with your head. Here’s how to fix it",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/407021/best-windows-backup-software.html",
-          "date": "2026-05-22",
+          "url": "https://www.pcworld.com/article/2617980/your-home-office-is-messing-with-your-head-heres-how-to-fix-it.html",
+          "date": "2026-05-26",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "We all know how important it is to back up your Windows PC or laptop. So much of our data is irreplaceable in the event of a disaster unless we have a backup. The best Windows backup doesn’t include just file b..."
+          "summary": "Like millions of people around the world, I work from home. And doing so means I need to create a healthy work environment that encourages productivity. Working on a PC all day can cause health issues — not jus..."
         }
       ]
     }
