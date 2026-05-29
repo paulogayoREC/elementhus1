@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-27",
+  "updatedAt": "2026-05-29",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops for college students: 7 picks for every budget",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/557622/the-best-laptop-for-college.html",
-          "date": "2026-05-26",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-05-28",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The right laptop can really make or break your college experience. From navigating packed lecture halls to powering through all-nighters, reliability is key. But that doesn’t mean you need the most expensive mo..."
+          "summary": "Buying the right laptop sounds simple… until you start researching. A single Google search can flood you with countless models and confusing specifications. From graphics cards to OLED displays, the options can..."
         },
         {
-          "title": "Ajuste imperceptível nos MacBook Pro M6 pode melhorar bastante o desempenho",
+          "title": "Grande mudança visual no iOS 27 vai repaginar Siri e mais; veja como vai ficar",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/notebook/ajuste-imperceptivel-nos-macbook-pro-m6-pode-melhorar-bastante-o-desempenho/",
-          "date": "2026-05-27",
+          "url": "https://canaltech.com.br/apps/grande-mudanca-visual-no-ios-27-vai-repaginar-siri-e-mais-veja-como-vai-ficar/",
+          "date": "2026-05-29",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Apple se prepara para resolver uma das maiores demandas de seus usuários: o gerenciamento térmico . Segundo novos rumores vindos do leaker ExoticSpice, a próxima geração do MacBook Pro de 14 e 16 polegadas..."
+          "summary": "A Apple prepara uma das maiores reformulações visuais e funcionais de sua história recente com o iOS 27. A atualização deve redesenhar completamente a Siri e ampliar o uso de inteligência artificial em todo o s..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Android Brands May Copy Apple's New Split iPhone Launch Strategy",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/05/26/android-brands-may-copy-iphone-launch-strategy/",
-          "date": "2026-05-26",
+          "title": "Nvidia’s N1X could show us the future of PCs—and the bill that comes with it",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3150362/nvidias-n1x-could-show-us-the-future-of-pcs-and-the-bill-that-comes-with-it.html",
+          "date": "2026-05-29",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Android manufacturers are planning to adopt Apple's split launch strategy, releasing high-end and standard models in separate windows rather than simultaneously, according to the leaker known as \" Digital Chat..."
+          "summary": "The PC industry is once again on the brink of a pivotal moment in history—or so appears to be the case, given the rumors about Computex next week. In particular, the internet anticipates the launch of Nvidia’s..."
         },
         {
-          "title": "How to Increase FPS in Any Game on PC: Best Optimization Guide",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/photo/how-to-increase-fps-in-any-game-on-pc-best-optimization-guide",
-          "date": "2026-05-27",
+          "title": "Report: Apple Plans to Make On-Device AI a Key WWDC Focus",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/28/apple-to-make-on-device-ai-key-focus/",
+          "date": "2026-05-28",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Update Graphics Drivers Regularly: Keeping GPU drivers updated improves compatibility, fixes bugs, and boosts performance in newly released games. NVIDIA, AMD, and Intel frequently release optimized drivers des..."
+          "summary": "Apple reportedly plans to use next month's Worldwide Developers Conference (WWDC) to highlight its on-device AI capabilities as a competitive advantage, leaning on 15 years of custom silicon expertise to make t..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "3D-printable humanoid legs let robotics experiments run wild",
-          "source": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/05/3d-printable-humanoid-legs-let-robotics-experiments-run-wild/",
-          "date": "2026-05-26",
+          "title": "Robot stress test: Narwal’s $1,500 mop vs. my nightmare messes",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3139997/robot-stress-test-narwals-1500-mop-vs-my-nightmare-messes.html",
+          "date": "2026-05-29",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Hugging Face debuts $2,500 bipedal robot project for builders and researchers."
+          "summary": "If a job is worth doing, it’s worth doing right—and if a robot is going to clean up my place , it better do a good job. That’s the stance I took when Narwal sent me its luxury Flow 2 robot vacuum/mop. The marke..."
         },
         {
-          "title": "This startup is betting India’s gig economy can train the world’s robots",
-          "source": "TechCrunch",
-          "url": "https://techcrunch.com/2026/05/26/human-archive-taps-into-indias-services-startups-to-collect-data-for-physical-ai/",
-          "date": "2026-05-26",
+          "title": "This AI startup will clean your home for free to train future robots",
+          "source": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning",
+          "date": "2026-05-29",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Human Archive, a startup founded by UC Berkeley and Stanford researchers, is paying gig workers in India to wear camera-equipped caps and sensor devices to collect the real-world physical training data that AI..."
+          "summary": "AI training startup Shift wants to clean your home for free. The catch - because, despite what its website says, there's always a catch - is that it will record cleaners as they scrub, vacuum, dust, tidy, and w..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Best VPN services: 7 top picks for every VPN need",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/406870/best-vpn-services-2.html",
-          "date": "2026-05-26",
+          "title": "How to use Gemini to track and split group expenses — for FREE!",
+          "source": "Android Central",
+          "url": "https://www.androidcentral.com/apps-software/how-to-use-gemini-to-track-and-split-group-expenses",
+          "date": "2026-05-29",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "A VPN, or virtual private network, is one of the easiest and most effective ways to improve your online privacy and security. Whether you’re protecting yourself on public Wi-Fi, hiding your IP address from trac..."
+          "summary": "Forget about paid apps like Splitwise. Instead, make the most of Gemini by using it to track and split shared expenses for trips, group expenses, and more!."
         },
         {
-          "title": "Your home office is messing with your head. Here’s how to fix it",
+          "title": "Roku’s new home screen is a big change. Here’s how to use it",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/2617980/your-home-office-is-messing-with-your-head-heres-how-to-fix-it.html",
-          "date": "2026-05-26",
+          "url": "https://www.pcworld.com/article/3149985/rokus-new-home-screen-is-a-big-change-heres-how-to-use-it.html",
+          "date": "2026-05-28",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Like millions of people around the world, I work from home. And doing so means I need to create a healthy work environment that encourages productivity. Working on a PC all day can cause health issues — not jus..."
+          "summary": "Roku is shaking up its home screen with its most substantial changes in over a decade. A new design debuting this week adds recommendation rows, quick action tiles, and genre subsections to what was once a simp..."
         }
       ]
     }
