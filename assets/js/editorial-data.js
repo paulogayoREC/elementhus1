@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-29",
+  "updatedAt": "2026-05-31",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-05-28",
+          "title": "4 empresas com as maiores novidades para a Computex 2026",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/hardware/anuncios-mais-aguardados-computex-2026/",
+          "date": "2026-05-29",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Buying the right laptop sounds simple… until you start researching. A single Google search can flood you with countless models and confusing specifications. From graphics cards to OLED displays, the options can..."
+          "summary": "A Computex 2026 está prestes a abrir suas portas em Taipei, entre os dias 2 e 5 de junho , com a temática oficial \"AI Together\" . No entanto, para além do marketing, o evento desse ano tem uma importância críti..."
         },
         {
-          "title": "Grande mudança visual no iOS 27 vai repaginar Siri e mais; veja como vai ficar",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/apps/grande-mudanca-visual-no-ios-27-vai-repaginar-siri-e-mais-veja-como-vai-ficar/",
+          "title": "Everything We Know About OpenAI's Planned iPhone Rival",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/05/29/everything-we-know-about-openai-iphone-rival/",
           "date": "2026-05-29",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Apple prepara uma das maiores reformulações visuais e funcionais de sua história recente com o iOS 27. A atualização deve redesenhar completamente a Siri e ampliar o uso de inteligência artificial em todo o s..."
+          "summary": "OpenAI is developing a smartphone intended to compete directly with the iPhone, in what appears to be a significant departure from the company's previously stated hardware strategy. Here's everything we know so..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "Nvidia’s N1X could show us the future of PCs—and the bill that comes with it",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3150362/nvidias-n1x-could-show-us-the-future-of-pcs-and-the-bill-that-comes-with-it.html",
-          "date": "2026-05-29",
+          "title": "First NVIDIA-Powered Windows PCs Expected to Debut at Computex Next Week",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/news/first-nvidia-powered-windows-pcs-expected-to-debut-at-computex-next-week",
+          "date": "2026-05-31",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "The PC industry is once again on the brink of a pivotal moment in history—or so appears to be the case, given the rumors about Computex next week. In particular, the internet anticipates the launch of Nvidia’s..."
+          "summary": "NVIDIA is expected to unveil the first Windows PCs powered by its own processors next week, a move that could shake up a market long dominated by Intel and AMD. According to a report by Axios, the announcement..."
         },
         {
-          "title": "Report: Apple Plans to Make On-Device AI a Key WWDC Focus",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/05/28/apple-to-make-on-device-ai-key-focus/",
-          "date": "2026-05-28",
+          "title": "Nvidia’s N1X could be the jolt Windows laptops need — with one big catch",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3151058/nvidias-n1x-could-be-the-jolt-windows-laptops-need-with-one-big-catch.html",
+          "date": "2026-05-30",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Apple reportedly plans to use next month's Worldwide Developers Conference (WWDC) to highlight its on-device AI capabilities as a competitive advantage, leaning on 15 years of custom silicon expertise to make t..."
+          "summary": "Nvidia is evidently not content to be the world’s most valuable company, as the AI and GPU giant now appears primed to dive headfirst into the choppy waters of the laptop processor market. Whether that will hel..."
         }
       ]
     },
@@ -66,14 +66,14 @@ window.editorialData = {
           "summary": "If a job is worth doing, it’s worth doing right—and if a robot is going to clean up my place , it better do a good job. That’s the stance I took when Narwal sent me its luxury Flow 2 robot vacuum/mop. The marke..."
         },
         {
-          "title": "This AI startup will clean your home for free to train future robots",
-          "source": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning",
-          "date": "2026-05-29",
+          "title": "Multimodal AI That Sees, Hears, and Thinks Together",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/ampstories/artificial-intelligence/multimodal-ai-that-sees-hears-and-thinks-together",
+          "date": "2026-05-31",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "AI training startup Shift wants to clean your home for free. The catch - because, despite what its website says, there's always a catch - is that it will record cleaners as they scrub, vacuum, dust, tidy, and w..."
+          "summary": "Multimodal AI combines text, images, audio, video, and sensors to understand the world like humans do. Unlike traditional AI, multimodal systems can see, hear, and think together in real time for deeper underst..."
         }
       ]
     },
@@ -91,14 +91,14 @@ window.editorialData = {
           "summary": "A now-patched high-severity security flaw affecting Digital Knowledge KnowledgeDeliver, a Learning Management System (LMS) popular in Japan, was exploited as a zero-day to deliver the Godzilla web shell and ult..."
         },
         {
-          "title": "Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV",
+          "title": "PAN-OS GlobalProtect Authentication Bypass (CVE-2026-0257) Under Active Exploitation",
           "source": "The Hacker News",
-          "url": "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
-          "date": "2026-05-23",
+          "url": "https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html",
+          "date": "2026-05-30",
           "tag": "Alerta",
           "featured": false,
           "image": "assets/img/astro001-cutout.png",
-          "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence..."
+          "summary": "Palo Alto Networks has warned that a recently disclosed medium-severity security flaw impacting PAN-OS and Prisma Access has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-02..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "How to use Gemini to track and split group expenses — for FREE!",
-          "source": "Android Central",
-          "url": "https://www.androidcentral.com/apps-software/how-to-use-gemini-to-track-and-split-group-expenses",
+          "title": "Best gaming laptops 2026: 4 top options for portable performance",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/407493/best-gaming-laptops.html",
           "date": "2026-05-29",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Forget about paid apps like Splitwise. Instead, make the most of Gemini by using it to track and split shared expenses for trips, group expenses, and more!."
+          "summary": "Not all gaming laptops are created equal, which is important to know when you’re shopping for one. Some are designed to give you the best performance possible, while others prioritize color accurate displays. T..."
         },
         {
-          "title": "Roku’s new home screen is a big change. Here’s how to use it",
+          "title": "Nvidia’s N1X could show us the future of PCs—and the bill that comes with it",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3149985/rokus-new-home-screen-is-a-big-change-heres-how-to-use-it.html",
-          "date": "2026-05-28",
+          "url": "https://www.pcworld.com/article/3150362/nvidias-n1x-could-show-us-the-future-of-pcs-and-the-bill-that-comes-with-it.html",
+          "date": "2026-05-29",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Roku is shaking up its home screen with its most substantial changes in over a decade. A new design debuting this week adds recommendation rows, quick action tiles, and genre subsections to what was once a simp..."
+          "summary": "The PC industry is once again on the brink of a pivotal moment in history—or so appears to be the case, given the rumors about Computex next week. In particular, the internet anticipates the launch of Nvidia’s..."
         }
       ]
     }
