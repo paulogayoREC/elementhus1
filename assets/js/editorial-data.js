@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-06-01",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "4 empresas com as maiores novidades para a Computex 2026",
+          "title": "CPU RTX Spark com gráficos Blackwel é a aposta da NVIDIA contra AMD e Intel",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/anuncios-mais-aguardados-computex-2026/",
-          "date": "2026-05-29",
+          "url": "https://canaltech.com.br/hardware/rtx-spark-e-a-cpu-com-graficos-integrados-blackwell-da-nvidia-e-chega-em-breve/",
+          "date": "2026-06-01",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Computex 2026 está prestes a abrir suas portas em Taipei, entre os dias 2 e 5 de junho , com a temática oficial \"AI Together\" . No entanto, para além do marketing, o evento desse ano tem uma importância críti..."
+          "summary": "Depois de muitas especulações, rumores e vazamentos sobre o processador da NVIDIA, o Time Verde enfim oficializou o produto antes da Computex 2026. Chamado de RTX Spark , o chip é desenvolvido em parceria com a..."
         },
         {
-          "title": "Everything We Know About OpenAI's Planned iPhone Rival",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/05/29/everything-we-know-about-openai-iphone-rival/",
-          "date": "2026-05-29",
+          "title": "Vazou: Motorola Edge 70 Pro+ tem preço e mais detalhes revelados antes da hora",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/smartphone/vazou-motorola-edge-70-pro-tem-preco-e-mais-detalhes-revelados-antes-da-hora/",
+          "date": "2026-06-01",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "OpenAI is developing a smartphone intended to compete directly with the iPhone, in what appears to be a significant departure from the company's previously stated hardware strategy. Here's everything we know so..."
+          "summary": "A Motorola prepara o lançamento oficial do seu novo celular intermediário premium: o Edge 70 Pro+ . Além de o site da marca mostrar novos detalhes das especificações do aparelho, vazamentos também já indicam po..."
         }
       ]
     },
@@ -31,24 +31,24 @@ window.editorialData = {
       "label": "Novidades tecnologicas",
       "items": [
         {
-          "title": "First NVIDIA-Powered Windows PCs Expected to Debut at Computex Next Week",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/news/first-nvidia-powered-windows-pcs-expected-to-debut-at-computex-next-week",
-          "date": "2026-05-31",
+          "title": "Nvidia’s RTX Spark chip ‘reinvents’ laptops for agentic AI",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3152460/nvidia-rtx-spark-chip-reinvents-laptops-for-agentic-ai.html",
+          "date": "2026-06-01",
           "tag": "Novidade",
           "featured": true,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "NVIDIA is expected to unveil the first Windows PCs powered by its own processors next week, a move that could shake up a market long dominated by Intel and AMD. According to a report by Axios, the announcement..."
+          "summary": "Nvidia has a vision to put AI productivity into the hands of virtually everyone on the planet. On Sunday night it advanced that mission with the debut of the Nvidia RTX Spark, a challenge to Qualcomm as the sec..."
         },
         {
-          "title": "Nvidia’s N1X could be the jolt Windows laptops need — with one big catch",
+          "title": "The ROG Ally X20 is basically the same handheld with OLED and gold trim",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3151058/nvidias-n1x-could-be-the-jolt-windows-laptops-need-with-one-big-catch.html",
-          "date": "2026-05-30",
+          "url": "https://www.pcworld.com/article/3153076/the-rog-ally-x20-is-basically-the-same-handheld-with-oled-and-gold-trim.html",
+          "date": "2026-06-01",
           "tag": "Novidade",
           "featured": false,
           "image": "assets/img/astronauta-eat-cutout.png",
-          "summary": "Nvidia is evidently not content to be the world’s most valuable company, as the AI and GPU giant now appears primed to dive headfirst into the choppy waters of the laptop processor market. Whether that will hel..."
+          "summary": "The Asus Xbox ROG Ally X is arguably the most high-profile PC gaming handheld from a major supplier, rivaled only by the Lenovo Legion Go 2. So as it is wont to do, Asus has decided to give it a bit of a boost..."
         }
       ]
     },
@@ -56,24 +56,24 @@ window.editorialData = {
       "label": "Curiosidades",
       "items": [
         {
-          "title": "Robot stress test: Narwal’s $1,500 mop vs. my nightmare messes",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3139997/robot-stress-test-narwals-1500-mop-vs-my-nightmare-messes.html",
-          "date": "2026-05-29",
+          "title": "Google Fotos prepara hub de IA e edição de vídeo turbinada com o CapCut",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/inteligencia-artificial/google-fotos-prepara-hub-de-ia-e-edicao-de-video-turbinada-com-o-capcut/",
+          "date": "2026-06-01",
           "tag": "Cultura digital",
           "featured": true,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "If a job is worth doing, it’s worth doing right—and if a robot is going to clean up my place , it better do a good job. That’s the stance I took when Narwal sent me its luxury Flow 2 robot vacuum/mop. The marke..."
+          "summary": "O Google Fotos está desenvolvendo novas ferramentas de inteligência artificial e edição avançada para as Recordações, incluindo integração com o CapCut e um novo hub dedicado a criações automáticas. As novidade..."
         },
         {
-          "title": "Multimodal AI That Sees, Hears, and Thinks Together",
+          "title": "Aravind Srinivas and the Rise of Perplexity: From IIT Classrooms to the Center of the AI Search Race",
           "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/ampstories/artificial-intelligence/multimodal-ai-that-sees-hears-and-thinks-together",
-          "date": "2026-05-31",
+          "url": "https://www.analyticsinsight.net/artificial-intelligence/aravind-srinivas-and-the-rise-of-perplexity-from-iit-classrooms-to-the-center-of-the-ai-search-race",
+          "date": "2026-06-01",
           "tag": "Cultura digital",
           "featured": false,
           "image": "assets/img/post-instagram-eat.png",
-          "summary": "Multimodal AI combines text, images, audio, video, and sensors to understand the world like humans do. Unlike traditional AI, multimodal systems can see, hear, and think together in real time for deeper underst..."
+          "summary": "In early 2025, Perplexity entered India through a major partnership with Bharti Airtel, giving millions of users access to Perplexity Pro almost overnight. On the surface, it looked like another telecom-AI anno..."
         }
       ]
     },
@@ -106,24 +106,24 @@ window.editorialData = {
       "label": "Tutoriais",
       "items": [
         {
-          "title": "Best gaming laptops 2026: 4 top options for portable performance",
+          "title": "I ditched Windows for a Chromebook—and it fixed my biggest PC frustrations",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/407493/best-gaming-laptops.html",
-          "date": "2026-05-29",
+          "url": "https://www.pcworld.com/article/2500763/i-ditched-windows-for-a-chromebook-and-it-fixed-my-biggest-pc-frustrations.html",
+          "date": "2026-06-01",
           "tag": "Guia pratico",
           "featured": true,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "Not all gaming laptops are created equal, which is important to know when you’re shopping for one. Some are designed to give you the best performance possible, while others prioritize color accurate displays. T..."
+          "summary": "I’m not saying Windows is a terrible operating system, but it’s definitely no longer the one I choose to use on a day-to-day basis. After 30+ years of using Windows in its various forms (starting with Windows 9..."
         },
         {
-          "title": "Nvidia’s N1X could show us the future of PCs—and the bill that comes with it",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3150362/nvidias-n1x-could-show-us-the-future-of-pcs-and-the-bill-that-comes-with-it.html",
+          "title": "How to use Gemini to track and split group expenses — for FREE!",
+          "source": "Android Central",
+          "url": "https://www.androidcentral.com/apps-software/how-to-use-gemini-to-track-and-split-group-expenses",
           "date": "2026-05-29",
           "tag": "Guia pratico",
           "featured": false,
           "image": "assets/img/amazon-delivery-hero.png",
-          "summary": "The PC industry is once again on the brink of a pivotal moment in history—or so appears to be the case, given the rumors about Computex next week. In particular, the internet anticipates the launch of Nvidia’s..."
+          "summary": "Forget about paid apps like Splitwise. Instead, make the most of Gemini by using it to track and split shared expenses for trips, group expenses, and more!."
         }
       ]
     }
