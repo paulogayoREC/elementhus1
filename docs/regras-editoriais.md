@@ -1,23 +1,21 @@
-# Regras editoriais das paginas de conteudo
+# Regras editoriais da pagina de conteudo
 
 Estas regras valem para:
 
 - `noticias.html`
-- `novidades-tecnologicas.html`
-- `curiosidades.html`
-- `alertas-seguranca.html`
-- `tutoriais.html`
+
+Os conteudos de novidades tecnologicas, curiosidades, alertas de seguranca, dicas e tutoriais ficam concentrados em secoes internas de `noticias.html`.
 
 ## Quando adicionar novo conteudo
 
-Sempre que o pedido for "adicione o novo conteudo" para uma dessas paginas:
+Sempre que o pedido for "adicione o novo conteudo" para a pagina de noticias ou uma de suas secoes internas:
 
 1. Transforme o novo conteudo no destaque principal da pagina.
 2. O destaque principal deve conter titulo, subtitulo, data em que foi adicionado, imagem e comentarios do visitante.
 3. Mova o destaque principal anterior para a area de conteudos anteriores.
 4. O conteudo anterior deve virar um card compacto e expansivel, com chamada curta que incentive a leitura.
-5. Mantenha no maximo 5 conteudos anteriores por pagina.
-6. Se ja houver 5 conteudos anteriores, exclua o mais antigo antes de adicionar outro.
+5. Mantenha no maximo 5 conteudos anteriores por secao interna.
+6. Se ja houver 5 conteudos anteriores na secao, exclua o mais antigo antes de adicionar outro.
 
 ## Campos obrigatorios
 
