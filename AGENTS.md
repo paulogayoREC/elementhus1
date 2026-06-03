@@ -9,21 +9,6 @@ Use estas regras para trabalhar no projeto com baixo consumo de contexto.
 3. Abra apenas os 3 a 5 arquivos diretamente relacionados a tarefa.
 4. Abra regras detalhadas somente quando a tarefa exigir.
 
-## Skills locais
-
-As skills ativas ficam em `.codex-skills/`.
-
-- Base: `web-project-guide` + `web-token-saver`.
-- Debug: `web-build-debugger`.
-- Performance: `web-performance-auditor`.
-- SEO: `web-seo-content`.
-- UI: `web-ui-components`.
-- Seguranca: `web-security-review`.
-- Produtos/Vitrine Tech: `web-affiliate-products`.
-- Conteudo editorial: `web-content-publisher`.
-
-Combine apenas as skills necessarias para a tarefa atual.
-
 ## Regras de economia
 
 - Nao leia o repositorio inteiro.
