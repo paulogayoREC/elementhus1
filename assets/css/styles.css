@@ -912,27 +912,6 @@ h4 {
   pointer-events: none;
 }
 
-.editorial-section-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.editorial-section-bg img {
-  position: absolute;
-  top: 50%;
-  right: clamp(-5rem, -2vw, -1.5rem);
-  width: min(50rem, 52vw);
-  max-width: none;
-  height: auto;
-  opacity: 0.92;
-  filter: saturate(1.08) contrast(1.08) drop-shadow(0 0 42px rgba(37, 125, 167, 0.28));
-  mix-blend-mode: screen;
-  transform: translateY(-50%);
-}
-
 .editorial-section .section-inner {
   position: relative;
   z-index: 3;
@@ -4780,14 +4759,6 @@ h4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .editorial-section-bg img {
-    top: 7rem;
-    right: -8rem;
-    width: 36rem;
-    opacity: 0.68;
-    transform: none;
-  }
-
   .category-card-grid {
     gap: 0.62rem;
   }
@@ -5203,14 +5174,6 @@ h4 {
   .product-grid,
   .category-card-grid {
     grid-template-columns: 1fr;
-  }
-
-  .editorial-section-bg img {
-    top: 1.5rem;
-    right: -9rem;
-    width: 30rem;
-    opacity: 0.5;
-    transform: none;
   }
 
   .editorial-section .topic-card {
