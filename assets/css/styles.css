@@ -865,6 +865,8 @@ h4 {
 }
 
 .editorial-section .section-heading {
+  max-width: 36rem;
+  margin-bottom: 1.5rem;
   text-shadow: 0 18px 42px rgba(0, 0, 0, 0.42);
 }
 
@@ -883,6 +885,11 @@ h4 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.editorial-section .editorial-grid {
+  grid-template-columns: 1fr;
+  max-width: 28rem;
 }
 
 .topic-card,
@@ -959,9 +966,68 @@ h4 {
 }
 
 .editorial-section .topic-large {
+  grid-column: 1;
+  min-height: auto;
   background:
     linear-gradient(135deg, rgba(37, 125, 167, 0.36), rgba(250, 235, 209, 0.08) 46%, rgba(0, 0, 0, 0.54)),
     rgba(0, 0, 0, 0.42);
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] {
+  gap: 0.58rem;
+  padding: 0.85rem;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(37, 125, 167, 0.08);
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] .topic-kicker {
+  width: 1.85rem;
+  height: 1.85rem;
+  margin-bottom: 0.18rem;
+  border-radius: 6px;
+  font-size: 0.66rem;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] h3 {
+  margin-bottom: 0.12rem;
+  font-size: 1.04rem;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] .topic-card-preview {
+  margin: 0;
+  border-radius: 6px;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] .topic-card-preview img {
+  height: 8.8rem;
+  aspect-ratio: auto;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] .topic-card-preview-copy {
+  gap: 0.24rem;
+  padding: 0.58rem 0.65rem 0.62rem;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] .topic-card-preview-copy span {
+  font-size: 0.54rem;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] .topic-card-preview-copy strong {
+  font-size: 0.78rem;
+  line-height: 1.28;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.editorial-section .topic-card[data-editorial-feature="noticias"] a {
+  min-height: 2.18rem;
+  margin-top: 0.06rem;
+  padding: 0.48rem 0.66rem;
+  border-radius: 6px;
+  font-size: 0.66rem;
 }
 
 .topic-alert {
