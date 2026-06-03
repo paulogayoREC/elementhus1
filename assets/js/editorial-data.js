@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-01",
+  "updatedAt": "2026-06-03",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "CPU RTX Spark com gráficos Blackwell é a aposta da NVIDIA contra AMD e Intel",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/rtx-spark-e-a-cpu-com-graficos-integrados-blackwell-da-nvidia-e-chega-em-breve/",
-          "date": "2026-06-01",
+          "title": "Siri in iOS 27: Every New Feature and Change to Expect",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/06/02/ios-27-siri-features/",
+          "date": "2026-06-02",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Depois de muitas especulações, rumores e vazamentos sobre o processador da NVIDIA, o Time Verde enfim oficializou o produto antes da Computex 2026. Chamado de RTX Spark, o chip é desenvolvido em parceria com a..."
+          "summary": "Apple first introduced the idea of a smarter version of Siri at the 2024 Worldwide Developers Conference. ‌Siri‌ with Apple Intelligence was supposed to launch as part of iOS 18, but the underlying architecture..."
         },
         {
-          "title": "Vazou: Motorola Edge 70 Pro+ tem preço e mais detalhes revelados antes da hora",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/smartphone/vazou-motorola-edge-70-pro-tem-preco-e-mais-detalhes-revelados-antes-da-hora/",
-          "date": "2026-06-01",
+          "title": "MacBook Neo Disrupts a PC Market in Decline, IDC Says",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/06/03/macbook-neo-disrupts-a-pc-market-in-decline/",
+          "date": "2026-06-03",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Motorola prepara o lançamento oficial do seu novo celular intermediário premium: o Edge 70 Pro+. Além de o site da marca mostrar novos detalhes das especificações do aparelho, vazamentos também já indicam po..."
+          "summary": "The global memory shortage that has already squeezed Mac mini and Mac Studio supply is now set to weigh heavily on the broader PC market, with IDC forecasting an 11.3% decline in global shipments for 2026. Acco..."
         }
       ]
     }
