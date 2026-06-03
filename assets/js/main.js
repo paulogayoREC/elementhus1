@@ -317,7 +317,7 @@ document.querySelectorAll("[data-share-site]").forEach((button) => {
     const url = button.dataset.shareUrl || window.location.origin;
     const shareData = {
       title: "Encontre Aqui Tech | Encontre Antes de Todo Mundo",
-      text: "Notícias, Alertas de Segurança, Tutoriais, Curiosidades para viver melhor no mundo Tech!",
+      text: "Notícias de tecnologia para viver melhor no mundo Tech!",
       url
     };
 

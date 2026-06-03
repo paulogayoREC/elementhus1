@@ -53,7 +53,7 @@ const authLegalDocuments = {
       </section>
       <section>
         <h4>2. Finalidade da plataforma</h4>
-        <p>O Encontre Aqui Tech é uma plataforma de conteúdo sobre tecnologia, notícias, novidades, curiosidades, alertas de segurança, tutoriais e indicações de produtos ou serviços relacionados ao universo digital.</p>
+        <p>O Encontre Aqui Tech é uma plataforma de conteúdo sobre tecnologia, notícias e indicações de produtos ou serviços relacionados ao universo digital.</p>
         <p>A área de cadastro pode ser usada para permitir acesso a recursos do site, preferências, interações, comunicações, funcionalidades futuras e uma experiência mais personalizada.</p>
       </section>
       <section>
@@ -134,7 +134,7 @@ const authLegalDocuments = {
           <li>Permitir login, autenticação, segurança e recuperação de acesso quando implementada.</li>
           <li>Registrar o aceite dos Termos de Uso e da Política de Privacidade.</li>
           <li>Melhorar a experiência do usuário e organizar funcionalidades futuras.</li>
-          <li>Enviar comunicações relacionadas ao site, segurança, conta ou novidades, respeitando preferências e regras aplicáveis.</li>
+          <li>Enviar comunicações relacionadas ao site, segurança, conta ou atualizações, respeitando preferências e regras aplicáveis.</li>
           <li>Prevenir abuso, fraude, tentativas de acesso indevido e incidentes de segurança.</li>
           <li>Cumprir obrigações legais, regulatórias ou ordens de autoridades competentes.</li>
         </ul>

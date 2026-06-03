@@ -4,18 +4,18 @@ Estas regras valem para:
 
 - `noticias.html`
 
-Os conteudos de novidades tecnologicas, curiosidades, alertas de seguranca, dicas e tutoriais ficam concentrados em secoes internas de `noticias.html`.
+A pagina de Noticias concentra somente a editoria de noticias do site.
 
 ## Quando adicionar novo conteudo
 
-Sempre que o pedido for "adicione o novo conteudo" para a pagina de noticias ou uma de suas secoes internas:
+Sempre que o pedido for "adicione o novo conteudo" para a pagina de noticias:
 
 1. Transforme o novo conteudo no destaque principal da pagina.
 2. O destaque principal deve conter titulo, subtitulo, data em que foi adicionado, imagem e comentarios do visitante.
 3. Mova o destaque principal anterior para a area de conteudos anteriores.
 4. O conteudo anterior deve virar um card compacto e expansivel, com chamada curta que incentive a leitura.
-5. Mantenha no maximo 5 conteudos anteriores por secao interna.
-6. Se ja houver 5 conteudos anteriores na secao, exclua o mais antigo antes de adicionar outro.
+5. Mantenha no maximo 5 conteudos anteriores na pagina.
+6. Se ja houver 5 conteudos anteriores na pagina, exclua o mais antigo antes de adicionar outro.
 
 ## Campos obrigatorios
 
@@ -29,7 +29,7 @@ Todo conteudo principal ou anterior precisa manter:
 
 ## Comentarios
 
-Os comentarios de materias, novidades, curiosidades, alertas e tutoriais usam:
+Os comentarios de materias e noticias usam:
 
 - API: `api/article-comments.php`
 - Tabela MySQL: `article_comments`
@@ -51,6 +51,6 @@ Cada formulario precisa ter:
 - Use o acabamento premium aplicado em `noticias.html`.
 - O destaque principal deve continuar forte, com hero visual, meta de data e imagem.
 - Conteudos anteriores devem aparecer em `details.article-archive-card`, dentro de `.article-archive-grid[data-archive-limit="5"]`, com imagem, data, titulo, subtitulo e botao visual de expansao.
-- Nao informe visualmente que um conteudo e secundario; use titulos editoriais como "Continue no radar", "Continue explorando", "Mais alertas" ou "Outros guias uteis".
+- Nao informe visualmente que um conteudo e secundario; use titulos editoriais como "Continue no radar" ou "Continue explorando".
 - Preserve performance: imagens antigas devem usar `loading="lazy"` e `decoding="async"`.
 - Mantenha slugs estaveis e descritivos para preservar comentarios ja publicados.

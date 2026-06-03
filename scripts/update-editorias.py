@@ -49,15 +49,15 @@ SOURCES = [
     Source("Digital Trends", "https://www.digitaltrends.com/feed/"),
     Source("GeekWire", "https://www.geekwire.com/feed/"),
     Source("The Next Web", "https://thenextweb.com/feed/"),
-    Source("The Hacker News", "https://feeds.feedburner.com/TheHackersNews", "alertas"),
+    Source("The Hacker News", "https://feeds.feedburner.com/TheHackersNews"),
     Source("InfoWorld", "https://www.infoworld.com/index.rss"),
     Source("Computerworld", "https://www.computerworld.com/index.rss"),
-    Source("PCWorld", "https://www.pcworld.com/feed", "tutoriais"),
+    Source("PCWorld", "https://www.pcworld.com/feed"),
     Source("MacRumors", "https://www.macrumors.com/macrumors.xml"),
-    Source("Android Authority", "https://www.androidauthority.com/feed", "tutoriais"),
-    Source("Android Central", "https://www.androidcentral.com/feed", "tutoriais"),
+    Source("Android Authority", "https://www.androidauthority.com/feed"),
+    Source("Android Central", "https://www.androidcentral.com/feed"),
     Source("Notebookcheck", "https://www.notebookcheck.net/?type=100"),
-    Source("XDA Developers", "https://www.xda-developers.com/feed/", "tutoriais"),
+    Source("XDA Developers", "https://www.xda-developers.com/feed/"),
     Source("MIT Technology Review", "https://www.technologyreview.com/feed/"),
     Source("Analytics Insight", "https://www.analyticsinsight.net/feed"),
 ]
@@ -83,71 +83,11 @@ CATEGORY_KEYWORDS = {
         "startup",
         "tecnologia",
     ],
-    "novidades": [
-        "android",
-        "app",
-        "chip",
-        "device",
-        "ferramenta",
-        "gemini",
-        "gadget",
-        "hardware",
-        "lanca",
-        "lancamento",
-        "new",
-        "novo",
-        "release",
-        "windows",
-    ],
-    "curiosidades": [
-        "cultura",
-        "curious",
-        "curioso",
-        "descoberta",
-        "historia",
-        "meme",
-        "robot",
-        "robots",
-        "weird",
-        "3d",
-    ],
-    "alertas": [
-        "breach",
-        "cve",
-        "cyber",
-        "ddos",
-        "exploit",
-        "fraud",
-        "golpe",
-        "hack",
-        "malware",
-        "phishing",
-        "ransomware",
-        "security",
-        "seguranca",
-        "vazamento",
-        "vulnerability",
-        "zero-day",
-    ],
-    "tutoriais": [
-        "como",
-        "dica",
-        "guide",
-        "how to",
-        "passo",
-        "setup",
-        "tutorial",
-        "use",
-    ],
 }
 
 
 CATEGORY_MIN_SCORE = {
     "noticias": 2,
-    "novidades": 2,
-    "curiosidades": 1,
-    "alertas": 2,
-    "tutoriais": 2,
 }
 
 
@@ -168,28 +108,16 @@ EXCLUDED_TITLE_KEYWORDS = [
 
 CATEGORY_LABELS = {
     "noticias": "Noticias",
-    "novidades": "Novidades tecnologicas",
-    "curiosidades": "Curiosidades",
-    "alertas": "Alertas de Seguranca",
-    "tutoriais": "Tutoriais",
 }
 
 
 CATEGORY_TAGS = {
     "noticias": "Radar tech",
-    "novidades": "Novidade",
-    "curiosidades": "Cultura digital",
-    "alertas": "Alerta",
-    "tutoriais": "Guia pratico",
 }
 
 
 CATEGORY_IMAGES = {
     "noticias": "assets/img/astronaut-earth.png",
-    "novidades": "assets/img/astronauta-eat-cutout.png",
-    "curiosidades": "assets/img/post-instagram-eat.png",
-    "alertas": "assets/img/astro001-cutout.png",
-    "tutoriais": "assets/img/amazon-delivery-hero.png",
 }
 
 
@@ -212,86 +140,6 @@ SEED_ITEMS = {
             "tag": "Educacao em IA",
             "image": "assets/img/astro001-cutout.png",
             "summary": "O Mutirao.AI combina aulas online e encontros presenciais para aproximar ferramentas de inteligencia artificial de criadores e trabalhadores de comunidades perifericas.",
-        },
-    ],
-    "novidades": [
-        {
-            "title": "Arquitetos da Apple, Qualcomm e Nuvia criam startup de CPUs para IA",
-            "source": "Tom's Hardware",
-            "url": "https://www.tomshardware.com/pc-components/cpus/legendary-qualcomm-apple-and-nuvia-alumni-form-new-cpu-startup-nuvacore-promises-to-rewrite-the-rules-of-silicon",
-            "date": "2026-04-16",
-            "tag": "Chips para IA",
-            "image": "assets/img/astronauta-eat-cutout.png",
-            "summary": "A Nuvacore nasce com foco em processadores para infraestrutura de IA e computacao agentica, mirando eficiencia e desempenho em data centers.",
-        },
-        {
-            "title": "Meta aumenta preco dos Quest por escassez de RAM ligada a IA",
-            "source": "Tom's Hardware",
-            "url": "https://www.tomshardware.com/virtual-reality/meta-raising-quest-headset-prices-due-to-ai-driven-ram-shortage-quest-3-to-cost-usd600-quest-3s-usd350-from-april-19",
-            "date": "2026-04-16",
-            "tag": "VR e mercado",
-            "image": "assets/img/amazon-delivery-hero.png",
-            "summary": "A demanda de memoria para data centers de IA pressiona componentes de consumo e ja afeta precos de produtos como os headsets Meta Quest.",
-        },
-    ],
-    "curiosidades": [
-        {
-            "title": "Impressoras 3D da Bambu ganham mistura de cores com filamentos",
-            "source": "Tom's Hardware",
-            "url": "https://www.tomshardware.com/3d-printing/bambu-updates-its-3d-printers-to-print-unique-hues-or-gradients-using-two-or-three-filaments-company-acknowledges-orcaslicer-fullspectrum-fork-as-the-basis-for-the-color-prediction-part-of-the-new-feature",
-            "date": "2026-04-16",
-            "tag": "3D criativo",
-            "image": "assets/img/post-instagram-eat.png",
-            "summary": "Atualizacao do Bambu Studio permite criar tons e gradientes combinando dois ou tres filamentos, usando um truque visual parecido com mistura de pontos de impressao.",
-        },
-        {
-            "title": "Caso Spotify e Anna's Archive levanta novo debate sobre scraping e IA",
-            "source": "Tom's Hardware",
-            "url": "https://www.tomshardware.com/tech-industry/annas-archive-fined-322-million",
-            "date": "2026-04-16",
-            "tag": "Dados e IA",
-            "image": "assets/img/astronaut-earth.png",
-            "summary": "A decisao envolvendo 86 milhoes de arquivos raspados do Spotify pode influenciar futuras disputas sobre coleta de dados, autenticacao e treinamento de modelos.",
-        },
-    ],
-    "alertas": [
-        {
-            "title": "Tres zero-days do Microsoft Defender sao explorados ativamente",
-            "source": "The Hacker News",
-            "url": "https://thehackernews.com/2026/04/three-microsoft-defender-zero-days.html",
-            "date": "2026-04-17",
-            "tag": "Zero-day",
-            "image": "assets/img/post-instagram-eat.png",
-            "summary": "Falhas conhecidas como BlueHammer, RedSun e UnDefend foram observadas em exploracao real; duas ainda estavam sem correcao no momento da publicacao.",
-        },
-        {
-            "title": "Patch Tuesday de abril corrige falhas criticas em SAP, Adobe, Microsoft e Fortinet",
-            "source": "The Hacker News",
-            "url": "https://thehackernews.com/2026/04/april-patch-tuesday-fixes-critical.html",
-            "date": "2026-04-15",
-            "tag": "Atualizacoes",
-            "image": "assets/img/astro001-cutout.png",
-            "summary": "A rodada de correcoes inclui vulnerabilidades criticas, exploracao ativa e risco especial para ambientes corporativos que dependem de SharePoint, Acrobat e FortiSandbox.",
-        },
-    ],
-    "tutoriais": [
-        {
-            "title": "Como criar uma saudacao personalizada no Take a Message do Pixel",
-            "source": "Android Authority",
-            "url": "https://www.androidauthority.com/google-pixel-take-a-message-custom-greeting-how-to-3656399/",
-            "date": "2026-04-12",
-            "tag": "Android",
-            "image": "assets/img/astronauta-eat-cutout.png",
-            "summary": "O guia mostra requisitos e caminho no app Telefone do Google para gravar saudacoes personalizadas no recurso de mensagens de chamadas perdidas.",
-        },
-        {
-            "title": "Como testar o novo app do Gemini no Windows",
-            "source": "Engadget",
-            "url": "https://www.engadget.com/apps/googles-new-windows-app-is-yet-another-way-to-access-gemini-214000564.html",
-            "date": "2026-04-14",
-            "tag": "Windows e IA",
-            "image": "assets/img/amazon-delivery-hero.png",
-            "summary": "O app do Google para Windows usa atalho Alt + Espaco, busca local, Google Drive e Lens para trazer o Gemini ao fluxo de trabalho no desktop.",
         },
     ],
 }
@@ -415,12 +263,6 @@ def score_item(item: dict, category: str) -> int:
     score = sum(1 for keyword in CATEGORY_KEYWORDS[category] if keyword.casefold() in haystack)
 
     if item.get("sourceBias") == category:
-        score += 3
-
-    if category == "tutoriais" and ("how to" in haystack or "como " in haystack):
-        score += 3
-
-    if category == "alertas" and item["source"] == "The Hacker News":
         score += 3
 
     return score

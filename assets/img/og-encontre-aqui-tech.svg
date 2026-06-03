@@ -66,8 +66,8 @@
   <text x="96" y="312" font-family="Orbitron, JetBrains Mono, Consolas, monospace" font-size="72" font-weight="900" letter-spacing="1" fill="#faebd1">ENCONTRE ANTES</text>
   <text x="96" y="395" font-family="Orbitron, JetBrains Mono, Consolas, monospace" font-size="72" font-weight="900" letter-spacing="1" fill="#faebd1">DE TODO MUNDO</text>
 
-  <text x="100" y="454" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#faebd1" opacity="0.86">Notícias, Alertas de Segurança, Tutoriais,</text>
-  <text x="100" y="492" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#faebd1" opacity="0.86">Curiosidades para viver melhor no mundo Tech!</text>
+  <text x="100" y="454" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#faebd1" opacity="0.86">Notícias de tecnologia para viver melhor</text>
+  <text x="100" y="492" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600" fill="#faebd1" opacity="0.86">no mundo Tech!</text>
 
   <g transform="translate(96 535)" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="800">
     <rect x="0" y="0" width="192" height="42" rx="8" fill="#faebd1"/>
@@ -75,7 +75,7 @@
     <rect x="208" y="0" width="214" height="42" rx="8" fill="#100d0b" stroke="#faebd1" stroke-opacity="0.28"/>
     <text x="229" y="27" fill="#faebd1">conhecimento tech</text>
     <rect x="438" y="0" width="198" height="42" rx="8" fill="#257da7"/>
-    <text x="461" y="27" fill="#faebd1">alertas digitais</text>
+    <text x="461" y="27" fill="#faebd1">radar digital</text>
   </g>
 
   <text x="896" y="548" font-family="JetBrains Mono, Consolas, monospace" font-size="21" font-weight="800" fill="#faebd1">encontreaquitech.com</text>

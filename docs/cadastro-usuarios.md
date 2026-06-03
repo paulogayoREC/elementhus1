@@ -8,7 +8,7 @@
 - `api/request-password-reset.php`: recebe o e-mail e dispara link seguro de redefinição.
 - `api/reset-password.php`: valida token de uso único e grava a nova senha.
 - `api/comments.php`: lista e publica comentários/avaliações no MySQL.
-- `api/article-comments.php`: lista e publica comentários vinculados a cada notícia, novidade, curiosidade, alerta ou tutorial.
+- `api/article-comments.php`: lista e publica comentários vinculados a cada notícia.
 - `api/logout.php`: encerra a sessão.
 - `app/bootstrap.php`: sessão, respostas JSON, CSRF e validações comuns.
 - `app/Database.php`: conexão PDO com MySQL.

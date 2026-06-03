@@ -20,7 +20,7 @@ Mapa curto para orientar o Codex no projeto `encontreaquitech.com` sem carregar 
 ## Entradas por tipo de tarefa
 
 - Home: `index.html`, `assets/js/main.js`, `assets/css/styles.css`.
-- Pagina editorial publicada: `noticias.html`, com secoes internas para noticias, novidades tecnologicas, curiosidades, alertas de seguranca, dicas e tutoriais.
+- Pagina editorial publicada: `noticias.html`, com a noticia principal e o arquivo de noticias anteriores.
 - Regras editoriais: `docs/regras-editoriais.md`.
 - Indicacoes/produtos: `indicacoes.html`, `indicacoes/*.html`, `assets/js/tech-showcase.js`.
 - Regras da Vitrine Tech: `docs/regras-vitrine-tech.md`.
