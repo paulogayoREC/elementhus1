@@ -18,6 +18,9 @@ RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
 # Removed editorial pages: return 410 for any direct access.
 RewriteRule ^(novidades-tecnologicas|curiosidades|alertas-seguranca|tutoriais)(?:\.html)?$ - [G,L,NC]
 
+# Removed Mundo Geek pages: return 410 for any direct access.
+RewriteRule ^(mundo-geek|colecionaveis-geek)(?:\.html)?$ - [G,L,NC]
+
 # Redirect public .html URLs to clean equivalents while preserving queries.
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[?\s] [NC]
 RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
