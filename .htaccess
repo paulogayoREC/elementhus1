@@ -15,6 +15,9 @@ RewriteRule ^ - [R=503,L]
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[?\s] [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
 
+# Removed editorial pages: return 410 for any direct access.
+RewriteRule ^(novidades-tecnologicas|curiosidades|alertas-seguranca|tutoriais)(?:\.html)?$ - [G,L,NC]
+
 # Redirect public .html URLs to clean equivalents while preserving queries.
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[?\s] [NC]
 RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
