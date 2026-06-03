@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-05-13",
+  "updatedAt": "2026-06-01",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "US Stock Market Live Updates: S&P 500 Drifts as Oil Slides, Tech Tries to Rebound With Earnings Ahead",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/business/us-stock-market-live-updates-sp-500-drifts-as-oil-slides-tech-tries-to-rebound-with-earnings-ahead",
-          "date": "2026-05-13",
+          "title": "CPU RTX Spark com gráficos Blackwell é a aposta da NVIDIA contra AMD e Intel",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/hardware/rtx-spark-e-a-cpu-com-graficos-integrados-blackwell-da-nvidia-e-chega-em-breve/",
+          "date": "2026-06-01",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Earnings Picture Retail names are splitting the market after morning results. Home Depot is down 2.4% after cutting its full-year sales outlook, citing softer big-ticket spending. Walmart is up 1.5% thanks to a..."
+          "summary": "Depois de muitas especulações, rumores e vazamentos sobre o processador da NVIDIA, o Time Verde enfim oficializou o produto antes da Computex 2026. Chamado de RTX Spark, o chip é desenvolvido em parceria com a..."
         },
         {
-          "title": "Claude fora do ar? Usuários reclamam de instabilidade no serviço de IA hoje (12)",
+          "title": "Vazou: Motorola Edge 70 Pro+ tem preço e mais detalhes revelados antes da hora",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/claude-fora-do-ar-usuarios-reclamam-de-instabilidade-no-servico-de-ia-hoje-12/",
-          "date": "2026-05-12",
+          "url": "https://canaltech.com.br/smartphone/vazou-motorola-edge-70-pro-tem-preco-e-mais-detalhes-revelados-antes-da-hora/",
+          "date": "2026-06-01",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Serviço de inteligência artificial da Anthropic, o Claude passa por instabilidades na tarde desta terça-feira (12). De acordo com a página oficial de status da ferramenta, há erros elevados neste momento no..."
+          "summary": "A Motorola prepara o lançamento oficial do seu novo celular intermediário premium: o Edge 70 Pro+. Além de o site da marca mostrar novos detalhes das especificações do aparelho, vazamentos também já indicam po..."
         }
       ]
     }
