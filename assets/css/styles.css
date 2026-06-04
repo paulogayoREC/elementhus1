@@ -1178,6 +1178,129 @@ h4 {
   outline: none;
 }
 
+.world-cup-section {
+  overflow: hidden;
+  isolation: isolate;
+  color: #050505;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fffdf8 52%, #fff8ec 100%);
+}
+
+.world-cup-section::before,
+.world-cup-section::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.world-cup-section::before {
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 94, 184, 0.12) 0 0.24rem, transparent 0.24rem 4.2rem),
+    repeating-linear-gradient(0deg, rgba(240, 83, 95, 0.11) 0 0.24rem, transparent 0.24rem 4.2rem),
+    linear-gradient(135deg, rgba(255, 221, 0, 0.38), transparent 30%, rgba(0, 171, 102, 0.16) 66%, transparent);
+  opacity: 0.74;
+}
+
+.world-cup-section::after {
+  bottom: auto;
+  height: 0.58rem;
+  background: linear-gradient(90deg, #e30613, #ffdd00 18%, #009a44 36%, #005baa 54%, #7b2cbf 72%, #f37021 88%, #e30613);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.world-cup-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.world-cup-copy {
+  display: grid;
+  align-content: center;
+}
+
+.world-cup-copy .eyebrow {
+  color: #005baa;
+}
+
+.world-cup-copy h2 {
+  scroll-margin-top: 6rem;
+  max-width: 12ch;
+  color: #050505;
+  font-family: var(--font-tech);
+  text-transform: uppercase;
+  text-shadow: 0 4px 0 rgba(255, 221, 0, 0.42);
+}
+
+.world-cup-copy p:not(.eyebrow) {
+  max-width: 36rem;
+  color: rgba(5, 5, 5, 0.76);
+  font-size: 1.05rem;
+}
+
+.world-cup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.world-cup-button {
+  border-color: #e30613;
+  color: #050505;
+  text-transform: uppercase;
+  background: #ffdd00;
+  box-shadow: 0 14px 28px rgba(227, 6, 19, 0.18), inset 0 -0.18rem 0 rgba(5, 5, 5, 0.18);
+}
+
+.world-cup-button:hover,
+.world-cup-button:focus-visible {
+  color: #ffffff;
+  background: #005baa;
+  box-shadow: 0 16px 34px rgba(0, 91, 170, 0.28), inset 0 -0.18rem 0 rgba(5, 5, 5, 0.18);
+}
+
+.world-cup-actions span {
+  max-width: 20rem;
+  color: rgba(5, 5, 5, 0.66);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.world-cup-media {
+  position: relative;
+  min-width: 0;
+  min-height: 13.6rem;
+  aspect-ratio: 1920 / 500;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(5, 5, 5, 0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.18);
+}
+
+.world-cup-media::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  border: 0.55rem solid rgba(255, 255, 255, 0.84);
+  pointer-events: none;
+}
+
+.world-cup-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .feature-band {
   color: var(--ink);
   background:
@@ -4721,6 +4844,7 @@ h4 {
   }
 
   .intro-layout,
+  .world-cup-layout,
   .feature-layout,
   .community-layout,
   .about-layout,
@@ -4842,8 +4966,17 @@ h4 {
   }
 
   .intro-layout,
+  .world-cup-layout,
   .feature-layout {
     gap: 1.5rem;
+  }
+
+  .world-cup-copy h2 {
+    max-width: 17ch;
+  }
+
+  .world-cup-media {
+    min-height: 15rem;
   }
 
   .topic-card,
@@ -5082,6 +5215,42 @@ h4 {
 
   .intro-layout {
     gap: 0.9rem;
+  }
+
+  .world-cup-section {
+    padding: 2.8rem 0;
+  }
+
+  .world-cup-layout {
+    gap: 1.1rem;
+  }
+
+  .world-cup-copy h2 {
+    max-width: 16ch;
+    font-size: 1.68rem;
+    line-height: 1.12;
+  }
+
+  .world-cup-copy p:not(.eyebrow) {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .world-cup-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.72rem;
+    margin-top: 0.45rem;
+  }
+
+  .world-cup-actions span {
+    max-width: none;
+    font-size: 0.78rem;
+  }
+
+  .world-cup-media {
+    order: -1;
+    min-height: 11.5rem;
   }
 
   .intro-layout p:last-child {
