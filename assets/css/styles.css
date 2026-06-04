@@ -1179,6 +1179,7 @@ h4 {
 }
 
 .world-cup-section {
+  scroll-margin-top: 5rem;
   overflow: hidden;
   isolation: isolate;
   color: #050505;
