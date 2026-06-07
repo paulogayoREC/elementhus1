@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-05",
+  "updatedAt": "2026-06-07",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-06-04",
+          "title": "What to Expect From WWDC 2026: Gemini-Powered Siri, iOS 27, macOS 27 and More",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/guide/wwdc-2026-what-to-expect/",
+          "date": "2026-06-05",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Buying the right laptop sounds simple… until you start researching. A single Google search can flood you with countless models and confusing specifications. From graphics cards to OLED displays, the options can..."
+          "summary": "Apple's 2026 Worldwide Developers Conference is just days away, and it's going to be an interesting event because it will give us a look at Apple's AI plans. We'll see how Apple is going to compete with OpenAI..."
         },
         {
-          "title": "Google planeja venda de US$ 80 bi em ações para expandir infraestrutura de IA",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/mercado/google-planeja-venda-de-us-80-bi-em-acoes-para-expandir-infraestrutura-de-ia/",
-          "date": "2026-06-03",
+          "title": "The laptop middle class is vanishing",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3153456/the-laptop-middle-class-is-vanishing.html",
+          "date": "2026-06-05",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Alphabet, controladora do Google, anunciou um plano para levantar US$ 80 bilhões por meio da venda de ações com o objetivo de financiar a expansão em larga escala de sua infraestrutura de inteligência artific..."
+          "summary": "Being a techy person in 2026 — or even someone who just needs a new laptop — is hell. Performance is amazing, but devices that used to be affordable are beginning to balloon in price. And “affordable” is now a..."
         }
       ]
     }
