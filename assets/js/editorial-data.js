@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-07",
+  "updatedAt": "2026-06-09",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "What to Expect From WWDC 2026: Gemini-Powered Siri, iOS 27, macOS 27 and More",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/guide/wwdc-2026-what-to-expect/",
-          "date": "2026-06-05",
+          "title": "RTX Spark vs. Snapdragon X2 Elite: Which chip do you want in your AI PC?",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3154920/nvidia-has-the-muscle-but-qualcomm-may-have-the-better-ai-pc-brain.html",
+          "date": "2026-06-09",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Apple's 2026 Worldwide Developers Conference is just days away, and it's going to be an interesting event because it will give us a look at Apple's AI plans. We'll see how Apple is going to compete with OpenAI..."
+          "summary": "One big thing changed at Computex this past week: Windows on Arm processors became the next big thing for Windows desktops, specifically for mini PCs designed for productivity and AI applications. So which Arm..."
         },
         {
-          "title": "The laptop middle class is vanishing",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3153456/the-laptop-middle-class-is-vanishing.html",
-          "date": "2026-06-05",
+          "title": "Apple divulga quais iPhones terão suporte ao iOS 27; veja se o seu está na lista",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/apps/apple-divulga-quais-iphones-terao-suporte-ao-ios-27-veja-se-o-seu-esta-na-lista/",
+          "date": "2026-06-08",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Being a techy person in 2026 — or even someone who just needs a new laptop — is hell. Performance is amazing, but devices that used to be affordable are beginning to balloon in price. And “affordable” is now a..."
+          "summary": "A Apple anunciou durante a WWDC 2026 a lista de iPhones compatíveis com o iOS 27 , confirmando que a nova atualização manterá suporte para aparelhos mais antigos, incluindo toda a linha iPhone 11 e o iPhone SE..."
         }
       ]
     }
