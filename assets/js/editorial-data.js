@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-09",
+  "updatedAt": "2026-06-11",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "RTX Spark vs. Snapdragon X2 Elite: Which chip do you want in your AI PC?",
+          "title": "Surface Laptop 8 for Business review: Yesterday’s laptop at tomorrow’s price",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3154920/nvidia-has-the-muscle-but-qualcomm-may-have-the-better-ai-pc-brain.html",
-          "date": "2026-06-09",
+          "url": "https://www.pcworld.com/article/3150005/surface-laptop-8-review.html",
+          "date": "2026-06-11",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "One big thing changed at Computex this past week: Windows on Arm processors became the next big thing for Windows desktops, specifically for mini PCs designed for productivity and AI applications. So which Arm..."
+          "summary": "At a glance Expert's Rating Pros The Surface Laptop you know New privacy screen is functional Voice focus feature is generally useful Cons Unreasonably high price Same old, same old Construction Our Verdict Mic..."
         },
         {
-          "title": "Apple divulga quais iPhones terão suporte ao iOS 27; veja se o seu está na lista",
+          "title": "Como era o melhor PC gamer na última vez que o Brasil ganhou a Copa",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/apps/apple-divulga-quais-iphones-terao-suporte-ao-ios-27-veja-se-o-seu-esta-na-lista/",
-          "date": "2026-06-08",
+          "url": "https://canaltech.com.br/hardware/como-era-o-melhor-pc-gamer-na-ultima-vez-que-o-brasil-ganhou-a-copa/",
+          "date": "2026-06-11",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Apple anunciou durante a WWDC 2026 a lista de iPhones compatíveis com o iOS 27 , confirmando que a nova atualização manterá suporte para aparelhos mais antigos, incluindo toda a linha iPhone 11 e o iPhone SE..."
+          "summary": "A Copa do Mundo de futebol de 2026 chegou e, mais uma vez, a esperança do 6º título invade o coração dos brasileiros. Já se passaram 24 anos desde que o Brasil foi campeão e o mundo naquela época era outro. Em..."
         }
       ]
     }
