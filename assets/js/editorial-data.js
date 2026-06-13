@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-11",
+  "updatedAt": "2026-06-13",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Surface Laptop 8 for Business review: Yesterday’s laptop at tomorrow’s price",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3150005/surface-laptop-8-review.html",
-          "date": "2026-06-11",
+          "title": "Como Elon Musk se tornou o primeiro trilionário do mundo com o IPO da SpaceX",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/mercado/como-elon-musk-se-tornou-o-primeiro-trilionario-do-mundo-com-o-ipo-da-spacex/",
+          "date": "2026-06-12",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "At a glance Expert's Rating Pros The Surface Laptop you know New privacy screen is functional Voice focus feature is generally useful Cons Unreasonably high price Same old, same old Construction Our Verdict Mic..."
+          "summary": "Elon Musk se tornou nesta sexta-feira (12) o primeiro trilionário da história . A marca foi alcançada após o início das negociações das ações da SpaceX na Nasdaq, a bolsa de valores americana. Com os papéis abr..."
         },
         {
-          "title": "Como era o melhor PC gamer na última vez que o Brasil ganhou a Copa",
+          "title": "O rei caiu? ChatGPT perde espaço e fica atrás do Claude em nova pesquisa",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/como-era-o-melhor-pc-gamer-na-ultima-vez-que-o-brasil-ganhou-a-copa/",
-          "date": "2026-06-11",
+          "url": "https://canaltech.com.br/inteligencia-artificial/o-rei-caiu-chatgpt-perde-espaco-e-fica-atras-do-claude-em-nova-pesquisa/",
+          "date": "2026-06-12",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Copa do Mundo de futebol de 2026 chegou e, mais uma vez, a esperança do 6º título invade o coração dos brasileiros. Já se passaram 24 anos desde que o Brasil foi campeão e o mundo naquela época era outro. Em..."
+          "summary": "Uma nova pesquisa realizada pelo Android Authority com mais de 2.000 participantes mostrou mudanças na preferência dos usuários por ferramentas de IA . No levantamento, o ChatGPT apareceu atrás do Claude, da An..."
         }
       ]
     }
