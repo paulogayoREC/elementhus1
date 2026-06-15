@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-13",
+  "updatedAt": "2026-06-15",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Como Elon Musk se tornou o primeiro trilionário do mundo com o IPO da SpaceX",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/mercado/como-elon-musk-se-tornou-o-primeiro-trilionario-do-mundo-com-o-ipo-da-spacex/",
-          "date": "2026-06-12",
+          "title": "These Three Unannounced iOS 27 Features Are Still Coming",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/06/15/three-unannounced-ios-27-features-are-still-coming/",
+          "date": "2026-06-15",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Elon Musk se tornou nesta sexta-feira (12) o primeiro trilionário da história . A marca foi alcançada após o início das negociações das ações da SpaceX na Nasdaq, a bolsa de valores americana. Com os papéis abr..."
+          "summary": "Apple developed more for its next-generation software updates than it revealed at WWDC last week, with three features already present in internal builds being deliberately withheld from the public announcement..."
         },
         {
-          "title": "O rei caiu? ChatGPT perde espaço e fica atrás do Claude em nova pesquisa",
+          "title": "Samsung deve trocar Exynos por Snapdragon em novo dobrável no Brasil, diz leaker",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/o-rei-caiu-chatgpt-perde-espaco-e-fica-atras-do-claude-em-nova-pesquisa/",
-          "date": "2026-06-12",
+          "url": "https://canaltech.com.br/smartphone/samsung-deve-trocar-exynos-por-snapdragon-em-novo-dobravel-no-brasil-diz-leaker/",
+          "date": "2026-06-15",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Uma nova pesquisa realizada pelo Android Authority com mais de 2.000 participantes mostrou mudanças na preferência dos usuários por ferramentas de IA . No levantamento, o ChatGPT apareceu atrás do Claude, da An..."
+          "summary": "As previsões em torno do lançamento do Galaxy Z Flip 8 indicam que o celular deve chegar às lojas em julho de 2026, e a Samsung pode adotar uma nova estratégia de processadores para esse dobrável. Novos rumores..."
         }
       ]
     }
