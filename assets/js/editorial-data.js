@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-15",
+  "updatedAt": "2026-06-17",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "These Three Unannounced iOS 27 Features Are Still Coming",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/06/15/three-unannounced-ios-27-features-are-still-coming/",
-          "date": "2026-06-15",
+          "title": "Best laptops for college students: 6 picks for every budget",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/557622/the-best-laptop-for-college.html",
+          "date": "2026-06-16",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Apple developed more for its next-generation software updates than it revealed at WWDC last week, with three features already present in internal builds being deliberately withheld from the public announcement..."
+          "summary": "The right laptop can really make or break your college experience. From navigating packed lecture halls to powering through all-nighters, reliability is key. But that doesn’t mean you need the most expensive mo..."
         },
         {
-          "title": "Samsung deve trocar Exynos por Snapdragon em novo dobrável no Brasil, diz leaker",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/smartphone/samsung-deve-trocar-exynos-por-snapdragon-em-novo-dobravel-no-brasil-diz-leaker/",
-          "date": "2026-06-15",
+          "title": "Here's What's New With Visual Intelligence in iOS 27",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/guide/ios-27-visual-intelligence/",
+          "date": "2026-06-16",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "As previsões em torno do lançamento do Galaxy Z Flip 8 indicam que o celular deve chegar às lojas em julho de 2026, e a Samsung pode adotar uma nova estratégia de processadores para esse dobrável. Novos rumores..."
+          "summary": "Visual Intelligence is getting a big upgrade in iOS 27 . It's now easier to find than it was before, and there are new ‌Visual Intelligence‌ capabilities. Apple also expanded it to the iPad and the Mac, so you..."
         }
       ]
     }
