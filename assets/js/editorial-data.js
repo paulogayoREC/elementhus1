@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-21",
+  "updatedAt": "2026-06-23",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Elon Musk duvida de IA chinesa e CEO de startup rival peita o trilionário",
+          "title": "Busca por IA já disputa espaço com o Google no Brasil, mostra pesquisa",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/mercado/elon-musk-duvida-de-ia-chinesa-e-ceo-de-startup-rival-peita-o-trilionario/",
-          "date": "2026-06-19",
+          "url": "https://canaltech.com.br/apps/busca-por-ia-ja-disputa-espaco-com-o-google-no-brasil-mostra-pesquisa/",
+          "date": "2026-06-22",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "O mercado global de inteligência artificial ganhou um novo capítulo na disputa entre o Ocidente e o Oriente. Jie Tang, CEO e fundador da startup chinesa Z.ai, rebateu publicamente uma previsão feita por Elon Mu..."
+          "summary": "A busca tradicional ainda domina, mas os assistentes de inteligência artificial já entraram na rotina de pesquisa dos brasileiros . É o que mostra a nova edição do “Super Panorama”, feito pelo Mobile Time/Opini..."
         },
         {
-          "title": "8 formas de assinar o Gemini mais barato ou de graça",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/como-assinar-o-gemini-mais-barato-ou-de-graca/",
-          "date": "2026-06-20",
+          "title": "Best Prime Day laptop deals: Great notebooks at spectacular prices",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/2923815/best-laptop-prime-day-deals.html",
+          "date": "2026-06-23",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Muita gente pensa no AI Pro quando fala em Gemini pago, mas a verdade é que o Google já tem uma opção mais acessível , o AI Plus, além de alguns caminhos que podem ajudar a gastar menos. Em alguns casos, dá até..."
+          "summary": "I’ve been spending the past few months digging into laptop pricing , and one thing is incredibly obvious here. Laptops are getting wildly expensive, thanks in part to the rising cost of RAM . But with Amazon Pr..."
         }
       ]
     }
