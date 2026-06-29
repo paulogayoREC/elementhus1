@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-27",
+  "updatedAt": "2026-06-29",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "\"Novo normal\": Lenovo faz previsão pessimista sobre preço de memórias RAM e SSDs",
+          "title": "ChatGPT consegue fazer check-up do seu PC sem abrir nenhum arquivo; veja como",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/novo-normal-lenovo-faz-previsao-pessimista-sobre-preco-de-memorias-ram-e-ssds/",
-          "date": "2026-06-26",
+          "url": "https://canaltech.com.br/inteligencia-artificial/chatgpt-consegue-fazer-check-up-do-seu-pc-sem-abrir-nenhum-arquivo-veja-como/",
+          "date": "2026-06-28",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "O \"RAMpocalipse\" está longe de acabar. Na verdade, ela acabou de começar, é o que acreditam muitos executivos de gigantes da indústria de hardware . A Lenovo é ainda mais pessimista , já que ela acha que a atua..."
+          "summary": "Caso o seu computador esteja lento ou você queira apenas conferir se está tudo certo com o PC, é possível usar o ChatGPT para fazer um check-up da máquina . Tudo isso ocorre sem instalar apps adicionais ou exig..."
         },
         {
-          "title": "Fim dos chatbots: OpenAI, Apple e Meta agora correm atrás da \"IA Espacial\"",
+          "title": "16 GB ainda dá? Quantos GB um PC gamer precisa de verdade em 2026",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/fim-dos-chatbots-openai-apple-e-meta-agora-correm-atras-da-ia-espacial/",
-          "date": "2026-06-26",
+          "url": "https://canaltech.com.br/hardware/16-gb-ainda-da-quantos-gb-um-pc-gamer-precisa-de-verdade-em-2026/",
+          "date": "2026-06-28",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A corrida da inteligência artificial está entrando em uma nova fase e deixando os chatbots em segundo plano. A OpenAI, Apple e Meta agora concentram esforços no desenvolvimento da chamada “IA espacial”, sistema..."
+          "summary": "Vivemos a pior época para comprar memória RAM , esse é um fato. Basta pesquisar por módulos de memória DDR5 para ver kits mais caros do que uma GeForce RTX 5060 Ti, dependendo do modelo. Olhando para a tecnolog..."
         }
       ]
     }
