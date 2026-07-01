@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-06-29",
+  "updatedAt": "2026-07-01",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "ChatGPT consegue fazer check-up do seu PC sem abrir nenhum arquivo; veja como",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/chatgpt-consegue-fazer-check-up-do-seu-pc-sem-abrir-nenhum-arquivo-veja-como/",
-          "date": "2026-06-28",
+          "title": "Krutrim: India's AI Unicorn that Pivoted Before it Peaked",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/artificial-intelligence/krutrim-indias-ai-unicorn-that-pivoted-before-it-peaked",
+          "date": "2026-07-01",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Caso o seu computador esteja lento ou você queira apenas conferir se está tudo certo com o PC, é possível usar o ChatGPT para fazer um check-up da máquina . Tudo isso ocorre sem instalar apps adicionais ou exig..."
+          "summary": "How Bhavish Aggarwal's Sovereign AI Bet Went From Frontier Models to Cloud Infrastructure India's AI ambitions found an early symbol in Krutrim. The name means \"artificial\" in Sanskrit, and the company carried..."
         },
         {
-          "title": "16 GB ainda dá? Quantos GB um PC gamer precisa de verdade em 2026",
+          "title": "iPhone 18 Pro: vazamentos revelam chip A20 Pro, modem C2 e câmera aprimorada",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/16-gb-ainda-da-quantos-gb-um-pc-gamer-precisa-de-verdade-em-2026/",
-          "date": "2026-06-28",
+          "url": "https://canaltech.com.br/smartphone/iphone-18-pro-vazamentos-revelam-chip-a20-pro-modem-c2-e-camera-aprimorada/",
+          "date": "2026-07-01",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Vivemos a pior época para comprar memória RAM , esse é um fato. Basta pesquisar por módulos de memória DDR5 para ver kits mais caros do que uma GeForce RTX 5060 Ti, dependendo do modelo. Olhando para a tecnolog..."
+          "summary": "Novos vazamentos sobre o iPhone 18 Pro indicam que a Apple prepara mudanças importantes para sua próxima geração de smartphones premium. Documentos técnicos obtidos durante um ataque cibernético à fornecedora T..."
         }
       ]
     }
