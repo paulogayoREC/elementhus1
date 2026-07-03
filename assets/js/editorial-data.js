@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-01",
+  "updatedAt": "2026-07-03",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Krutrim: India's AI Unicorn that Pivoted Before it Peaked",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/artificial-intelligence/krutrim-indias-ai-unicorn-that-pivoted-before-it-peaked",
+          "title": "Elon Musk's SpaceX Showed Off Prototype AI Device",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/07/01/spacex-ai-device/",
           "date": "2026-07-01",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "How Bhavish Aggarwal's Sovereign AI Bet Went From Frontier Models to Cloud Infrastructure India's AI ambitions found an early symbol in Krutrim. The name means \"artificial\" in Sanskrit, and the company carried..."
+          "summary": "Elon Musk's SpaceX may be aiming to compete with Apple in the future. The company showed investors a prototype for a \"handset-like device designed to reshape how humans interact with artificial intelligence,\" a..."
         },
         {
-          "title": "iPhone 18 Pro: vazamentos revelam chip A20 Pro, modem C2 e câmera aprimorada",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/smartphone/iphone-18-pro-vazamentos-revelam-chip-a20-pro-modem-c2-e-camera-aprimorada/",
-          "date": "2026-07-01",
+          "title": "Best laptops under $500: Affordable picks that will satisfy your needs",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/699203/best-laptops-under-500.html",
+          "date": "2026-07-02",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Novos vazamentos sobre o iPhone 18 Pro indicam que a Apple prepara mudanças importantes para sua próxima geração de smartphones premium. Documentos técnicos obtidos durante um ataque cibernético à fornecedora T..."
+          "summary": "Finding a great laptop for under $500 isn’t impossible. It just takes knowing what to pay attention to and what to ignore. For most people, I’d recommend opting for a laptop with a 1080p display and at least 8G..."
         }
       ]
     }
