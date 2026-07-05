@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-05",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Elon Musk's SpaceX Showed Off Prototype AI Device",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/07/01/spacex-ai-device/",
-          "date": "2026-07-01",
+          "title": "IA pode destruir a bateria do seu celular; veja como resolver",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/inteligencia-artificial/ia-pode-destruir-a-bateria-do-seu-celular-veja-como-resolver/",
+          "date": "2026-07-04",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Elon Musk's SpaceX may be aiming to compete with Apple in the future. The company showed investors a prototype for a \"handset-like device designed to reshape how humans interact with artificial intelligence,\" a..."
+          "summary": "A inteligência artificial está cada vez mais presente nos smartphones, sendo integrada ao sistema e a diversos aplicativos para executar tarefas, como resumos de notificações, edição de fotos, sugestões persona..."
         },
         {
-          "title": "Best laptops under $500: Affordable picks that will satisfy your needs",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/699203/best-laptops-under-500.html",
-          "date": "2026-07-02",
+          "title": "Gigante da Apple: iPhone 17 Pro Max de 512 GB ganha super desconto no Prime",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/smartphone/gigante-da-apple-iphone-17-pro-max-de-512-gb-ganha-super-desconto-no-prime/",
+          "date": "2026-07-04",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Finding a great laptop for under $500 isn’t impossible. It just takes knowing what to pay attention to and what to ignore. For most people, I’d recommend opting for a laptop with a 1080p display and at least 8G..."
+          "summary": "A Amazon preparou uma condição imperdível para quem busca o ápice da tecnologia da Maçã. O cobiçado iPhone 17 Pro Max (na elegante cor Laranja Cósmico e com 512 GB de armazenamento) está com um desconto agressi..."
         }
       ]
     }
