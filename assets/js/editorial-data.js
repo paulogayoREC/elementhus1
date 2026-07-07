@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-05",
+  "updatedAt": "2026-07-07",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "IA pode destruir a bateria do seu celular; veja como resolver",
+          "title": "Crise da RAM faz Samsung bater recorde de lucro e deixa Apple e NVIDIA para trás",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/ia-pode-destruir-a-bateria-do-seu-celular-veja-como-resolver/",
-          "date": "2026-07-04",
+          "url": "https://canaltech.com.br/produtos/crise-da-ram-faz-samsung-bater-recorde-de-lucro-e-deixa-apple-e-nvidia-para-tras/",
+          "date": "2026-07-07",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A inteligência artificial está cada vez mais presente nos smartphones, sendo integrada ao sistema e a diversos aplicativos para executar tarefas, como resumos de notificações, edição de fotos, sugestões persona..."
+          "summary": "A forte alta nos preços das memórias RAM transformou o segundo trimestre de 2026 em um período histórico para a Samsung , que registrou um lucro operacional de 89,4 trilhões de won (cerca de R$ 305), superando..."
         },
         {
-          "title": "Gigante da Apple: iPhone 17 Pro Max de 512 GB ganha super desconto no Prime",
+          "title": "Não subestime o iPhone Air 2; vazamento sugere correções dos maiores \"defeitos\"",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/smartphone/gigante-da-apple-iphone-17-pro-max-de-512-gb-ganha-super-desconto-no-prime/",
-          "date": "2026-07-04",
+          "url": "https://canaltech.com.br/smartphone/nao-subestime-o-iphone-air-2-vazamento-sugere-correcoes-dos-maiores-defeitos/",
+          "date": "2026-07-07",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Amazon preparou uma condição imperdível para quem busca o ápice da tecnologia da Maçã. O cobiçado iPhone 17 Pro Max (na elegante cor Laranja Cósmico e com 512 GB de armazenamento) está com um desconto agressi..."
+          "summary": "A Apple ainda nem confirmou oficialmente o iPhone Air 2 , mas novos rumores já indicam que a empresa prepara melhorias importantes para a segunda geração do seu celular ultrafino. Segundo um vazamento recente n..."
         }
       ]
     }
