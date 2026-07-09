@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-07",
+  "updatedAt": "2026-07-09",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Crise da RAM faz Samsung bater recorde de lucro e deixa Apple e NVIDIA para trás",
+          "title": "Modo de voz do ChatGPT está mais fluido e vira alternativa ao Google Tradutor",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/produtos/crise-da-ram-faz-samsung-bater-recorde-de-lucro-e-deixa-apple-e-nvidia-para-tras/",
-          "date": "2026-07-07",
+          "url": "https://canaltech.com.br/inteligencia-artificial/modo-de-voz-do-chatgpt-esta-mais-fluido-e-vira-alternativa-ao-google-tradutor/",
+          "date": "2026-07-08",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A forte alta nos preços das memórias RAM transformou o segundo trimestre de 2026 em um período histórico para a Samsung , que registrou um lucro operacional de 89,4 trilhões de won (cerca de R$ 305), superando..."
+          "summary": "A OpenAI anunciou o GPT-Live nesta quarta-feira (08), novo modelo de IA para conversas por voz no ChatGPT. A atualização deixa as interações mais fluidas e ainda transforma o assistente em “intérprete” para tra..."
         },
         {
-          "title": "Não subestime o iPhone Air 2; vazamento sugere correções dos maiores \"defeitos\"",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/smartphone/nao-subestime-o-iphone-air-2-vazamento-sugere-correcoes-dos-maiores-defeitos/",
-          "date": "2026-07-07",
+          "title": "Meta's 'Super Sensing' Prototype Glasses Quietly Record Everything",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/07/09/meta-super-sensing-glasses-record-everything/",
+          "date": "2026-07-09",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Apple ainda nem confirmou oficialmente o iPhone Air 2 , mas novos rumores já indicam que a empresa prepara melhorias importantes para a segunda geração do seu celular ultrafino. Segundo um vazamento recente n..."
+          "summary": "Meta has prototyped \"super sensing\" smart glasses that use cameras and audio recordings to capture the wearer's every moment, reports the Financial Times ($). The smart glasses continuously collect audio while..."
         }
       ]
     }
