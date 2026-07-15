@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-13",
+  "updatedAt": "2026-07-15",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "From Tech to AI: The First Billionaires Who Changed the World",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/ampstories/artificial-intelligence/from-tech-to-ai-the-first-billionaires-who-changed-the-world",
-          "date": "2026-07-13",
+          "title": "Best laptops for college students: 6 picks for every budget",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/557622/the-best-laptop-for-college.html",
+          "date": "2026-07-14",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Bill Gates: Microsoft co-founder revolutionized personal computing, making software accessible worldwide while influencing philanthropy, education, healthcare, and global technological development significantly..."
+          "summary": "The right laptop can really make or break your college experience. From navigating packed lecture halls to powering through all-nighters, reliability is key. But that doesn’t mean you need the most expensive mo..."
         },
         {
-          "title": "Indian Cities Emerging as Deep-Tech Innovation Hubs",
+          "title": "Top News Today: ASML AI Boom, High-Paying Degrees, OpenAI Device & Crypto Picks",
           "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/ampstories/tech-news/indian-cities-emerging-as-deep-tech-innovation-hubs",
-          "date": "2026-07-13",
+          "url": "https://www.analyticsinsight.net/tech-news/top-news-today-asml-ai-boom-high-paying-degrees-openai-device-crypto-picks",
+          "date": "2026-07-15",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Bengaluru: India's leading deep-tech hub, Bengaluru drives AI, robotics, aerospace, semiconductor, and enterprise software innovation through startups, research institutions, and global companies. Hyderabad: Hy..."
+          "summary": "Good morning! Here’s your quick roundup of today’s biggest stories from artificial intelligence, semiconductors, higher education, startups, cryptocurrency, and emerging consumer technology. What’s New Today: A..."
         }
       ]
     }
