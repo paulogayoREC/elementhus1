@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-07-17",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops for college students: 6 picks for every budget",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/557622/the-best-laptop-for-college.html",
-          "date": "2026-07-14",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-07-16",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The right laptop can really make or break your college experience. From navigating packed lecture halls to powering through all-nighters, reliability is key. But that doesn’t mean you need the most expensive mo..."
+          "summary": "Shopping for a laptop starts simple enough, but it always ends with a dozen open tabs full of specs you didn’t really care about in the first place. Graphics cards, display types, confusing processor names… it..."
         },
         {
-          "title": "Top News Today: ASML AI Boom, High-Paying Degrees, OpenAI Device & Crypto Picks",
+          "title": "What is Inkling AI? Mira Murati's ChatGPT Challenger",
           "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/tech-news/top-news-today-asml-ai-boom-high-paying-degrees-openai-device-crypto-picks",
-          "date": "2026-07-15",
+          "url": "https://www.analyticsinsight.net/news/what-is-inkling-ai-mira-muratis-chatgpt-challenger",
+          "date": "2026-07-17",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Good morning! Here’s your quick roundup of today’s biggest stories from artificial intelligence, semiconductors, higher education, startups, cryptocurrency, and emerging consumer technology. What’s New Today: A..."
+          "summary": "Thinking Machines Lab, the AI startup founded by former OpenAI CTO Mira Murati, announced its first in-house AI model, Inkling. The model comes as a response to the growing demand for open-weight AI systems, pa..."
         }
       ]
     }
