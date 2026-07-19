@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-17",
+  "updatedAt": "2026-07-19",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-07-16",
+          "title": "Como usar IA para acabar com o doomscrolling e \"curar\" vício digital",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/inteligencia-artificial/curar-doomscrolling-vicio-digital-com-ajuda-da-ia/",
+          "date": "2026-07-18",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Shopping for a laptop starts simple enough, but it always ends with a dozen open tabs full of specs you didn’t really care about in the first place. Graphics cards, display types, confusing processor names… it..."
+          "summary": "Se você abre as redes sociais para dar uma olhada nas notícias e, quando percebe, já passou vários minutos ou até horas rolando o feed, provavelmente já caiu no doomscrolling . Esse hábito pode aumentar a ansie..."
         },
         {
-          "title": "What is Inkling AI? Mira Murati's ChatGPT Challenger",
+          "title": "Samsung Cuts Hundreds of US Jobs Amid Texas HQ Move",
           "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/news/what-is-inkling-ai-mira-muratis-chatgpt-challenger",
-          "date": "2026-07-17",
+          "url": "https://www.analyticsinsight.net/news/samsung-cuts-hundreds-of-us-jobs-amid-texas-hq-move",
+          "date": "2026-07-19",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Thinking Machines Lab, the AI startup founded by former OpenAI CTO Mira Murati, announced its first in-house AI model, Inkling. The model comes as a response to the growing demand for open-weight AI systems, pa..."
+          "summary": "Samsung Electronics has cut hundreds of jobs in the US as it shifts the headquarters of its consumer electronics business from New Jersey to Texas. The restructuring affects employees across the company's displ..."
         }
       ]
     }
