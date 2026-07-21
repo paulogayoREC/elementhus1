@@ -7,10 +7,6 @@ const feedbackStatus = document.querySelector("[data-feedback-status]");
 const feedbackMessage = document.querySelector("[data-feedback-message]");
 const feedbackCount = document.querySelector("[data-feedback-count]");
 const feedbackName = feedbackForm?.querySelector('input[name="name"]');
-const searchPanel = document.querySelector("[data-search-panel]");
-const searchInput = document.querySelector("[data-search-input]");
-const searchResults = document.querySelector("[data-search-results]");
-const transmissionFeed = document.querySelector("[data-transmission-feed]");
 const feedbackNameStorageKey = "encontreAquiTechFeedback:name";
 const feedbackMessageLimit = 500;
 const articleCommentForms = Array.from(document.querySelectorAll("[data-article-comment-form]"));
@@ -35,8 +31,6 @@ const articleCommentState = {
 const editorialCategories = window.editorialData?.categories || {};
 let menuBackdrop = null;
 let menuLastFocusedElement = null;
-let searchLastFocusedElement = null;
-let cachedSearchItems = null;
 
 const queueIdleTask = (callback, timeout = 1200) => {
   if ("requestIdleCallback" in window) {
@@ -127,195 +121,6 @@ const createTextElement = (tagName, className, text) => {
   return element;
 };
 
-const normalizeSearchText = (value) => String(value || "")
-  .normalize("NFD")
-  .replace(/[\u0300-\u036f]/g, "")
-  .toLowerCase()
-  .trim();
-
-const getStaticSearchItems = () => Array.from(document.querySelectorAll("[data-search-item]"))
-  .map((element) => ({
-    category: element.dataset.searchCategory || "Encontre Aqui Tech",
-    title: element.dataset.searchTitle || element.textContent,
-    summary: element.dataset.searchSummary || "",
-    url: element.dataset.searchUrl || element.getAttribute("href") || "#"
-  }))
-  .filter((item) => item.title && item.url);
-
-const getEditorialSearchItems = () => Object.values(editorialCategories)
-  .flatMap((category) => (Array.isArray(category.items) ? category.items : []).map((item) => ({
-    category: category.label || item.tag || "Notícias Tech",
-    title: item.title,
-    summary: item.summary || item.source || "",
-    url: item.url || "#"
-  })))
-  .filter((item) => item.title && item.url);
-
-const getSearchItems = () => {
-  if (cachedSearchItems) return cachedSearchItems;
-
-  const itemsByKey = new Map();
-  [...getStaticSearchItems(), ...getEditorialSearchItems()].forEach((item) => {
-    const key = `${item.title}:${item.url}`;
-    if (!itemsByKey.has(key)) {
-      itemsByKey.set(key, item);
-    }
-  });
-
-  cachedSearchItems = Array.from(itemsByKey.values());
-  return cachedSearchItems;
-};
-
-const renderSearchResults = (query = "") => {
-  if (!searchResults) return;
-
-  const normalizedQuery = normalizeSearchText(query);
-  const items = getSearchItems();
-  const visibleItems = normalizedQuery
-    ? items.filter((item) => normalizeSearchText(`${item.category} ${item.title} ${item.summary}`).includes(normalizedQuery))
-    : items.slice(0, 6);
-
-  searchResults.textContent = "";
-
-  if (!visibleItems.length) {
-    searchResults.append(createTextElement("p", "search-empty", "Nenhum resultado encontrado no conteúdo carregado desta página."));
-    return;
-  }
-
-  visibleItems.slice(0, 8).forEach((item) => {
-    const link = document.createElement("a");
-    link.className = "search-result";
-    link.href = item.url;
-
-    if (/^https?:\/\//.test(item.url) && !item.url.includes(window.location.hostname)) {
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-    }
-
-    link.append(
-      createTextElement("span", "search-result-category", item.category),
-      createTextElement("strong", "", item.title),
-      createTextElement("span", "", item.summary || "Abrir conteúdo")
-    );
-
-    searchResults.append(link);
-  });
-};
-
-const openSearchPanel = () => {
-  if (!searchPanel || !searchInput) return;
-
-  searchLastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-  closeMenu({ restoreFocus: false });
-  searchPanel.hidden = false;
-  document.body.classList.add("search-open");
-  renderSearchResults(searchInput.value);
-
-  window.setTimeout(() => {
-    searchInput.focus();
-    searchInput.select();
-  }, 40);
-};
-
-const closeSearchPanel = ({ restoreFocus = true } = {}) => {
-  if (!searchPanel || searchPanel.hidden) return;
-
-  searchPanel.hidden = true;
-  document.body.classList.remove("search-open");
-
-  if (restoreFocus && searchLastFocusedElement instanceof HTMLElement) {
-    searchLastFocusedElement.focus();
-  }
-};
-
-const createTransmissionRow = (item) => {
-  const link = document.createElement("a");
-  link.className = "transmission-row";
-  link.href = item.url;
-  link.dataset.searchItem = "";
-  link.dataset.searchCategory = item.tag || item.source || "Curadoria";
-  link.dataset.searchTitle = item.title || "";
-  link.dataset.searchSummary = item.summary || "";
-  link.dataset.searchUrl = item.url || "#";
-
-  if (/^https?:\/\//.test(item.url || "") && !item.url.includes(window.location.hostname)) {
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-  }
-
-  const time = document.createElement("time");
-  time.dateTime = item.date || "";
-  time.textContent = formatEditorialDate(item.date) || "Agora";
-
-  const category = createTextElement("span", "", item.tag || item.source || "Notícias Tech");
-  const title = createTextElement("strong", "", item.title || "Publicação recente");
-  const status = createTextElement("em", "", item.featured ? "novo" : "curadoria");
-
-  link.append(time, category, title, status);
-
-  return link;
-};
-
-const renderTransmissionFeed = () => {
-  if (!transmissionFeed) return;
-
-  const editorialItems = Object.values(editorialCategories)
-    .flatMap((category) => (Array.isArray(category.items) ? category.items : []))
-    .filter((item) => item.title && item.url)
-    .slice(0, 2);
-
-  if (!editorialItems.length) return;
-
-  const staticRows = Array.from(transmissionFeed.querySelectorAll("[data-transmission-static]"))
-    .map((row) => row.cloneNode(true));
-  transmissionFeed.textContent = "";
-  editorialItems.forEach((item) => transmissionFeed.append(createTransmissionRow(item)));
-  staticRows.forEach((row) => transmissionFeed.append(row));
-  cachedSearchItems = null;
-};
-
-const setupActiveNavigation = () => {
-  const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
-  const targets = links
-    .map((link) => document.getElementById(decodeURIComponent(link.getAttribute("href").slice(1))))
-    .filter(Boolean);
-
-  if (!links.length || !targets.length || !("IntersectionObserver" in window)) return;
-
-  const setActiveLink = (id) => {
-    links.forEach((link) => {
-      const isActive = link.getAttribute("href") === `#${id}`;
-      if (isActive) {
-        link.setAttribute("aria-current", "true");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    const visibleEntry = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-    if (visibleEntry?.target?.id) {
-      setActiveLink(visibleEntry.target.id);
-    }
-  }, {
-    rootMargin: "-36% 0px -54% 0px",
-    threshold: [0.05, 0.2, 0.45]
-  });
-
-  targets.forEach((target) => observer.observe(target));
-};
-
-const updateCurrentYear = () => {
-  const year = String(new Date().getFullYear());
-  document.querySelectorAll("[data-current-year]").forEach((element) => {
-    element.textContent = year;
-  });
-};
-
 const renderHomeEditorialHighlights = () => {
   document.querySelectorAll("[data-editorial-feature]").forEach((card) => {
     const key = card.dataset.editorialFeature;
@@ -383,12 +188,9 @@ const renderTopicEditorialLists = () => {
 
 renderHomeEditorialHighlights();
 renderTopicEditorialLists();
-renderTransmissionFeed();
-setupActiveNavigation();
-updateCurrentYear();
 
 const revealTargets = document.querySelectorAll(
-  ".section-heading, .panel-label, .hero-dashboard, .astronaut-guide, .topic-marquee, .radar-feature, .radar-side-card, .transmission-row, .weekly-report, .geek-card, .final-cta, .footer-brand, .footer-column, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
+  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
 );
 
 const setHeaderState = () => {
@@ -508,30 +310,6 @@ const setShareButtonFeedback = (button, message) => {
 
 createMobileShareButton();
 
-document.querySelectorAll("[data-search-open]").forEach((button) => {
-  button.addEventListener("click", openSearchPanel);
-});
-
-document.querySelectorAll("[data-search-close]").forEach((button) => {
-  button.addEventListener("click", () => closeSearchPanel());
-});
-
-searchInput?.addEventListener("input", () => {
-  renderSearchResults(searchInput.value);
-});
-
-searchPanel?.addEventListener("click", (event) => {
-  const target = event.target;
-  if (target instanceof HTMLElement && target.closest(".search-result")) {
-    closeSearchPanel({ restoreFocus: false });
-  }
-});
-
-searchPanel?.querySelector("[data-search-form]")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  searchResults?.querySelector(".search-result")?.click();
-});
-
 document.querySelectorAll("[data-share-site]").forEach((button) => {
   button.addEventListener("click", async () => {
     closeMenu();
@@ -539,7 +317,7 @@ document.querySelectorAll("[data-share-site]").forEach((button) => {
     const url = button.dataset.shareUrl || window.location.origin;
     const shareData = {
       title: "Encontre Aqui Tech | Encontre Antes de Todo Mundo",
-      text: "Portal editorial de tecnologia, Vitrine Tech e comunidade.",
+      text: "Notícias de tecnologia para viver melhor no mundo Tech!",
       url
     };
 
@@ -567,15 +345,10 @@ document.querySelectorAll("[data-share-site]").forEach((button) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
-    closeSearchPanel();
   }
 
   if (menu?.classList.contains("is-open")) {
     trapFocusWithin(menu, event);
-  }
-
-  if (searchPanel && !searchPanel.hidden) {
-    trapFocusWithin(searchPanel, event);
   }
 });
 
