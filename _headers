@@ -11,5 +11,11 @@
 /assets/*
   Cache-Control: public, max-age=86400
 
+/
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+
+/noticias
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+
 /*.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
