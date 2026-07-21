@@ -43,3 +43,12 @@ Use estas regras para trabalhar no projeto com baixo consumo de contexto.
 - PHP/API: usar `php -S localhost:8000` e testar o fluxo afetado.
 - Editorias e Vitrine Tech: validar pelas docs especificas.
 - Se nao houver teste automatizado aplicavel, informe a validacao manual feita.
+
+## Salvamento obrigatorio
+
+- Ao finalizar qualquer solicitacao que altere arquivos deste projeto, salvar a versao no Git local e no GitHub.
+- Antes de salvar, revisar `git status --short` e confirmar que somente arquivos do escopo da solicitacao serao incluidos.
+- Se houver alteracoes fora do escopo ou feitas pelo usuario no mesmo momento, nao misturar no commit sem confirmar.
+- Usar preferencialmente `scripts/salvar-github.cmd "Mensagem objetiva do commit"` no Windows.
+- O script deve criar o commit local, sincronizar com `origin` usando rebase e fazer push para o GitHub do projeto.
+- Informar na resposta final a mensagem do commit, a branch e se o push foi concluido.

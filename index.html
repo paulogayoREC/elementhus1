@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/img/astro001-cutout.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260604-copa-2026-v2">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260720-premium-flow">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
     <script src="assets/js/main.js?v=20260423-ux-hardening-about-close" defer></script>
     <script src="assets/js/tech-showcase.js?v=20260423-vitrine-cache" defer></script>
@@ -130,48 +130,60 @@
           <p class="eyebrow">Encontre Antes de Todo Mundo</p>
           <h1 id="hero-title">Encontre Aqui Tech</h1>
           <p class="hero-copy">
-            Notícias de tecnologia com uma linguagem direta para quem vive conectado.
+            Notícias, alertas e indicações de tecnologia em uma experiência mais limpa para quem vive conectado.
           </p>
           <div class="hero-actions" aria-label="Ações principais">
             <a class="button button-primary" href="#editorias">Notícias Tech</a>
-            <a class="button button-primary" href="#copa-2026">Copa 2026</a>
-            <a class="button button-primary" href="/indicacoes">Vitrine Tech</a>
+            <a class="button button-secondary" href="/indicacoes">Vitrine Tech</a>
+            <a class="button button-secondary" href="#comunidade">Participar</a>
           </div>
         </div>
 
         <div class="mission-strip" aria-label="Resumo editorial">
-          <span>conteúdo útil</span>
-          <span>Conhecimento Tech</span>
-          <span>radar digital</span>
+          <span>notícias tech</span>
+          <span>curadoria inteligente</span>
+          <span>comunidade</span>
         </div>
       </section>
 
-      <section class="section world-cup-section" id="copa-2026" aria-labelledby="world-cup-collection-title" data-section-name="Copa do Mundo 2026 Panini">
-        <div class="section-inner world-cup-layout">
-          <div class="world-cup-copy">
-            <p class="eyebrow">Copa do Mundo 2026</p>
-            <h2 id="world-cup-collection-title">Álbum e figurinhas Panini no radar.</h2>
-            <p>
-              Um espaço especial para acompanhar a coleção oficial da Copa e encontrar o link de compra na Amazon quando a pré-venda estiver ativa.
-            </p>
-            <div class="world-cup-actions">
-              <a class="button world-cup-button" href="https://www.amazon.com.br/s?k=album+figurinhas+copa+do+mundo+2026+panini" target="_blank" rel="sponsored noopener noreferrer" aria-label="Ver álbum e figurinhas da Copa do Mundo 2026 Panini na Amazon">
-                Ver na Amazon
-              </a>
-              <span>Ao comprar pelo link, você apoia o Encontre Aqui Tech sem pagar nada a mais.</span>
-            </div>
+      <section class="section editorial-section" id="editorias" aria-labelledby="editorias-title" data-section-name="Notícias Tech">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Notícias Tech</p>
+            <h2 id="editorias-title">Notícias que merecem estar no seu radar.</h2>
           </div>
-          <figure class="world-cup-media">
-            <img src="assets/img/copa-2026-panini-banner.webp" alt="Arte da Panini para a coleção oficial de figurinhas da Copa do Mundo FIFA 2026" width="1920" height="500" loading="lazy" decoding="async">
-          </figure>
+
+          <div class="editorial-grid">
+            <article class="topic-card topic-large" data-editorial-feature="noticias">
+              <span class="topic-kicker">01</span>
+              <h3>Notícias</h3>
+              <div class="topic-card-preview">
+                <img src="assets/img/noticias/medtronic-invasao-sistemas-cover.webp" alt="Pessoa digitando em notebook com tela azul em ambiente escuro.">
+                <div class="topic-card-preview-copy">
+                  <span>Cibersegurança</span>
+                  <strong>Medtronic confirma invasão em sistemas corporativos</strong>
+                </div>
+              </div>
+              <p>A empresa investiga a alegação de roubo de 9 milhões de registros feita pelo ShinyHunters.</p>
+              <a href="/noticias" aria-label="Ler notícia completa sobre a invasão em sistemas corporativos da Medtronic">Ler notícia completa</a>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section feature-band" aria-labelledby="feature-title" data-section-name="Sessão Vitrine Tech">
         <div class="section-inner feature-layout">
           <div class="feature-copy">
-            <p class="eyebrow">Nossas Indicações</p>
-            <h2 id="feature-title">Produtos tech escolhidos com critério.</h2>
+            <p class="eyebrow">Vitrine Tech</p>
+            <h2 id="feature-title">Curadoria enxuta para comprar melhor.</h2>
+            <p>
+              Uma seleção rotativa de produtos tech, organizada para você comparar rápido e abrir direto as melhores indicações.
+            </p>
+            <div class="feature-highlights" aria-label="Pilares da Vitrine Tech">
+              <span>5 escolhas por rodada</span>
+              <span>categorias essenciais</span>
+              <span>links diretos</span>
+            </div>
             <a class="button button-primary" href="/indicacoes">Abrir Vitrine Tech</a>
           </div>
           <div class="tech-picks-panel" data-tech-picks-panel aria-label="Destaques da Vitrine Tech">
@@ -205,31 +217,6 @@
               <strong>Nintendo Switch 2</strong>
               <span class="tech-pick-link">Encontre Aqui</span>
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section editorial-section" id="editorias" aria-labelledby="editorias-title" data-section-name="Notícias Tech">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow">Notícias Tech</p>
-            <h2 id="editorias-title">Notícias que merecem estar no seu radar.</h2>
-          </div>
-
-          <div class="editorial-grid">
-            <article class="topic-card topic-large" data-editorial-feature="noticias">
-              <span class="topic-kicker">01</span>
-              <h3>Notícias</h3>
-              <div class="topic-card-preview">
-                <img src="assets/img/noticias/medtronic-invasao-sistemas-cover.webp" alt="Pessoa digitando em notebook com tela azul em ambiente escuro.">
-                <div class="topic-card-preview-copy">
-                  <span>Cibersegurança</span>
-                  <strong>Medtronic confirma invasão em sistemas corporativos</strong>
-                </div>
-              </div>
-              <p>A empresa investiga a alegação de roubo de 9 milhões de registros feita pelo ShinyHunters.</p>
-              <a href="/noticias" aria-label="Ler notícia completa sobre a invasão em sistemas corporativos da Medtronic">Ler notícia completa</a>
-            </article>
           </div>
         </div>
       </section>
