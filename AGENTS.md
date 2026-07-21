@@ -35,6 +35,8 @@ Use estas regras para trabalhar no projeto com baixo consumo de contexto.
 - Quando o usuario usar a palavra-chave `notícia nova` ou `noticia nova`, tratar como tarefa editorial obrigatoria da editoria Noticias.
 - Atualizar o card `Notícias Tech` da pagina inicial (`index.html`) para destacar a nova materia, mantendo imagem, titulo, resumo/chamada e link coerentes com `/noticias`.
 - Atualizar `noticias.html` para que a nova materia vire o destaque principal da pagina.
+- A materia principal de `noticias.html` deve ter design e estrutura especiais, criados livremente para o tema da noticia, podendo fugir do padrao visual recorrente do site.
+- A liberdade visual vale para a area da materia principal; preservar header, menu, rodape, SEO, comentarios, slugs, seletores `data-*`, acessibilidade, responsividade e desempenho.
 - Mover a materia que era destaque principal em `noticias.html` para a area inferior `Continue no radar`, dentro de `.article-archive-grid[data-archive-limit="5"]`.
 - Manter no maximo 5 materias antigas em `Continue no radar`; se passar de 5, remover a mais antiga.
 - Preservar comentarios, slugs existentes, seletores `data-*`, imagens, metadados, URLs limpas e formularios de comentario conforme `docs/regras-editoriais.md`.
