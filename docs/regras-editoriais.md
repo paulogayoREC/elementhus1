@@ -6,9 +6,21 @@ Estas regras valem para:
 
 A pagina de Noticias concentra somente a editoria de noticias do site.
 
+## Palavra-chave `notícia nova`
+
+Sempre que o pedido do usuario trouxer a palavra-chave `notícia nova` ou `noticia nova`, execute o fluxo completo da editoria Noticias:
+
+1. Atualize o card `Notícias Tech` da pagina inicial (`index.html`) para destacar a nova materia.
+2. O card da home deve usar dados reais da nova materia: titulo, chamada/resumo, imagem, categoria/contexto e link para `/noticias`.
+3. Atualize `noticias.html` para que a nova materia seja o destaque principal da pagina.
+4. Mova a materia que era destaque principal para a area inferior `Continue no radar`.
+5. A area `Continue no radar` deve usar `details.article-archive-card` dentro de `.article-archive-grid[data-archive-limit="5"]`.
+6. Mantenha no maximo 5 materias antigas nessa area; se ja houver 5, remova a mais antiga antes de inserir a anterior.
+7. Preserve slugs, formularios e listas de comentarios da materia que saiu do destaque, sem perder o vinculo com comentarios ja publicados.
+
 ## Quando adicionar novo conteudo
 
-Sempre que o pedido for "adicione o novo conteudo" para a pagina de noticias:
+Sempre que o pedido for "adicione o novo conteudo" para a pagina de noticias, ou quando a palavra-chave `notícia nova`/`noticia nova` for usada:
 
 1. Transforme o novo conteudo no destaque principal da pagina.
 2. O destaque principal deve conter titulo, subtitulo, data em que foi adicionado, imagem e comentarios do visitante.

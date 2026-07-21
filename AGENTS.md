@@ -30,6 +30,15 @@ Use estas regras para trabalhar no projeto com baixo consumo de contexto.
 - Vitrine Tech, produtos ou indicacoes: leia `docs/regras-vitrine-tech.md`.
 - Cadastro, login ou usuarios: leia `docs/cadastro-usuarios.md` somente se necessario.
 
+## Regra da palavra-chave `notícia nova`
+
+- Quando o usuario usar a palavra-chave `notícia nova` ou `noticia nova`, tratar como tarefa editorial obrigatoria da editoria Noticias.
+- Atualizar o card `Notícias Tech` da pagina inicial (`index.html`) para destacar a nova materia, mantendo imagem, titulo, resumo/chamada e link coerentes com `/noticias`.
+- Atualizar `noticias.html` para que a nova materia vire o destaque principal da pagina.
+- Mover a materia que era destaque principal em `noticias.html` para a area inferior `Continue no radar`, dentro de `.article-archive-grid[data-archive-limit="5"]`.
+- Manter no maximo 5 materias antigas em `Continue no radar`; se passar de 5, remover a mais antiga.
+- Preservar comentarios, slugs existentes, seletores `data-*`, imagens, metadados, URLs limpas e formularios de comentario conforme `docs/regras-editoriais.md`.
+
 ## Modo manutencao
 
 - Pagina oculta: `manutencao.html`.
