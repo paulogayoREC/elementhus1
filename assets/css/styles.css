@@ -1219,7 +1219,7 @@ h4 {
 }
 
 .feature-copy h2 {
-  max-width: 12ch;
+  max-width: 20ch;
   margin-bottom: 0;
 }
 
@@ -1227,32 +1227,6 @@ h4 {
   max-width: 34rem;
   margin-bottom: 0;
   color: rgba(16, 13, 11, 0.72);
-}
-
-.feature-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.55rem;
-  margin: 0.2rem 0 0.1rem;
-}
-
-.feature-highlights span {
-  display: grid;
-  min-height: 3.1rem;
-  align-items: center;
-  border: 1px solid rgba(37, 125, 167, 0.2);
-  border-radius: 8px;
-  padding: 0.62rem 0.68rem;
-  color: rgba(16, 13, 11, 0.78);
-  font-family: var(--font-primary);
-  font-size: 0.68rem;
-  font-weight: 800;
-  line-height: 1.28;
-  text-transform: uppercase;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.36), rgba(37, 125, 167, 0.055)),
-    rgba(250, 235, 209, 0.42);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
 }
 
 .feature-copy .button {
@@ -5131,18 +5105,7 @@ h4 {
   }
 
   .feature-copy h2 {
-    max-width: 14ch;
-  }
-
-  .feature-highlights {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
-  }
-
-  .feature-highlights span {
-    min-height: 2.6rem;
-    padding: 0.55rem 0.62rem;
-    font-size: 0.62rem;
+    max-width: 18ch;
   }
 
   .mission-strip {
