@@ -238,11 +238,15 @@
     const title = document.createElement("strong");
     title.textContent = product.title;
 
+    const reason = document.createElement("span");
+    reason.className = "tech-pick-reason";
+    reason.textContent = "Escolha rotativa da Vitrine Tech.";
+
     const linkLabel = document.createElement("span");
     linkLabel.className = "tech-pick-link";
-    linkLabel.textContent = "Encontre Aqui";
+    linkLabel.textContent = "Encontrar produto";
 
-    card.append(category, image, title, linkLabel);
+    card.append(category, image, title, reason, linkLabel);
 
     return card;
   }

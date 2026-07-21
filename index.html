@@ -42,7 +42,7 @@
     <script src="assets/js/tech-showcase.js?v=20260423-vitrine-cache" defer></script>
     <script src="assets/js/auth.js?v=20260428-auth-scoped-session" defer></script>
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
     <header class="site-header" data-header>
@@ -63,8 +63,11 @@
 
         <div class="site-menu" id="site-menu" data-menu>
           <div class="nav-links">
-            <a href="#editorias">Notícias Tech</a>
-            <a href="/indicacoes">Indicações</a>
+            <a href="#radar-tech">Notícias Tech</a>
+            <a href="#vitrine-tech">Vitrine Tech</a>
+            <a href="#mundo-geek">Mundo Geek</a>
+            <a href="#comunidade">Participar</a>
+            <button class="nav-search-button" type="button" data-search-open>Busca</button>
             <button class="nav-share-button" type="button" data-share-site data-share-url="https://encontreaquitech.com/" aria-label="Compartilhar Encontre Aqui Tech" title="Compartilhar">
               <span class="nav-share-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" focusable="false">
@@ -74,6 +77,7 @@
               <span class="nav-share-label">Compartilhar</span>
             </button>
             <button class="nav-auth-button" type="button" data-auth-open>Login</button>
+            <a class="nav-primary-link" href="#comunidade">Participar agora</a>
           </div>
           <div class="nav-socials" aria-label="Redes do Encontre Aqui Tech">
             <a class="nav-social nav-social-telegram" href="https://t.me/+SEU_CONVITE_AQUI" target="_blank" rel="noopener noreferrer">
@@ -120,65 +124,164 @@
     </header>
 
     <main id="conteudo">
-      <section class="hero-section" aria-labelledby="hero-title" data-section-name="Sessão Capa">
+      <section class="hero-section home-hero" id="inicio" aria-labelledby="hero-title" data-section-name="Sessão Capa" data-search-item data-search-category="Início" data-search-title="Encontre Aqui Tech" data-search-summary="Portal editorial de tecnologia com notícias, alertas, Vitrine Tech e comunidade." data-search-url="#inicio">
         <div class="space-grid" aria-hidden="true"></div>
-        <div class="hero-media" aria-hidden="true">
-          <img class="hero-astronaut" src="assets/img/astro001-cutout.png" alt="" width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high">
-        </div>
+        <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
 
         <div class="hero-content">
-          <p class="eyebrow">Encontre Antes de Todo Mundo</p>
+          <p class="eyebrow">Tecnologia, informação e futuro</p>
+          <p class="hero-slogan">Encontre Antes de Todo Mundo</p>
           <h1 id="hero-title">Encontre Aqui Tech</h1>
           <p class="hero-copy">
-            Notícias, alertas e indicações de tecnologia em uma experiência mais limpa para quem vive conectado.
+            Um portal tech para acompanhar notícias relevantes, alertas digitais, cultura geek e indicações de produtos com leitura clara, curadoria responsável e visual de central editorial do futuro.
           </p>
           <div class="hero-actions" aria-label="Ações principais">
-            <a class="button button-primary" href="#editorias">Notícias Tech</a>
-            <a class="button button-secondary" href="/indicacoes">Vitrine Tech</a>
-            <a class="button button-secondary" href="#comunidade">Participar</a>
+            <a class="button button-primary" href="#radar-tech">Acessar notícias</a>
+            <a class="button button-secondary" href="#vitrine-tech">Conhecer a Vitrine Tech</a>
+            <button class="button button-secondary" type="button" data-search-open>Buscar no portal</button>
           </div>
+
+          <dl class="hero-dashboard" aria-label="Resumo do portal">
+            <div>
+              <dt>Radar</dt>
+              <dd>Notícias e alertas</dd>
+            </div>
+            <div>
+              <dt>Vitrine</dt>
+              <dd>5 produtos por janela</dd>
+            </div>
+            <div>
+              <dt>Comunidade</dt>
+              <dd>Comentários reais</dd>
+            </div>
+          </dl>
         </div>
 
-        <div class="mission-strip" aria-label="Resumo editorial">
-          <span>notícias tech</span>
-          <span>curadoria inteligente</span>
-          <span>comunidade</span>
+        <div class="hero-media">
+          <img class="hero-astronaut" src="assets/img/astro001-cutout.png" alt="Mascote astronauta do Encontre Aqui Tech apontando para os destaques editoriais do portal." width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high">
+          <div class="astronaut-guide">
+            <span>Guia editorial</span>
+            <strong>Radar pronto para notícias, produtos e descobertas tech.</strong>
+          </div>
         </div>
       </section>
 
-      <section class="section editorial-section" id="editorias" aria-labelledby="editorias-title" data-section-name="Notícias Tech">
+      <div class="topic-marquee" aria-label="Assuntos do Encontre Aqui Tech">
+        <div class="topic-marquee-track">
+          <span>Notícias Tech</span>
+          <span>Inteligência Artificial</span>
+          <span>Cibersegurança</span>
+          <span>Mundo Geek</span>
+          <span>Inovação</span>
+          <span>Produtos</span>
+          <span>Tutoriais</span>
+          <span>Alertas Digitais</span>
+          <span>Notícias Tech</span>
+          <span>Inteligência Artificial</span>
+          <span>Cibersegurança</span>
+          <span>Mundo Geek</span>
+          <span>Inovação</span>
+          <span>Produtos</span>
+          <span>Tutoriais</span>
+          <span>Alertas Digitais</span>
+        </div>
+      </div>
+
+      <section class="section editorial-section radar-panel" id="radar-tech" aria-labelledby="radar-title" data-section-name="Painel 01 · Radar Tech">
         <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow">Notícias Tech</p>
-            <h2 id="editorias-title">Notícias que merecem estar no seu radar.</h2>
+          <div class="section-heading panel-heading">
+            <p class="panel-label"><span>01</span> Radar Tech</p>
+            <h2 id="radar-title">Notícias que merecem estar no seu radar.</h2>
+            <p>O destaque principal ocupa o centro do painel; os temas recentes ficam próximos para uma leitura progressiva.</p>
           </div>
 
-          <div class="editorial-grid">
-            <article class="topic-card topic-large" data-editorial-feature="noticias">
-              <span class="topic-kicker">01</span>
-              <h3>Notícias</h3>
-              <div class="topic-card-preview">
-                <img src="assets/img/noticias/gta-vi-midia-fisica-bg.webp" alt="Arte de GTA VI com personagens em cenário ensolarado de Vice City.">
-                <div class="topic-card-preview-copy">
-                  <span>Games e mídia física</span>
-                  <strong>De GTA VI ao PlayStation: o futuro dos jogos físicos está em risco</strong>
+          <div class="radar-layout">
+            <article class="radar-feature" data-search-item data-search-category="Notícias Tech" data-search-title="De GTA VI ao PlayStation: o futuro dos jogos físicos está em risco" data-search-summary="Caixas com códigos digitais, discos em retirada e preservação entram no centro da discussão gamer." data-search-url="/noticias">
+              <a class="radar-feature-link" href="/noticias" aria-label="Ler notícia completa sobre GTA VI, PlayStation e o futuro dos jogos físicos">
+                <figure class="radar-feature-media">
+                  <img src="assets/img/noticias/gta-vi-midia-fisica-bg.webp" alt="Arte de GTA VI com personagens em cenário ensolarado de Vice City." width="1200" height="675">
+                </figure>
+                <div class="radar-feature-copy">
+                  <span class="content-tag">Games e mídia física</span>
+                  <h3>De GTA VI ao PlayStation: o futuro dos jogos físicos está em risco</h3>
+                  <p>Caixas com códigos digitais, discos em retirada e preservação entram no centro da discussão gamer.</p>
+                  <div class="article-meta-row">
+                    <time datetime="2026-07-21">21 jul. 2026</time>
+                    <span>9 min de leitura</span>
+                    <span>Em destaque</span>
+                  </div>
+                  <span class="text-link">Ler matéria</span>
                 </div>
-              </div>
-              <p>Caixas com códigos digitais, discos em retirada e preservação entram no centro da discussão gamer.</p>
-              <a href="/noticias" aria-label="Ler notícia completa sobre GTA VI, PlayStation e o futuro dos jogos físicos">Ler notícia completa</a>
+              </a>
             </article>
+
+            <div class="radar-stack" aria-label="Notícias recentes">
+              <article class="radar-side-card" data-search-item data-search-category="Alerta digital" data-search-title="Medtronic confirma invasão em sistemas corporativos" data-search-summary="A empresa diz não ter identificado impacto em produtos médicos, pacientes ou operações industriais." data-search-url="/noticias">
+                <span class="content-tag">Alerta digital</span>
+                <h3>Medtronic confirma invasão em sistemas corporativos</h3>
+                <p>A empresa diz não ter identificado impacto em produtos médicos, pacientes ou operações industriais.</p>
+                <a href="/noticias">Continuar no radar</a>
+              </article>
+
+              <article class="radar-side-card" data-search-item data-search-category="Big Tech" data-search-title="Tim Cook deixa o comando da Apple e abre nova fase" data-search-summary="John Ternus assume a liderança executiva em uma transição marcada por pressão por respostas mais fortes em IA." data-search-url="/noticias">
+                <span class="content-tag">Big Tech</span>
+                <h3>Tim Cook deixa o comando da Apple e abre nova fase</h3>
+                <p>John Ternus assume a liderança executiva em uma transição marcada por pressão por respostas mais fortes em IA.</p>
+                <a href="/noticias">Ler contexto</a>
+              </article>
+
+              <article class="radar-side-card" data-search-item data-search-category="Inteligência Artificial" data-search-title="Tarifas travam data centers de IA" data-search-summary="Infraestrutura física, energia e cadeia de suprimentos viram peças centrais na corrida por capacidade de IA." data-search-url="/noticias">
+                <span class="content-tag">Inteligência Artificial</span>
+                <h3>Tarifas travam data centers de IA</h3>
+                <p>Infraestrutura física, energia e cadeia de suprimentos viram peças centrais na corrida por capacidade de IA.</p>
+                <a href="/noticias">Abrir análise</a>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section feature-band" aria-labelledby="feature-title" data-section-name="Sessão Vitrine Tech">
+      <section class="section transmissions-panel" id="transmissoes" aria-labelledby="transmissoes-title" data-section-name="Painel 02 · Transmissões recentes">
+        <div class="section-inner">
+          <div class="section-heading panel-heading">
+            <p class="panel-label"><span>02</span> Transmissões recentes</p>
+            <h2 id="transmissoes-title">O que acabou de chegar ao nosso radar.</h2>
+            <p>Uma leitura em formato de atividade editorial, conectando publicações internas e curadoria recente.</p>
+          </div>
+
+          <div class="transmission-list" data-transmission-feed>
+            <a class="transmission-row" href="/noticias" data-transmission-static data-search-item data-search-category="Notícias Tech" data-search-title="De GTA VI ao PlayStation: o futuro dos jogos físicos está em risco" data-search-summary="Destaque publicado em 21 de julho de 2026." data-search-url="/noticias">
+              <time datetime="2026-07-21">21 jul.</time>
+              <span>Notícias Tech</span>
+              <strong>De GTA VI ao PlayStation: o futuro dos jogos físicos está em risco</strong>
+              <em>em destaque</em>
+            </a>
+            <a class="transmission-row" href="/noticias" data-transmission-static data-search-item data-search-category="Alerta digital" data-search-title="Medtronic confirma invasão em sistemas corporativos" data-search-summary="Conteúdo anterior publicado em 28 de abril de 2026." data-search-url="/noticias">
+              <time datetime="2026-04-28">28 abr.</time>
+              <span>Alerta digital</span>
+              <strong>Medtronic confirma invasão em sistemas corporativos</strong>
+              <em>atualizado</em>
+            </a>
+            <a class="transmission-row" href="/noticias" data-transmission-static data-search-item data-search-category="Big Tech" data-search-title="Tim Cook deixa o comando da Apple" data-search-summary="Conteúdo anterior publicado em 21 de abril de 2026." data-search-url="/noticias">
+              <time datetime="2026-04-21">21 abr.</time>
+              <span>Big Tech</span>
+              <strong>Tim Cook deixa o comando da Apple e abre espaço para uma nova fase</strong>
+              <em>arquivo</em>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature-band vitrine-panel" id="vitrine-tech" aria-labelledby="feature-title" data-section-name="Painel 03 · Vitrine Tech">
         <div class="section-inner feature-layout">
           <div class="feature-copy">
-            <p class="eyebrow">Vitrine Tech</p>
-            <h2 id="feature-title">Melhores indicações, com as melhores avaliações, tudo isso para comprar melhor!</h2>
+            <p class="panel-label"><span>03</span> Vitrine Tech</p>
+            <h2 id="feature-title">Produtos escolhidos com critério.</h2>
             <p>
-              Uma seleção rotativa de produtos tech, organizada para você comparar rápido e abrir direto as melhores indicações.
+              Uma seleção rotativa de 5 produtos tech, atualizada a cada janela da Vitrine e preservada como fallback caso o JavaScript não carregue.
             </p>
+            <p class="affiliate-note">Alguns links podem ser afiliados. A curadoria aponta caminhos, mas a decisão de compra continua com você.</p>
             <a class="button button-primary" href="/indicacoes">Abrir Vitrine Tech</a>
           </div>
           <div class="tech-picks-panel" data-tech-picks-panel aria-label="Destaques da Vitrine Tech">
@@ -186,41 +289,101 @@
               <span class="tech-pick-category">Smartphone</span>
               <img src="assets/img/indicacoes/produtos/smartphones-01.webp" alt="Celular Samsung Galaxy S25 FE 5G" width="900" height="900" loading="lazy" decoding="async">
               <strong>Samsung Galaxy S25 FE</strong>
-              <span class="tech-pick-link">Encontre Aqui</span>
+              <span class="tech-pick-reason">Curadoria editorial para comparar melhor.</span>
+              <span class="tech-pick-link">Encontrar produto</span>
             </a>
             <a class="tech-pick-card" href="https://amzn.to/4vQlKSf" target="_blank" rel="sponsored noopener noreferrer">
               <span class="tech-pick-category">Áudio Gamer</span>
               <img src="assets/img/indicacoes/produtos/fones-04.webp?v=20260421-recorte-premium" alt="Headset Gamer Redragon Zeus Pro Preto Sem Fio" width="900" height="900" loading="lazy" decoding="async">
               <strong>Redragon Zeus Pro</strong>
-              <span class="tech-pick-link">Encontre Aqui</span>
+              <span class="tech-pick-reason">Escolha rotativa da Vitrine Tech.</span>
+              <span class="tech-pick-link">Encontrar produto</span>
             </a>
             <a class="tech-pick-card" href="https://amzn.to/4vKdMty" target="_blank" rel="sponsored noopener noreferrer">
               <span class="tech-pick-category">GPU</span>
               <img src="assets/img/indicacoes/produtos/placa-de-video-02.webp" alt="Placa de vídeo GALAX RTX 4060 1-Click OC 2X V2" width="900" height="900" loading="lazy" decoding="async">
               <strong>GALAX RTX 4060</strong>
-              <span class="tech-pick-link">Encontre Aqui</span>
+              <span class="tech-pick-reason">Indicação para montar ou atualizar setup.</span>
+              <span class="tech-pick-link">Encontrar produto</span>
             </a>
             <a class="tech-pick-card" href="https://amzn.to/3Qngvcw" target="_blank" rel="sponsored noopener noreferrer">
               <span class="tech-pick-category">Casa Inteligente</span>
               <img src="assets/img/indicacoes/produtos/casa-inteligente-02.webp" alt="Echo Dot geração mais recente com Alexa" width="900" height="900" loading="lazy" decoding="async">
               <strong>Echo Dot com Alexa</strong>
-              <span class="tech-pick-link">Encontre Aqui</span>
+              <span class="tech-pick-reason">Produto prático para automação cotidiana.</span>
+              <span class="tech-pick-link">Encontrar produto</span>
             </a>
             <a class="tech-pick-card" href="https://amzn.to/3QEbbRX" target="_blank" rel="sponsored noopener noreferrer">
               <span class="tech-pick-category">Games</span>
               <img src="assets/img/indicacoes/produtos/games-05.webp?v=20260421-recorte-premium" alt="Nintendo Switch 2 Nacional" width="900" height="900" loading="lazy" decoding="async">
               <strong>Nintendo Switch 2</strong>
-              <span class="tech-pick-link">Encontre Aqui</span>
+              <span class="tech-pick-reason">Destaque gamer do catálogo de indicações.</span>
+              <span class="tech-pick-link">Encontrar produto</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section class="section community-section" id="comunidade" aria-labelledby="comunidade-title" data-section-name="Sessão Comentários">
+      <section class="section geek-section" id="mundo-geek" aria-labelledby="geek-title" data-section-name="Painel 04 · Mundo Geek">
+        <div class="section-inner geek-layout">
+          <div class="section-heading panel-heading">
+            <p class="panel-label"><span>04</span> Mundo Geek</p>
+            <h2 id="geek-title">Tecnologia, nostalgia e cultura geek em órbita.</h2>
+            <p>O lado mais vibrante do portal usa o catálogo de games e colecionáveis tech sem romper a identidade editorial.</p>
+          </div>
+
+          <div class="geek-card" data-search-item data-search-category="Mundo Geek" data-search-title="Games e cultura geek em órbita" data-search-summary="Destaques visuais, games, nostalgia e produtos especiais dentro do Encontre Aqui Tech." data-search-url="/indicacoes/games">
+            <figure>
+              <img src="assets/img/indicacoes/produtos/games-01.webp?v=20260421-recorte-premium" alt="Console PlayStation 5 Slim Digital em fundo claro." width="900" height="900" loading="lazy" decoding="async">
+            </figure>
+            <div>
+              <span class="content-tag">Games · Colecionáveis · Nostalgia</span>
+              <h3>Uma estação para explorar cultura pop, jogos e produtos especiais.</h3>
+              <p>Enquanto uma página dedicada ao Mundo Geek evolui, os destaques de games já conectam leitores a consoles, acessórios e achados do catálogo.</p>
+              <a class="button button-secondary" href="/indicacoes/games">Explorar games</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section weekly-section" id="relatorio" aria-labelledby="relatorio-title" data-section-name="Painel 05 · O relatório da semana">
+        <div class="section-inner weekly-layout">
+          <div class="section-heading panel-heading">
+            <p class="panel-label"><span>05</span> O relatório da semana</p>
+            <h2 id="relatorio-title">O que movimentou a tecnologia nesta semana.</h2>
+            <p>O componente está preparado para receber métricas reais quando houver fonte confiável conectada.</p>
+          </div>
+
+          <div class="weekly-report" data-report-placeholder>
+            <header>
+              <span>Relatório editorial</span>
+              <strong>Dados reais ainda não conectados</strong>
+            </header>
+            <dl>
+              <div>
+                <dt>Categoria em análise</dt>
+                <dd>Aguardando telemetria editorial</dd>
+              </div>
+              <div>
+                <dt>Produto mais procurado</dt>
+                <dd>Aguardando fonte dinâmica confiável</dd>
+              </div>
+              <div>
+                <dt>Principal alerta</dt>
+                <dd>Será exibido somente com dado validado</dd>
+              </div>
+            </dl>
+            <p>Nenhum número foi inventado: este painel é uma estrutura pronta para dados reais.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section community-section" id="comunidade" aria-labelledby="comunidade-title" data-section-name="Painel 06 · Comunidade">
         <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow">Interações com o público</p>
-            <h2 id="comunidade-title">Deixe seu comentário!</h2>
+          <div class="section-heading panel-heading">
+            <p class="panel-label"><span>06</span> Comunidade</p>
+            <h2 id="comunidade-title">A tecnologia também é construída por quem participa.</h2>
+            <p>Comentários, notas e sugestões continuam conectados ao mesmo fluxo de validação e publicação.</p>
           </div>
 
           <div class="community-layout">
@@ -271,14 +434,16 @@
         </div>
       </section>
 
-      <section class="section about-section" id="sobre" aria-labelledby="sobre-title" data-section-name="Sessão Criador">
+      <section class="section about-section creator-section" id="sobre" aria-labelledby="sobre-title" data-section-name="Painel 07 · Manifesto do criador">
         <div class="section-inner about-layout">
           <figure class="portrait-wrap">
             <img src="assets/img/paulo-gayo-principal.jpg" alt="Foto profissional de Paulo Gayo" width="600" height="800" loading="lazy" decoding="async">
           </figure>
           <div class="about-copy">
-            <p class="eyebrow">Criador</p>
-            <h2 id="sobre-title">Paulo Gayo</h2>
+            <p class="panel-label"><span>07</span> Manifesto do criador</p>
+            <p class="creator-id">Paulo Gayo · Criador</p>
+            <h2 id="sobre-title">Por que o Encontre Aqui Tech existe.</h2>
+            <p class="creator-quote">"Encontre Aqui Tech, encontre antes de todo mundo!"</p>
             <details class="about-story-card">
               <summary class="about-story-summary">
                 <span class="about-story-action">
@@ -316,14 +481,83 @@
           </div>
         </div>
       </section>
+
+      <section class="section final-cta-section" aria-labelledby="final-cta-title" data-section-name="Chamada final">
+        <div class="section-inner final-cta">
+          <img src="assets/img/astronauta-eat-cutout.png" alt="Mascote astronauta do Encontre Aqui Tech." width="1024" height="1024" loading="lazy" decoding="async">
+          <div>
+            <p class="eyebrow">Encontre Antes de Todo Mundo</p>
+            <h2 id="final-cta-title">Continue explorando. A próxima grande descoberta pode estar mais perto do que parece.</h2>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://t.me/+SEU_CONVITE_AQUI" target="_blank" rel="noopener noreferrer">Telegram</a>
+              <a class="button button-secondary" href="https://www.instagram.com/encontre_aqui_tech/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="button button-secondary" href="https://www.youtube.com/@EncontreAquiTech" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a class="button button-secondary" href="#radar-tech">Explorar notícias</a>
+              <a class="button button-secondary" href="/indicacoes">Visitar Vitrine Tech</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
       <footer class="site-footer">
         <div class="section-inner footer-layout">
-          <p>Encontre Aqui Tech</p>
-          <p>Uma vida tecnológica mais inteligente</p>
+          <div class="footer-brand">
+            <a class="brand-mark" href="/" aria-label="Encontre Aqui Tech - início">
+              <span class="brand-avatar" aria-hidden="true">
+                <img src="assets/img/astronauta-eat.jpeg" alt="">
+              </span>
+              <span class="brand-name">Encontre Aqui Tech</span>
+            </a>
+            <p>Encontre Antes de Todo Mundo</p>
+            <p>Portal editorial de tecnologia, alertas digitais, cultura geek e indicações responsáveis.</p>
+          </div>
+
+          <nav class="footer-column" aria-label="Navegação do rodapé">
+            <h2>Explorar</h2>
+            <a href="#radar-tech">Notícias Tech</a>
+            <a href="#vitrine-tech">Vitrine Tech</a>
+            <a href="#mundo-geek">Mundo Geek</a>
+            <a href="#comunidade">Participar</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Categorias de indicações">
+            <h2>Categorias</h2>
+            <a href="/indicacoes/smartphones">Smartphones</a>
+            <a href="/indicacoes/games">Games</a>
+            <a href="/indicacoes/notebooks">Notebooks</a>
+            <a href="/indicacoes/monitores">Monitores</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Redes sociais">
+            <h2>Redes</h2>
+            <a href="https://t.me/+SEU_CONVITE_AQUI" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://www.instagram.com/encontre_aqui_tech/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.youtube.com/@EncontreAquiTech" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="mailto:privacidade@encontreaquitech.com">Contato e privacidade</a>
+          </nav>
+        </div>
+        <div class="section-inner footer-bottom">
+          <p>© <span data-current-year>2026</span> Encontre Aqui Tech. Todos os direitos reservados.</p>
+          <p>Links de produtos podem conter indicação afiliada quando aplicável.</p>
         </div>
       </footer>
+
+      <section class="search-panel" data-search-panel hidden role="dialog" aria-modal="true" aria-labelledby="search-title">
+        <button class="search-backdrop" type="button" data-search-close aria-label="Fechar busca"></button>
+        <div class="search-shell" role="document">
+          <div class="search-heading">
+            <p class="eyebrow">Busca editorial</p>
+            <h2 id="search-title">Encontrar no Encontre Aqui Tech</h2>
+            <button class="search-close" type="button" data-search-close>Fechar</button>
+          </div>
+          <form class="search-form" data-search-form>
+            <label for="site-search-input">Digite notícia, produto ou seção</label>
+            <input id="site-search-input" type="search" name="query" autocomplete="off" placeholder="Ex.: GTA VI, Vitrine, games, comunidade" data-search-input>
+          </form>
+          <div class="search-results" data-search-results aria-live="polite"></div>
+        </div>
+      </section>
 
   </body>
 </html>
