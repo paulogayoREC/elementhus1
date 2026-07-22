@@ -6400,6 +6400,610 @@ h4 {
   }
 }
 
+/* Repair layer for the GTA VI feature: stable proportions, readable containers and no overflow. */
+.news-article-gta-special {
+  overflow-x: clip;
+  background:
+    radial-gradient(circle at 18% 9%, rgba(255, 83, 163, 0.14), transparent 24rem),
+    radial-gradient(circle at 86% 18%, rgba(53, 237, 255, 0.1), transparent 26rem),
+    linear-gradient(180deg, #08030e 0%, #13051c 44%, #070912 100%);
+}
+
+.news-article-gta-special .article-hero {
+  display: block;
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: hidden;
+  padding: 6.15rem 0 3.2rem;
+}
+
+.news-article-gta-special .article-hero-bg img {
+  opacity: 0.82;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.news-article-gta-special .article-hero::before {
+  background:
+    linear-gradient(90deg, rgba(7, 3, 13, 0.96), rgba(14, 5, 24, 0.82) 48%, rgba(7, 3, 13, 0.48)),
+    linear-gradient(180deg, rgba(7, 3, 13, 0.2), rgba(7, 3, 13, 0.92)),
+    radial-gradient(circle at 28% 24%, rgba(255, 196, 94, 0.18), transparent 18rem),
+    radial-gradient(circle at 78% 18%, rgba(255, 83, 163, 0.2), transparent 22rem);
+}
+
+.news-article-gta-special .article-hero::after {
+  background-image:
+    linear-gradient(90deg, rgba(53, 237, 255, 0.14), transparent 1px),
+    linear-gradient(rgba(255, 196, 94, 0.07), transparent 1px);
+  background-size: 4.25rem 4.25rem;
+  opacity: 0.32;
+}
+
+.news-article-gta-special .article-hero-layout {
+  width: min(1180px, calc(100% - 2rem));
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 22.5rem);
+  gap: 2rem;
+  align-items: center;
+}
+
+.news-article-gta-special .article-hero-copy {
+  max-width: 46rem;
+}
+
+.news-article-gta-special .article-hero h1 {
+  max-width: 14ch;
+  margin-bottom: 0.95rem;
+  font-size: 3.35rem;
+  line-height: 1.04;
+}
+
+.news-article-gta-special .article-lead {
+  max-width: 43rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 250, 236, 0.88);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.news-article-gta-special .article-meta-row {
+  gap: 0.48rem;
+}
+
+.news-article-gta-special .article-meta-row span,
+.news-article-gta-special .article-meta-row time {
+  min-height: 2.2rem;
+  padding: 0.44rem 0.62rem;
+  line-height: 1.25;
+}
+
+.news-article-gta-special .article-hero-figure {
+  display: grid;
+  grid-template-rows: minmax(0, auto) auto;
+  width: 100%;
+  max-width: 22.5rem;
+  align-self: center;
+  justify-self: end;
+  transform: none;
+  border-color: rgba(255, 196, 94, 0.42);
+  background: rgba(5, 2, 10, 0.78);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.48),
+    0 0 34px rgba(255, 83, 163, 0.18);
+}
+
+.news-article-gta-special .article-hero-figure img {
+  display: block;
+  width: 100%;
+  height: 29rem;
+  max-height: 29rem;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center 24%;
+}
+
+.article-gta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.58rem;
+  margin-top: 1rem;
+}
+
+.article-gta-action-button {
+  display: inline-flex;
+  min-height: 2.65rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 196, 94, 0.46);
+  border-radius: 8px;
+  padding: 0.68rem 0.82rem;
+  color: #0b0612;
+  font-family: var(--font-primary);
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1.2;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffc45e, #ff53a3 52%, #35edff);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22), 0 0 22px rgba(255, 83, 163, 0.16);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.article-gta-action-button:hover,
+.article-gta-action-button:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(53, 237, 255, 0.72);
+  outline: none;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26), 0 0 28px rgba(53, 237, 255, 0.22);
+}
+
+.article-gta-action-button:active {
+  transform: translateY(0);
+}
+
+.article-gta-action-button.is-copied {
+  color: #0b0612;
+  background: linear-gradient(135deg, #6effc3, #35edff);
+}
+
+.article-gta-action-button-secondary {
+  color: rgba(250, 235, 209, 0.9);
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.news-article-gta-special .article-body-section-featured {
+  margin-top: 0;
+  padding: 3rem 0 3.4rem;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 83, 163, 0.12), transparent 20rem),
+    radial-gradient(circle at 84% 8%, rgba(53, 237, 255, 0.1), transparent 22rem),
+    linear-gradient(180deg, #08030e, #12061a 48%, #080911);
+}
+
+.news-article-gta-special .article-layout {
+  width: min(1120px, calc(100% - 2rem));
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  grid-template-columns: minmax(0, 46rem) minmax(15rem, 19rem);
+  gap: 1.35rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.news-article-gta-special .article-main-column,
+.news-article-gta-special .article-content,
+.news-article-gta-special .article-comment-panel {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.news-article-gta-special .article-content[data-reveal],
+.news-article-gta-special .article-comment-panel[data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.news-article-gta-special .article-body-section-featured .article-content {
+  overflow: hidden;
+  border: 1px solid rgba(255, 196, 94, 0.18);
+  border-radius: 8px;
+  padding: 1.45rem;
+  background:
+    linear-gradient(135deg, rgba(255, 83, 163, 0.09), rgba(53, 237, 255, 0.06) 44%, rgba(255, 196, 94, 0.07)),
+    rgba(5, 3, 11, 0.72);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.28), inset 0 0 38px rgba(255, 83, 163, 0.05);
+}
+
+.news-article-gta-special .article-content > p,
+.news-article-gta-special .article-content > h2 {
+  max-width: 66ch;
+}
+
+.news-article-gta-special .article-content p {
+  margin-bottom: 1.08rem;
+  color: rgba(250, 235, 209, 0.84);
+  line-height: 1.76;
+}
+
+.news-article-gta-special .article-content p:first-child {
+  font-size: 1.02rem;
+}
+
+.news-article-gta-special .article-content h2 {
+  margin: 1.7rem 0 0.72rem;
+  font-size: 1.34rem;
+  line-height: 1.22;
+}
+
+.news-article-gta-special .article-gta-briefing,
+.news-article-gta-special .article-gta-signal-grid,
+.news-article-gta-special .article-gta-showcase,
+.news-article-gta-special .article-gta-media-panel,
+.news-article-gta-special .article-gta-stat-strip,
+.news-article-gta-special .article-gta-rift,
+.news-article-gta-special .article-source-card,
+.article-gta-related-nav {
+  width: 100%;
+  max-width: 100%;
+}
+
+.news-article-gta-special .article-gta-briefing {
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
+  align-items: stretch;
+  margin: 1.45rem 0;
+  padding: 0.78rem;
+}
+
+.news-article-gta-special .article-gta-briefing img,
+.news-article-gta-special .article-gta-rift img {
+  width: 100%;
+  height: 13.5rem;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.news-article-gta-special .article-gta-briefing figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.news-article-gta-special .article-gta-briefing h2,
+.news-article-gta-special .article-gta-rift h2 {
+  font-size: 1.34rem;
+  line-height: 1.16;
+}
+
+.news-article-gta-special .article-gta-signal-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.62rem;
+}
+
+.news-article-gta-special .article-gta-signal-grid span {
+  min-height: 3rem;
+  padding: 0.64rem;
+  text-align: center;
+}
+
+.news-article-gta-special .article-gta-showcase {
+  grid-template-columns: minmax(10rem, 0.62fr) minmax(0, 1.38fr);
+  gap: 0.7rem;
+  margin: 1.35rem 0 1.55rem;
+}
+
+.news-article-gta-special .article-gta-showcase-main {
+  min-height: 0;
+  height: 22rem;
+  aspect-ratio: auto;
+}
+
+.news-article-gta-special .article-gta-showcase-main img {
+  object-fit: contain;
+  object-position: center;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 196, 94, 0.16), transparent 15rem),
+    rgba(5, 2, 10, 0.82);
+}
+
+.news-article-gta-special .article-gta-showcase-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.news-article-gta-special .article-gta-showcase-grid img,
+.news-article-gta-special .article-gta-showcase-grid img:first-child {
+  min-height: 0;
+  height: 8.9rem;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.news-article-gta-special .article-gta-showcase-grid img:first-child {
+  grid-column: 1 / -1;
+  height: 10.2rem;
+}
+
+.news-article-gta-special .article-gta-showcase-grid img:nth-child(2) {
+  display: none;
+}
+
+.news-article-gta-special .article-gta-showcase-grid img:nth-child(3) {
+  grid-column: 1 / -1;
+  height: 10.95rem;
+}
+
+.news-article-gta-special .article-gta-media-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr);
+  margin: 1.35rem 0 1.55rem;
+}
+
+.news-article-gta-special .article-gta-media-panel img {
+  min-height: 0;
+  height: 14.5rem;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.news-article-gta-special .article-gta-media-panel img:last-of-type {
+  height: 14.5rem;
+  aspect-ratio: auto;
+  object-position: center;
+}
+
+.news-article-gta-special .article-gta-stat-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.25rem 0 1.35rem;
+}
+
+.news-article-gta-special .article-gta-stat-strip div {
+  min-height: 7.2rem;
+  padding: 0.78rem;
+}
+
+.news-article-gta-special .article-gta-stat-strip strong {
+  font-size: 1.8rem;
+}
+
+.news-article-gta-special .article-gta-rift {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 0.8fr);
+  align-items: center;
+  margin: 1.45rem 0 1.55rem;
+}
+
+.news-article-gta-special .article-source-card {
+  margin-top: 1.35rem;
+  overflow: hidden;
+}
+
+.news-article-gta-special .article-source-card a {
+  overflow-wrap: anywhere;
+}
+
+.article-gta-related-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.62rem;
+  margin-top: 1.1rem;
+}
+
+.article-gta-related-nav a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(53, 237, 255, 0.28);
+  border-radius: 8px;
+  padding: 0.72rem;
+  color: rgba(250, 235, 209, 0.9);
+  font-family: var(--font-primary);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.article-gta-related-nav a:hover,
+.article-gta-related-nav a:focus-visible {
+  border-color: rgba(255, 196, 94, 0.58);
+  color: #ffffff;
+  outline: none;
+  background: rgba(255, 83, 163, 0.14);
+}
+
+.news-article-gta-special .article-aside {
+  width: 100%;
+  min-width: 0;
+  max-width: 19rem;
+}
+
+.news-article-gta-special .article-aside h2 {
+  font-size: 1.18rem;
+}
+
+.news-article-gta-special .article-comment-panel .article-comment-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (max-width: 980px) {
+  .news-article-gta-special .article-hero-layout,
+  .news-article-gta-special .article-layout {
+    width: min(46rem, calc(100% - 2rem));
+    grid-template-columns: 1fr;
+  }
+
+  .news-article-gta-special .article-hero-figure,
+  .news-article-gta-special .article-aside {
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .news-article-gta-special .article-hero-figure img {
+    height: 23rem;
+    max-height: 23rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-main {
+    height: 18rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-grid img,
+  .news-article-gta-special .article-gta-showcase-grid img:first-child {
+    height: 8.75rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-grid img:first-child {
+    height: 10rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-grid img:nth-child(3) {
+    height: 10rem;
+  }
+
+  .news-article-gta-special .article-gta-briefing img,
+  .news-article-gta-special .article-gta-rift img,
+  .news-article-gta-special .article-gta-media-panel img,
+  .news-article-gta-special .article-gta-media-panel img:last-of-type {
+    height: 12rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .news-article-gta-special .article-hero {
+    padding: 5.2rem 0 2rem;
+  }
+
+  .news-article-gta-special .article-hero-layout,
+  .news-article-gta-special .article-layout {
+    width: calc(100vw - 72px) !important;
+    max-width: 34rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: visible !important;
+  }
+
+  .news-article-gta-special .article-hero-copy,
+  .news-article-gta-special .article-hero-figure,
+  .news-article-gta-special .article-main-column,
+  .news-article-gta-special .article-content,
+  .news-article-gta-special .article-aside,
+  .news-article-gta-special .article-gta-command-strip,
+  .news-article-gta-special .article-gta-actions,
+  .news-article-gta-special .article-gta-showcase,
+  .news-article-gta-special .article-gta-showcase-grid,
+  .news-article-gta-special .article-gta-media-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .news-article-gta-special .article-hero h1 {
+    max-width: 15ch;
+    font-size: 1.9rem;
+  }
+
+  .news-article-gta-special .article-lead {
+    font-size: 0.96rem;
+  }
+
+  .news-article-gta-special .article-meta-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .news-article-gta-special .article-meta-row span,
+  .news-article-gta-special .article-meta-row time {
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .article-gta-command-strip span,
+  .article-gta-command-strip strong,
+  .article-gta-command-strip small,
+  .article-gta-action-button,
+  .article-gta-related-nav a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .article-gta-actions,
+  .article-gta-related-nav,
+  .news-article-gta-special .article-gta-signal-grid,
+  .news-article-gta-special .article-gta-stat-strip,
+  .news-article-gta-special .article-gta-briefing,
+  .news-article-gta-special .article-gta-showcase,
+  .news-article-gta-special .article-gta-media-panel,
+  .news-article-gta-special .article-gta-rift {
+    grid-template-columns: 1fr;
+  }
+
+  .article-gta-actions {
+    display: grid;
+  }
+
+  .news-article-gta-special .article-body-section-featured .article-content {
+    padding: 1rem;
+  }
+
+  .news-article-gta-special .article-gta-rift figure:first-child {
+    display: block;
+  }
+
+  .news-article-gta-special .article-gta-showcase-main,
+  .news-article-gta-special .article-gta-briefing img,
+  .news-article-gta-special .article-gta-rift img,
+  .news-article-gta-special .article-gta-media-panel img,
+  .news-article-gta-special .article-gta-media-panel img:last-of-type {
+    aspect-ratio: auto;
+  }
+
+  .news-article-gta-special .article-hero-figure img {
+    height: 18rem;
+    max-height: 18rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-main {
+    height: 14.75rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-grid img,
+  .news-article-gta-special .article-gta-showcase-grid img:first-child {
+    height: 8.25rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-grid img:first-child {
+    height: 9.5rem;
+  }
+
+  .news-article-gta-special .article-gta-showcase-grid img:nth-child(3) {
+    height: 9.5rem;
+  }
+
+  .news-article-gta-special .article-gta-briefing img,
+  .news-article-gta-special .article-gta-rift img,
+  .news-article-gta-special .article-gta-media-panel img,
+  .news-article-gta-special .article-gta-media-panel img:last-of-type {
+    height: 11rem;
+  }
+
+  .news-article-gta-special .article-gta-stat-strip div {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .news-article-gta-special .article-hero-layout,
+  .news-article-gta-special .article-layout {
+    width: calc(100vw - 80px) !important;
+    max-width: 20.5rem !important;
+  }
+
+  .news-article-gta-special .article-hero h1 {
+    font-size: 1.56rem;
+  }
+
+  .news-article-gta-special .article-hero-figure img {
+    height: 15.75rem;
+    max-height: 15.75rem;
+  }
+
+  .news-article-gta-special .article-content h2,
+  .news-article-gta-special .article-gta-briefing h2,
+  .news-article-gta-special .article-gta-rift h2 {
+    font-size: 1.12rem;
+  }
+
+  .news-article-gta-special .article-gta-stat-strip strong {
+    font-size: 1.55rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
