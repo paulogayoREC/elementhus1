@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-07-25",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops for students on Amazon right now",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
           "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/557622/the-best-laptop-for-college.html",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
           "date": "2026-07-23",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Finding a good college laptop isn’t as easy as it used to be. With thousands of models available on Amazon, it’s easy to get lost in the sauce (as they say). Whether you need a basic laptop for taking notes and..."
+          "summary": "Shopping for a laptop starts simple enough, but it always ends with a dozen open tabs full of specs you didn’t really care about in the first place. Graphics cards, display types, confusing processor names… it..."
         },
         {
-          "title": "Top News Today: Tata Chip Fab, Crypto Bill, Revolut, AI Psychosis & B.Com Jobs",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/tech-news/top-news-today-tata-chip-fab-crypto-bill-revolut-ai-psychosis-bcom-jobs",
-          "date": "2026-07-23",
+          "title": "Intel admite erro e trará multithreading de volta em 2028 com CPUs Coral Rapids",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/hardware/intel-admite-erro-e-trara-multithreading-de-volta-em-2028-com-cpus-coral-rapids/",
+          "date": "2026-07-24",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Good morning! From the Indian semiconductor push to new crypto laws in the US, this morning’s top stories cover everything from technology and finance to education and artificial intelligence. Here is all that..."
+          "summary": "A Intel abandonou a tecnologia Hyper-Threading nas últimas gerações de seus processadores, algo que levou a empresa a se arrepender , já que causou \"desvantagem competitiva\" contra a rival AMD. Agora, o CEO, Li..."
         }
       ]
     }
