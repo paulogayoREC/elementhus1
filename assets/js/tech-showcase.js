@@ -33,7 +33,7 @@
   const slotsPerDay = Math.floor(24 / rotationHours);
   const siteTimeZone = "America/Recife";
   const rotationBaseDay = getDayNumber("2026-01-01");
-  const catalogCacheKey = "eatTechShowcase:catalog:v2";
+  const catalogCacheKey = "eatTechShowcase:catalog:v3";
   const catalogCacheTtl = 24 * 60 * 60 * 1000;
   let activeRotationKey = "";
   let productCatalog = [];
