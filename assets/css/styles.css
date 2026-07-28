@@ -7173,6 +7173,20 @@ h4 {
   gap: 1.25rem;
 }
 
+.news-article-ai-infra-special .article-main-column,
+.news-article-ai-infra-special .article-content,
+.news-article-ai-infra-special .article-comment-panel {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.news-article-ai-infra-special .article-content[data-reveal],
+.news-article-ai-infra-special .article-comment-panel[data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 .news-article-ai-infra-special .article-content,
 .news-article-ai-infra-special .article-comment-panel,
 .news-article-ai-infra-special .article-aside {
