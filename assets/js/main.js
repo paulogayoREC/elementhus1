@@ -1,6 +1,8 @@
 const header = document.querySelector("[data-header]");
 const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
+const brasiliaClock = document.querySelector("[data-brasilia-clock]");
+const brasiliaClockTime = brasiliaClock?.querySelector("[data-brasilia-clock-time]");
 const feedbackForm = document.querySelector("[data-feedback-form]");
 const feedbackList = document.querySelector("[data-feedback-list]");
 const feedbackStatus = document.querySelector("[data-feedback-status]");
@@ -101,6 +103,26 @@ const formatEditorialDate = (value) => {
     timeZone: "UTC"
   }).format(date);
 };
+
+const brasiliaClockFormatter = new Intl.DateTimeFormat("pt-BR", {
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+  timeZone: "America/Sao_Paulo"
+});
+
+const updateBrasiliaClock = () => {
+  if (!brasiliaClock || !brasiliaClockTime) return;
+
+  const time = brasiliaClockFormatter.format(new Date());
+  brasiliaClockTime.textContent = time;
+  brasiliaClock.setAttribute("aria-label", `Horário de Brasília: ${time}`);
+};
+
+if (brasiliaClockTime) {
+  updateBrasiliaClock();
+  window.setInterval(updateBrasiliaClock, 1000);
+}
 
 const getEditorialItems = (key) => {
   const items = editorialCategories[key]?.items;
