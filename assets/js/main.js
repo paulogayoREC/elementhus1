@@ -116,7 +116,7 @@ const updateBrasiliaClock = () => {
 
   const time = brasiliaClockFormatter.format(new Date());
   brasiliaClockTime.textContent = time;
-  brasiliaClock.setAttribute("aria-label", `Horário de Brasília: ${time}`);
+  brasiliaClock.setAttribute("aria-label", `Horário atual: ${time}`);
 };
 
 if (brasiliaClockTime) {
