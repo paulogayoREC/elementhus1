@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-07-29",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "GPT-5.6 e Claude Fable 5: todas as melhores IAs precisarão de aprovação dos EUA?",
+          "title": "Por que a China está dando de graça suas IAs mais avançadas?",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/todas-as-melhores-ias-precisarao-de-aprovacao-dos-eua/",
-          "date": "2026-07-25",
+          "url": "https://canaltech.com.br/inteligencia-artificial/por-que-a-china-esta-dando-de-graca-suas-ias-mais-avancadas/",
+          "date": "2026-07-28",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "O GPT-5.6 Sol , da OpenAI, e o Claude Fable 5 , da Anthropic, chegaram ao público depois de uma fiscalização que nenhum modelo de IA havia enfrentado até agora. Os dois foram avaliados pelo governo dos Estados..."
+          "summary": "A chegada do Kimi K3 , modelo de IA desenvolvido pela startup chinesa Moonshot AI, colocou o Vale do Silício em alerta. Além de prometer desempenho comparável ao de alguns dos sistemas mais avançados dos Estado..."
         },
         {
-          "title": "Tech layoffs: A 2026 timeline",
-          "source": "Computerworld",
-          "url": "https://www.computerworld.com/article/3816579/tech-layoffs-this-year-a-timeline.html",
-          "date": "2026-07-23",
+          "title": "OpenAI's First Devices: Speaker, Smartphone, and More",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/07/28/openai-first-devices/",
+          "date": "2026-07-29",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Among a range of factors leading to a wave of tech sector layoffs in 2026 is the rapid rise of artificial intelligence and automation. Companies are reconfiguring their workforces to leverage AI for increased e..."
+          "summary": "OpenAI's hardware roadmap has sharpened considerably in recent months, with its first device now identified, a smartphone said to be arriving as soon as next year, and a wider lineup taking shape behind them. A..."
         }
       ]
     }
