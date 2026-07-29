@@ -12,7 +12,9 @@ if (function_exists('ini_set')) {
     ini_set('session.use_only_cookies', '1');
     ini_set('session.cookie_httponly', '1');
     ini_set('session.cookie_samesite', 'Lax');
-    ini_set('session.sid_length', '48');
+    if (PHP_VERSION_ID < 80400) {
+        ini_set('session.sid_length', '48');
+    }
 }
 
 if (function_exists('header_remove')) {

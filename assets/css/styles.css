@@ -7968,6 +7968,306 @@ h4 {
   margin-bottom: 0;
 }
 
+.lofi-video-section,
+.lofi-rating-section {
+  position: relative;
+  padding: 4.2rem 0;
+  background:
+    linear-gradient(180deg, rgba(7, 7, 6, 0.98), rgba(6, 10, 11, 0.98)),
+    #070706;
+}
+
+.lofi-video-section::before,
+.lofi-rating-section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(37, 125, 167, 0.78), transparent);
+}
+
+.lofi-rating-section {
+  padding-top: 3.4rem;
+  background:
+    linear-gradient(180deg, rgba(6, 10, 11, 0.98), rgba(10, 8, 7, 0.98)),
+    #070706;
+}
+
+.lofi-section-heading {
+  display: grid;
+  max-width: 48rem;
+  gap: 0.45rem;
+  margin-bottom: 1.7rem;
+}
+
+.lofi-section-heading h2 {
+  margin: 0;
+  color: var(--cream);
+  font-size: 1.84rem;
+  line-height: 1.16;
+}
+
+.lofi-section-heading p:not(.eyebrow) {
+  max-width: 42rem;
+  margin: 0;
+  color: rgba(250, 235, 209, 0.72);
+  line-height: 1.6;
+}
+
+.lofi-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+  gap: 1rem;
+}
+
+.lofi-video-card {
+  display: grid;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(37, 125, 167, 0.32);
+  border-radius: 8px;
+  background:
+    linear-gradient(155deg, rgba(37, 125, 167, 0.12), rgba(194, 159, 115, 0.05)),
+    rgba(0, 0, 0, 0.34);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(250, 235, 209, 0.08);
+}
+
+.lofi-video-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  min-height: 9.6rem;
+  overflow: hidden;
+  background: #050607;
+}
+
+.lofi-video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 240ms ease, filter 240ms ease;
+}
+
+.lofi-video-thumb::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, 0.55)),
+    linear-gradient(135deg, rgba(255, 31, 61, 0.08), transparent 52%);
+  pointer-events: none;
+}
+
+.lofi-video-thumb:hover img,
+.lofi-video-thumb:focus-visible img {
+  filter: saturate(1.08) contrast(1.04);
+  transform: scale(1.035);
+}
+
+.lofi-play-badge {
+  position: absolute;
+  right: 0.78rem;
+  bottom: 0.78rem;
+  z-index: 1;
+  display: inline-grid;
+  width: 2.72rem;
+  height: 2.72rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 50%;
+  background: rgba(255, 31, 61, 0.9);
+  box-shadow: 0 10px 28px rgba(255, 31, 61, 0.28);
+}
+
+.lofi-play-badge::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 0.18rem;
+  border-top: 0.48rem solid transparent;
+  border-bottom: 0.48rem solid transparent;
+  border-left: 0.72rem solid #ffffff;
+  content: "";
+}
+
+.lofi-video-content {
+  display: grid;
+  gap: 0.48rem;
+  padding: 0.94rem;
+}
+
+.lofi-video-index,
+.lofi-rating-copy span {
+  display: inline-grid;
+  width: 2.35rem;
+  height: 1.58rem;
+  place-items: center;
+  border: 1px solid rgba(194, 159, 115, 0.4);
+  border-radius: 8px;
+  color: var(--bronze);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: rgba(194, 159, 115, 0.09);
+}
+
+.lofi-video-content h3,
+.lofi-rating-copy h3 {
+  margin: 0;
+  color: var(--cream);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: 1.24;
+  overflow-wrap: anywhere;
+}
+
+.lofi-video-content p,
+.lofi-rating-copy p,
+.lofi-rating-meta {
+  margin: 0;
+  color: rgba(250, 235, 209, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.48;
+}
+
+.lofi-video-content .lofi-channel,
+.lofi-rating-copy p {
+  color: rgba(37, 175, 222, 0.86);
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.lofi-rating-list {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.lofi-rating-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, auto);
+  gap: 1rem;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid rgba(250, 235, 209, 0.13);
+  border-radius: 8px;
+  padding: 0.82rem;
+  background:
+    linear-gradient(135deg, rgba(37, 125, 167, 0.13), rgba(0, 0, 0, 0.18)),
+    rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(250, 235, 209, 0.06);
+}
+
+.lofi-rating-copy {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.2rem 0.72rem;
+  align-items: center;
+  min-width: 0;
+}
+
+.lofi-rating-copy span {
+  grid-row: span 2;
+}
+
+.lofi-rating-controls {
+  display: grid;
+  gap: 0.42rem;
+  justify-items: end;
+}
+
+.lofi-star-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 2.2rem);
+  gap: 0.28rem;
+}
+
+.lofi-star-buttons button {
+  display: inline-grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  place-items: center;
+  border: 1px solid rgba(250, 235, 209, 0.16);
+  border-radius: 8px;
+  color: rgba(250, 235, 209, 0.34);
+  font-size: 1.08rem;
+  line-height: 1;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.24);
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.lofi-star-buttons button:hover,
+.lofi-star-buttons button:focus-visible,
+.lofi-star-buttons button.is-selected {
+  border-color: rgba(194, 159, 115, 0.66);
+  color: var(--bronze);
+  background: rgba(194, 159, 115, 0.13);
+  box-shadow: 0 0 18px rgba(194, 159, 115, 0.18);
+}
+
+.lofi-star-buttons button:hover,
+.lofi-star-buttons button:focus-visible {
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.lofi-star-buttons button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.lofi-star-buttons button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.lofi-rating-meta {
+  max-width: 18rem;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .lofi-video-section,
+  .lofi-rating-section {
+    padding: 3rem 0;
+  }
+
+  .lofi-section-heading h2 {
+    font-size: 1.42rem;
+  }
+
+  .lofi-rating-item {
+    grid-template-columns: 1fr;
+  }
+
+  .lofi-rating-controls {
+    justify-items: start;
+  }
+
+  .lofi-rating-meta {
+    max-width: none;
+    text-align: left;
+  }
+}
+
+@media (max-width: 420px) {
+  .lofi-star-buttons {
+    grid-template-columns: repeat(5, 2rem);
+  }
+
+  .lofi-star-buttons button {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 @keyframes musicDividerSweep {
   0%,
   38% {
@@ -8007,6 +8307,25 @@ h4 {
 }
 
 @media (max-width: 700px) {
+  .music-page .section-inner,
+  .music-page .nav-shell {
+    width: min(1180px, calc(100% - 2rem));
+  }
+
+  .music-page main .section-inner {
+    width: min(1180px, calc(100% - 5rem));
+  }
+
+  .music-page .brand-name {
+    max-width: min(42vw, 10.6rem);
+  }
+
+  .music-page .button {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+
   .music-divider {
     margin-top: 0;
     padding: 0.9rem 0 2rem;
@@ -8062,11 +8381,51 @@ h4 {
   .music-platform-card {
     min-height: auto;
   }
+
+  .lofi-video-card,
+  .lofi-rating-item {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 420px) {
+  .music-page main .section-inner {
+    width: min(100%, calc(100vw - 4rem));
+  }
+
+  .music-page .music-platform-card,
+  .music-page .lofi-section-heading,
+  .music-page .lofi-video-card,
+  .music-page .lofi-rating-item {
+    width: min(100%, calc(100vw - 4rem));
+    max-width: min(100%, calc(100vw - 4rem));
+  }
+
+  .music-page .nav-shell {
+    gap: 0.52rem;
+  }
+
+  .music-page .brand-name {
+    max-width: min(38vw, 9.4rem);
+    font-size: 0.82rem;
+  }
+
+  .music-page .menu-toggle {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    padding-right: 0;
+    padding-left: 0;
+    grid-template-columns: 1.1rem;
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .music-page .menu-toggle span {
+    grid-column: 1;
+  }
+
   .music-divider-shell {
-    width: min(100%, calc(100vw - 1.25rem));
+    width: 100%;
   }
 
   .music-option {

@@ -6,6 +6,7 @@ require dirname(__DIR__) . '/app/bootstrap.php';
 require dirname(__DIR__) . '/app/Database.php';
 require dirname(__DIR__) . '/app/CommentStorage.php';
 require dirname(__DIR__) . '/app/ArticleCommentStorage.php';
+require dirname(__DIR__) . '/app/LofiRatingStorage.php';
 require dirname(__DIR__) . '/app/PasswordResetStorage.php';
 
 function db_check_is_debug(): bool
@@ -141,6 +142,7 @@ function db_check_diagnostics(?Throwable $exception = null): array
             'app/bootstrap.php' => db_check_file_status($projectRoot . '/app/bootstrap.php'),
             'app/CommentStorage.php' => db_check_file_status($projectRoot . '/app/CommentStorage.php'),
             'app/ArticleCommentStorage.php' => db_check_file_status($projectRoot . '/app/ArticleCommentStorage.php'),
+            'app/LofiRatingStorage.php' => db_check_file_status($projectRoot . '/app/LofiRatingStorage.php'),
             'app/PasswordResetStorage.php' => db_check_file_status($projectRoot . '/app/PasswordResetStorage.php'),
         ],
         'private_config_candidates' => array_map(
@@ -227,10 +229,22 @@ try {
         ], 500, $exception);
     }
 
+    try {
+        ensure_lofi_video_ratings_table($pdo);
+        $pdo->query('SELECT id FROM lofi_video_ratings WHERE 1 = 0');
+    } catch (Throwable $exception) {
+        error_log($exception->getMessage());
+        db_check_response([
+            'ok' => false,
+            'stage' => 'lofi_video_ratings_table',
+            'message' => 'Conexao com o banco OK, mas a tabela lofi_video_ratings nao foi encontrada ou esta incompleta.',
+        ], 500, $exception);
+    }
+
     db_check_response([
         'ok' => true,
         'stage' => 'ready',
-        'message' => 'Banco conectado e tabelas users/password_resets/community_comments/article_comments disponíveis.',
+        'message' => 'Banco conectado e tabelas users/password_resets/community_comments/article_comments/lofi_video_ratings disponiveis.',
     ]);
 } catch (PDOException $exception) {
     error_log($exception->getMessage());

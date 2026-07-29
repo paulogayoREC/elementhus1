@@ -15,6 +15,8 @@ const articleCommentForms = Array.from(document.querySelectorAll("[data-article-
 const articleCommentLists = Array.from(document.querySelectorAll("[data-article-comment-list]"));
 const articleCommentNameStorageKey = "encontreAquiTechArticleComment:name";
 const articleCommentMessageLimit = 500;
+const lofiRatingItems = Array.from(document.querySelectorAll("[data-lofi-rating]"));
+const lofiRatingStorageKey = "encontreAquiTechLofiRatings:v1";
 const mainScriptElement = document.currentScript;
 const focusableSelector = 'a[href], button:not([disabled]), textarea:not([disabled]), input:not([type="hidden"]):not([disabled]), select:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
 const feedbackApiBase = mainScriptElement?.src
@@ -830,6 +832,151 @@ const setupArticleCommentForms = () => {
   });
 };
 
+const readStoredLofiRatings = () => {
+  try {
+    const storedRatings = JSON.parse(window.localStorage.getItem(lofiRatingStorageKey) || "{}");
+    return storedRatings && typeof storedRatings === "object" && !Array.isArray(storedRatings)
+      ? storedRatings
+      : {};
+  } catch {
+    return {};
+  }
+};
+
+const storedLofiRatings = readStoredLofiRatings();
+const lofiRatingFormatter = new Intl.NumberFormat("pt-BR", {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1
+});
+
+const writeStoredLofiRatings = () => {
+  try {
+    window.localStorage.setItem(lofiRatingStorageKey, JSON.stringify(storedLofiRatings));
+  } catch {
+    // localStorage can be disabled; the public API remains the source of truth.
+  }
+};
+
+const normalizeLofiRating = (summary = {}, fallbackRating = 0) => {
+  const average = Math.max(0, Math.min(5, Number(summary.average) || 0));
+  const count = Math.max(0, Number(summary.count) || 0);
+  const userRating = Math.max(0, Math.min(5, Number(summary.userRating || fallbackRating) || 0));
+
+  return { average, count, userRating };
+};
+
+const updateLofiRatingItem = (item, summary = {}) => {
+  const videoId = item.dataset.videoId || "";
+  const fallbackRating = Number(storedLofiRatings[videoId] || 0);
+  const { average, count, userRating } = normalizeLofiRating(summary, fallbackRating);
+  const buttons = Array.from(item.querySelectorAll("[data-rating]"));
+  const meta = item.querySelector("[data-lofi-rating-meta]");
+  const activeScore = userRating;
+
+  buttons.forEach((button) => {
+    const score = Number(button.dataset.rating || 0);
+    button.classList.toggle("is-selected", score <= activeScore);
+    button.setAttribute("aria-pressed", score === userRating ? "true" : "false");
+  });
+
+  if (!meta) return;
+
+  if (count > 0) {
+    const voteLabel = count === 1 ? "voto" : "votos";
+    const userLabel = userRating ? ` Sua nota: ${userRating} de 5.` : "";
+    meta.textContent = `M\u00e9dia do p\u00fablico: ${lofiRatingFormatter.format(average)} de 5 (${count} ${voteLabel}).${userLabel}`;
+    return;
+  }
+
+  meta.textContent = userRating
+    ? `Sua nota: ${userRating} de 5. Aguardando mais votos do p\u00fablico.`
+    : "Ainda sem votos. Seja a primeira pessoa a avaliar.";
+};
+
+const setLofiRatingButtonsDisabled = (item, disabled) => {
+  item.querySelectorAll("[data-rating]").forEach((button) => {
+    button.disabled = disabled;
+  });
+};
+
+const loadLofiRatings = async () => {
+  if (!lofiRatingItems.length) return;
+
+  try {
+    const data = await feedbackApiRequest("lofi-ratings");
+    const ratings = data.ratings && typeof data.ratings === "object" ? data.ratings : {};
+
+    lofiRatingItems.forEach((item) => {
+      updateLofiRatingItem(item, ratings[item.dataset.videoId] || {});
+    });
+  } catch {
+    lofiRatingItems.forEach((item) => {
+      updateLofiRatingItem(item);
+      const meta = item.querySelector("[data-lofi-rating-meta]");
+      const videoId = item.dataset.videoId || "";
+
+      if (meta && !storedLofiRatings[videoId]) {
+        meta.textContent = "Avalia\u00e7\u00e3o p\u00fablica dispon\u00edvel quando o site estiver conectado ao PHP e MySQL.";
+      }
+    });
+  }
+};
+
+const submitLofiRating = async (item, rating) => {
+  const videoId = item.dataset.videoId || "";
+  const meta = item.querySelector("[data-lofi-rating-meta]");
+
+  if (!videoId || rating < 1 || rating > 5) return;
+
+  setLofiRatingButtonsDisabled(item, true);
+  if (meta) {
+    meta.textContent = "Salvando avalia\u00e7\u00e3o...";
+  }
+
+  try {
+    await ensureFeedbackSession();
+
+    if (!feedbackState.csrfToken) {
+      throw new Error("Sessao indisponivel.");
+    }
+
+    const data = await feedbackApiRequest("lofi-ratings", {
+      method: "POST",
+      body: JSON.stringify({ videoId, rating })
+    });
+
+    storedLofiRatings[videoId] = rating;
+    writeStoredLofiRatings();
+    updateLofiRatingItem(item, data.rating || { userRating: rating });
+  } catch {
+    storedLofiRatings[videoId] = rating;
+    writeStoredLofiRatings();
+    updateLofiRatingItem(item, { userRating: rating });
+
+    if (meta) {
+      meta.textContent = `Sua nota: ${rating} de 5. M\u00e9dia p\u00fablica indispon\u00edvel agora.`;
+    }
+  } finally {
+    setLofiRatingButtonsDisabled(item, false);
+  }
+};
+
+const setupLofiRatings = () => {
+  if (!lofiRatingItems.length) return;
+
+  lofiRatingItems.forEach((item) => {
+    updateLofiRatingItem(item);
+
+    item.querySelectorAll("[data-rating]").forEach((button) => {
+      button.addEventListener("click", () => {
+        submitLofiRating(item, Number(button.dataset.rating || 0));
+      });
+    });
+  });
+
+  loadLofiRatings();
+};
+
 feedbackMessage?.addEventListener("input", updateFeedbackCount);
 ensureHoneypotField(feedbackForm);
 
@@ -905,3 +1052,4 @@ getArticleCommentSlugs().forEach((contentSlug) => {
 });
 loadFeedbackWhenVisible();
 scheduleArticleCommentLoads();
+setupLofiRatings();
