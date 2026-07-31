@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-31",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Por que a China está dando de graça suas IAs mais avançadas?",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/por-que-a-china-esta-dando-de-graca-suas-ias-mais-avancadas/",
-          "date": "2026-07-28",
+          "title": "Microsoft doubles down on multi-model AI as it builds a Copilot super app",
+          "source": "Computerworld",
+          "url": "https://www.computerworld.com/article/4203702/microsoft-doubles-down-on-multi-model-ai-as-it-builds-a-copilot-super-app-3.html",
+          "date": "2026-07-31",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A chegada do Kimi K3 , modelo de IA desenvolvido pela startup chinesa Moonshot AI, colocou o Vale do Silício em alerta. Além de prometer desempenho comparável ao de alguns dos sistemas mais avançados dos Estado..."
+          "summary": "All of the major AI providers want you to use, and ideally stay within, their super apps, and now Microsoft is looking to capture that attention, too. During an earnings call this week, CEO Satya Nadella confir..."
         },
         {
-          "title": "OpenAI's First Devices: Speaker, Smartphone, and More",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/07/28/openai-first-devices/",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
           "date": "2026-07-29",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "OpenAI's hardware roadmap has sharpened considerably in recent months, with its first device now identified, a smartphone said to be arriving as soon as next year, and a wider lineup taking shape behind them. A..."
+          "summary": "Shopping for a laptop starts simple enough, but it always ends with a dozen open tabs full of specs you didn’t really care about in the first place. Graphics cards, display types, confusing processor names… it..."
         }
       ]
     }
