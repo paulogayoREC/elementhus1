@@ -1,5 +1,5 @@
 window.editorialData = {
-  "updatedAt": "2026-08-01",
+  "updatedAt": "2026-08-03",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
@@ -16,14 +16,14 @@ window.editorialData = {
           "summary": "All of the major AI providers want you to use, and ideally stay within, their super apps, and now Microsoft is looking to capture that attention, too. During an earnings call this week, CEO Satya Nadella confir..."
         },
         {
-          "title": "Microsoft lidera lista de marcas mais usadas por hackers; veja ranking completo",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/seguranca/microsoft-lidera-lista-de-marcas-mais-usadas-por-hackers-veja-ranking-completo/",
-          "date": "2026-07-31",
+          "title": "How AI is killing smartphone apps in China",
+          "source": "Computerworld",
+          "url": "https://www.computerworld.com/article/4203560/how-ai-in-china-is-killing-smartphone-apps.html",
+          "date": "2026-08-03",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A Microsoft segue como a marca mais usada por criminosos em ataques de phishing. Segundo o relatório do segundo trimestre de 2026 da Check Point Research, a empresa aparece em 22,6% de todas as tentativas de pe..."
+          "summary": "Chinese smartphone makers have been followers in the global market, embracing the concepts and paradigms set in the past 20 years by Apple and Google. But AI may be giving the Chinese an opportunity to break aw..."
         }
       ]
     }
