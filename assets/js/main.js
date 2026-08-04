@@ -229,19 +229,8 @@ const orderHomeNewsCards = () => {
         (next.timestamp - current.timestamp) || (current.index - next.index)
       ))
       .forEach(({ card }, index) => {
-        const kicker = card.querySelector("[data-home-news-kicker]");
-        const heading = card.querySelector("[data-home-news-heading]");
-
         card.hidden = index > 1;
         card.dataset.homeNewsPosition = index === 0 ? "latest" : index === 1 ? "previous" : "archived";
-
-        if (kicker) {
-          kicker.textContent = String(index + 1).padStart(2, "0");
-        }
-
-        if (heading) {
-          heading.textContent = index === 0 ? "Mais recente" : "Notícia anterior";
-        }
 
         grid.append(card);
       });
