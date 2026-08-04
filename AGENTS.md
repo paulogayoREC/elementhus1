@@ -33,7 +33,7 @@ Use estas regras para trabalhar no projeto com baixo consumo de contexto.
 ## Regra da palavra-chave `notícia nova`
 
 - Quando o usuario usar a palavra-chave `notícia nova` ou `noticia nova`, tratar como tarefa editorial obrigatoria da editoria Noticias.
-- Atualizar o card `Notícias Tech` da pagina inicial (`index.html`) para destacar a nova materia, mantendo imagem, titulo, resumo/chamada e link coerentes com `/noticias`.
+- Atualizar a area `Notícias Tech` da pagina inicial (`index.html`) com dois cards: a noticia mais recente a esquerda e a noticia anterior a direita, mantendo imagem, titulo, resumo/chamada, `data-home-news-date` e links coerentes com `/noticias`.
 - Atualizar `noticias.html` para que a nova materia vire o destaque principal da pagina.
 - A materia principal de `noticias.html` deve ter design e estrutura especiais, criados livremente para o tema da noticia, podendo fugir do padrao visual recorrente do site.
 - A liberdade visual vale para a area da materia principal; preservar header, menu, rodape, SEO, comentarios, slugs, seletores `data-*`, acessibilidade, responsividade e desempenho.

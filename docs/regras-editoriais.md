@@ -10,16 +10,17 @@ A pagina de Noticias concentra somente a editoria de noticias do site.
 
 Sempre que o pedido do usuario trouxer a palavra-chave `notícia nova` ou `noticia nova`, execute o fluxo completo da editoria Noticias:
 
-1. Atualize o card `Notícias Tech` da pagina inicial (`index.html`) para destacar a nova materia.
-2. O card da home deve usar dados reais da nova materia: titulo, chamada/resumo, imagem, categoria/contexto e link para `/noticias`.
-3. Atualize `noticias.html` para que a nova materia seja o destaque principal da pagina.
-4. Crie para a materia principal um design e uma estrutura especiais, livres e autorais, adequados ao assunto da noticia, podendo fugir do padrao visual recorrente do site.
-5. Essa liberdade visual vale somente para a area da materia principal. Preserve header, menu, rodape, SEO, metadados, URL limpa, comentarios, formularios, slugs e seletores `data-*`.
-6. Quando criar CSS ou classes para esse design especial, prefira escopar por classe da materia ou slug para evitar impacto em outras paginas e em materias arquivadas.
-7. Mova a materia que era destaque principal para a area inferior `Continue no radar`.
-8. A area `Continue no radar` deve usar `details.article-archive-card` dentro de `.article-archive-grid[data-archive-limit="5"]`.
-9. Mantenha no maximo 5 materias antigas nessa area; se ja houver 5, remova a mais antiga antes de inserir a anterior.
-10. Preserve slugs, formularios e listas de comentarios da materia que saiu do destaque, sem perder o vinculo com comentarios ja publicados.
+1. Atualize a area `Notícias Tech` da pagina inicial (`index.html`) com dois cards.
+2. O card da esquerda deve ser a noticia mais recente adicionada, com `data-home-news-date`, titulo, chamada/resumo, imagem, categoria/contexto e link coerente com `/noticias`.
+3. O card da direita deve ser a noticia anterior da mais recente, tambem com `data-home-news-date`, titulo, chamada/resumo, imagem, categoria/contexto e link coerente com `/noticias`.
+4. Atualize `noticias.html` para que a nova materia seja o destaque principal da pagina.
+5. Crie para a materia principal um design e uma estrutura especiais, livres e autorais, adequados ao assunto da noticia, podendo fugir do padrao visual recorrente do site.
+6. Essa liberdade visual vale somente para a area da materia principal. Preserve header, menu, rodape, SEO, metadados, URL limpa, comentarios, formularios, slugs e seletores `data-*`.
+7. Quando criar CSS ou classes para esse design especial, prefira escopar por classe da materia ou slug para evitar impacto em outras paginas e em materias arquivadas.
+8. Mova a materia que era destaque principal para a area inferior `Continue no radar`.
+9. A area `Continue no radar` deve usar `details.article-archive-card` dentro de `.article-archive-grid[data-archive-limit="5"]`.
+10. Mantenha no maximo 5 materias antigas nessa area; se ja houver 5, remova a mais antiga antes de inserir a anterior.
+11. Preserve slugs, formularios e listas de comentarios da materia que saiu do destaque, sem perder o vinculo com comentarios ja publicados.
 
 ## Quando adicionar novo conteudo
 

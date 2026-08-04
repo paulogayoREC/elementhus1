@@ -36,9 +36,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/img/astro001-cutout.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260728-music-divider">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260804-noticias-duplas">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260728-clock-label" defer></script>
+    <script src="assets/js/main.js?v=20260804-noticias-duplas" defer></script>
     <script src="assets/js/tech-showcase.js?v=20260423-vitrine-cache" defer></script>
     <script src="assets/js/auth.js?v=20260428-auth-scoped-session" defer></script>
   </head>
@@ -200,10 +200,10 @@
             <h2 id="editorias-title">Notícias que merecem estar no seu radar.</h2>
           </div>
 
-          <div class="editorial-grid">
-            <article class="topic-card topic-large" data-editorial-feature="noticias">
-              <span class="topic-kicker">01</span>
-              <h3>Notícias</h3>
+          <div class="editorial-grid editorial-news-grid" data-home-news-grid>
+            <article class="topic-card topic-large topic-news-card" data-editorial-feature="noticias" data-home-news-card data-home-news-date="2026-07-28">
+              <span class="topic-kicker" data-home-news-kicker>01</span>
+              <h3 data-home-news-heading>Mais recente</h3>
               <div class="topic-card-preview">
                 <img src="assets/img/noticias/ai-infra-bilionaria-hero.jpg" alt="Corredor de data center com servidores e equipes técnicas acompanhando a infraestrutura.">
                 <div class="topic-card-preview-copy">
@@ -213,6 +213,20 @@
               </div>
               <p>Chips, energia e data centers viram a nova fronteira competitiva de OpenAI, Nvidia, AMD, Google, Microsoft e outras gigantes.</p>
               <a href="/noticias" aria-label="Ler notícia completa sobre a corrida bilionária pela infraestrutura da inteligência artificial">Ler notícia completa</a>
+            </article>
+
+            <article class="topic-card topic-large topic-news-card" data-editorial-feature="noticias" data-home-news-card data-home-news-date="2026-07-21">
+              <span class="topic-kicker" data-home-news-kicker>02</span>
+              <h3 data-home-news-heading>Notícia anterior</h3>
+              <div class="topic-card-preview">
+                <img src="assets/img/noticias/gta-vi-midia-fisica-key-visual.jpg" alt="Arte de GTA VI com personagens em cenário ensolarado de Vice City." loading="lazy" decoding="async">
+                <div class="topic-card-preview-copy">
+                  <span>Jogos físicos</span>
+                  <strong>De GTA VI ao PlayStation: o futuro dos jogos físicos está em risco</strong>
+                </div>
+              </div>
+              <p>GTA VI, PlayStation e a queda do disco físico mostram como propriedade, revenda e preservação entram em uma nova fase.</p>
+              <a href="/noticias#noticias-archive-title" aria-label="Ler notícia anterior sobre GTA VI, PlayStation e o futuro dos jogos físicos">Ler notícia anterior</a>
             </article>
           </div>
         </div>

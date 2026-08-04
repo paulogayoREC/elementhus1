@@ -21,7 +21,7 @@ Mapa curto para orientar o Codex no projeto `encontreaquitech.com` sem carregar 
 
 - Home: `index.html`, `assets/js/main.js`, `assets/css/styles.css`.
 - Pagina editorial publicada: `noticias.html`, com a noticia principal e o arquivo de noticias anteriores.
-- Palavra-chave `notícia nova` ou `noticia nova`: atualizar juntos o card `Notícias Tech` da home em `index.html` e o destaque principal de `noticias.html`; a materia principal deve ter design/estrutura especial e livre para o tema, enquanto o destaque anterior vai para `Continue no radar`.
+- Palavra-chave `notícia nova` ou `noticia nova`: atualizar juntos a area `Notícias Tech` da home em `index.html` e o destaque principal de `noticias.html`; na home, manter dois cards com a noticia mais recente a esquerda e a anterior a direita, usando `data-home-news-date`; a materia principal deve ter design/estrutura especial e livre para o tema, enquanto o destaque anterior vai para `Continue no radar`.
 - Regras editoriais: `docs/regras-editoriais.md`.
 - Indicacoes/produtos: `indicacoes.html`, `indicacoes/*.html`, `assets/js/tech-showcase.js`.
 - Regras da Vitrine Tech: `docs/regras-vitrine-tech.md`.

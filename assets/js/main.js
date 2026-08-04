@@ -210,8 +210,47 @@ const renderTopicEditorialLists = () => {
   });
 };
 
+const getHomeNewsTimestamp = (card) => {
+  const date = new Date(`${card.dataset.homeNewsDate || ""}T00:00:00Z`);
+  return Number.isNaN(date.getTime()) ? 0 : date.getTime();
+};
+
+const orderHomeNewsCards = () => {
+  document.querySelectorAll("[data-home-news-grid]").forEach((grid) => {
+    const cards = Array.from(grid.querySelectorAll("[data-home-news-card]"));
+
+    cards
+      .map((card, index) => ({
+        card,
+        index,
+        timestamp: getHomeNewsTimestamp(card)
+      }))
+      .sort((current, next) => (
+        (next.timestamp - current.timestamp) || (current.index - next.index)
+      ))
+      .forEach(({ card }, index) => {
+        const kicker = card.querySelector("[data-home-news-kicker]");
+        const heading = card.querySelector("[data-home-news-heading]");
+
+        card.hidden = index > 1;
+        card.dataset.homeNewsPosition = index === 0 ? "latest" : index === 1 ? "previous" : "archived";
+
+        if (kicker) {
+          kicker.textContent = String(index + 1).padStart(2, "0");
+        }
+
+        if (heading) {
+          heading.textContent = index === 0 ? "Mais recente" : "Notícia anterior";
+        }
+
+        grid.append(card);
+      });
+  });
+};
+
 renderHomeEditorialHighlights();
 renderTopicEditorialLists();
+orderHomeNewsCards();
 
 const revealTargets = document.querySelectorAll(
   ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
