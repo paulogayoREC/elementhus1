@@ -1586,6 +1586,7 @@ h4 {
 .interesting-sites-section {
   overflow: hidden;
   isolation: isolate;
+  padding: clamp(2.7rem, 5vw, 3.8rem) 0;
   color: var(--cream);
   background:
     radial-gradient(circle at 18% 28%, rgba(250, 235, 209, 0.14), transparent 20rem),
@@ -1624,14 +1625,14 @@ h4 {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(17rem, 0.58fr) minmax(8.5rem, 0.24fr) minmax(0, 1.18fr);
-  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: minmax(15rem, 0.62fr) minmax(6.2rem, 0.18fr) minmax(18rem, 0.74fr);
+  gap: clamp(0.8rem, 2vw, 1.35rem);
   align-items: center;
 }
 
 .interesting-sites-home-copy {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.68rem;
 }
 
 .interesting-sites-home-copy .eyebrow,
@@ -1644,17 +1645,27 @@ h4 {
 .interesting-sites-home-copy h2 {
   max-width: 19ch;
   margin-bottom: 0;
+  font-size: clamp(1.65rem, 2.6vw, 2.35rem);
+  line-height: 1.05;
 }
 
 .interesting-sites-home-copy p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 0;
   color: rgba(250, 235, 209, 0.82);
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 .interesting-sites-home-copy .button,
 .interesting-site-cta-row .button {
   justify-self: start;
+}
+
+.interesting-sites-home-copy .button {
+  min-height: 2.35rem;
+  padding: 0.54rem 0.76rem;
+  font-size: 0.68rem;
 }
 
 .connected-globe {
@@ -1674,6 +1685,10 @@ h4 {
     0 0 44px rgba(250, 235, 209, 0.18),
     inset 0 0 36px rgba(250, 235, 209, 0.14);
   animation: connectedGlobeFloat 6.8s ease-in-out infinite;
+}
+
+.connected-globe-home {
+  width: clamp(6.4rem, 10vw, 8.4rem);
 }
 
 .connected-globe::before,
@@ -1756,12 +1771,15 @@ h4 {
 }
 
 .interesting-sites-grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 0.8rem;
   align-items: stretch;
 }
 
 .interesting-sites-grid .interesting-site-card {
+  gap: 0.64rem;
+  min-height: 0;
+  padding: 0.85rem;
   border-color: rgba(250, 235, 209, 0.24);
   background:
     linear-gradient(145deg, rgba(250, 235, 209, 0.12), rgba(37, 125, 167, 0.2) 48%, rgba(61, 45, 36, 0.74)),
@@ -1773,14 +1791,16 @@ h4 {
 }
 
 .interesting-sites-grid .topic-card-preview {
+  margin: 0 0 0.32rem;
   border-color: rgba(250, 235, 209, 0.24);
   background: rgba(16, 13, 11, 0.38);
 }
 
 .interesting-sites-grid .topic-card-preview img {
-  min-height: clamp(15rem, 28vw, 21rem);
-  aspect-ratio: 16 / 9;
-  object-position: center;
+  height: clamp(9.6rem, 15vw, 12.8rem);
+  min-height: 0;
+  aspect-ratio: auto;
+  object-position: center 44%;
   filter: saturate(1.05) contrast(1.04);
 }
 
@@ -1788,6 +1808,31 @@ h4 {
   background:
     linear-gradient(180deg, rgba(7, 6, 5, 0), rgba(7, 6, 5, 0.88)),
     rgba(61, 45, 36, 0.46);
+  padding: 0.64rem 0.72rem 0.72rem;
+}
+
+.interesting-sites-grid .topic-card-preview-copy span {
+  color: #faebd1;
+  font-size: 0.58rem;
+}
+
+.interesting-sites-grid .topic-card-preview-copy strong {
+  font-size: clamp(0.88rem, 1.1vw, 1.02rem);
+  line-height: 1.24;
+}
+
+.interesting-sites-grid .interesting-site-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.48;
+}
+
+.interesting-sites-grid .interesting-site-card a {
+  min-height: 2.12rem;
+  margin-top: auto;
+  padding: 0.45rem 0.66rem;
+  border-radius: 6px;
+  font-size: 0.62rem;
 }
 
 .interesting-sites-page {
