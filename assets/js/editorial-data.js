@@ -1,5 +1,5 @@
 window.editorialData = {
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-05",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
@@ -16,14 +16,14 @@ window.editorialData = {
           "summary": "All of the major AI providers want you to use, and ideally stay within, their super apps, and now Microsoft is looking to capture that attention, too. During an earnings call this week, CEO Satya Nadella confir..."
         },
         {
-          "title": "How AI is killing smartphone apps in China",
-          "source": "Computerworld",
-          "url": "https://www.computerworld.com/article/4203560/how-ai-in-china-is-killing-smartphone-apps.html",
-          "date": "2026-08-03",
+          "title": "Apple Limits Bug Bounty Submissions After Flood of AI Slop",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/2026/08/04/aple-bug-bounty-limits-ai/",
+          "date": "2026-08-04",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Chinese smartphone makers have been followers in the global market, embracing the concepts and paradigms set in the past 20 years by Apple and Google. But AI may be giving the Chinese an opportunity to break aw..."
+          "summary": "Apple limited the number of vulnerabilities security researchers can submit to its bug bounty program because of an uptick in reports about fake bugs hallucinated by AI, according to The Financial Times . Apple..."
         }
       ]
     }
