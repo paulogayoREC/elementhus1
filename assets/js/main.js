@@ -259,6 +259,15 @@ const setHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
 };
 
+const revealTarget = (target, observer) => {
+  target.classList.add("is-visible");
+  observer?.unobserve(target);
+};
+
+const revealAllTargets = () => {
+  revealTargets.forEach((target) => revealTarget(target));
+};
+
 const ensureMenuBackdrop = () => {
   if (menuBackdrop) return menuBackdrop;
 
@@ -430,16 +439,20 @@ if ("IntersectionObserver" in window) {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+        revealTarget(entry.target, observer);
       });
     },
     { threshold: 0.16 }
   );
 
   revealTargets.forEach((target) => revealObserver.observe(target));
+  window.setTimeout(() => {
+    if (window.matchMedia("(max-width: 700px)").matches) {
+      revealAllTargets();
+    }
+  }, 1200);
 } else {
-  revealTargets.forEach((target) => target.classList.add("is-visible"));
+  revealAllTargets();
 }
 
 document.querySelectorAll('a[href="#"]').forEach((link) => {

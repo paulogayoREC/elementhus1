@@ -5202,6 +5202,13 @@ h4 {
   transform: translateY(0);
 }
 
+@media (max-width: 700px) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .interesting-sites-section [data-reveal],
 .interesting-sites-page [data-reveal] {
   opacity: 1;
