@@ -36,9 +36,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/img/astro001-cutout.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260804-noticias-cards-destaque">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260805-sites-interessantes">
     <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260804-noticias-cards-destaque" defer></script>
+    <script src="assets/js/main.js?v=20260805-sites-interessantes" defer></script>
     <script src="assets/js/tech-showcase.js?v=20260423-vitrine-cache" defer></script>
     <script src="assets/js/auth.js?v=20260428-auth-scoped-session" defer></script>
   </head>
@@ -65,6 +65,7 @@
           <div class="nav-links">
             <a href="#editorias">Notícias Tech</a>
             <a href="/indicacoes">Indicações</a>
+            <a href="/sitesinteressantes">Sites Interessantes</a>
             <button class="nav-share-button" type="button" data-share-site data-share-url="https://encontreaquitech.com/" aria-label="Compartilhar Encontre Aqui Tech" title="Compartilhar">
               <span class="nav-share-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" focusable="false">
@@ -269,6 +270,42 @@
               <strong>UGREEN Revodok Hub USB C 6 em 1</strong>
               <span class="tech-pick-link">Ver oferta</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section interesting-sites-section" id="sites-interessantes" aria-labelledby="sites-interessantes-title" data-section-name="Sites Interessantes">
+        <div class="section-inner interesting-sites-home-layout">
+          <div class="interesting-sites-home-copy">
+            <p class="eyebrow">Sites Interessantes</p>
+            <h2 id="sites-interessantes-title">Links da internet que valem um clique curioso.</h2>
+            <p>
+              Achados criativos, úteis ou simplesmente divertidos para testar no navegador e guardar nos favoritos.
+            </p>
+            <a class="button button-primary" href="/sitesinteressantes">Explorar sites</a>
+          </div>
+
+          <div class="connected-globe connected-globe-home" aria-hidden="true">
+            <span class="globe-core">&#127760;</span>
+            <span class="globe-ring globe-ring-one"></span>
+            <span class="globe-ring globe-ring-two"></span>
+            <span class="globe-node globe-node-one"></span>
+            <span class="globe-node globe-node-two"></span>
+            <span class="globe-node globe-node-three"></span>
+          </div>
+
+          <div class="editorial-grid interesting-sites-grid" data-home-site-grid>
+            <article class="topic-card topic-large interesting-site-card" data-home-site-card data-home-site-date="2026-08-05">
+              <div class="topic-card-preview">
+                <img src="assets/img/sites-interessantes/incredibox-music-lab.jpg" alt="Ilustração de uma interface musical com personagens criando batidas e vozes em um app de navegador." width="1400" height="771" loading="lazy" decoding="async">
+                <div class="topic-card-preview-copy">
+                  <span>Música interativa</span>
+                  <strong>Incredibox: o site em que você monta uma banda de beatbox em poucos cliques</strong>
+                </div>
+              </div>
+              <p>Arraste sons, combine vozes, desbloqueie refrões animados e transforme o navegador em um pequeno laboratório musical.</p>
+              <a href="/sitesinteressantes" aria-label="Conhecer a apresentação do site Incredibox">Conhecer site interessante</a>
+            </article>
           </div>
         </div>
       </section>

@@ -210,39 +210,48 @@ const renderTopicEditorialLists = () => {
   });
 };
 
-const getHomeNewsTimestamp = (card) => {
-  const date = new Date(`${card.dataset.homeNewsDate || ""}T00:00:00Z`);
+const getHomeCardTimestamp = (card, dateKey) => {
+  const date = new Date(`${card.dataset[dateKey] || ""}T00:00:00Z`);
   return Number.isNaN(date.getTime()) ? 0 : date.getTime();
 };
 
-const orderHomeNewsCards = () => {
-  document.querySelectorAll("[data-home-news-grid]").forEach((grid) => {
-    const cards = Array.from(grid.querySelectorAll("[data-home-news-card]"));
+const orderHomeCardsByDate = (gridSelector, cardSelector, dateKey, positionKey) => {
+  document.querySelectorAll(gridSelector).forEach((grid) => {
+    const cards = Array.from(grid.querySelectorAll(cardSelector));
 
     cards
       .map((card, index) => ({
         card,
         index,
-        timestamp: getHomeNewsTimestamp(card)
+        timestamp: getHomeCardTimestamp(card, dateKey)
       }))
       .sort((current, next) => (
         (next.timestamp - current.timestamp) || (current.index - next.index)
       ))
       .forEach(({ card }, index) => {
         card.hidden = index > 1;
-        card.dataset.homeNewsPosition = index === 0 ? "latest" : index === 1 ? "previous" : "archived";
+        card.dataset[positionKey] = index === 0 ? "latest" : index === 1 ? "previous" : "archived";
 
         grid.append(card);
       });
   });
 };
 
+const orderHomeNewsCards = () => {
+  orderHomeCardsByDate("[data-home-news-grid]", "[data-home-news-card]", "homeNewsDate", "homeNewsPosition");
+};
+
+const orderHomeSiteCards = () => {
+  orderHomeCardsByDate("[data-home-site-grid]", "[data-home-site-card]", "homeSiteDate", "homeSitePosition");
+};
+
 renderHomeEditorialHighlights();
 renderTopicEditorialLists();
 orderHomeNewsCards();
+orderHomeSiteCards();
 
 const revealTargets = document.querySelectorAll(
-  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
+  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .interesting-sites-home-copy, .interesting-sites-grid, .connected-globe, .interesting-site-feature, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
 );
 
 const setHeaderState = () => {
