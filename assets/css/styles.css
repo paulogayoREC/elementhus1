@@ -4234,8 +4234,22 @@ h4 {
   opacity: 0.42;
 }
 
+.tip-article .article-hero {
+  min-height: auto;
+  padding: 6.35rem 0 3.15rem;
+}
+
+.tip-article .article-hero-layout {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+
+.tip-article .article-hero-copy {
+  max-width: min(100%, 70rem);
+}
+
 .tip-article .article-hero h1 {
-  max-width: 18ch;
+  max-width: 19ch;
   font-family: var(--font-secondary);
   font-size: clamp(2.28rem, 4vw, 3.2rem);
   line-height: 1.02;
@@ -4276,11 +4290,33 @@ h4 {
   min-height: 2.55rem;
 }
 
+.tip-hero-figure {
+  width: min(100%, 68rem);
+  margin: 1rem 0 1.05rem;
+  border-color: rgba(37, 125, 167, 0.56);
+  background:
+    linear-gradient(145deg, rgba(37, 125, 167, 0.12), rgba(0, 0, 0, 0.44)),
+    #050807;
+  box-shadow:
+    0 28px 78px rgba(0, 0, 0, 0.48),
+    0 0 42px rgba(37, 125, 167, 0.22),
+    inset 0 0 0 1px rgba(250, 235, 209, 0.06);
+}
+
 .tip-hero-figure img {
+  display: block;
+  height: auto;
   aspect-ratio: 959 / 638;
   background: #050807;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  opacity: 1;
+  filter: saturate(1.03) contrast(1.05);
+}
+
+.tip-hero-figure figcaption {
+  max-width: 58rem;
+  color: rgba(250, 235, 209, 0.74);
 }
 
 .tip-benefit-list,
@@ -10189,6 +10225,15 @@ h4 {
     max-width: 100%;
   }
 
+  .tip-article .article-hero {
+    padding: 5.8rem 0 2.75rem;
+  }
+
+  .tip-hero-figure {
+    width: 100%;
+    max-width: none;
+  }
+
   .tip-article .article-hero h1 {
     max-width: 18ch;
   }
@@ -10275,6 +10320,19 @@ h4 {
   .tip-article .article-hero h1 {
     max-width: 18ch;
     font-size: clamp(1.92rem, 8vw, 2.34rem);
+  }
+
+  .tip-hero-figure {
+    margin: 0.78rem 0 0.9rem;
+  }
+
+  .tip-hero-figure img {
+    aspect-ratio: 959 / 638;
+  }
+
+  .tip-hero-figure figcaption {
+    padding: 0.62rem 0.7rem;
+    font-size: 0.72rem;
   }
 
   .tip-breadcrumb {
