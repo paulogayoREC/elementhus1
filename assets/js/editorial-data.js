@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-08-05",
+  "updatedAt": "2026-08-07",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Microsoft doubles down on multi-model AI as it builds a Copilot super app",
-          "source": "Computerworld",
-          "url": "https://www.computerworld.com/article/4203702/microsoft-doubles-down-on-multi-model-ai-as-it-builds-a-copilot-super-app-3.html",
-          "date": "2026-07-31",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-08-05",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "All of the major AI providers want you to use, and ideally stay within, their super apps, and now Microsoft is looking to capture that attention, too. During an earnings call this week, CEO Satya Nadella confir..."
+          "summary": "Shopping for a laptop starts simple enough, but it always ends with a dozen open tabs full of specs you didn’t really care about in the first place. Graphics cards, display types, confusing processor names… it..."
         },
         {
-          "title": "Apple Limits Bug Bounty Submissions After Flood of AI Slop",
+          "title": "iPhone 18 Pro and Foldable iPhone Could Sell Out Fast Due to Memory Shortage",
           "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/08/04/aple-bug-bounty-limits-ai/",
-          "date": "2026-08-04",
+          "url": "https://www.macrumors.com/2026/08/06/iphone-18-pro-possible-shortages/",
+          "date": "2026-08-07",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Apple limited the number of vulnerabilities security researchers can submit to its bug bounty program because of an uptick in reports about fake bugs hallucinated by AI, according to The Financial Times . Apple..."
+          "summary": "The iPhone 18 Pro , ‌iPhone 18 Pro‌ Max, and foldable \" iPhone Ultra \" could be in short supply this year, leading to long wait times and an initial sellout during preorders. Semiconductor analyst Tim Culpan sa..."
         }
       ]
     }
