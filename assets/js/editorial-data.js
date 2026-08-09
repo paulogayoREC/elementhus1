@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-09",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-08-05",
+          "title": "Mercado Livre faz queima do Galaxy Buds 4 com cupom; fone da Samsung com ANC",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/fone-de-ouvido/mercado-livre-faz-queima-do-galaxy-buds-4-com-cupom-fone-da-samsung-com-anc/",
+          "date": "2026-08-08",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Shopping for a laptop starts simple enough, but it always ends with a dozen open tabs full of specs you didn’t really care about in the first place. Graphics cards, display types, confusing processor names… it..."
+          "summary": "O Samsung Galaxy Buds 4 aparece em uma faixa de preço bastante competitiva no Mercado Livre . O fone de ouvido com ANC e recursos Galaxy AI está saindo por R$ 846 no Pix , com frete grátis , após a aplicação do..."
         },
         {
-          "title": "iPhone 18 Pro and Foldable iPhone Could Sell Out Fast Due to Memory Shortage",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/08/06/iphone-18-pro-possible-shortages/",
+          "title": "Best laptops for engineering students: Top 4 picks for power and portability",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/829122/best-laptops-for-engineering-students.html",
           "date": "2026-08-07",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The iPhone 18 Pro , ‌iPhone 18 Pro‌ Max, and foldable \" iPhone Ultra \" could be in short supply this year, leading to long wait times and an initial sellout during preorders. Semiconductor analyst Tim Culpan sa..."
+          "summary": "Engineering students rarely work in one place. They bounce between lectures, labs, and libraries. That means your laptop has to be lightweight, long-lasting, and ready for heavy workloads. The options below bal..."
         }
       ]
     }
