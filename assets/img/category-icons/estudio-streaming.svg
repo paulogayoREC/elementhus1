@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Estúdio e Streaming">
+  <defs>
+    <linearGradient id="studio-bg" x1="34" y1="32" x2="286" y2="288" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#102b36"/>
+      <stop offset="0.54" stop-color="#071016"/>
+      <stop offset="1" stop-color="#1f1710"/>
+    </linearGradient>
+    <linearGradient id="studio-accent" x1="94" y1="79" x2="238" y2="248" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#63d0ff"/>
+      <stop offset="0.48" stop-color="#faebd1"/>
+      <stop offset="1" stop-color="#c29f73"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="56" fill="url(#studio-bg)"/>
+  <path d="M58 88h204a20 20 0 0 1 20 20v114a20 20 0 0 1-20 20H58a20 20 0 0 1-20-20V108a20 20 0 0 1 20-20Z" fill="#0d151b" stroke="#2c6f88" stroke-width="7"/>
+  <path d="M80 115h102a12 12 0 0 1 12 12v76a12 12 0 0 1-12 12H80a12 12 0 0 1-12-12v-76a12 12 0 0 1 12-12Z" fill="#12232b" stroke="#63d0ff" stroke-width="6"/>
+  <path d="M120 139v52l45-26-45-26Z" fill="#faebd1"/>
+  <path d="M214 129h28a12 12 0 0 1 12 12v48a12 12 0 0 1-12 12h-28a12 12 0 0 1-12-12v-48a12 12 0 0 1 12-12Z" fill="#1d3843" stroke="#c29f73" stroke-width="6"/>
+  <path d="M229 121v-21m0 112v25m-44 0h88" stroke="url(#studio-accent)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M87 255h146" stroke="#63d0ff" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="66" cy="66" r="13" fill="#c29f73"/>
+  <circle cx="254" cy="66" r="7" fill="#63d0ff"/>
+  <circle cx="258" cy="255" r="11" fill="#faebd1"/>
+</svg>

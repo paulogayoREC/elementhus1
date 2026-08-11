@@ -24,7 +24,8 @@
     { category: "PC Gamming", url: "indicacoes/pc-gamming.html" },
     { category: "Impressoras", url: "indicacoes/impressoras.html" },
     { category: "Tablets", url: "indicacoes/tablets.html" },
-    { category: "Peças e Componentes", url: "indicacoes/pecas-componentes.html" },
+    { category: "Estúdio e Streaming", url: "indicacoes/estudio-streaming.html" },
+    { category: "Acessórios e Componentes", url: "indicacoes/pecas-componentes.html" },
     { category: "Games", url: "indicacoes/games.html" }
   ];
 
@@ -33,7 +34,7 @@
   const slotsPerDay = Math.floor(24 / rotationHours);
   const siteTimeZone = "America/Recife";
   const rotationBaseDay = getDayNumber("2026-01-01");
-  const catalogCacheKey = "eatTechShowcase:catalog:v3";
+  const catalogCacheKey = "eatTechShowcase:catalog:v4";
   const catalogCacheTtl = 24 * 60 * 60 * 1000;
   let activeRotationKey = "";
   let productCatalog = [];
