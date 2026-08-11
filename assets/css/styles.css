@@ -10933,6 +10933,161 @@ h4 {
   }
 }
 
+/* Repair layer for the YouTube YPP feature: always-readable text and fluid containers. */
+.news-article-youtube-ypp-special,
+.news-article-youtube-ypp-special * {
+  box-sizing: border-box;
+}
+
+.news-article-youtube-ypp-special {
+  overflow-x: clip;
+}
+
+.news-article-youtube-ypp-special [data-reveal],
+.news-article-youtube-ypp-special .article-hero-copy,
+.news-article-youtube-ypp-special .article-hero-figure,
+.news-article-youtube-ypp-special .article-content,
+.news-article-youtube-ypp-special .article-aside,
+.news-article-youtube-ypp-special .article-comment-panel {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.news-article-youtube-ypp-special .article-body-section-featured .article-content,
+.news-article-youtube-ypp-special .article-comment-panel {
+  overflow: visible;
+}
+
+.news-article-youtube-ypp-special .article-content {
+  color: #fff8f2;
+}
+
+.news-article-youtube-ypp-special .article-content p,
+.news-article-youtube-ypp-special .article-content li,
+.news-article-youtube-ypp-special .article-youtube-briefing p,
+.news-article-youtube-ypp-special .article-youtube-rift p,
+.news-article-youtube-ypp-special .article-source-card p {
+  width: auto;
+  max-width: min(100%, 72ch);
+  color: rgba(255, 248, 242, 0.9);
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.news-article-youtube-ypp-special .article-content h2,
+.news-article-youtube-ypp-special .article-youtube-briefing h2,
+.news-article-youtube-ypp-special .article-youtube-rift h2 {
+  width: auto;
+  max-width: min(100%, 30ch);
+  color: #ffffff;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.news-article-youtube-ypp-special .article-youtube-command-strip,
+.news-article-youtube-ypp-special .article-youtube-stat-strip,
+.news-article-youtube-ypp-special .article-youtube-signal-grid,
+.news-article-youtube-ypp-special .article-youtube-compare,
+.news-article-youtube-ypp-special .article-youtube-briefing,
+.news-article-youtube-ypp-special .article-youtube-rift,
+.news-article-youtube-ypp-special .article-youtube-showcase,
+.news-article-youtube-ypp-special .article-youtube-showcase-grid {
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.news-article-youtube-ypp-special .article-youtube-command-strip span,
+.news-article-youtube-ypp-special .article-youtube-stat-strip div,
+.news-article-youtube-ypp-special .article-youtube-signal-grid span,
+.news-article-youtube-ypp-special .article-youtube-compare div {
+  min-width: 0;
+  color: rgba(255, 248, 242, 0.9);
+}
+
+.news-article-youtube-ypp-special .article-youtube-command-strip small,
+.news-article-youtube-ypp-special .article-youtube-stat-strip span,
+.news-article-youtube-ypp-special .article-youtube-compare p,
+.news-article-youtube-ypp-special .article-youtube-signal-grid span,
+.news-article-youtube-ypp-special figcaption {
+  color: rgba(255, 248, 242, 0.78);
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+@media (max-width: 880px) {
+  .news-article-youtube-ypp-special .article-hero-layout,
+  .news-article-youtube-ypp-special .article-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .news-article-youtube-ypp-special .article-hero-copy,
+  .news-article-youtube-ypp-special .article-hero-figure,
+  .news-article-youtube-ypp-special .article-main-column,
+  .news-article-youtube-ypp-special .article-content,
+  .news-article-youtube-ypp-special .article-aside,
+  .news-article-youtube-ypp-special .article-comment-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .news-article-youtube-ypp-special .section-inner {
+    width: min(100% - 1.5rem, 22rem);
+  }
+
+  .news-article-youtube-ypp-special .article-hero-copy,
+  .news-article-youtube-ypp-special .article-hero-figure,
+  .news-article-youtube-ypp-special .article-main-column,
+  .news-article-youtube-ypp-special .article-content,
+  .news-article-youtube-ypp-special .article-aside,
+  .news-article-youtube-ypp-special .article-comment-panel,
+  .news-article-youtube-ypp-special .article-youtube-command-strip,
+  .news-article-youtube-ypp-special .article-youtube-stat-strip,
+  .news-article-youtube-ypp-special .article-youtube-signal-grid,
+  .news-article-youtube-ypp-special .article-youtube-compare,
+  .news-article-youtube-ypp-special .article-youtube-briefing,
+  .news-article-youtube-ypp-special .article-youtube-rift,
+  .news-article-youtube-ypp-special .article-youtube-showcase {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .news-article-youtube-ypp-special .article-hero h1 {
+    max-width: 15ch;
+    font-size: clamp(1.55rem, 7.2vw, 1.92rem);
+    line-height: 1.06;
+    overflow-wrap: break-word;
+  }
+
+  .news-article-youtube-ypp-special .article-lead,
+  .news-article-youtube-ypp-special .article-hero-figure figcaption,
+  .news-article-youtube-ypp-special .article-content p,
+  .news-article-youtube-ypp-special .article-content li,
+  .news-article-youtube-ypp-special .article-content h2,
+  .news-article-youtube-ypp-special .article-source-card a {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .news-article-youtube-ypp-special .article-content {
+    padding: 1rem;
+  }
+
+  .news-article-youtube-ypp-special .article-content p {
+    font-size: 0.94rem;
+    line-height: 1.66;
+  }
+
+  .news-article-youtube-ypp-special .article-content h2,
+  .news-article-youtube-ypp-special .article-youtube-briefing h2,
+  .news-article-youtube-ypp-special .article-youtube-rift h2 {
+    font-size: 1.08rem;
+    line-height: 1.24;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
