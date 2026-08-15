@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-15",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Top News Today: Pixel 11 Pro Fold Launch, Quarkitech Funding, Fresher Hiring Surge, Bitcoin AI Security Push, and Google Health AI",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/tech-news/top-news-today-pixel-11-pro-fold-launch-quarkitech-funding-fresher-hiring-surge-bitcoin-ai-security-push-and-google-health-ai",
+          "title": "OpenAI: Latest news and insights",
+          "source": "Computerworld",
+          "url": "https://www.computerworld.com/article/4015023/openai-latest-news-and-insights.html",
           "date": "2026-08-13",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Good afternoon! Here’s your quick roundup of today’s biggest developments across smartphones, startups, hiring, crypto security, and AI-powered healthcare. What’s New Today Google has launched the Pixel 11 Pro..."
+          "summary": "OpenAI is an artificial intelligence organization comprised of the non-profit OpenAI, Inc. and several for-profit subsidiaries. The company is perhaps best known for its ChatGPT chatbot, which launched in 2022..."
         },
         {
-          "title": "Google's $100 Pixel Price Hike and Trade-In Push Hint at Apple's iPhone 18 Pro Plans",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/08/12/google-pixel-price-hike/",
-          "date": "2026-08-12",
+          "title": "Apple cracks China with Alibaba for iPhone AI",
+          "source": "Computerworld",
+          "url": "https://www.computerworld.com/article/4209632/apple-cracks-china-with-alibaba-for-iphone-ai.html",
+          "date": "2026-08-14",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Google raised the price of its latest smartphones compared to last year, and the increase may hint at what Apple will do with the iPhone 18 Pro models. All of Google's Pixel starting prices are $100 higher than..."
+          "summary": "Apple recently posted and removed details explaining how Mac users in China could set up their computers to work with Alibaba’s Qwen AI. Now, Reuters has confirmed long-held speculation that Apple has revisited..."
         }
       ]
     }
