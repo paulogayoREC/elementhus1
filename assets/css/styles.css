@@ -28,6 +28,7 @@
   --blue-soft: rgba(37, 125, 167, 0.18);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
   --font-primary: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
   --font-secondary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-tech: "Orbitron", var(--font-primary);
   --font-cyber: "Blender Pro", "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
@@ -11575,5 +11576,352 @@ h4 {
   [data-reveal] {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Pintura premium global: ajustes finais de leitura, popup e responsividade. */
+main,
+.section,
+.hero-section,
+.topic-hero,
+.article-hero,
+.article-body-section,
+.article-archive-section,
+.products-section,
+.interesting-sites-section,
+.interesting-sites-feature-section,
+.interesting-sites-radar-section,
+.music-divider,
+.lofi-video-section,
+.lofi-rating-section,
+.tips-index-section,
+.community-section,
+.about-section {
+  overflow-x: clip;
+}
+
+:where(.section-inner, .hero-content, .nav-shell, .site-menu, .footer-layout, .hero-actions, .music-divider-shell, .music-divider-options, .editorial-grid, .feature-layout, .tech-picks-panel, .interesting-sites-home-layout, .interesting-sites-page-hero-layout, .interesting-site-feature, .interesting-site-story, .community-layout, .feedback-compact-row, .feedback-actions-row, .about-layout, .shop-hero-layout, .product-category, .product-grid, .category-card-grid, .topic-focus-grid, .topic-content-grid, .article-hero-layout, .article-layout, .article-main-column, .article-comment-layout, .article-comment-form, .article-archive-grid, .article-archive-card summary, .tips-home-layout, .tips-page-list-layout, .tip-video-grid, .lofi-video-grid, .lofi-rating-item, .article-youtube-command-strip, .article-youtube-stat-strip, .article-youtube-signal-grid, .article-youtube-compare, .article-youtube-briefing, .article-youtube-rift, .article-youtube-showcase, .article-youtube-showcase-grid, .article-ai-command-strip, .article-ai-stat-strip, .article-ai-signal-grid, .article-ai-briefing, .article-ai-rift, .article-ai-showcase, .article-ai-showcase-grid, .article-gta-command-strip, .article-gta-stat-strip, .article-gta-signal-grid, .article-gta-briefing, .article-gta-rift, .article-gta-showcase, .article-gta-showcase-grid, .article-gta-media-panel) > * {
+  min-width: 0;
+}
+
+:where(.topic-card, .product-card, .affiliate-note, .tech-pick-card, .content-card, .focus-panel, .feedback-form, .comment-stream, .article-content, .article-aside, .article-comment-panel, .article-archive-card, .interesting-site-feature, .interesting-site-story, .interesting-site-verdict, .tips-card, .lofi-video-card, .lofi-rating-item, .auth-dialog, .auth-legal-card, .reset-card) {
+  max-width: 100%;
+}
+
+:where(h1, h2, h3, h4, .brand-name, .topic-card-preview-copy strong, .tech-pick-card strong, .product-info h4, .article-youtube-command-strip strong, .article-youtube-stat-strip strong, .article-youtube-compare strong, .article-ai-command-strip strong, .article-ai-stat-strip strong, .article-gta-command-strip strong, .article-gta-stat-strip strong) {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+:where(p, li, figcaption, small, label, .article-lead, .hero-copy, .form-note, .auth-field-error, .auth-status, .article-source-card a, .article-archive-source, .comment-card p, .hero-donation-card p, .hero-donation-card strong) {
+  overflow-wrap: break-word;
+  word-break: normal;
+  text-wrap: pretty;
+}
+
+:where(.button, .nav-links a, .nav-links button, .nav-social, .social-link, .music-option, .topic-card a, .content-card a, .product-card a, .article-youtube-action-button, .article-youtube-related-nav a, .article-ai-action-button, .article-ai-related-nav a, .article-gta-action-button, .article-gta-related-nav a, .back-link, .reset-inline-link, .auth-submit, .auth-connected .button, .auth-link-button, .auth-recovery-card button) {
+  max-width: 100%;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+}
+
+:where(input, textarea, select, button) {
+  min-width: 0;
+}
+
+.site-menu-backdrop {
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.auth-modal-shell {
+  align-items: center;
+  justify-items: center;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: clamp(0.75rem, 2vw, 1.35rem);
+}
+
+.auth-modal-backdrop {
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.auth-dialog {
+  width: min(100%, 28rem);
+  max-width: calc(100vw - 1.5rem);
+  max-height: min(92svh, 44rem);
+  max-height: min(92dvh, 44rem);
+  padding: clamp(0.85rem, 2.4vw, 1.1rem);
+  z-index: 1;
+}
+
+.auth-dialog.has-legal-panel {
+  min-height: min(42rem, calc(100svh - 1.5rem));
+  min-height: min(42rem, calc(100dvh - 1.5rem));
+}
+
+.auth-legal-card {
+  width: 100%;
+  min-height: 0;
+  max-height: calc(100svh - 3rem);
+  max-height: calc(100dvh - 3rem);
+}
+
+.auth-legal-scroll {
+  overscroll-behavior: contain;
+}
+
+.auth-legal-toolbar {
+  min-width: 0;
+}
+
+.article-archive-card summary,
+.comment-meta,
+.feedback-actions-row,
+.article-meta-row,
+.product-price-row {
+  min-width: 0;
+}
+
+.article-archive-summary-copy,
+.article-source-card,
+.auth-dialog-heading,
+.auth-reset-intro,
+.auth-recovery-card,
+.auth-connected,
+.comment-card,
+.lofi-rating-copy {
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  html {
+    scrollbar-gutter: auto;
+  }
+
+  .nav-shell {
+    gap: 0.58rem;
+    width: min(100% - 1rem, 1180px);
+  }
+
+  .brand-mark {
+    gap: 0.52rem;
+  }
+
+  .brand-name {
+    max-width: min(39vw, 9.25rem);
+  }
+
+  .nav-share-button-mobile {
+    width: 2.45rem;
+    min-width: 2.45rem;
+    min-height: 2.45rem;
+  }
+
+  .menu-toggle {
+    flex: 0 0 auto;
+    width: 2.45rem;
+    min-width: 2.45rem;
+    min-height: 2.45rem;
+    padding-right: 0;
+    padding-left: 0;
+    justify-content: center;
+    grid-template-columns: 1.05rem;
+    font-size: 0;
+  }
+
+  .menu-toggle span {
+    grid-column: 1;
+    width: 1.05rem;
+  }
+
+  .site-menu {
+    right: 0.5rem;
+    width: min(23.5rem, calc(100vw - 1rem));
+    max-height: calc(100svh - 5rem);
+    max-height: calc(100dvh - 5rem);
+  }
+
+  .hero-actions,
+  .feedback-actions-row,
+  .article-youtube-actions,
+  .article-youtube-related-nav,
+  .article-ai-actions,
+  .article-ai-related-nav,
+  .article-gta-actions,
+  .article-gta-related-nav,
+  .empty-category-actions,
+  .tip-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .button,
+  .feedback-actions-row .button,
+  .article-youtube-action-button,
+  .article-youtube-related-nav a,
+  .article-ai-action-button,
+  .article-ai-related-nav a,
+  .article-gta-action-button,
+  .article-gta-related-nav a,
+  .empty-category-actions .button,
+  .tip-hero-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .feedback-compact-row,
+  .article-comment-form,
+  .article-archive-card summary,
+  .article-youtube-command-strip,
+  .article-youtube-stat-strip,
+  .article-youtube-signal-grid,
+  .article-youtube-compare,
+  .article-youtube-briefing,
+  .article-youtube-rift,
+  .article-youtube-showcase-grid,
+  .article-ai-command-strip,
+  .article-ai-stat-strip,
+  .article-ai-signal-grid,
+  .article-ai-briefing,
+  .article-ai-rift,
+  .article-ai-showcase-grid,
+  .article-gta-command-strip,
+  .article-gta-stat-strip,
+  .article-gta-signal-grid,
+  .article-gta-briefing,
+  .article-gta-rift,
+  .article-gta-showcase-grid,
+  .article-gta-media-panel,
+  .tip-video-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .article-archive-card summary {
+    min-height: auto;
+    gap: 0.68rem;
+    padding: 0.68rem;
+  }
+
+  .article-archive-toggle {
+    justify-self: start;
+  }
+
+  .article-comment-form label:has(textarea),
+  .article-comment-form .feedback-actions-row,
+  .article-comment-form .form-note {
+    grid-column: 1;
+  }
+
+  .article-comment-form .button {
+    width: 100%;
+  }
+
+  .comment-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.24rem;
+  }
+
+  .auth-modal-shell {
+    place-items: center;
+    padding: 0.75rem;
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+  }
+
+  .auth-dialog {
+    max-width: calc(100vw - 1.5rem);
+    max-height: calc(100svh - 1.5rem);
+    max-height: calc(100dvh - 1.5rem);
+  }
+
+  .auth-legal-panel {
+    padding: 0.55rem;
+  }
+
+  .auth-legal-toolbar {
+    gap: 0.55rem;
+    padding: 0.62rem;
+  }
+
+  .auth-legal-scroll {
+    padding: 0.62rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-shell {
+    gap: 0.42rem;
+  }
+
+  .brand-name {
+    max-width: min(34vw, 7.45rem);
+  }
+
+  .brand-avatar {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .nav-share-button-mobile,
+  .menu-toggle {
+    width: 2.34rem;
+    min-width: 2.34rem;
+    min-height: 2.34rem;
+  }
+
+  .auth-modal-shell {
+    padding: 0.5rem;
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+  }
+
+  .auth-dialog {
+    max-width: calc(100vw - 1rem);
+    max-height: calc(100svh - 1rem);
+    max-height: calc(100dvh - 1rem);
+    padding: 0.72rem;
+  }
+
+  .auth-dialog-heading {
+    padding-right: 3rem;
+  }
+
+  .auth-close,
+  .auth-legal-close {
+    display: inline-grid;
+    min-width: 2.2rem;
+    min-height: 2.2rem;
+    place-items: center;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .auth-close::before,
+  .auth-legal-close::before {
+    content: "X";
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+
+  .auth-password-field input {
+    padding-right: 4rem;
+  }
+
+  .auth-password-toggle {
+    right: 0.28rem;
+    max-width: 3.35rem;
+    overflow: hidden;
+    padding-right: 0.42rem;
+    padding-left: 0.42rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .auth-check {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .auth-legal-toolbar h3 {
+    font-size: 0.98rem;
   }
 }
