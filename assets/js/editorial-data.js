@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-08-21",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "AI data center optical interconnect market to hit $144 billion by 2030, an over ten-fold increase from 2024 figures, according to new projections — silicon photonics expected to account for nearly two-thirds of revenue, driven by co-packaged optics",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/photonics/ai-data-center-optical-interconnect-market-to-hit-usd144-billion-by-2030-an-over-ten-fold-increase-from-2024-figures-according-to-new-projections-silicon-photonics-expected-to-account-for-nearly-two-thirds-of-revenue-driven-by-co-packaged-optics",
-          "date": "2026-08-17",
+          "title": "Devs conseguem burlar marca d'água do Claude para textos em poucas horas",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/inteligencia-artificial/devs-conseguem-burlar-marca-dagua-do-claude-para-textos-em-poucas-horas/",
+          "date": "2026-08-20",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The global data center optical interconnect market is expected to reach $144.4 billion by 2030, up from $13.7 billion in 2024 — a 48.1% compound annual growth rate (CAGR) — according to a China Insights Consult..."
+          "summary": "Poucas horas após a Anthropic confirmar a implementação de marcas d'água invisíveis nos textos gerados pelo Claude, desenvolvedores independentes já começaram a encontrar formas de removê-las . Entre as estraté..."
         },
         {
-          "title": "Apple cracks China with Alibaba for iPhone AI",
-          "source": "Computerworld",
-          "url": "https://www.computerworld.com/article/4209632/apple-cracks-china-with-alibaba-for-iphone-ai.html",
-          "date": "2026-08-14",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-08-20",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Apple recently posted and removed details explaining how Mac users in China could set up their computers to work with Alibaba’s Qwen AI. Now, Reuters has confirmed long-held speculation that Apple has revisited..."
+          "summary": "PCWorld prides itself on laptop experience and expertise. We’ve been covering PCs since 1983, and we now review more than 70 laptops every year. Our reviews span PC laptops at every price point to meet the need..."
         }
       ]
     }
