@@ -245,10 +245,59 @@ const orderHomeSiteCards = () => {
   orderHomeCardsByDate("[data-home-site-grid]", "[data-home-site-card]", "homeSiteDate", "homeSitePosition");
 };
 
+const initDiaTextReveal = () => {
+  const revealTitles = document.querySelectorAll("[data-dia-text-reveal]");
+
+  if (!revealTitles.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  revealTitles.forEach((title) => {
+    const text = (title.dataset.diaText || title.textContent || "").trim();
+
+    if (!text || title.dataset.diaTextRevealReady === "true") return;
+
+    title.dataset.diaTextRevealReady = "true";
+    title.setAttribute("aria-label", text);
+    title.textContent = "";
+
+    const visualText = document.createElement("span");
+    visualText.className = "dia-title-reveal-text";
+    visualText.setAttribute("aria-hidden", "true");
+
+    let characterIndex = 0;
+    const tokens = text.match(/\S+|\s+/g) || [];
+
+    tokens.forEach((token) => {
+      if (/^\s+$/.test(token)) {
+        visualText.append(document.createTextNode(token));
+        return;
+      }
+
+      const word = document.createElement("span");
+      word.className = "dia-title-reveal-word";
+
+      Array.from(token).forEach((character) => {
+        const characterElement = document.createElement("span");
+        characterElement.className = `dia-title-reveal-char dia-title-reveal-step-${Math.min(characterIndex, 32)}`;
+        characterElement.textContent = character;
+        word.append(characterElement);
+        characterIndex += 1;
+      });
+
+      visualText.append(word);
+    });
+
+    title.append(visualText);
+    title.classList.add("is-dia-ready");
+  });
+};
+
 renderHomeEditorialHighlights();
 renderTopicEditorialLists();
 orderHomeNewsCards();
 orderHomeSiteCards();
+initDiaTextReveal();
 
 const revealTargets = document.querySelectorAll(
   ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .interesting-sites-home-copy, .interesting-sites-grid, .connected-globe, .interesting-site-feature, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"

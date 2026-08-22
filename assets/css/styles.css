@@ -590,6 +590,73 @@ h1 {
   text-shadow: 0 0 26px rgba(37, 125, 167, 0.5), 0 2px 0 rgba(0, 0, 0, 0.3);
 }
 
+.dia-title-reveal {
+  --dia-delay: 0.35s;
+  --dia-duration: 2.4s;
+}
+
+.dia-title-reveal-text,
+.dia-title-reveal-word,
+.dia-title-reveal-char {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+}
+
+.dia-title-reveal-word,
+.dia-title-reveal-char {
+  display: inline-block;
+}
+
+.dia-title-reveal-word {
+  white-space: nowrap;
+}
+
+.dia-title-reveal.is-dia-ready .dia-title-reveal-char {
+  opacity: 0;
+  transform-origin: 50% 80%;
+  animation: diaTitleReveal var(--dia-duration) cubic-bezier(0.2, 0.82, 0.17, 1) both;
+  animation-delay: calc(var(--dia-delay) + (var(--dia-step, 0) * 52ms));
+  clip-path: inset(0 100% 0 0);
+  will-change: opacity, transform, filter, clip-path;
+}
+
+.dia-title-reveal-step-0 { --dia-step: 0; }
+.dia-title-reveal-step-1 { --dia-step: 1; }
+.dia-title-reveal-step-2 { --dia-step: 2; }
+.dia-title-reveal-step-3 { --dia-step: 3; }
+.dia-title-reveal-step-4 { --dia-step: 4; }
+.dia-title-reveal-step-5 { --dia-step: 5; }
+.dia-title-reveal-step-6 { --dia-step: 6; }
+.dia-title-reveal-step-7 { --dia-step: 7; }
+.dia-title-reveal-step-8 { --dia-step: 8; }
+.dia-title-reveal-step-9 { --dia-step: 9; }
+.dia-title-reveal-step-10 { --dia-step: 10; }
+.dia-title-reveal-step-11 { --dia-step: 11; }
+.dia-title-reveal-step-12 { --dia-step: 12; }
+.dia-title-reveal-step-13 { --dia-step: 13; }
+.dia-title-reveal-step-14 { --dia-step: 14; }
+.dia-title-reveal-step-15 { --dia-step: 15; }
+.dia-title-reveal-step-16 { --dia-step: 16; }
+.dia-title-reveal-step-17 { --dia-step: 17; }
+.dia-title-reveal-step-18 { --dia-step: 18; }
+.dia-title-reveal-step-19 { --dia-step: 19; }
+.dia-title-reveal-step-20 { --dia-step: 20; }
+.dia-title-reveal-step-21 { --dia-step: 21; }
+.dia-title-reveal-step-22 { --dia-step: 22; }
+.dia-title-reveal-step-23 { --dia-step: 23; }
+.dia-title-reveal-step-24 { --dia-step: 24; }
+.dia-title-reveal-step-25 { --dia-step: 25; }
+.dia-title-reveal-step-26 { --dia-step: 26; }
+.dia-title-reveal-step-27 { --dia-step: 27; }
+.dia-title-reveal-step-28 { --dia-step: 28; }
+.dia-title-reveal-step-29 { --dia-step: 29; }
+.dia-title-reveal-step-30 { --dia-step: 30; }
+.dia-title-reveal-step-31 { --dia-step: 31; }
+.dia-title-reveal-step-32 { --dia-step: 32; }
+
 h2 {
   margin-bottom: 1rem;
   font-size: 3rem;
@@ -6183,6 +6250,14 @@ h4 {
     opacity: 1;
     transform: none;
   }
+
+  .dia-title-reveal.is-dia-ready .dia-title-reveal-char {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    clip-path: inset(0 0 0 0);
+    animation-delay: 0s !important;
+  }
 }
 
 .interesting-sites-section [data-reveal],
@@ -6383,6 +6458,32 @@ h4 {
 @keyframes logoSweep {
   to {
     transform: rotate(1turn);
+  }
+}
+
+@keyframes diaTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0.62em, 0) scale(0.94);
+    filter: blur(10px);
+    clip-path: inset(0 100% 0 0);
+  }
+
+  38% {
+    opacity: 1;
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
+  }
+
+  72% {
+    transform: translate3d(0, -0.05em, 0) scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+    clip-path: inset(0 0 0 0);
   }
 }
 
