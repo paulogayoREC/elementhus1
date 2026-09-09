@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-09",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "8 AI Updates You've Missed This Week",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/ampstories/tech-news/8-ai-updates-youve-missed-this-week",
-          "date": "2026-09-07",
+          "title": "Big Tech eyes glacier-strewn Patagonia for building mega AI data centers — region offers 17,300 glaciers, coldness, and cheap energy, but fiber lines are scarce",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/data-centers/glacier-strewn-patagonia-pitches-for-mega-data-center-business-coldness-and-energy-resources-a-plus-but-poor-connectivity-issues-need-to-be-resolved",
+          "date": "2026-09-09",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "OpenAI: OpenAI’s latest developments highlight the accelerating AI race, with companies competing aggressively on models, capabilities, infrastructure, products and enterprise adoption. Anthropic: Anthropic con..."
+          "summary": "Patagonia, a region of Argentina with 17,300 glaciers, has the potential to turn into a data center hotspot. The cool climate and abundant energy resources there are drawing interest from the likes of Amazon..."
         },
         {
-          "title": "iPhone Duo?",
-          "source": "MacRumors",
-          "url": "https://www.macrumors.com/2026/09/04/iphone-duo/",
-          "date": "2026-09-04",
+          "title": "Benchmarking Qwen 3.8 27B on RTX 5090 and beyond — VRAM capacity alone can't overcome severe software and inference engine bottlenecks",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/benchmarking-qwen-3-8-27b-on-rtx-5090-and-beyond-vram-capacity-alone-cant-overcome-severe-software-and-inference-engine-bottlenecks",
+          "date": "2026-09-08",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "While the long-awaited foldable iPhone has often been referred to as the iPhone Ultra or the iPhone Fold in rumors, another name making the rounds is iPhone Duo. There is no actual evidence that Apple will use..."
+          "summary": "Alibaba’s Qwen 3.8 27B open-weight AI model came out a couple of weeks ago, and it immediately created a wave of hype among local AI enthusiasts thanks to its impressive intelligence benchmark results for a mod..."
         }
       ]
     }
