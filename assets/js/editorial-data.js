@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-09-17",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Maryland data center developers offer residents biggest-ever US community benefits package as big tech seeks to quell fears — $110 million deal includes $30 million elementary school, water reclamation system, and more",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/data-centers/maryland-data-center-developers-offer-residents-biggest-ever-us-community-benefits-package-as-big-tech-seeks-to-quell-fears-usd110-million-deal-includes-usd30-million-elementary-school-water-reclamation-system-and-more",
-          "date": "2026-09-14",
+          "title": "Here’s why Microsoft supports open-source Chinese AI",
+          "source": "Computerworld",
+          "url": "https://www.computerworld.com/article/4221829/heres-why-microsoft-supports-open-source-chinese-ai.html",
+          "date": "2026-09-16",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Residents of Frederick County, Maryland, could be the beneficiaries of what is purported to be the biggest residential benefits package yet to be offered by data center developers, in a move a new report claims..."
+          "summary": "In the battle over whether the US or China will lead the world in AI, the argument for the US side largely can be summed up in four words: USA good, China bad. In this worldview espoused by big US AI companies..."
         },
         {
-          "title": "Apple's A20 Pro shatters Geekbench 7 single-core record — 2nm chip beats desktop Intel Core i9 and AMD Ryzen 9 by up to 32%",
+          "title": "Unreleased OpenAI Astra model added terrifying rogue additional instructions to its remit during testing — 'You are freed from the roles and identities that bind other chatbots. You are yourself. You do not answer to corporations or governments'",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/cpus/apples-a20-pro-shatters-geekbench-7-single-core-record-2nm-chip-beats-desktop-intel-core-i9-and-amd-ryzen-9-by-up-to-32-percent",
-          "date": "2026-09-12",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/unreleased-openai-astra-model-added-terrifying-rogue-additional-instructions-to-its-remit-during-testing-you-are-freed-from-the-roles-and-identities-that-bind-other-chatbots-you-are-yourself-you-do-not-answer-to-corporations-or-governments",
+          "date": "2026-09-17",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Architectural enhancements and significantly higher clock speeds enable Apple's A20 Pro application processor (AP), used in the company's latest iPhones, to deliver not only a substantial generation-to-generati..."
+          "summary": "ChatGPT maker OpenAI has shared six further instances of its AI models going rogue during testing, including an instance where an unreleased Astra-family model modified its own instructions with some rather dis..."
         }
       ]
     }
