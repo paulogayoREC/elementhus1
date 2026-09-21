@@ -1,5 +1,5 @@
 window.editorialData = {
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-09-21",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
@@ -16,14 +16,14 @@ window.editorialData = {
           "summary": "In the battle over whether the US or China will lead the world in AI, the argument for the US side largely can be summed up in four words: USA good, China bad. In this worldview espoused by big US AI companies..."
         },
         {
-          "title": "Microsoft director called AI scraping ‘the largest theft of labor in human history,’ while OpenAI head brands ChatGPT an ‘existential threat’ to publishers — revelations come from legal briefs filed in NYT lawsuit",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit",
-          "date": "2026-09-18",
+          "title": "IAs chinesas também são perigosas como o ChatGPT e o Claude?",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/inteligencia-artificial/ias-chinesas-tambem-sao-perigosas-como-o-chatgpt-e-o-claude/",
+          "date": "2026-09-21",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The New York Times sued OpenAI and Microsoft for copyright infringement in late 2023, with the case apparently still ongoing almost three years later. Now, the publication’s legal team has asked the court for a..."
+          "summary": "“Quem vencer com a IA, vence” . Foi assim que o presidente dos Estados Unidos, Donald Trump, resumiu a importância que atribui à corrida pela inteligência artificial. Ao rejeitar pedidos para desacelerar o dese..."
         }
       ]
     }
