@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-23",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Here’s why Microsoft supports open-source Chinese AI",
-          "source": "Computerworld",
-          "url": "https://www.computerworld.com/article/4221829/heres-why-microsoft-supports-open-source-chinese-ai.html",
-          "date": "2026-09-16",
+          "title": "Como usar ChatGPT e Gemini sem entregar seus maiores segredos",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/inteligencia-artificial/como-usar-chatgpt-e-gemini-sem-entregar-seus-maiores-segredos/",
+          "date": "2026-09-22",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "In the battle over whether the US or China will lead the world in AI, the argument for the US side largely can be summed up in four words: USA good, China bad. In this worldview espoused by big US AI companies..."
+          "summary": "Os assistentes de inteligência artificial, como ChatGPT, Gemini e Claude, são usados para tirar dúvidas, organizar tarefas e até conversar sobre questões pessoais. O problema é que essa proximidade também pode..."
         },
         {
-          "title": "IAs chinesas também são perigosas como o ChatGPT e o Claude?",
+          "title": "Googlebooks vs Chromebooks: 6 diferenças entre os notebooks do Google",
           "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/ias-chinesas-tambem-sao-perigosas-como-o-chatgpt-e-o-claude/",
-          "date": "2026-09-21",
+          "url": "https://canaltech.com.br/notebook/googlebooks-vs-chromebooks-6-diferencas-entre-os-notebooks-do-google/",
+          "date": "2026-09-22",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "“Quem vencer com a IA, vence” . Foi assim que o presidente dos Estados Unidos, Donald Trump, resumiu a importância que atribui à corrida pela inteligência artificial. Ao rejeitar pedidos para desacelerar o dese..."
+          "summary": "O Google anunciou recentemente os Googlebooks, novos notebooks que pretendem mudar a forma como os usuários interagem com os seus dispositivos. Contudo, isso levanta questões — ainda “ontem” a companhia vendia..."
         }
       ]
     }
