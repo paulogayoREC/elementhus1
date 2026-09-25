@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-09-23",
+  "updatedAt": "2026-09-25",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Como usar ChatGPT e Gemini sem entregar seus maiores segredos",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/como-usar-chatgpt-e-gemini-sem-entregar-seus-maiores-segredos/",
-          "date": "2026-09-22",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-09-24",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Os assistentes de inteligência artificial, como ChatGPT, Gemini e Claude, são usados para tirar dúvidas, organizar tarefas e até conversar sobre questões pessoais. O problema é que essa proximidade também pode..."
+          "summary": "PCWorld has been testing and writing about PCs since 1983. That’s a long time! Today, we put more than 70 laptops through our review process every year, covering everything from affordable everyday laptops to p..."
         },
         {
-          "title": "Googlebooks vs Chromebooks: 6 diferenças entre os notebooks do Google",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/notebook/googlebooks-vs-chromebooks-6-diferencas-entre-os-notebooks-do-google/",
-          "date": "2026-09-22",
+          "title": "Nvidia CEO says 'we have to shut the labs down' if AI experiments are unsafe",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-ceo-says-we-have-to-shut-the-labs-down-if-ai-experiments-are-unsafe-jensen-huang-says-frontier-ai-lab-fears-are-a-distraction-not-a-call-for-regulation",
+          "date": "2026-09-24",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "O Google anunciou recentemente os Googlebooks, novos notebooks que pretendem mudar a forma como os usuários interagem com os seus dispositivos. Contudo, isso levanta questões — ainda “ontem” a companhia vendia..."
+          "summary": "Nvidia CEO Jensen Huang has a simple solution for frontier labs like OpenAI and Anthropic that have recently called for increased regulation for their models — \"we have to shut the labs down,\" Huang said in an..."
         }
       ]
     }
