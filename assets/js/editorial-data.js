@@ -1,19 +1,19 @@
 window.editorialData = {
-  "updatedAt": "2026-09-25",
+  "updatedAt": "2026-09-27",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-09-24",
+          "title": "What Businesses Can Learn from Microsoft's AI Transformation",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/business/what-businesses-can-learn-from-microsofts-ai-transformation",
+          "date": "2026-09-27",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "PCWorld has been testing and writing about PCs since 1983. That’s a long time! Today, we put more than 70 laptops through our review process every year, covering everything from affordable everyday laptops to p..."
+          "summary": "Overview : AI adoption works better when companies build a learning-focused culture before introducing new tools. Microsoft’s long-term AI bets show the value of committing early while giving teams time to adap..."
         },
         {
           "title": "Nvidia CEO says 'we have to shut the labs down' if AI experiments are unsafe",
