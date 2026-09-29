@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-09-27",
+  "updatedAt": "2026-09-29",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "What Businesses Can Learn from Microsoft's AI Transformation",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/business/what-businesses-can-learn-from-microsofts-ai-transformation",
-          "date": "2026-09-27",
+          "title": "OpenAI Jalapeño design interview transcript",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-jalapeno-design-interview-transcript-hardware-vp-richard-ho-explains-how-ai-assisted-design-may-shape-the-future-of-inference-asics",
+          "date": "2026-09-28",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Overview : AI adoption works better when companies build a learning-focused culture before introducing new tools. Microsoft’s long-term AI bets show the value of committing early while giving teams time to adap..."
+          "summary": "OpenAI revealed its Jalapeño inference ASIC at Hot Chips in August 2026, a chip that leaned heavily on AI to deliver an incredibly short design window. Following the reveal, Tom's Hardware had the opportunity t..."
         },
         {
-          "title": "Nvidia CEO says 'we have to shut the labs down' if AI experiments are unsafe",
+          "title": "Silicon is starting to design silicon — how AI is being used in chipmaking, from EDA tools to OpenAI's Jalapeño and beyond",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-ceo-says-we-have-to-shut-the-labs-down-if-ai-experiments-are-unsafe-jensen-huang-says-frontier-ai-lab-fears-are-a-distraction-not-a-call-for-regulation",
-          "date": "2026-09-24",
+          "url": "https://www.tomshardware.com/tech-industry/semiconductors/silicon-is-starting-to-design-silicon-how-ai-is-being-used-in-chipmaking-from-eda-tools-to-openais-jalapeno-and-beyond",
+          "date": "2026-09-29",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Nvidia CEO Jensen Huang has a simple solution for frontier labs like OpenAI and Anthropic that have recently called for increased regulation for their models — \"we have to shut the labs down,\" Huang said in an..."
+          "summary": "In late August, Architect Labs claimed it had designed a chip that was almost entirely developed by AI, an industry-first achievement. AI is already used to optimize floorplans, placement and routing, verificat..."
         }
       ]
     }
