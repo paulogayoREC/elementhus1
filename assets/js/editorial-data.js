@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-01",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "OpenAI Jalapeño design interview transcript",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-jalapeno-design-interview-transcript-hardware-vp-richard-ho-explains-how-ai-assisted-design-may-shape-the-future-of-inference-asics",
-          "date": "2026-09-28",
+          "title": "Why ChatGPT, Claude, & Gemini Keep Experiencing Outages?",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/artificial-intelligence/why-chatgpt-claude-gemini-keep-experiencing-outages",
+          "date": "2026-10-01",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "OpenAI revealed its Jalapeño inference ASIC at Hot Chips in August 2026, a chip that leaned heavily on AI to deliver an incredibly short design window. Following the reveal, Tom's Hardware had the opportunity t..."
+          "summary": "Overview: AI outages are usually infrastructure failures, not failures of the underlying AI model, with problems often occurring in routing, databases, networking, or configuration. Capacity, complexity, softwa..."
         },
         {
-          "title": "Silicon is starting to design silicon — how AI is being used in chipmaking, from EDA tools to OpenAI's Jalapeño and beyond",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/semiconductors/silicon-is-starting-to-design-silicon-how-ai-is-being-used-in-chipmaking-from-eda-tools-to-openais-jalapeno-and-beyond",
-          "date": "2026-09-29",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
+          "date": "2026-09-30",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "In late August, Architect Labs claimed it had designed a chip that was almost entirely developed by AI, an industry-first achievement. AI is already used to optimize floorplans, placement and routing, verificat..."
+          "summary": "PCWorld has been testing and writing about PCs since 1983. That’s a long time! Today, we put more than 70 laptops through our review process every year, covering everything from affordable everyday laptops to p..."
         }
       ]
     }
