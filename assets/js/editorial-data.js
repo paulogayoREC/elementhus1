@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-03",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Why ChatGPT, Claude, & Gemini Keep Experiencing Outages?",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/artificial-intelligence/why-chatgpt-claude-gemini-keep-experiencing-outages",
-          "date": "2026-10-01",
+          "title": "California subpoenas OpenAI over rogue AI agents conducting hacking attacks",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/california-subpoenas-openai-as-it-investigates-huggingface-breach-doj-wants-more-information-on-cybersecurity-incidents-to-determine-developer-responsibility",
+          "date": "2026-10-03",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Overview: AI outages are usually infrastructure failures, not failures of the underlying AI model, with problems often occurring in routing, databases, networking, or configuration. Capacity, complexity, softwa..."
+          "summary": "The California Department of Justice (DOJ) has subpoenaed OpenAI as it investigates the recent cybersecurity incidents involving the company’s AI models and agents. According to The Register , state Attorney Ge..."
         },
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-09-30",
+          "title": "OpenAI’s Jalapeño ASICs are deployed alongside AMD EPYC ‘Turin’ CPUs as hosts, not Nvidia's Vera",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/cpus/openais-jalapeno-asics-are-deployed-alongside-amd-epyc-turin-cpus-as-hosts-hardware-vp-says-nvidias-vera-standalone-is-a-little-bit-behind-on-that-maturity-level",
+          "date": "2026-10-02",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "PCWorld has been testing and writing about PCs since 1983. That’s a long time! Today, we put more than 70 laptops through our review process every year, covering everything from affordable everyday laptops to p..."
+          "summary": "OpenAI’s new Jalapeño ASIC is being deployed internally alongside AMD EPYC Turin hosts, each with 1.5TB of memory. SemiAnalysis described the rack-scale deployment of Jalapeño following the reveal of the chip..."
         }
       ]
     }
