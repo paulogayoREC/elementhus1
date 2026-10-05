@@ -1,5 +1,5 @@
 window.editorialData = {
-  "updatedAt": "2026-10-03",
+  "updatedAt": "2026-10-05",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
@@ -16,14 +16,14 @@ window.editorialData = {
           "summary": "The California Department of Justice (DOJ) has subpoenaed OpenAI as it investigates the recent cybersecurity incidents involving the company’s AI models and agents. According to The Register , state Attorney Ge..."
         },
         {
-          "title": "OpenAI’s Jalapeño ASICs are deployed alongside AMD EPYC ‘Turin’ CPUs as hosts, not Nvidia's Vera",
+          "title": "Google AI data center project investigated after 420 football fields of Finnish forest demolished",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/cpus/openais-jalapeno-asics-are-deployed-alongside-amd-epyc-turin-cpus-as-hosts-hardware-vp-says-nvidias-vera-standalone-is-a-little-bit-behind-on-that-maturity-level",
-          "date": "2026-10-02",
+          "url": "https://www.tomshardware.com/tech-industry/data-centers/google-ai-data-center-project-investigated-after-420-football-fields-of-finnish-forest-razed-trees-were-removed-before-a-mandatory-environmental-impact-assessment-say-reports",
+          "date": "2026-10-05",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "OpenAI’s new Jalapeño ASIC is being deployed internally alongside AMD EPYC Turin hosts, each with 1.5TB of memory. SemiAnalysis described the rack-scale deployment of Jalapeño following the reveal of the chip..."
+          "summary": "Google’s latest data center construction project in Finland is being investigated after the company representing the search giant allegedly cleared over 300 hectares of forest. The reported issue is that Google..."
         }
       ]
     }
