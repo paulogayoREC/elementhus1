@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-07",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "California subpoenas OpenAI over rogue AI agents conducting hacking attacks",
+          "title": "OpenAI and Synopsys partner to build \"GPT-Synopsys\" for autonomous chip design",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/california-subpoenas-openai-as-it-investigates-huggingface-breach-doj-wants-more-information-on-cybersecurity-incidents-to-determine-developer-responsibility",
-          "date": "2026-10-03",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-and-synopsys-partner-to-build-gpt-synopsys-for-autonomous-chip-design-specialized-ai-model-will-operate-eda-tools-allowing-engineers-to-deliver-more-sophisticated-chips-faster",
+          "date": "2026-10-06",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The California Department of Justice (DOJ) has subpoenaed OpenAI as it investigates the recent cybersecurity incidents involving the company’s AI models and agents. According to The Register , state Attorney Ge..."
+          "summary": "OpenAI and Synopsys have signed a multi-year agreement to jointly develop GPT-Synopsys, a specialized model optimized for semiconductor design using Synopsys's electronic design automation (EDA) tools. Accordin..."
         },
         {
-          "title": "Google AI data center project investigated after 420 football fields of Finnish forest demolished",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/data-centers/google-ai-data-center-project-investigated-after-420-football-fields-of-finnish-forest-razed-trees-were-removed-before-a-mandatory-environmental-impact-assessment-say-reports",
-          "date": "2026-10-05",
+          "title": "IaaS vs PaaS vs SaaS in 2027: What’s the Difference in Cloud Computing?",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/apps/iaas-vs-paas-vs-saas-in-2027-whats-the-difference-in-cloud-computing",
+          "date": "2026-10-07",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Google’s latest data center construction project in Finland is being investigated after the company representing the search giant allegedly cleared over 300 hectares of forest. The reported issue is that Google..."
+          "summary": "Overview IaaS provides maximum infrastructure control, making it suitable for customised workloads requiring greater technical management and configuration flexibility. PaaS reduces infrastructure responsibilit..."
         }
       ]
     }
