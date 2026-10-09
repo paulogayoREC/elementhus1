@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-09",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "OpenAI and Synopsys partner to build \"GPT-Synopsys\" for autonomous chip design",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-and-synopsys-partner-to-build-gpt-synopsys-for-autonomous-chip-design-specialized-ai-model-will-operate-eda-tools-allowing-engineers-to-deliver-more-sophisticated-chips-faster",
-          "date": "2026-10-06",
+          "title": "Google lança site gratuito para identificar fotos, vídeos e áudios feitos por IA",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/inteligencia-artificial/google-lanca-site-gratuito-para-identificar-fotos-videos-e-audios-feitos-por-ia/",
+          "date": "2026-10-08",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "OpenAI and Synopsys have signed a multi-year agreement to jointly develop GPT-Synopsys, a specialized model optimized for semiconductor design using Synopsys's electronic design automation (EDA) tools. Accordin..."
+          "summary": "O Google disponibilizou o SynthID Detector , site gratuito para verificar se imagens, vídeos e arquivos de áudio foram gerados por inteligência artificial. A ferramenta, lançada mundialmente em inglês pelo Goog..."
         },
         {
-          "title": "IaaS vs PaaS vs SaaS in 2027: What’s the Difference in Cloud Computing?",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/apps/iaas-vs-paas-vs-saas-in-2027-whats-the-difference-in-cloud-computing",
-          "date": "2026-10-07",
+          "title": "Acer Googlebook 14 review: The AI isn’t the best part",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3255332/acer-googlebook-review.html",
+          "date": "2026-10-09",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Overview IaaS provides maximum infrastructure control, making it suitable for customised workloads requiring greater technical management and configuration flexibility. PaaS reduces infrastructure responsibilit..."
+          "summary": "At a glance Expert's Rating Pros Gorgeous OLED display Lightweight, premium design Excellent battery life Cons AI features aren’t particularly useful Touchpad attracts fingerprints Our Verdict The Acer Googlebo..."
         }
       ]
     }
