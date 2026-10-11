@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-11",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Google lança site gratuito para identificar fotos, vídeos e áudios feitos por IA",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/inteligencia-artificial/google-lanca-site-gratuito-para-identificar-fotos-videos-e-audios-feitos-por-ia/",
-          "date": "2026-10-08",
+          "title": "This week on Tom's Hardware Premium: October 10, 2026",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/this-week-on-toms-hardware-premium-october-10-2026-tencent-grabs-bargain-chips-qualcomm-huawei-ip-deal-groq-lawsuit-and-more",
+          "date": "2026-10-10",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "O Google disponibilizou o SynthID Detector , site gratuito para verificar se imagens, vídeos e arquivos de áudio foram gerados por inteligência artificial. A ferramenta, lançada mundialmente em inglês pelo Goog..."
+          "summary": "In case you've been missing out on the action over on Tom's Hardware Premium , we're back with another roundup to fill you in on everything you missed. Central to this week's theme is how Artificial Intelligenc..."
         },
         {
-          "title": "Acer Googlebook 14 review: The AI isn’t the best part",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3255332/acer-googlebook-review.html",
-          "date": "2026-10-09",
+          "title": "Senate investigation says that some AI data center claims are misleading",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/data-centers/senate-investigation-says-that-some-ai-data-center-claims-are-misleading-senators-question-number-of-permanent-jobs-projects-bring-to-communities-but-companies-refuse-to-divulge-data",
+          "date": "2026-10-10",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "At a glance Expert's Rating Pros Gorgeous OLED display Lightweight, premium design Excellent battery life Cons AI features aren’t particularly useful Touchpad attracts fingerprints Our Verdict The Acer Googlebo..."
+          "summary": "The U.S. Senate has been conducting a year-long investigation into AI data centers, and its findings suggest that some developers have been misleading the public about the costs and benefits that these projects..."
         }
       ]
     }
