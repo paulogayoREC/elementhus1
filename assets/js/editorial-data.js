@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-13",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "This week on Tom's Hardware Premium: October 10, 2026",
+          "title": "Chinese AI companies buy 1 million Nvidia GPUs in a single year, report claims",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/this-week-on-toms-hardware-premium-october-10-2026-tencent-grabs-bargain-chips-qualcomm-huawei-ip-deal-groq-lawsuit-and-more",
-          "date": "2026-10-10",
+          "url": "https://www.tomshardware.com/pc-components/gpus/chinese-ai-companies-buy-1-million-nvidia-gpus-in-a-single-year-report-claims-export-control-compliant-chips-flood-the-market-to-bridge-gap-in-compute-demand",
+          "date": "2026-10-13",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "In case you've been missing out on the action over on Tom's Hardware Premium , we're back with another roundup to fill you in on everything you missed. Central to this week's theme is how Artificial Intelligenc..."
+          "summary": "Chinese tech companies have bought more than 1 million Nvidia gaming and workstation GPUs to plug gaps in demand for AI computing power, Financial Times reports. The report cites industry insiders who claim the..."
         },
         {
-          "title": "Senate investigation says that some AI data center claims are misleading",
+          "title": "Meet the modders porting ringfenced DLSS features to older GPUs",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/data-centers/senate-investigation-says-that-some-ai-data-center-claims-are-misleading-senators-question-number-of-permanent-jobs-projects-bring-to-communities-but-companies-refuse-to-divulge-data",
-          "date": "2026-10-10",
+          "url": "https://www.tomshardware.com/pc-components/gpus/meet-the-modders-porting-ringfenced-dlss-features-to-older-gpus-how-dlss-5-and-multi-frame-generation-were-unlocked-for-older-architectures",
+          "date": "2026-10-12",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "The U.S. Senate has been conducting a year-long investigation into AI data centers, and its findings suggest that some developers have been misleading the public about the costs and benefits that these projects..."
+          "summary": "Over recent weeks, we've seen the release of DLSS 5 Neural Rendering in NBA 2K27, followed by its porting to older GPU generations , and the unlocking of DLSS Multi Frame Generation (MFG) for older graphics car..."
         }
       ]
     }
