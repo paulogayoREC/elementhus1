@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-15",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Chinese AI companies buy 1 million Nvidia GPUs in a single year, report claims",
+          "title": "We tested the RTX Spark Superchip in Microsoft's Surface Laptop Ultra",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/gpus/chinese-ai-companies-buy-1-million-nvidia-gpus-in-a-single-year-report-claims-export-control-compliant-chips-flood-the-market-to-bridge-gap-in-compute-demand",
-          "date": "2026-10-13",
+          "url": "https://www.tomshardware.com/laptops/we-test-the-rtx-spark-superchip-in-microsofts-surface-laptop-ultra-nvidias-windows-on-arm-platform-impresses-in-local-ai-but-gaming-isnt-its-strong-suit",
+          "date": "2026-10-15",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Chinese tech companies have bought more than 1 million Nvidia gaming and workstation GPUs to plug gaps in demand for AI computing power, Financial Times reports. The report cites industry insiders who claim the..."
+          "summary": "Nvidia CEO Jensen Huang announced the RTX Spark platform with the grand ambition to “reinvent the PC” back at Computex 2026. By pairing the GB10 Superchip with a version of Windows on Arm tailored for the secur..."
         },
         {
-          "title": "Meet the modders porting ringfenced DLSS features to older GPUs",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/gpus/meet-the-modders-porting-ringfenced-dlss-features-to-older-gpus-how-dlss-5-and-multi-frame-generation-were-unlocked-for-older-architectures",
-          "date": "2026-10-12",
+          "title": "Top News Today: GlobalFoundries Plans Two US Fabs, Solvera Raises USD 6.3M, UK Internships Tighten, OpenAI Faces Lawsuits",
+          "source": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/tech-news/top-news-today-globalfoundries-plans-two-us-fabs-solvera-raises-usd-63m-uk-internships-tighten-openai-faces-lawsuits",
+          "date": "2026-10-15",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Over recent weeks, we've seen the release of DLSS 5 Neural Rendering in NBA 2K27, followed by its porting to older GPU generations , and the unlocking of DLSS Multi Frame Generation (MFG) for older graphics car..."
+          "summary": "Hello everyone! Here is your quick roundup of today’s biggest developments across semiconductors, AI engineering, graduate hiring, financial markets, and artificial intelligence safety. What’s New Today : Five..."
         }
       ]
     }
