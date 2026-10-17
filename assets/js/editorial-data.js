@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-17",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "We tested the RTX Spark Superchip in Microsoft's Surface Laptop Ultra",
+          "title": "Microsoft Surface Laptop Ultra review: RTX Spark in a straight-up beautiful Windows PC",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/laptops/we-test-the-rtx-spark-superchip-in-microsofts-surface-laptop-ultra-nvidias-windows-on-arm-platform-impresses-in-local-ai-but-gaming-isnt-its-strong-suit",
-          "date": "2026-10-15",
+          "url": "https://www.tomshardware.com/tablets/microsoft-surface/microsoft-surface-laptop-ultra-rtx-spark-review",
+          "date": "2026-10-16",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Nvidia CEO Jensen Huang announced the RTX Spark platform with the grand ambition to “reinvent the PC” back at Computex 2026. By pairing the GB10 Superchip with a version of Windows on Arm tailored for the secur..."
+          "summary": "It's been a few years since we've seen a Surface focused on performance. With Nvidia's entry into mobile SoCs, Microsoft is one of several hardware partners that have developed an ultra-premium PC designed arou..."
         },
         {
-          "title": "Top News Today: GlobalFoundries Plans Two US Fabs, Solvera Raises USD 6.3M, UK Internships Tighten, OpenAI Faces Lawsuits",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/tech-news/top-news-today-globalfoundries-plans-two-us-fabs-solvera-raises-usd-63m-uk-internships-tighten-openai-faces-lawsuits",
+          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
           "date": "2026-10-15",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Hello everyone! Here is your quick roundup of today’s biggest developments across semiconductors, AI engineering, graduate hiring, financial markets, and artificial intelligence safety. What’s New Today : Five..."
+          "summary": "PCWorld has been testing and writing about PCs since 1983. That’s a long time! Today, we put more than 70 laptops through our review process every year, covering everything from affordable everyday laptops to p..."
         }
       ]
     }
