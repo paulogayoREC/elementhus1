@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-21",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "This week on Tom's Hardware Premium: October 17, 2026",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/this-week-on-toms-hardware-premium-october-17-2026-packaging-roadmaps-chinese-dgx-spark-rival-emerges-and-digging-into-asmls-earnings",
-          "date": "2026-10-17",
+          "title": "iPhone Duo Reviews Explain Why Device is Both 'Fun' and 'Frustrating'",
+          "source": "MacRumors",
+          "url": "https://www.macrumors.com/review/iphone-duo/",
+          "date": "2026-10-21",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "This week, we've published a swath of news and features over on Tom's Hardware Premium . So, if you're not subscribed yet and wondering what you might be missing out on, we've got you covered. To read any of th..."
+          "summary": "The first reviews of the iPhone Duo were published today, providing us with a closer look at the foldable device in action ahead of its launch on Friday. The Verge 's Nilay Patel and Allison Johnson said the iP..."
         },
         {
-          "title": "Microsoft Surface Laptop Ultra review: RTX Spark in a straight-up beautiful Windows PC",
+          "title": "Qualcomm to cut jobs globally in \"performance-based\" layoffs, as company pivots to AI data center and edge computing markets",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tablets/microsoft-surface/microsoft-surface-laptop-ultra-rtx-spark-review",
-          "date": "2026-10-16",
+          "url": "https://www.tomshardware.com/tech-industry/big-tech/qualcomm-to-cut-jobs-globally-in-performance-based-layoffs-ceo-says-move-will-build-stronger-performance-culture-as-company-pivots-to-ai-data-center-and-edge-products",
+          "date": "2026-10-21",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "It's been a few years since we've seen a Surface focused on performance. With Nvidia's entry into mobile SoCs, Microsoft is one of several hardware partners that have developed an ultra-premium PC designed arou..."
+          "summary": "Qualcomm has told employees it will cut jobs worldwide after its annual performance reviews, and it expects to begin informing affected employees in November. According to a Reuters report , CEO Cristiano Amon..."
         }
       ]
     }
