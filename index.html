@@ -36,11 +36,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/img/astro001-cutout.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260821-dia-title-reveal">
-    <script src="assets/js/editorial-data.js?v=20260419-indicacoes-categorias" defer></script>
-    <script src="assets/js/main.js?v=20260821-dia-title-reveal" defer></script>
-    <script src="assets/js/tech-showcase.js?v=20260423-vitrine-cache" defer></script>
-    <script src="assets/js/auth.js?v=20260428-auth-scoped-session" defer></script>
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261031-content-cleanup">
+    <script src="assets/js/editorial-data.js?v=20261027-editorial" defer></script>
+    <script src="assets/js/main.js?v=20261031-content-cleanup" defer></script>
+    <script src="assets/js/auth.js?v=20261031-content-cleanup" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -64,9 +63,6 @@
         <div class="site-menu" id="site-menu" data-menu>
           <div class="nav-links">
             <a href="#editorias">Notícias Tech</a>
-            <a href="/dicas">Dicas</a>
-            <a href="/indicacoes">Indicações</a>
-            <a href="/sitesinteressantes">Radar Web</a>
             <button class="nav-share-button" type="button" data-share-site data-share-url="https://encontreaquitech.com/" aria-label="Compartilhar Encontre Aqui Tech" title="Compartilhar">
               <span class="nav-share-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="img" focusable="false">
@@ -132,11 +128,10 @@
           <p class="eyebrow">Encontre Antes de Todo Mundo</p>
           <h1 id="hero-title" class="dia-title-reveal" data-dia-text-reveal data-dia-delay="0.35" data-dia-duration="2.4">Encontre Aqui Tech</h1>
           <p class="hero-copy">
-            Notícias, alertas e indicações de tecnologia em uma experiência mais limpa para quem vive conectado.
+            Notícias e alertas de tecnologia em uma experiência mais limpa para quem vive conectado.
           </p>
           <div class="hero-actions" aria-label="Ações principais">
             <a class="button button-primary" href="#editorias">Notícias Tech</a>
-            <a class="button button-secondary" href="/indicacoes">Vitrine Tech</a>
             <div class="hero-desk-clock" role="timer" aria-live="polite" aria-label="Horário atual" data-brasilia-clock>
               <span class="hero-desk-clock-time" data-brasilia-clock-time>--:--</span>
             </div>
@@ -230,113 +225,6 @@
         </div>
       </section>
 
-      <section class="section feature-band" aria-labelledby="feature-title" data-section-name="Sessão Vitrine Tech">
-        <div class="section-inner feature-layout">
-          <div class="feature-copy">
-            <p class="eyebrow">Vitrine Tech</p>
-            <h2 id="feature-title">Produtos selecionados para atualizar seu setup.</h2>
-            <p>
-              Indicações publicadas nas categorias do Encontre Aqui Tech, com links externos para conferir a oferta.
-            </p>
-            <a class="button button-primary" href="/indicacoes">Ver indicações</a>
-          </div>
-          <div class="tech-picks-panel" data-tech-picks-panel aria-label="Produtos da Vitrine Tech">
-            <a class="tech-pick-card tech-pick-featured" href="https://link.amazon/B09z6HmO8" target="_blank" rel="sponsored noopener noreferrer">
-              <span class="tech-pick-category">Monitor</span>
-              <img src="assets/img/indicacoes/produtos/lg-ultragear-b09z6hmo8.png" alt="Monitor Gamer LG UltraGear" width="888" height="731" loading="lazy" decoding="async">
-              <strong>Monitor Gamer LG UltraGear</strong>
-              <span class="tech-pick-link">Ver oferta</span>
-            </a>
-            <a class="tech-pick-card" href="https://link.amazon/B0eckarWF" target="_blank" rel="sponsored noopener noreferrer">
-              <span class="tech-pick-category">Tablets</span>
-              <img src="assets/img/indicacoes/produtos/galaxy-tab-s10-lite-b0eckarwf.png" alt="Galaxy Tab S10 Lite" width="888" height="642" loading="lazy" decoding="async">
-              <strong>Galaxy Tab S10 Lite</strong>
-              <span class="tech-pick-link">Ver oferta</span>
-            </a>
-            <a class="tech-pick-card" href="https://link.amazon/B056Kjk8w" target="_blank" rel="sponsored noopener noreferrer">
-              <span class="tech-pick-category">Fones</span>
-              <img src="assets/img/indicacoes/produtos/redragon-zeus-b056kjk8w.png" alt="Headset Gamer Redragon Zeus" width="747" height="888" loading="lazy" decoding="async">
-              <strong>Headset Gamer Redragon Zeus</strong>
-              <span class="tech-pick-link">Ver oferta</span>
-            </a>
-            <a class="tech-pick-card" href="https://link.amazon/B0dFp8xb0" target="_blank" rel="sponsored noopener noreferrer">
-              <span class="tech-pick-category">Placa Mãe</span>
-              <img src="assets/img/indicacoes/produtos/gigabyte-b850-gaming-b0dfp8xb0.png" alt="Placa Mãe Gigabyte B850 GAMING" width="888" height="590" loading="lazy" decoding="async">
-              <strong>Placa Mãe Gigabyte B850 GAMING</strong>
-              <span class="tech-pick-link">Ver oferta</span>
-            </a>
-            <a class="tech-pick-card" href="https://link.amazon/B01xK5D1u" target="_blank" rel="sponsored noopener noreferrer">
-              <span class="tech-pick-category">Peças e Componentes</span>
-              <img src="assets/img/indicacoes/produtos/ugreen-revodok-hub-usb-c-b01xk5d1u.png" alt="UGREEN Revodok Hub USB C 6 em 1" width="888" height="624" loading="lazy" decoding="async">
-              <strong>UGREEN Revodok Hub USB C 6 em 1</strong>
-              <span class="tech-pick-link">Ver oferta</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section interesting-sites-section" id="sites-interessantes" aria-labelledby="sites-interessantes-title" data-section-name="Radar Web">
-        <div class="section-inner interesting-sites-home-layout">
-          <div class="interesting-sites-home-copy">
-            <p class="eyebrow">Radar Web</p>
-            <h2 id="sites-interessantes-title">Links da internet que valem um clique curioso.</h2>
-            <a class="button button-primary" href="/sitesinteressantes">Explorar sites</a>
-          </div>
-
-          <div class="connected-globe connected-globe-home" aria-hidden="true">
-            <span class="globe-core">&#127760;</span>
-            <span class="globe-ring globe-ring-one"></span>
-            <span class="globe-ring globe-ring-two"></span>
-            <span class="globe-node globe-node-one"></span>
-            <span class="globe-node globe-node-two"></span>
-            <span class="globe-node globe-node-three"></span>
-          </div>
-
-          <div class="editorial-grid interesting-sites-grid" data-home-site-grid>
-            <article class="topic-card topic-large interesting-site-card" data-home-site-card data-home-site-date="2026-08-12">
-              <div class="topic-card-preview">
-                <img src="assets/img/sites-interessantes/radio-garden-capa.jpg" alt="Logo do Radio Garden sobre um globo terrestre azul com pontos verdes de estações de rádio." width="1280" height="720" loading="lazy" decoding="async">
-                <div class="topic-card-preview-copy">
-                  <span>Destaque atual / rádio global</span>
-                  <strong>Radio Garden: ouça rádios do mundo em um globo interativo</strong>
-                </div>
-              </div>
-              <p>Explore cidades no mapa, escolha uma região do planeta e descubra músicas, notícias e culturas em transmissões ao vivo.</p>
-              <a href="/sitesinteressantes" aria-label="Conhecer a apresentação do Radio Garden no Radar Web">Conhecer achado do Radar Web</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section tips-index-section home-tips-section" id="dicas" aria-labelledby="home-dicas-title" data-section-name="Dicas">
-        <div class="section-inner tips-home-layout">
-          <div class="tips-home-copy">
-            <p class="eyebrow">Dicas</p>
-            <h2 id="home-dicas-title">Soluções práticas para o dia a dia digital.</h2>
-            <p>Ferramentas e tutoriais úteis, explicados sem complicar.</p>
-            <a class="button button-primary" href="/dicas">Ver dicas</a>
-          </div>
-
-          <div class="editorial-grid tips-grid">
-            <article class="topic-card topic-large tips-card" data-home-tip-card data-home-tip-date="2026-08-05">
-              <div class="topic-card-preview">
-                <img src="assets/img/dicas/localsend-transferencia-rede-local.jpg" alt="Tela do LocalSend recebendo arquivos no computador enquanto um celular aparece ao lado." width="959" height="638" loading="lazy" decoding="async">
-                <div class="topic-card-preview-copy">
-                  <span>Aplicativos e produtividade / 5 ago. 2026</span>
-                  <strong>LocalSend: transfira arquivos entre celular e computador sem internet</strong>
-                </div>
-              </div>
-              <p>Compartilhe fotos, vídeos, documentos e textos pela rede local, sem depender de cabos, nuvem ou cadastro.</p>
-              <div class="tips-card-meta" aria-label="Informações da dica">
-                <span>5 min de leitura</span>
-                <span>Rede local</span>
-              </div>
-              <a href="/dicas/localsend-transferir-arquivos-sem-internet" aria-label="Ver dica completa sobre LocalSend">Ver dica completa</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section class="section community-section" id="comunidade" aria-labelledby="comunidade-title" data-section-name="Sessão Comentários">
         <div class="section-inner">
           <div class="section-heading">
@@ -419,7 +307,7 @@
                   De fato, é um cenário pouco animador. Mas, como pontuamos, a tecnologia continua acontecendo todos os dias, e estamos aqui para usá-la da melhor maneira possível. Queremos entender os destaques das notícias, buscar compreensão e senso crítico diante das inovações, acompanhar os movimentos das big techs e também pequenas ações humanas que geram reflexos relevantes na sociedade.
                 </p>
                 <p>
-                  O Encontre Aqui Tech busca, por meio dos fatos, levar conhecimento, aproximar pessoas, informar e alertar sobre o que pode estar por vir neste mundo. Queremos falar também do passado, da história, cultivar a nostalgia e oferecer melhores indicações de compras de produtos tech, sempre com responsabilidade e com a alegria de compartilhar este projeto.
+                  O Encontre Aqui Tech busca, por meio dos fatos, levar conhecimento, aproximar pessoas, informar e alertar sobre o que pode estar por vir neste mundo. Queremos falar também do passado, da história e cultivar a nostalgia, sempre com responsabilidade e com a alegria de compartilhar este projeto.
                 </p>
                 <p>
                   Nos acompanhe, deixe seu comentário, faça sugestões e venha construir essa jornada com a gente.

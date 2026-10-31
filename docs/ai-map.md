@@ -23,8 +23,6 @@ Mapa curto para orientar o Codex no projeto `encontreaquitech.com` sem carregar 
 - Pagina editorial publicada: `noticias.html`, com a noticia principal e o arquivo de noticias anteriores.
 - Palavra-chave `notícia nova` ou `noticia nova`: atualizar juntos a area `Notícias Tech` da home em `index.html` e o destaque principal de `noticias.html`; na home, manter dois cards com a noticia mais recente a esquerda e a anterior a direita, usando `data-home-news-date`; a materia principal deve ter design/estrutura especial e livre para o tema, enquanto o destaque anterior vai para `Continue no radar`.
 - Regras editoriais: `docs/regras-editoriais.md`.
-- Indicacoes/produtos: `indicacoes.html`, `indicacoes/*.html`, `assets/js/tech-showcase.js`.
-- Regras da Vitrine Tech: `docs/regras-vitrine-tech.md`.
 - Login/cadastro/sessao: `assets/js/auth.js`, `api/login.php`, `api/register.php`, `api/session.php`, `app/bootstrap.php`.
 - Comentarios: `assets/js/main.js`, `api/comments.php`, `api/article-comments.php`, `app/CommentStorage.php`, `app/ArticleCommentStorage.php`.
 - Redefinicao de senha: `resetar-senha.html`, `assets/js/password-reset.js`, `api/request-password-reset.php`, `api/reset-password.php`, `app/PasswordResetStorage.php`.
@@ -44,5 +42,4 @@ Mapa curto para orientar o Codex no projeto `encontreaquitech.com` sem carregar 
 - HTML/CSS/JS: abrir no navegador e conferir console quando possivel.
 - PHP/API: usar `php -S localhost:8000` e testar o fluxo afetado.
 - Editorias: conferir `docs/regras-editoriais.md`.
-- Vitrine Tech: conferir `docs/regras-vitrine-tech.md`.
 - Sem build/lint formal: o projeto nao tem `package.json`.

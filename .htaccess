@@ -26,6 +26,10 @@ RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
 # Removed editorial pages: return 410 for any direct access.
 RewriteRule ^(novidades-tecnologicas|curiosidades|alertas-seguranca|tutoriais)(?:\.html)?$ - [G,L,NC]
 
+# Removed Dicas, Indicacoes and Radar Web content: return 410 for old URLs.
+RewriteRule ^(?:dicas|indicacoes)(?:\.html|/.*)?$ - [G,L,NC]
+RewriteRule ^sitesinteressantes(?:\.html)?$ - [G,L,NC]
+
 # Removed Mundo Geek pages: return 410 for any direct access.
 RewriteRule ^(mundo-geek|colecionaveis-geek)(?:\.html)?$ - [G,L,NC]
 

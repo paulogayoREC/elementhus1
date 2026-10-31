@@ -53,7 +53,7 @@ const authLegalDocuments = {
       </section>
       <section>
         <h4>2. Finalidade da plataforma</h4>
-        <p>O Encontre Aqui Tech é uma plataforma de conteúdo sobre tecnologia, notícias e indicações de produtos ou serviços relacionados ao universo digital.</p>
+        <p>O Encontre Aqui Tech é uma plataforma de conteúdo sobre tecnologia e notícias relacionadas ao universo digital.</p>
         <p>A área de cadastro pode ser usada para permitir acesso a recursos do site, preferências, interações, comunicações, funcionalidades futuras e uma experiência mais personalizada.</p>
       </section>
       <section>
@@ -92,7 +92,7 @@ const authLegalDocuments = {
       <section>
         <h4>8. Limitação de responsabilidade</h4>
         <p>O conteúdo do Encontre Aqui Tech tem finalidade informativa e editorial. O site busca manter as informações úteis e atualizadas, mas não garante ausência total de erros, indisponibilidades, alterações de terceiros ou mudanças posteriores em produtos, serviços, preços, regras ou tecnologias mencionadas.</p>
-        <p>Indicações de produtos podem conter links de afiliado quando aplicável. O usuário deve avaliar informações, condições de compra, garantia e políticas de terceiros antes de tomar decisões.</p>
+        <p>Links para serviços de terceiros podem ser apresentados quando relevantes. O usuário deve avaliar as informações e as políticas externas antes de tomar decisões.</p>
       </section>
       <section>
         <h4>9. Alterações dos Termos</h4>

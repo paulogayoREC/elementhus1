@@ -241,10 +241,6 @@ const orderHomeNewsCards = () => {
   orderHomeCardsByDate("[data-home-news-grid]", "[data-home-news-card]", "homeNewsDate", "homeNewsPosition");
 };
 
-const orderHomeSiteCards = () => {
-  orderHomeCardsByDate("[data-home-site-grid]", "[data-home-site-card]", "homeSiteDate", "homeSitePosition");
-};
-
 const initDiaTextReveal = () => {
   const revealTitles = document.querySelectorAll("[data-dia-text-reveal]");
 
@@ -296,11 +292,10 @@ const initDiaTextReveal = () => {
 renderHomeEditorialHighlights();
 renderTopicEditorialLists();
 orderHomeNewsCards();
-orderHomeSiteCards();
 initDiaTextReveal();
 
 const revealTargets = document.querySelectorAll(
-  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feature-copy, .tech-picks-panel, .tech-pick-card, .interesting-sites-home-copy, .interesting-sites-grid, .connected-globe, .interesting-site-feature, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .affiliate-note, .product-category, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
+  ".section-heading, .topic-card, .topic-card-preview, .topic-feature, .content-card, .feedback-form, .comment-stream, .portrait-wrap, .about-copy, .curator-layout, .focus-panel, .article-hero-copy, .article-hero-figure, .article-content, .article-aside, .article-comment-panel, .article-archive-card"
 );
 
 const setHeaderState = () => {
