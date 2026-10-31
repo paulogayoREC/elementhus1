@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-10-31",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-10-28",
+          "title": "Intel’s woes wipe out $1 trillion of semiconductor market cap in one day",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/cpus/intels-woes-wipe-out-usd1-trillion-of-semiconductor-market-cap-in-one-day-pc-market-bloodbath-leaves-few-chip-stocks-unscathed",
+          "date": "2026-10-30",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "PCWorld has been testing and writing about PCs since 1983. That’s a long time! Today, we put more than 70 laptops through our review process every year, covering everything from affordable everyday laptops to p..."
+          "summary": "Intel's shares plunged 30% on Friday, wiping out nearly $150 billion in market capitalization in a single day, the largest single-day loss in the company's history. The decline followed a disappointing financia..."
         },
         {
-          "title": "US Stock Market Today: Alphabet Stock Slumps 10% as Microsoft Gains on Strong Earnings",
-          "source": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/stocks/us-stock-market-today-alphabet-stock-slumps-10-as-microsoft-gains-on-strong-earnings",
-          "date": "2026-10-29",
+          "title": "Benchmarking Nvidia’s Vera CPU for the data center — standalone Vera tested against Granite Rapids-AP and EPYC Turin",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/cpus/benchmarking-nvidias-vera-cpu-for-the-data-center-standalone-vera-tested-against-granite-rapids-ap-and-epyc-turin",
+          "date": "2026-10-30",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "US stock futures fell on Thursday, October 29, as Alphabet's earnings miss renewed concerns over the rising cost of artificial intelligence investments. According to premarket trading data at 7:02 a.m. ET, Nasd..."
+          "summary": "Nvidia’s Vera CPU is an important next step in the company’s years-long spearheading of AI infrastructure buildout. It’s arriving just as the shift to agentic AI workflows has created unprecedented demand for d..."
         }
       ]
     }
