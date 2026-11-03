@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-03",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "Intel’s woes wipe out $1 trillion of semiconductor market cap in one day",
+          "title": "'America hates data centers' — New data highlights public sentiment",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/cpus/intels-woes-wipe-out-usd1-trillion-of-semiconductor-market-cap-in-one-day-pc-market-bloodbath-leaves-few-chip-stocks-unscathed",
-          "date": "2026-10-30",
+          "url": "https://www.tomshardware.com/tech-industry/data-centers/america-hates-data-centers-new-database-reveals-more-than-90-percent-of-10-000-public-comments-are-negative-only-21-percent-mention-ai-73-percent-of-meetings-had-no-data-center-supporters-water-is-the-number-one-concern",
+          "date": "2026-11-02",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Intel's shares plunged 30% on Friday, wiping out nearly $150 billion in market capitalization in a single day, the largest single-day loss in the company's history. The decline followed a disappointing financia..."
+          "summary": "As more and more AI data centers are being built across the United States, the backlash is starting to gather pace. Following the recent news that Amazon canceled plans to build four new facilities after a publ..."
         },
         {
-          "title": "Benchmarking Nvidia’s Vera CPU for the data center — standalone Vera tested against Granite Rapids-AP and EPYC Turin",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/cpus/benchmarking-nvidias-vera-cpu-for-the-data-center-standalone-vera-tested-against-granite-rapids-ap-and-epyc-turin",
-          "date": "2026-10-30",
+          "title": "It’s not just Sam Altman: AI will ruin PC gaming in ways you don’t expect",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/3274724/not-just-altman-ai-assaults-the-game-industry-from-every-angle.html",
+          "date": "2026-11-03",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Nvidia’s Vera CPU is an important next step in the company’s years-long spearheading of AI infrastructure buildout. It’s arriving just as the shift to agentic AI workflows has created unprecedented demand for d..."
+          "summary": "Good lord, it’s been a bad week for gaming. You don’t need to be a news hound or a Nostradamus to see where the problems are coming from: AI. From hardware to software to platforms to funding, “AI” is causing n..."
         }
       ]
     }
