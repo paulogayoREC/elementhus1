@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-05",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "'America hates data centers' — New data highlights public sentiment",
+          "title": "Apple MacBook Pro with PROLED XDR Display review: The screen that every Mac deserves",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/data-centers/america-hates-data-centers-new-database-reveals-more-than-90-percent-of-10-000-public-comments-are-negative-only-21-percent-mention-ai-73-percent-of-meetings-had-no-data-center-supporters-water-is-the-number-one-concern",
-          "date": "2026-11-02",
+          "url": "https://www.tomshardware.com/laptops/macbooks/apple-macbook-pro-with-proled-xdr-display-review",
+          "date": "2026-11-05",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "As more and more AI data centers are being built across the United States, the backlash is starting to gather pace. Following the recent news that Amazon canceled plans to build four new facilities after a publ..."
+          "summary": "Apple's fans know all about waiting. The company tends to polish features, especially in hardware, that some other laptop vendors release faster. The MacBook Pro with PROLED XDR Display ends the wait for two lo..."
         },
         {
-          "title": "It’s not just Sam Altman: AI will ruin PC gaming in ways you don’t expect",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/3274724/not-just-altman-ai-assaults-the-game-industry-from-every-angle.html",
-          "date": "2026-11-03",
+          "title": "Marvell to buy Lumentum in $115 billion all-stock deal",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/semiconductors/marvell-to-buy-lumentum-in-usd115-billion-all-stock-deal-combined-company-to-supply-scale-up-and-scale-in-optics-for-ai-data-centers",
+          "date": "2026-11-05",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Good lord, it’s been a bad week for gaming. You don’t need to be a news hound or a Nostradamus to see where the problems are coming from: AI. From hardware to software to platforms to funding, “AI” is causing n..."
+          "summary": "Marvell Technology Inc. has signed a definitive merger agreement to acquire Lumentum for an enterprise value of $115 billion, combining two of the biggest players in the data center optics market into one compa..."
         }
       ]
     }
