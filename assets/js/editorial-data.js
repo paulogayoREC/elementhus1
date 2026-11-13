@@ -1,5 +1,5 @@
 window.editorialData = {
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-13",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
@@ -16,14 +16,14 @@ window.editorialData = {
           "summary": "Amid the AI gold rush, one particularly fruitful vein of research is the emergence of AI-assisted workflows in electronic design automation ( EDA) tools like Cadence Maestro . One such company developing such f..."
         },
         {
-          "title": "AMD quer frear a crise de memória RAM com tecnologia revolucionária",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/hardware/amd-quer-frear-a-crise-de-memoria-ram-com-tecnologia-revolucionaria/",
-          "date": "2026-11-10",
+          "title": "Russia’s Google says nearly 3% of its data was lost after crippling Ukraine drone strikes, opens secret availability zones",
+          "source": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/data-centers/russias-google-says-nearly-3-percent-of-its-data-was-lost-after-crippling-ukraine-drone-strikes-opens-secret-availability-zones-yandex-cloud-blames-lack-of-user-backups-for-lost-data-now-forcibly-applies-backup-rules-by-default",
+          "date": "2026-11-12",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "A novidade mais promissora que a AMD apresentou durante o lançamento dos novos processadores EPYC Venice, na última quarta-feira (4), em Las Vegas, não foram os chips em si, mas uma tecnologia de gerenciamento..."
+          "summary": "Yandex, sometimes called Russia’s Google, has updated its customers in the wake of extensive damage to its data centers in drone strikes . In a blog post this week, the firm’s cloud business boasted that it had..."
         }
       ]
     }
