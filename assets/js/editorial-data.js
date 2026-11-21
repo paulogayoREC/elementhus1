@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-21",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "The Downfall of Jensen Huang — a timeline of allegations and scandals that brought down the king of AI infrastructure",
+          "title": "This week on Tom's Hardware Premium: 21 November 2026",
           "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/the-downfall-of-jensen-huang",
-          "date": "2026-11-18",
+          "url": "https://www.tomshardware.com/tech-industry/supercomputers/this-week-on-toms-hardware-premium-21-november-2026-amd-nvidia-and-more-show-off-the-future-of-high-performance-computing-at-sc26",
+          "date": "2026-11-21",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Nvidia rose from a niche gaming hardware company with an unofficial motto of \"Our company is thirty days from going out of business” to becoming the world’s most valuable company by market capitalization in 202..."
+          "summary": "In case you're worried about missing out on all the goodness on Tom's Hardware Premium , we've rounded up everything that we've published this week right here. The main theme for this week has been coverage str..."
         },
         {
-          "title": "Best laptops 2026: Premium, budget, gaming, 2-in-1, and more",
-          "source": "PCWorld",
-          "url": "https://www.pcworld.com/article/436674/best-pc-laptops.html",
-          "date": "2026-11-19",
+          "title": "Como era o mundo da tecnologia quando GTA V foi lançado?",
+          "source": "Canaltech",
+          "url": "https://canaltech.com.br/internet-e-redes-sociais/como-era-mundo-da-tecnologia-quando-gta-5-foi-lancado/",
+          "date": "2026-11-20",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "PCWorld has been testing and writing about PCs since 1983. That’s a long time! Today, we put more than 70 laptops through our review process every year, covering everything from affordable everyday laptops to p..."
+          "summary": "Um dos maiores hiatos do entretenimento acabou nesta semana: GTA 6 é o novo título da franquia da Rockstar após 13 anos de espera. O antecessor, GTA V , foi lançado ainda em 2013 para PlayStation 3 e Xbox 360 e..."
         }
       ]
     }
