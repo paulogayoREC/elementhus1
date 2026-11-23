@@ -1,29 +1,29 @@
 window.editorialData = {
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-23",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
       "label": "Noticias",
       "items": [
         {
-          "title": "This week on Tom's Hardware Premium: 21 November 2026",
-          "source": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/supercomputers/this-week-on-toms-hardware-premium-21-november-2026-amd-nvidia-and-more-show-off-the-future-of-high-performance-computing-at-sc26",
-          "date": "2026-11-21",
+          "title": "AI agent security concerns kick-start confidential computing",
+          "source": "Computerworld",
+          "url": "https://www.computerworld.com/article/4245310/ai-agent-security-concerns-kick-start-confidential-computing.html",
+          "date": "2026-11-23",
           "tag": "Radar tech",
           "featured": true,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "In case you're worried about missing out on all the goodness on Tom's Hardware Premium , we've rounded up everything that we've published this week right here. The main theme for this week has been coverage str..."
+          "summary": "As incident after incident reveals AI agents running wild and causing security concerns, confidential computing is emerging as a way to lock down AI models in a secure vault. The technology has been slow to cat..."
         },
         {
-          "title": "Como era o mundo da tecnologia quando GTA V foi lançado?",
-          "source": "Canaltech",
-          "url": "https://canaltech.com.br/internet-e-redes-sociais/como-era-mundo-da-tecnologia-quando-gta-5-foi-lancado/",
-          "date": "2026-11-20",
+          "title": "Best laptops for college on Amazon right now",
+          "source": "PCWorld",
+          "url": "https://www.pcworld.com/article/557622/the-best-laptop-for-college.html",
+          "date": "2026-11-23",
           "tag": "Radar tech",
           "featured": false,
           "image": "assets/img/astronaut-earth.png",
-          "summary": "Um dos maiores hiatos do entretenimento acabou nesta semana: GTA 6 é o novo título da franquia da Rockstar após 13 anos de espera. O antecessor, GTA V , foi lançado ainda em 2013 para PlayStation 3 e Xbox 360 e..."
+          "summary": "Finding the right laptop for college can be harder than it sounds. Amazon, for example, has thousands of models to choose from. Once you start comparing processors and screen sizes, it’s easy to get lost in the..."
         }
       ]
     }
