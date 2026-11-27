@@ -1,5 +1,5 @@
 window.editorialData = {
-  "updatedAt": "2026-11-25",
+  "updatedAt": "2026-11-27",
   "refreshEveryDays": 2,
   "categories": {
     "noticias": {
